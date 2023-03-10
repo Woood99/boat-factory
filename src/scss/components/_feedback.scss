@@ -1,0 +1,70 @@
+.feedback {
+    display: flex;
+
+    &__text {
+        p {
+            color: var(--black);
+            font-weight: 600;
+            font-size: 16px;
+            line-height: math.div(24, 16);
+
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+
+            @media (max-width:$tablet-max) {
+                font-size: 14px;
+            }
+
+            @media (max-width:$smallTablet-max) {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        margin-right: 30px;
+
+        @media (max-width:$smallTablet-max) {
+            margin-right: 0;
+        }
+    }
+
+    &__btns {
+        align-self: end;
+        display: flex;
+        align-items: center;
+
+        @media (max-width:$smallTablet-max) {
+            align-self: start;
+            margin-top: 25px;
+            width: 100%;
+        }
+
+        @media (max-width:$mobile-max) {
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            width: 100%;
+        }
+
+        @media (max-width:$mobile-max) {
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    @media (max-width:$smallTablet-max) {
+        flex-direction: column;
+    }
+
+}

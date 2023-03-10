@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+"title": "Pages"
+})
+
+<body class="page__body">
+    <div class="site-container">
+        <div class="block">
+            <h2>Готовые страницы:</h2>
+            <ol>
+                <li>
+                    <a href="./where-buy.html">Где купить</a>
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+            <h2>В разработке:</h2>
+            <ol>
+                <li>
+                    <a href="./asd">...</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+
+    <style>
+        .page__body {
+            padding: 20px 15px;
+        }
+
+        .site-container {
+            overflow: visible;
+        }
+
+        .block:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 100%;
+            font-weight: 500;
+        }
+
+        ul {
+            margin-top: 30px !important;
+        }
+
+        a {
+            font-size: 15px;
+            line-height: 100%;
+            font-weight: 400;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+    </style>
+</body>
+
+
+</html>

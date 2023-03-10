@@ -1,0 +1,23 @@
+.title {}
+
+.subtitle {}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+
+    @media (max-width:$max-1150) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+.img-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,63 @@
+.spollers {
+    &__item {
+        font-size: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            @include fontHalvar;
+            color: var(--black);
+            font-weight: 500;
+            @include adaptiveValue("font-size", 26, 18);
+            line-height: math.div(30, 26);
+            text-transform: uppercase;
+            transition: color $transitionSpeed $transitionFunction;
+        }
+
+        svg {
+            width: 38px;
+            height: 47px;
+            fill: #bababa;
+            transform: rotate(-135deg);
+            transition: transform $transitionSpeed $transitionFunction,
+                fill $transitionSpeed $transitionFunction;
+                @media (max-width:$tablet-max){
+                    width: 30px;
+                    height: 41px;
+                }
+        }
+        &:hover{
+            span{
+                color: var(--red);
+            }
+            svg{
+                fill: var(--red);
+            }
+        }
+        &:focus{
+            span{
+                color: var(--red);
+            }
+            svg{
+                fill: var(--red);
+            }
+        }
+        &._spoller-active {
+            svg {
+                transform: rotate(-45deg);
+                fill: var(--red);
+            }
+        }
+    }
+
+    &__body {}
+}

@@ -1,0 +1,173 @@
+.footer {
+    @include adaptiveValue("margin-top", 100,50 );
+    position: relative;
+    background-image: url('../img/footer-bg.webp');
+    background-blend-mode: overlay, normal;
+    background-color: var(--red);
+    border-radius: 35px 35px 0px 0px;
+
+    &__container {
+        padding-top: 55px;
+        padding-bottom: 45px;
+
+        @media (max-width:$tablet-max) {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: minmax(150px, max-content) repeat(4,max-content);
+        justify-content: space-between;
+        grid-gap: 40px;
+
+        @media (max-width:$tablet-max) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 25px;
+        }
+
+        @media (max-width:$smallMobile-max) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__info {
+        @media (max-width:$tablet-max) {
+            grid-column: 1/-1;
+        }
+    }
+
+    &__item {}
+
+    &__bottom {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width:$smallTablet-max) {
+            justify-content: center;
+        }
+
+    }
+
+    &__social {}
+
+    &__rights-reserved {
+        color: var(--lilac);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: math.div(26, 14);
+
+        @media (max-width:$tablet-max) {
+            font-size: 13px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            display: none;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+.footer-info {
+    &__title {
+        @include fontHalvar;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        color: var(--white);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 26px;
+        @include adaptiveValue("font-size", 26, 18);
+        line-height: math.div(45, 26);
+
+        &::after {
+            content: url("../img/biceps.svg");
+        }
+
+        @media (max-width:$smallTablet-max) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__descr {
+        font-size: 14px;
+        line-height: math.div(22, 14);
+        font-weight: 500;
+        color: var(--lilac);
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width:$smallMobile-max) {
+        text-align: center;
+    }
+}
+
+.footer-item {
+
+    &__title {
+        margin-bottom: 21px;
+        color: var(--white);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: math.div(24, 16);
+
+        @media (max-width:$tablet-max) {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__elements {}
+
+    &__element {}
+
+    &__link {
+        font-weight: 500;
+        color: var(--lilac);
+        font-size: 14px;
+        line-height: math.div(40, 14);
+        transition: color $transitionSpeed $transitionFunction;
+        outline: none;
+
+        &:hover {
+            color: var(--white);
+        }
+
+        &:focus {
+            color: var(--white);
+        }
+
+        @media (max-width:$tablet-max) {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        &:not(:nth-child(2)) {
+            justify-self: center;
+        }
+    }
+
+    @media (max-width:$smallTablet-max) {
+        &:not(:nth-child(2)) {
+            justify-self: auto;
+        }
+    }
+
+    @media (max-width:$smallMobile-max) {
+        text-align: center;
+    }
+}

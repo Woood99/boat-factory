@@ -1,0 +1,51 @@
+// main
+$fontFamily: "Open Sans";
+$fontSize: 14;
+$minWidth: 320;
+$maxWidth: 1920;
+$contentWidth: 1288;
+$containerOffset: 15;
+$containerWidth: calc($contentWidth + ($containerOffset * 2));
+
+// main colors
+$bodyColor: #f5f5f5; // Цвет body по умолчаниюу
+$mainColor: #000; // Цвет шрифта по умолчанию
+
+:root {
+
+    // additional colors
+    --black: #000;
+    --white: #fff;
+    --primary: #f5f5f5;
+    --red: #e6332a;
+    --red-dark: #b92b23;
+    --alto: #dfdfdf;
+    --lilac: #ffa7a2;
+
+}
+
+
+
+// others vars
+$transitionSpeed: 0.3s;
+$transitionFunction: ease-in-out;
+
+
+
+// break points
+$desktop: $containerWidth+px;
+
+$max-1150: 1150px;
+$min-1150: 1151px;
+
+$tablet-max: 1024px;
+$tablet-min: 1025px;
+
+$smallTablet-max: 768px;
+$smallTablet-min: 769px;
+
+$mobile-max: 576px;
+$mobile-min: 577px;
+
+$smallMobile-max: 360px;
+$smallMobile-min: 361px;

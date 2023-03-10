@@ -1,0 +1,16 @@
+.logo {
+
+    &__img {}
+
+    @media (max-width:$tablet-max) {
+        width: 200px;
+    }
+
+    @media (max-width:$smallTablet-max) {
+        width: 150px;
+    }
+
+    @media (max-width:$mobile-max) {
+        width: 135px;
+    }
+}
