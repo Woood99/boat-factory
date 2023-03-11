@@ -13,11 +13,8 @@
     <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-    </script>
     <script defer src="js/main.js"></script>
 </head>
-
 
 <body class="page__body">
     <div class="site-container">
@@ -27,13 +24,24 @@
                 <li>
                     <a href="./where-buy.html">Где купить</a>
                 </li>
+                <li>
+                    <a href="./news-events.html">Новости и события</a>
+                </li>
             </ol>
         </div>
         <div class="block">
             <h2>В разработке:</h2>
             <ol>
                 <li>
-                    <a href="./asd">...</a>
+                    ...
+                </li>
+            </ol>
+        </div>
+        <div class="block">
+            <h2>Ui-Kit</h2>
+            <ol>
+                <li>
+                    <a href="./ui-kit.html">Ссылка</a>
                 </li>
             </ol>
         </div>
@@ -60,10 +68,12 @@
             font-weight: 500;
         }
 
-        ul {
-            margin-top: 30px !important;
+        ol {
+            margin-top: 15px !important;
         }
-
+        ol li:not(:last-child){
+            margin-bottom: 8px;
+        }
         a {
             font-size: 15px;
             line-height: 100%;

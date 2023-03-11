@@ -16,7 +16,6 @@
         span {
             @include fontHalvar;
             color: var(--black);
-            font-weight: 500;
             @include adaptiveValue("font-size", 26, 18);
             line-height: math.div(30, 26);
             text-transform: uppercase;
@@ -30,27 +29,33 @@
             transform: rotate(-135deg);
             transition: transform $transitionSpeed $transitionFunction,
                 fill $transitionSpeed $transitionFunction;
-                @media (max-width:$tablet-max){
-                    width: 30px;
-                    height: 41px;
-                }
+
+            @media (max-width:$tablet-max) {
+                width: 30px;
+                height: 41px;
+            }
         }
-        &:hover{
-            span{
+
+        &:hover {
+            span {
                 color: var(--red);
             }
-            svg{
+
+            svg {
                 fill: var(--red);
             }
         }
-        &:focus{
-            span{
+
+        &:focus {
+            span {
                 color: var(--red);
             }
-            svg{
+
+            svg {
                 fill: var(--red);
             }
         }
+
         &._spoller-active {
             svg {
                 transform: rotate(-45deg);

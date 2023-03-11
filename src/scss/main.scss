@@ -15,6 +15,9 @@
 // ui components
 @import "./ui-kit/address-item";
 @import "./ui-kit/balloon";
+@import "./ui-kit/breadcrumbs";
+@import "./ui-kit/article-card";
+@import "./ui-kit/pagination";
 
 
 // =============================================================================================================
@@ -33,6 +36,7 @@
 // big components
 @import "./components/header";
 @import "./components/where-buy";
+@import "./components/news-events";
 @import "./components/footer";
 
 

@@ -29,7 +29,6 @@
     }
 
     &__descr {
-        font-weight: 500;
         @include adaptiveValue("font-size", 16, 14);
         line-height: math.div(24, 16);
         color: var(--black);
@@ -95,9 +94,7 @@
         }
     }
 
-    &__btn {
-    
-    }
+    &__btn {}
 
     &__addresses {
         grid-column: 3/-1;

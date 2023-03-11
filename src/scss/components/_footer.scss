@@ -60,7 +60,6 @@
 
     &__rights-reserved {
         color: var(--lilac);
-        font-weight: 500;
         font-size: 14px;
         line-height: math.div(26, 14);
 
@@ -102,7 +101,6 @@
     &__descr {
         font-size: 14px;
         line-height: math.div(22, 14);
-        font-weight: 500;
         color: var(--lilac);
 
         @media (max-width:$smallTablet-max) {
@@ -135,7 +133,6 @@
     &__element {}
 
     &__link {
-        font-weight: 500;
         color: var(--lilac);
         font-size: 14px;
         line-height: math.div(40, 14);

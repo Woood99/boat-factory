@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Новости и события</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <div class="news-events container grid">
+                <div class="news-events__breadcrumbs breadcrumbs">
+                    <ul class="breadcrumbs__list list-reset">
+                        <li class="breadcrumbs__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--last">
+                            <span>Новости и события</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news-events__list">
+                    <article class="news-events__card article-card">
+                        <a href="#" class="article-card__wrapper">
+                            <button type="button" class="btn btn-reset btn-primary btn-primary--small article-card__type article-card__type--mobile" tabindex="-1">Статья</button>
+                            <div class="article-card__img ibg">
+                                <picture>
+                                    <source srcset="./img/news-events/news-events-1.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/news-events/news-events-1.png" width="574"
+                                        height="267" alt="Как выбирают лодку для рыбалки профессионалы?">
+                                </picture>
+                            </div>
+                            <div class="article-card__content">
+                                <button type="button"
+                                    class="btn btn-reset btn-primary btn-primary--small article-card__type" tabindex="-1">Статья</button>
+                                <h4 class="article-card__title">
+                                    Как выбирают лодку для рыбалки профессионалы?
+                                </h4>
+                                <p class="article-card__descr">
+                                    Выбираете вы алюминиевую лодку впервые или меняете раз в несколько лет,
+                                    определиться сложно. Именно поэтому в рамках известных соревнований по рыбной
+                                    ловле мы поговорили с десятком спортсменов и выяснили важнейшие критерии и
+                                    особенности, которые будут влиять как на процесс так и на результат.
+                                </p>
+                                <div class="article-card__bottom">
+                                    <time class="article-card__date" datetime="2023-03-03">03.03.2023</time>
+                                    <span class="article-card__time">
+                                        2 мин
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-events__card article-card">
+                        <a href="#" class="article-card__wrapper">
+                        <button type="button" class="btn btn-reset btn-primary btn-primary--small article-card__type article-card__type--mobile" tabindex="-1">Новости</button>
+                            <div class="article-card__img ibg">
+                                <picture>
+                                    <source srcset="./img/news-events/news-events-2.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/news-events/news-events-2.png" width="574"
+                                        height="267" alt="«Это идеальная лодка для рыбалки» Андрей Питерцов испытал модель FL–70">
+                                </picture>
+                            </div>
+                            <div class="article-card__content">
+                                <button type="button"
+                                    class="btn btn-reset btn-primary btn-primary--small article-card__type" tabindex="-1">Новости</button>
+                                <h4 class="article-card__title">
+                                    «Это идеальная лодка для рыбалки» Андрей Питерцов испытал модель FL–70
+                                </h4>
+                                <p class="article-card__descr">
+                                    Выбираете вы алюминиевую лодку впервые или меняете раз в несколько лет, определиться сложно. Именно поэтому в рамках известных соревнований по рыбной ловле мы поговорили с десятком спортсменов и выяснили важнейшие критерии и особенности, которые будут влиять как на процесс так и на результат.
+                                </p>
+                                <div class="article-card__bottom">
+                                    <time class="article-card__date" datetime="2023-03-03">03.03.2023</time>
+                                    <span class="article-card__time">
+                                        5 мин
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-events__card article-card">
+                        <a href="#" class="article-card__wrapper">
+                            <button type="button" class="btn btn-reset btn-primary btn-primary--small article-card__type article-card__type--mobile" tabindex="-1">Событие</button>
+                            <div class="article-card__img ibg">
+                                <picture>
+                                    <source srcset="./img/news-events/news-events-3.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/news-events/news-events-3.png" width="574"
+                                        height="267" alt="Впервые на Moscow Boat Show 2023 — лодки FL">
+                                </picture>
+                            </div>
+                            <div class="article-card__content">
+                                <button type="button"
+                                    class="btn btn-reset btn-primary btn-primary--small article-card__type" tabindex="-1">Событие</button>
+                                <h4 class="article-card__title">
+                                    Впервые на Moscow Boat Show 2023 — лодки FL
+                                </h4>
+                                <p class="article-card__descr">
+                                    Компания Фабрика лодок представит 4 модификации премиальных катеров для рыбалки и отдыха под брендом FL.
+                                    2022 год стал временем возможностей в развитии российского судостроения. Основатели нового производства полного цикла ООО «Фабрика лодок» с гордостью представят свои разработки на «Московском Боут Шоу» со 2 по 5 марта 2023 года.                                    
+                                </p>
+                                <div class="article-card__bottom">
+                                    <time class="article-card__date" datetime="2023-03-03">03.03.2023</time>
+                                    <span class="article-card__time">
+                                        2 мин
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-events__card article-card">
+                        <a href="#" class="article-card__wrapper">
+                            <button type="button" class="btn btn-reset btn-primary btn-primary--small article-card__type article-card__type--mobile" tabindex="-1">Статья</button>
+                            <div class="article-card__img ibg">
+                                <picture>
+                                    <source srcset="./img/news-events/news-events-1.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/news-events/news-events-1.png" width="574"
+                                        height="267" alt="Как выбирают лодку для рыбалки профессионалы?">
+                                </picture>
+                            </div>
+                            <div class="article-card__content">
+                                <button type="button"
+                                    class="btn btn-reset btn-primary btn-primary--small article-card__type" tabindex="-1">Статья</button>
+                                <h4 class="article-card__title">
+                                    Как выбирают лодку для рыбалки профессионалы?
+                                </h4>
+                                <p class="article-card__descr">
+                                    Выбираете вы алюминиевую лодку впервые или меняете раз в несколько лет,
+                                    определиться сложно. Именно поэтому в рамках известных соревнований по рыбной
+                                    ловле мы поговорили с десятком спортсменов и выяснили важнейшие критерии и
+                                    особенности, которые будут влиять как на процесс так и на результат.
+                                </p>
+                                <div class="article-card__bottom">
+                                    <time class="article-card__date" datetime="2023-03-03">03.03.2023</time>
+                                    <span class="article-card__time">
+                                        2 мин
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="news-events__card article-card">
+                        <a href="#" class="article-card__wrapper">
+                        <button type="button" class="btn btn-reset btn-primary btn-primary--small article-card__type article-card__type--mobile" tabindex="-1">Новости</button>
+                            <div class="article-card__img ibg">
+                                <picture>
+                                    <source srcset="./img/news-events/news-events-2.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/news-events/news-events-2.png" width="574"
+                                        height="267" alt="«Это идеальная лодка для рыбалки» Андрей Питерцов испытал модель FL–70">
+                                </picture>
+                            </div>
+                            <div class="article-card__content">
+                                <button type="button"
+                                    class="btn btn-reset btn-primary btn-primary--small article-card__type" tabindex="-1">Новости</button>
+                                <h4 class="article-card__title">
+                                    «Это идеальная лодка для рыбалки» Андрей Питерцов испытал модель FL–70
+                                </h4>
+                                <p class="article-card__descr">
+                                    Выбираете вы алюминиевую лодку впервые или меняете раз в несколько лет, определиться сложно. Именно поэтому в рамках известных соревнований по рыбной ловле мы поговорили с десятком спортсменов и выяснили важнейшие критерии и особенности, которые будут влиять как на процесс так и на результат.
+                                </p>
+                                <div class="article-card__bottom">
+                                    <time class="article-card__date" datetime="2023-03-03">03.03.2023</time>
+                                    <span class="article-card__time">
+                                        5 мин
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="news-events__pagination pagination">
+                    <a href="#" class="pagination__arrow pagination__arrow--prev" aria-hidden="true"
+                        tabindex="-1" disabled>
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </a>
+                    <ul class="pagination__list list-reset">
+                        <li class="pagination__item" disabled>
+                            <a href="#">
+                                1
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#">
+                                2
+                            </a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#">
+                                3
+                            </a>
+                        </li>
+                        <li class="pagination__item dots" tabindex="-1">
+                            ...
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#">
+                                98
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="pagination__arrow pagination__arrow--next"
+                        aria-label="Следующая страница">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+
+</html>

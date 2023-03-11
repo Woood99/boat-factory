@@ -1,0 +1,60 @@
+.breadcrumbs {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    &__item {
+        white-space: nowrap;
+        padding: 0 28px;
+        font-size: 16px;
+        line-height: math.div(20, 16);
+        color: var(--gray);
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:not(:first-child) {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 24px;
+                height: 24px;
+                background-image: url('../img/arrow-right.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                left: 0;
+                @media (max-width:$smallTablet-max){
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+        }
+
+        a {
+            transition: color $transitionSpeed $transitionFunction;
+
+            &:hover {
+                color: var(--red);
+            }
+        }
+        @media (max-width:$smallTablet-max){
+             padding: 0 16px;
+             font-size: 14px; 
+        }
+    }
+
+    &__item--last {
+        color: var(--shaft);
+        padding-right: 0;
+    }
+
+}
