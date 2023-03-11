@@ -123,8 +123,6 @@
 
     &__feedback {
         grid-column: 3/-1;
-        @include adaptiveValue("padding-top", 60, 30);
-        border-top: 1px solid var(--alto);
 
         @media (max-width:$max-1150) {
             grid-column: 1/-1;

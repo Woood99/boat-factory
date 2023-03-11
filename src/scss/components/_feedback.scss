@@ -1,4 +1,6 @@
 .feedback {
+    @include adaptiveValue("padding-top", 60, 30);
+    border-top: 1px solid var(--alto);
     display: flex;
 
     &__text {
