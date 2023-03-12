@@ -21,6 +21,7 @@
 .label-primary {
     @include fontInter;
     display: block;
+
     &__name {
         display: block;
         margin-bottom: 6px;
@@ -28,13 +29,23 @@
         font-size: 14px;
         line-height: math.div(20, 14);
         color: var(--oxford-blue);
-        @media (max-width:$smallTablet-max){
-              font-size: 13px;
-              margin-bottom: 4px;
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 13px;
+            margin-bottom: 4px;
         }
     }
-    &__input{
+
+    &__input {
         width: 100%;
+    }
+
+    .just-validate-error-field {
+        border: 1px solid var(--red) !important;
+    }
+
+    .just-validate-error-label {
+        display: none;
     }
 }
 
@@ -47,12 +58,20 @@
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     border-radius: 8px;
     transition: border $transitionSpeed $transitionFunction;
+    font-size: 16px;
+    color: #667085;
+
+    &::placeholder {
+        color: currentColor;
+    }
 
     &:focus {
         border: 1px solid var(--oxford-blue);
     }
-    @media (max-width:$smallTablet-max){
-         height: 42px; 
+
+    @media (max-width:$smallTablet-max) {
+        height: 42px;
+        font-size: 14px;
     }
 }
 
@@ -183,4 +202,8 @@
     resize: none;
     height: 128px;
     padding: 10px 14px;
+
+    @media (max-width:$tablet-max) {
+        height: 100px;
+    }
 }

@@ -4,7 +4,7 @@ import headerFixed from './components/headerFixed';
 import fixFullheight from './components/fixFullHeight'
 import burgerMenu from './components/burger';
 import spollers from "./components/spollers";
-import customSelect from './components/customSelect';
+import validateForm from './components/validation';
 import './components/map';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,11 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // =======================================================
 
-    const maskMap = {
-        'tur': "+\\90 999 999-9999",
-        'usa': "+1 999 999-99-99",
-        'ru': "+7 (999) 999-9999",
-    };
+    validateForm();
 
-    customSelect(maskMap);
+
+
+
+
+
+
+    // Ненужное
+    // const maskMap = {
+    //     'tur': "+\\90 999 999-9999",
+    //     'usa': "+1 999 999-99-99",
+    //     'ru': "+7 (999) 999-9999",
+    // };
+
+    // customSelect(maskMap);
 })

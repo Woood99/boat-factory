@@ -62,12 +62,19 @@
             width: var(--size);
             padding-bottom: var(--size);
             height: 0;
+
         }
 
         @media (max-width:$tablet-max) {
             &::before {
                 bottom: -8%;
                 --size: 55%
+            }
+        }
+
+        @media (max-width:$mobile-max) {
+            &::before {
+                --size: 65%;
             }
         }
     }
@@ -89,8 +96,12 @@
 
         @media (max-width:$mobile-max) {
             max-width: none;
-            padding: 20px;
-            border-radius: 15px;
+            padding: 0;
+            border-radius: 0;
+            background: transparent;
+            backdrop-filter: none;
+            position: relative;
+            z-index: 2;
         }
     }
 

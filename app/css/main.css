@@ -235,6 +235,12 @@
 .label-primary__input {
   width: 100%;
 }
+.label-primary .just-validate-error-field {
+  border: 1px solid var(--red) !important;
+}
+.label-primary .just-validate-error-label {
+  display: none;
+}
 
 .input-primary {
   font-family: "Inter", sans-serif;
@@ -248,6 +254,23 @@
   -webkit-transition: border 0.3s ease-in-out;
   -o-transition: border 0.3s ease-in-out;
   transition: border 0.3s ease-in-out;
+  font-size: 16px;
+  color: #667085;
+}
+.input-primary::-webkit-input-placeholder {
+  color: currentColor;
+}
+.input-primary::-moz-placeholder {
+  color: currentColor;
+}
+.input-primary:-ms-input-placeholder {
+  color: currentColor;
+}
+.input-primary::-ms-input-placeholder {
+  color: currentColor;
+}
+.input-primary::placeholder {
+  color: currentColor;
 }
 .input-primary:focus {
   border: 1px solid var(--oxford-blue);
@@ -255,6 +278,7 @@
 @media (max-width: 768px) {
   .input-primary {
     height: 42px;
+    font-size: 14px;
   }
 }
 
@@ -375,6 +399,11 @@
   resize: none;
   height: 128px;
   padding: 10px 14px;
+}
+@media (max-width: 1024px) {
+  .textarea-primary {
+    height: 100px;
+  }
 }
 
 .checkbox {
@@ -2419,6 +2448,11 @@ a {
     --size: 55% ;
   }
 }
+@media (max-width: 576px) {
+  .becoming-dealer__content::before {
+    --size: 65%;
+  }
+}
 .becoming-dealer__form {
   margin: 0 auto;
   max-width: 708px;
@@ -2438,8 +2472,13 @@ a {
 @media (max-width: 576px) {
   .becoming-dealer__form {
     max-width: none;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    position: relative;
+    z-index: 2;
   }
 }
 .becoming-dealer__feedback {
