@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Гарантия</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <div class="guarantee container grid p-top-page">
+                <div class="guarantee__top top-border-page">
+                    <h1 class="guarantee__title title-1">
+                        гарантия
+                    </h1>
+                    <div class="guarantee__text">
+                        <p>
+                            Гарантийный срок на моторные лодки FL при условии соблюдения
+                            требований эксплуатации, транспортировки и хранения:
+                        </p>
+                    </div>
+                </div>
+                <div class="guarantee__content">
+                    <div class="guarantee__item reciprocity">
+                        <span>три года</span>
+                        <span aria-hidden="true"></span>
+                        <span>на корпус</span>
+                    </div>
+                    <div class="guarantee__item reciprocity">
+                        <span>один год</span>
+                        <span aria-hidden="true"></span>
+                        <span>
+                            на лакокрасочное покрытие, электрику
+                            и дополнительное оборудование
+                        </span>
+                    </div>
+                </div>
+                <div class="guarantee__feedback feedback">
+                    <div class="feedback__text">
+                        <p>
+                            Не нашли дилера в вашем регионе? Свяжитесь с нами, поможем
+                            в выборе комплектации и расскажем о доставке.
+                        </p>
+                        <p>
+                            Предварительные характеристики и стоимость можно узнать
+                            с помощью конфигуратора
+                        </p>
+                    </div>
+                    <div class="feedback__btns">
+                        <button type="submit" class="btn btn-reset btn-third feedback__btn">Заказать звонок</button>
+                        <button type="submit" class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+
+</html>

@@ -352,25 +352,27 @@ __webpack_require__.r(__webpack_exports__);
 
 const validateForm = () => {
   const form = document.querySelector('.becoming-dealer__form');
-  const tel = form.querySelector('.label-primary__input--tel');
-  const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())('+7 (999) 999-99-99');
-  inputMask.mask(tel);
-  const validator = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](form);
-  validator.addField('.label-primary__input--name', [{
-    rule: 'required'
-  }, {
-    rule: 'minLength',
-    value: 3
-  }]).addField('.label-primary__input--tel', [{
-    validator: function () {
-      const phone = form.querySelector('.label-primary__input--tel').inputmask.unmaskedvalue();
-      return phone.length === 10;
-    }
-  }]);
-  validator.onSuccess(e => {
-    console.log('Проверка успешна');
-    e.target.reset();
-  });
+  if (form) {
+    const tel = form.querySelector('.label-primary__input--tel');
+    const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())('+7 (999) 999-99-99');
+    inputMask.mask(tel);
+    const validator = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](form);
+    validator.addField('.label-primary__input--name', [{
+      rule: 'required'
+    }, {
+      rule: 'minLength',
+      value: 3
+    }]).addField('.label-primary__input--tel', [{
+      validator: function () {
+        const phone = form.querySelector('.label-primary__input--tel').inputmask.unmaskedvalue();
+        return phone.length === 10;
+      }
+    }]);
+    validator.onSuccess(e => {
+      console.log('Проверка успешна');
+      e.target.reset();
+    });
+  }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validateForm);
 
