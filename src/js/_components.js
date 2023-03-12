@@ -6,7 +6,7 @@ import burgerMenu from './components/burger';
 import spollers from "./components/spollers";
 import validateForm from './components/validation';
 import './components/map';
-
+import sliderBreakpoint from './modules/sliderBreakpoint';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();
@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     validateForm();
 
+    // =======================================================
 
+    sliderBreakpoint('.hero-home__list', 1150);
 
 
 

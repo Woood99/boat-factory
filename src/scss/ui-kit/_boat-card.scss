@@ -1,0 +1,102 @@
+.boat-card {
+    width: 416px;
+
+    &__wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: calc(100% - 29px);
+        transform: translateY(-50%) rotate(-5deg);
+
+        img {
+            width: 100%;
+        }
+
+        @media (max-width:$mobile-max) {
+            width: 100%;
+        }
+
+        @media (max-width:500px) {
+            top: 20px;
+        }
+    }
+
+    &__content {
+        padding: 78px 37px 32px;
+        background-color: var(--white);
+        box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.06);
+        border-radius: 30px;
+
+        display: grid;
+        grid-template-columns: repeat(1fr, max-content);
+        grid-gap: 7px 10px;
+    }
+
+    &__title {
+        grid-column: 1/-1;
+        @include fontHalvar;
+        color: var(--black);
+        letter-spacing: -1.35288px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: math.div(35, 30);
+        transition: color $transitionSpeed $transitionFunction;
+    }
+
+    &__descr {
+        grid-column: 1/2;
+        font-size: 14px;
+        line-height: math.div(19, 14);
+        color: #8F8F8F;
+    }
+
+    &__btn {
+        justify-self: end;
+        grid-column: 2/3;
+        display: flex;
+        align-items: center;
+        color: var(--red);
+        font-weight: 600;
+        font-size: 12px;
+        line-height: math.div(16, 12);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(5px);
+
+        transition: opacity $transitionSpeed $transitionFunction,
+            visibility $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
+
+        svg {
+            margin-right: 10px;
+            width: 12px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            display: none;
+            grid-column: 1/-1;
+        }
+    }
+
+    &:hover {
+        .boat-card {
+            &__title {
+                color: var(--red);
+            }
+
+            &__btn {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+    }
+}

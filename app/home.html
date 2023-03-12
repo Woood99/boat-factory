@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Главная</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <header class="header">
+    <div class="header__container container grid">
+        <a href="#" class="header__logo logo">
+            <img loading="lazy" src="./img/logo.svg" class="logo__img" width="218" height="48" alt="Фабрика Лодок">
+        </a>
+        <nav class="header__nav nav" data-menu>
+            <ul class="nav__list list-reset">
+                <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Катера</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Как купить</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <a href="tel:88004441461" class="header__tel">
+            <svg>
+                <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <span>8 800 444-14-61</span>
+        </a>
+        <button class="header__burger burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <span class="burger__line"></span>
+        </button>
+    </div>
+</header>
+
+        <main class="main">
+            <section class="hero-home">
+    <div class="hero-home__container container">
+        <h1 class="hero-home__title">
+            фабрика лодок
+        </h1>
+        <button type="button" class="btn btn-reset hero-home__call">
+            <img class="" src="./img/call.png" alt="Заказать звонок">
+        </button>
+        <div class="hero-home__decor--plus hero-home__decor--plus-1">
+            <svg>
+                <use xlink:href="img/sprite.svg#plus"></use>
+            </svg>
+        </div>
+        <div class="hero-home__decor--plus hero-home__decor--plus-2">
+            <svg>
+                <use xlink:href="img/sprite.svg#plus"></use>
+            </svg>
+        </div>
+        <div class="hero-home__decor--plus hero-home__decor--plus-3">
+            <svg>
+                <use xlink:href="img/sprite.svg#plus"></use>
+            </svg>
+        </div>
+        <div class="hero-home__decor--elipse hero-home__decor--elipse-1">
+            <picture>
+                <source srcset="./img/hero-home-decor-1.webp" type="image/webp">
+                <img loading="lazy" src="./img/hero-home-decor-1.png" width="62" height="62" aria-hidden="true" alt="">
+            </picture>
+        </div>
+        <div class="hero-home__decor--elipse hero-home__decor--elipse-2">
+            <picture>
+                <source srcset="./img/hero-home-decor-2.webp" type="image/webp">
+                <img loading="lazy" src="./img/hero-home-decor-2.png" width="151" height="151" aria-hidden="true"
+                    alt="">
+            </picture>
+        </div>
+        <div class="hero-home__content">
+            <div class="hero-home__image">
+                <picture>
+                    <source srcset="./img/boat.webp" type="image/webp">
+                    <img loading="lazy" src="./img/boat.png" width="353" height="348" alt="Лодка">
+                </picture>
+            </div>
+            <div class="hero-home__bubble-speech hero-home__bubble-speech--1 bubble-speech">
+                <p class="bubble-speech__text">
+                    Безупречные ходовые качества, большая грузоподъёмность и максимальное количество места
+                    на судне — мы учли всё, что важно
+                </p>
+            </div>
+            <div class="hero-home__bubble-speech hero-home__bubble-speech--2 bubble-speech">
+                <p class="bubble-speech__text">
+                    Моторные лодки FL разработаны в России при участии опытных водомоторников и рыболовов
+                </p>
+            </div>
+            <a href="#" class="hero-home__bubble-speech hero-home__bubble-speech--3 bubble-speech">
+                <h4 class="bubble-speech__title">
+                    [КОНФИГУРАТОР]
+                </h4>
+                <p class="bubble-speech__text">
+                    Когда каждая лодка уникальна
+                </p>
+            </a>
+        </div>
+        <div class="swiper hero-home__list" data-slider-breakpoint="false">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide boat-card">
+                    <a href="#" class="boat-card__wrapper">
+                        <div class="boat-card__img">
+                            <picture>
+                                <source srcset="./img/boat-card/boat-card-1.webp" type="image/webp">
+                                <img loading="lazy" src="./img/boat-card/boat-card-1.png" width="387" height="200"
+                                    alt="[FL–47]">
+                            </picture>
+                        </div>
+                        <div class="boat-card__content">
+                            <h3 class="boat-card__title">
+                                [FL–47]
+                            </h3>
+                            <p class="boat-card__descr">
+                                Навстречу приключениям
+                            </p>
+                            <button type="button" class="btn btn-reset boat-card__btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Подробнее
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide boat-card">
+                    <a href="#" class="boat-card__wrapper">
+                        <div class="boat-card__img">
+                            <picture>
+                                <source srcset="./img/boat-card/boat-card-1.webp" type="image/webp">
+                                <img loading="lazy" src="./img/boat-card/boat-card-1.png" width="387" height="200"
+                                    alt="[FL–47]">
+                            </picture>
+                        </div>
+                        <div class="boat-card__content">
+                            <h3 class="boat-card__title">
+                                [FL–47]
+                            </h3>
+                            <p class="boat-card__descr">
+                                Навстречу приключениям
+                            </p>
+                            <button type="button" class="btn btn-reset boat-card__btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Подробнее
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide boat-card">
+                    <a href="#" class="boat-card__wrapper">
+                        <div class="boat-card__img">
+                            <picture>
+                                <source srcset="./img/boat-card/boat-card-1.webp" type="image/webp">
+                                <img loading="lazy" src="./img/boat-card/boat-card-1.png" width="387" height="200"
+                                    alt="[FL–47]">
+                            </picture>
+                        </div>
+                        <div class="boat-card__content">
+                            <h3 class="boat-card__title">
+                                [FL–47]
+                            </h3>
+                            <p class="boat-card__descr">
+                                Навстречу приключениям
+                            </p>
+                            <button type="button" class="btn btn-reset boat-card__btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Подробнее
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+        <footer class="footer img-bg">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <div class="footer__info footer-info">
+                <h3 class="footer-info__title">
+                    хочу стать дилером
+                </h3>
+                <p class="footer-info__descr">
+                    Станьте дилером лучших лодок для рыбалки и отдыха.
+                </p>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    О нас
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О производстве
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Новости и события
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Вопрос-ответ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Катера
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            FL–47
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            FL–55
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            FL–70
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Конфигуратор
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Покупателю
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Где купить
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Гарантия
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Контакты
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            info@fl-boats.ru
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="tel:88004441461" class="footer-item__link">
+                            8 800 444-14-61
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <ul class="footer__social social list-reset">
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--vk"
+                        aria-label="Наша страничка во Вконтакте" title="Наша страничка во Вконтакте">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Мы в телеграмме" title="Мы в телеграмме">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--wa" aria-label="Мы в WhatsApp" title="Мы в WhatsApp">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--yt" aria-label="Наш канал на YouTube" title="Наш канал на YouTube">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#yt"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__rights-reserved">
+                ООО «Фабрика Лодок» | Все права защищены
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+
+</html>
