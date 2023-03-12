@@ -1,3 +1,29 @@
+.form-primary {
+    &__label {
+        margin-bottom: 24px;
+
+        @media (max-width:$smallTablet-max) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__agree {
+        margin-bottom: 32px;
+
+        @media (max-width:$smallTablet-max) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+    }
+}
+
+
+
+
+
 // =============================================================================
 
 // button
@@ -6,12 +32,12 @@
 // =============================================================================
 
 // input
-// @import "input";
+@import "input";
 
 // =============================================================================
 
 // checkbox
-// @import "checkbox";
+@import "checkbox";
 
 // =============================================================================
 

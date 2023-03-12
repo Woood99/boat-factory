@@ -1,9 +1,9 @@
 .footer {
-    @include adaptiveValue("margin-top", 100,50 );
+    @include adaptiveValue("margin-top", 100, 50);
     position: relative;
     background-image: url('../img/footer-bg.webp');
     background-blend-mode: overlay, normal;
-    background-color: var(--red);
+    background-color: #2d2d2d;
     border-radius: 35px 35px 0px 0px;
 
     &__container {
@@ -18,7 +18,7 @@
 
     &__main {
         display: grid;
-        grid-template-columns: minmax(150px, max-content) repeat(4,max-content);
+        grid-template-columns: minmax(150px, max-content) repeat(4, max-content);
         justify-content: space-between;
         grid-gap: 40px;
 
@@ -59,7 +59,7 @@
     &__social {}
 
     &__rights-reserved {
-        color: var(--lilac);
+        color: var(--white);
         font-size: 14px;
         line-height: math.div(26, 14);
 
@@ -101,7 +101,7 @@
     &__descr {
         font-size: 14px;
         line-height: math.div(22, 14);
-        color: var(--lilac);
+        color: var(--white);
 
         @media (max-width:$smallTablet-max) {
             font-size: 13px;
@@ -133,18 +133,18 @@
     &__element {}
 
     &__link {
-        color: var(--lilac);
+        color: var(--white);
         font-size: 14px;
         line-height: math.div(40, 14);
         transition: color $transitionSpeed $transitionFunction;
         outline: none;
 
         &:hover {
-            color: var(--white);
+            color: var(--red);
         }
 
         &:focus {
-            color: var(--white);
+            color: var(--red);
         }
 
         @media (max-width:$tablet-max) {

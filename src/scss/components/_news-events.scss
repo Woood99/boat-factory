@@ -1,5 +1,4 @@
 .news-events {
-    padding-top: 35px;
 
     &__container {}
 
@@ -30,9 +29,5 @@
         @include adaptiveValue("margin-top", 127, 55);
         grid-column: 1/-1;
         justify-self: center;
-    }
-
-    @media (max-width:$tablet-max) {
-        padding-top: 25px;
     }
 }

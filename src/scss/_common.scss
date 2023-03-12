@@ -2,6 +2,18 @@
 
 .subtitle {}
 
+.title-1{
+    @include fontHalvar;
+    color: var(--black);
+    font-weight: 500;
+    @include adaptiveValue("font-size", 26, 18);
+    line-height: math.div(31, 26);
+    text-transform: uppercase;
+
+    @media (max-width:$tablet-max) {
+        margin-bottom: 15px;
+    }
+}
 
 
 .grid {
@@ -20,4 +32,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+
+.p-top-page{
+    padding-top: 35px;
+    @media (max-width:$tablet-max) {
+        padding-top: 25px;
+    }
+}
+
+.top-border-page{
+    padding-top: 56px;
+    border-top: 1px solid var(--alto);
+    @media (max-width:$max-1150) {
+        padding-top: 0;
+        border-top: none;
+    }
 }

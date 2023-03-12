@@ -1,0 +1,109 @@
+.becoming-dealer {
+
+
+
+    &__top {
+        grid-column: 3/-1;
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+        }
+    }
+
+    &__title {
+        margin-bottom: 56px;
+
+        @media (max-width:$max-1150) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__text {
+        max-width: 622px;
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: math.div(24, 16);
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 26px;
+            }
+        }
+
+        @media (max-width:$max-1150) {
+            max-width: none;
+
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        @include adaptiveValue("margin-top", 85, 35);
+        grid-column: 1/-1;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            background-image: url('../img/becoming-dealer-bg.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: bottom center;
+
+            position: absolute;
+            left: 0;
+            bottom: -11%;
+            transform: translateX(-50%);
+
+            --size: 65%;
+            width: var(--size);
+            padding-bottom: var(--size);
+            height: 0;
+        }
+
+        @media (max-width:$tablet-max) {
+            &::before {
+                bottom: -8%;
+                --size: 55%
+            }
+        }
+    }
+
+    &__form {
+        margin: 0 auto;
+        max-width: 708px;
+        padding: 100px 114px;
+
+        background: rgba(255, 255, 255, 0.48);
+        backdrop-filter: blur(36.5px);
+        border-radius: 55px;
+
+        @media (max-width:$tablet-max) {
+            max-width: 500px;
+            padding: 60px 70px;
+            border-radius: 35px;
+        }
+
+        @media (max-width:$mobile-max) {
+            max-width: none;
+            padding: 20px;
+            border-radius: 15px;
+        }
+    }
+
+    &__feedback {
+        margin-top: 136px;
+        grid-column: 3/-1;
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+        }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 90px;
+        }
+    }
+}

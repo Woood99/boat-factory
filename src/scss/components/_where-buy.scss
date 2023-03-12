@@ -3,29 +3,14 @@
 
     &__info {
         grid-column: 3/-1;
-        border-top: 1px solid var(--alto);
-        padding-top: 56px;
 
         @media (max-width:$max-1150) {
             grid-column: 1/-1;
-            border-top: none;
-            padding-top: 0;
         }
     }
 
     &__title {
-        @include fontHalvar;
-        margin-bottom: 37px;
-        color: var(--black);
-        font-weight: 500;
-        font-size: 26px;
-        @include adaptiveValue("font-size", 26, 18);
-        line-height: math.div(31, 26);
-        text-transform: uppercase;
-
-        @media (max-width:$tablet-max) {
-            margin-bottom: 15px;
-        }
+        margin-bottom: 35px;
     }
 
     &__descr {
@@ -61,19 +46,27 @@
         }
 
 
-        [class*="balloon__layout"] {
-            overflow: visible;
-        }
-
-        [class*="balloon__content"] {
-            margin-right: 0 !important;
-            padding: 0;
-        }
-
         [class*="balloon__close"] {
             position: absolute;
             top: -8px;
             right: -8px;
+        }
+
+        [class*="-balloon"] {
+            border-radius: 20px;
+            box-shadow: none;
+        }
+
+        [class$="-balloon__layout"] {
+            overflow: visible;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        [class$="-balloon__content"] {
+            box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.09);
+            padding: 0;
+            margin-right: 0 !important;
         }
 
         [class*="balloon__close-button"] {

@@ -5,12 +5,18 @@
     &__item {
         width: 44px;
         height: 44px;
-        background-color: #ffc9c6;
+        background-color: var(--white);
         border-radius: 13px;
         transition: background-color $transitionSpeed $transitionFunction;
 
         &:hover {
-            background-color: var(--white);
+            background-color: var(--black);
+
+            .social__link {
+                svg {
+                    fill: var(--white);
+                }
+            }
         }
 
         &:not(:last-child) {
@@ -27,10 +33,11 @@
         align-items: center;
 
         svg {
-            fill: var(--red);
+            fill: var(--black);
             width: 100%;
             height: 100%;
             display: block;
+            transition: fill $transitionSpeed $transitionFunction;
         }
     }
 

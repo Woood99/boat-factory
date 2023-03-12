@@ -17,7 +17,7 @@
 
         img {
             border-radius: 35px;
-            transition: transform 1s $transitionFunction;
+            transition: transform 0.7s $transitionFunction;
         }
 
         @media (max-width:$tablet-max) {
