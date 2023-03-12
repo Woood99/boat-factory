@@ -1,7 +1,8 @@
-.guarantee {
+.delivery {
 
     &__top {
         grid-column: 3/-1;
+        @include adaptiveValue("padding-bottom", 170, 60);
 
         @media (max-width:$max-1150) {
             grid-column: 1/-1;
@@ -38,35 +39,6 @@
         }
     }
 
-    &__content {
-        grid-column: 3/-1;
-        @include adaptiveValue("padding-top", 85, 40);
-        @include adaptiveValue("padding-bottom", 270, 100);
-
-
-        display: flex;
-        flex-direction: column;
-
-        @media (max-width:$max-1150) {
-            grid-column: 1/-1;
-        }
-
-        @media (max-width:$mobile-max) {
-            align-items: center;
-        }
-    }
-
-    &__item {
-
-        &:not(:last-child) {
-            margin-bottom: 30px;
-
-            @media (max-width:$mobile-max) {
-                margin-bottom: 45px;
-            }
-        }
-    }
-
     &__feedback {
         grid-column: 3/-1;
 
@@ -87,7 +59,7 @@
 
         position: absolute;
         right: -56%;
-        bottom: 30%;
+        bottom: 10%;
         transform: translateX(-50%);
 
         --size: 63%;
@@ -97,10 +69,13 @@
         z-index: -1;
 
         @media (max-width:$smallTablet-max) {
-            --size: 80%;
-            bottom: 32%;
+            --size: 82%;
+            bottom: 10%;
+        }
+
+        @media (max-width:$mobile-max) {
+            bottom: 30%;
         }
     }
 
 }
-
