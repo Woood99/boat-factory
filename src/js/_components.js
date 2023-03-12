@@ -7,6 +7,7 @@ import spollers from "./components/spollers";
 import validateForm from './components/validation';
 import './components/map';
 import sliderBreakpoint from './modules/sliderBreakpoint';
+import './components/sliders';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();

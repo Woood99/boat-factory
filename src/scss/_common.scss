@@ -2,11 +2,11 @@
 
 .subtitle {}
 
-.title-1{
+.title-1 {
     @include fontHalvar;
     color: var(--black);
     font-weight: 500;
-    @include adaptiveValue("font-size", 26, 18);
+    font-size: 26px;
     line-height: math.div(31, 26);
     text-transform: uppercase;
 
@@ -35,18 +35,54 @@
 }
 
 
-.p-top-page{
+.p-top-page {
     padding-top: 35px;
+
     @media (max-width:$tablet-max) {
         padding-top: 25px;
     }
 }
 
-.top-border-page{
+.top-border-page {
     padding-top: 56px;
     border-top: 1px solid var(--alto);
+
     @media (max-width:$max-1150) {
         padding-top: 0;
         border-top: none;
+    }
+}
+
+
+.gallery {
+    margin-top: -80px;
+    max-height: 200px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+
+    &__inner {
+        padding: 0 15px;
+        margin: 0 -15px;
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        height: 100%;
+
+    }
+
+    img {
+        border-radius: 30px;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width:$smallTablet-max) {
+            border-radius: 20px;
+        }
+    }
+
+    @media (max-width:$smallTablet-max) {
+        margin-top: -50px;
     }
 }
