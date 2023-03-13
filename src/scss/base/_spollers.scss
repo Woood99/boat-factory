@@ -103,6 +103,7 @@
         padding: 20px 0;
         width: 69.5%;
         margin-left: auto;
+        text-align: left;
 
         span {
             @include fontHalvar;
@@ -111,7 +112,7 @@
             line-height: math.div(19, 16);
             text-transform: uppercase;
             padding-right: 30px;
-
+            text-align: left;
             @media (max-width:$smallTablet-max) {
                 font-size: 14px;
             }
@@ -178,14 +179,9 @@
                 fill: var(--red);
             }
         }
-
         @media (max-width:$max-1150) {
             width: 100%;
-            text-align: left;
-
-            span {
-                text-align: left;
-            }
+         
         }
     }
 

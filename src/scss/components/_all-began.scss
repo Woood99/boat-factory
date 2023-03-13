@@ -1,0 +1,193 @@
+.all-began {
+    margin-top: 60px;
+
+    &__container {
+        padding-left: 65px;
+        display: grid;
+        grid-template-columns: min-content min-content 1fr;
+        justify-content: space-between;
+        grid-gap: 15px;
+
+        @media (max-width:$max-1150) {
+            padding-left: 15px;
+            grid-template-columns: max-content 1fr;
+            grid-gap: 65px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-gap: 0;
+        }
+    }
+
+    &__options {
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: space-between;
+            grid-gap: 20px 24px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            justify-content: center;
+        }
+        @media (max-width:$mobile-max){
+             justify-content: start; 
+        }
+    }
+
+    &__option {
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        @media (max-width:$max-1150) {
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+
+        &:nth-child(1) {
+            span:nth-child(1) {
+                position: relative;
+                display: flex;
+                align-items: start;
+
+                &::after {
+                    content: '+';
+                    @include fontRoboto;
+                    font-weight: 700;
+                    color: var(--red);
+                    letter-spacing: 1;
+                    font-size: 40px;
+                    line-height: math.div(47, 40);
+                    margin-left: 5px;
+
+                }
+            }
+
+        }
+
+        &:nth-child(3) {
+            @media (max-width:$smallTablet-max) {
+                grid-column: 1/3;
+                grid-row: 2/3;
+            }
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        span:nth-child(1) {
+            @include fontRoboto;
+            color: #1c1a1d;
+            font-weight: 500;
+            font-size: 70px;
+            line-height: math.div(82, 70);
+            letter-spacing: 1px;
+
+            @media (max-width:$smallTablet-max) {
+                letter-spacing: 0.9px;
+                font-size: 0;
+
+                &::before {
+                    content: attr(data-text-mobile);
+                    font-size: 66px;
+                }
+            }
+        }
+
+        span:nth-child(2) {
+            color: var(--red);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: math.div(19, 14);
+
+            @media (max-width:$smallTablet-max) {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &__title {
+        color: var(--red);
+        transform: translateX(-62%);
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/2;
+            transform: translateX(0);
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-column: 1/-1;
+            margin-top: 50px;
+        }
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+
+        @media (max-width:$max-1150) {
+            grid-column: 2/3;
+
+            padding-right: 70px;
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding-right: 0;
+            grid-column: 1/-1;
+            margin-top: 24px;
+        }
+    }
+
+    &__path {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text {
+        color: var(--black);
+        font-size: 14px;
+        line-height: math.div(22, 14);
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__names {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            @include fontHalvar;
+            text-transform: uppercase;
+            color: var(--black);
+            font-size: 16px;
+            line-height: math.div(37, 16);
+            transition: color $transitionSpeed $transitionFunction;
+
+            &:hover {
+                color: var(--red);
+            }
+        }
+
+        @media (max-width:$smallTablet-max) {
+            margin-top: 15px;
+        }
+    }
+}
+
+.container {}
