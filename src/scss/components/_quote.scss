@@ -4,8 +4,6 @@
     &__container {}
 
     &__inner {
-        background-color: #f5f5f5;
-        border: 1px solid #d0d0d0;
         border-radius: 30px;
         padding: 60px;
 
@@ -78,12 +76,46 @@
         line-height: math.div(42, 33);
         color: #a7a7a7;
 
-        span {
-            color: var(--black);
-        }
-
         @media (max-width:$tablet-max) {
             margin: 20px 0 0 0;
+        }
+    }
+
+    &--white {
+        .quote {
+            &__inner {
+                background-color: #f5f5f5;
+                border: 1px solid #d0d0d0;
+            }
+
+            &__name {
+                color: var(--black);
+            }
+
+            &__text {
+                span {
+                    color: var(--black);
+                }
+            }
+        }
+    }
+
+    &--black {
+        .quote {
+            &__inner {
+                background-color: #1c1c1c;
+                border: none;
+            }
+
+            &__name {
+                color: var(--white);
+            }
+
+            &__text {
+                span {
+                    color: var(--white);
+                }
+            }
         }
     }
 }

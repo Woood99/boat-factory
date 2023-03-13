@@ -23,8 +23,63 @@
             @include('partials/hero-home.html')
             @include('partials/choice-obvious.html')
             @include('partials/all-began.html')
-            @include('partials/quote.html')
+            <section class="quote quote--white">
+                <div class="quote__container container">
+                    <div class="quote__inner">
+                        <div class="quote__top">
+                            <div class="quote__icon">
+                                <picture>
+                                    <source srcset="./img/avatar.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/avatar.jpg" width="132" height="132"
+                                        alt="Дмитрий Зюзин">
+                                </picture>
+                            </div>
+                            <div class="quote__info">
+                                <h3 class="quote__name">
+                                    Дмитрий Зюзин
+                                </h3>
+                                <span class="quote__post">
+                                    Сооснователь компании
+                                </span>
+                            </div>
+                        </div>
+                        <blockquote class="quote__text">
+                            «Мной, моими друзьями и коллегами проведено тысячи тестов катеров на воде, что 
+                            <span>позволило нам создать лодку, максимально приспособленную</span>
+                            для полноценной профессиональной и любительской рыбалки»
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
             @include('partials/video-block.html')
+            <section class="quote quote--black">
+                <div class="quote__container container">
+                    <div class="quote__inner">
+                        <div class="quote__top">
+                            <div class="quote__icon">
+                                <picture>
+                                    <source srcset="./img/avatar-2.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/avatar-2.jpg" width="132" height="132"
+                                        alt="Дмитрий Зюзин">
+                                </picture>
+                            </div>
+                            <div class="quote__info">
+                                <h3 class="quote__name">
+                                    адель шарафутдинов
+                                </h3>
+                                <span class="quote__post">
+                                    Сооснователь компании
+                                </span>
+                            </div>
+                        </div>
+                        <blockquote class="quote__text">
+                            «Мы пришли, чтобы доказать всем.
+                            В России <span>лучшее производство алюминиевых лодок</span> для рыбалки и активного отдыха.
+                            Нам удалось объединить <span>технологичность, практичность, комфорт и безопасность»</span>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
         </main>
         @include('partials/footer.html')
     </div>
