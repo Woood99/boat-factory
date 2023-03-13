@@ -20,6 +20,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/sliderBreakpoint */ "./src/js/modules/sliderBreakpoint.js");
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
+/* harmony import */ var _modules_video_block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/video-block */ "./src/js/modules/video-block.js");
+
 
 
 
@@ -56,6 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // =======================================================
 
   (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.hero-home__list', 1150);
+
+  // =======================================================
+
+  (0,_modules_video_block__WEBPACK_IMPORTED_MODULE_10__["default"])();
 
   // Ненужное
   // const maskMap = {
@@ -587,6 +593,51 @@ const throttle = function (func) {
   };
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (throttle);
+
+/***/ }),
+
+/***/ "./src/js/modules/video-block.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/video-block.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const videoBlock = () => {
+  const videos = document.querySelectorAll('.video-block');
+  if (!videos) return;
+  videos.forEach(video => {
+    const btn = video.querySelector('.video-block__button');
+    const content = video.querySelector('.video-block__video');
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const contentHTML = `
+                <iframe src="${btn.dataset.src}?autoplay=1&mute=1" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen></iframe>
+                </iframe>
+                `;
+      content.insertAdjacentHTML('beforeend', contentHTML);
+    });
+  });
+
+  // $('.play_btn').on('click', function (e) {
+  //     e.preventDefault();
+  //     let $block = $('.video-block');
+
+  //     $(this).hide();
+  //     $block.find('img.poster').hide();
+  //     $block.append('<iframe class="frameYouTube" src="https://www.youtube.com/embed/KtBLV-FF9Dk?autoplay=1&mute=1&start=25" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>');
+
+  //     return false;
+  // });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (videoBlock);
 
 /***/ }),
 

@@ -497,6 +497,39 @@
     </div>
 </section>
 
+            <section class="video-section">
+    <div class="container">
+        <div class="video-block">
+            <!-- в data-src указываем путь к видео по примеру (embed обязательно) -->
+            <button type="button" class="btn btn-reset video-block__button"
+                data-src="https://www.youtube.com/embed/KtBLV-FF9Dk">
+                <picture>
+                    <source srcset="./img/video-poster.webp" type="image/webp">
+                    <img loading="lazy" src="./img/video-poster.jpg" class="video-block__poster"
+                        alt="[ ПРОЦЕСС ПРОИЗВОДСТВА / СМОТРЕТЬ ВИДЕО ] ">
+                </picture>
+                <div class="video-block__video">
+
+                </div>
+                <div class="video-block__play">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#arrow-right-fill"></use>
+                    </svg>
+                </div>
+            </button>
+            <h3 class="video-block__title">
+                [ ПРОЦЕСС ПРОИЗВОДСТВА / СМОТРЕТЬ ВИДЕО ]
+            </h3>
+        </div>
+    </div>
+</section>
+
+
+<!-- <iframe src="https://www.youtube.com/embed/KtBLV-FF9Dk?autoplay=1&mute=1" frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen></iframe>
+</iframe> -->
+
         </main>
         <footer class="footer img-bg">
     <div class="footer__container container">
