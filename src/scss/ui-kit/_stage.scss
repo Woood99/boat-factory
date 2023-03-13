@@ -1,0 +1,51 @@
+.stage {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-gap: 0 28px;
+
+    &__icon {
+        grid-column: 1/2;
+        width: 48px;
+        height: 48px;
+        background-color: var(--white);
+        border-radius: 10px;
+        filter: drop-shadow(0px 14px 22px rgba(0, 0, 0, 0.02));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: var(--shark);
+        }
+
+        @media (max-width:$tablet-max) {
+            display: none;
+        }
+    }
+
+    &__info {
+        grid-column: 2/3;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        color: #111112;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: math.div(22, 16);
+
+    }
+
+    &__descr {
+        font-size: 14px;
+        line-height: math.div(20, 14);
+        color: #8E8E8E;
+    }
+
+    @media (max-width:$tablet-max) {
+        grid-template-columns: 1fr;
+    }
+}

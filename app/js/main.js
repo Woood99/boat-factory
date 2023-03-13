@@ -21,6 +21,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/sliderBreakpoint */ "./src/js/modules/sliderBreakpoint.js");
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
 /* harmony import */ var _modules_video_block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/video-block */ "./src/js/modules/video-block.js");
+/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/production-progress */ "./src/js/components/production-progress.js");
+/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_production_progress__WEBPACK_IMPORTED_MODULE_11__);
+
 
 
 
@@ -268,6 +271,34 @@ if (document.querySelector('.where-buy__map')) {
   }
   ymaps.ready(init);
 }
+
+/***/ }),
+
+/***/ "./src/js/components/production-progress.js":
+/*!**************************************************!*\
+  !*** ./src/js/components/production-progress.js ***!
+  \**************************************************/
+/***/ (() => {
+
+const productionProgress = document.querySelector('.production-progress');
+window.addEventListener('scroll', e => {
+  const headerHeight = document.querySelector('.header').offsetHeight;
+  const line = productionProgress.querySelector('.production-progress__line');
+  const finish = productionProgress.querySelector('.production-progress__finish');
+  const states = productionProgress.querySelectorAll('.state');
+  const topOffset = line.getBoundingClientRect().top + window.pageYOffset;
+  const topOffsetNegative = ~topOffset + 1 + headerHeight + 300;
+  const scrolled = window.pageYOffset;
+  if (scrolled > topOffsetNegative) line.style.setProperty('--height', `${topOffsetNegative + scrolled}px`);
+  topOffsetNegative + scrolled > 0 ? states[0].classList.add('active') : states[0].classList.remove('active');
+  topOffsetNegative + scrolled > 176 ? states[1].classList.add('active') : states[1].classList.remove('active');
+  topOffsetNegative + scrolled > 176 * 2 ? states[2].classList.add('active') : states[2].classList.remove('active');
+  topOffsetNegative + scrolled > 176 * 3 ? states[3].classList.add('active') : states[3].classList.remove('active');
+  topOffsetNegative + scrolled > 176 * 4 ? states[4].classList.add('active') : states[4].classList.remove('active');
+  topOffsetNegative + scrolled > 176 * 5 ? states[5].classList.add('active') : states[5].classList.remove('active');
+  topOffsetNegative + scrolled > 176 * 5 ? states[5].classList.add('active') : states[5].classList.remove('active');
+  topOffsetNegative + scrolled > 176 * 5 ? finish.classList.add('active') : finish.classList.remove('active');
+});
 
 /***/ }),
 

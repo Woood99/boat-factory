@@ -9,7 +9,7 @@ import './components/map';
 import sliderBreakpoint from './modules/sliderBreakpoint';
 import './components/sliders';
 import videoBlock from './modules/video-block';
-
+import './components/production-progress';
 
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
