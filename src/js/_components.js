@@ -10,7 +10,7 @@ import sliderBreakpoint from './modules/sliderBreakpoint';
 import './components/sliders';
 import videoBlock from './modules/video-block';
 import './components/production-progress';
-
+import './modules/dynamicAdapt';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();
@@ -76,4 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // };
 
     // customSelect(maskMap);
+
+
+
+
+
 })

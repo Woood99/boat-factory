@@ -23,6 +23,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_video_block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/video-block */ "./src/js/modules/video-block.js");
 /* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/production-progress */ "./src/js/components/production-progress.js");
 /* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_production_progress__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/dynamicAdapt */ "./src/js/modules/dynamicAdapt.js");
+/* harmony import */ var _modules_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__);
+
 
 
 
@@ -281,24 +284,26 @@ if (document.querySelector('.where-buy__map')) {
 /***/ (() => {
 
 const productionProgress = document.querySelector('.production-progress');
-window.addEventListener('scroll', e => {
-  const headerHeight = document.querySelector('.header').offsetHeight;
-  const line = productionProgress.querySelector('.production-progress__line');
-  const finish = productionProgress.querySelector('.production-progress__finish');
-  const states = productionProgress.querySelectorAll('.state');
-  const topOffset = line.getBoundingClientRect().top + window.pageYOffset;
-  const topOffsetNegative = ~topOffset + 1 + headerHeight + 300;
-  const scrolled = window.pageYOffset;
-  if (scrolled > topOffsetNegative) line.style.setProperty('--height', `${topOffsetNegative + scrolled}px`);
-  topOffsetNegative + scrolled > 0 ? states[0].classList.add('active') : states[0].classList.remove('active');
-  topOffsetNegative + scrolled > 176 ? states[1].classList.add('active') : states[1].classList.remove('active');
-  topOffsetNegative + scrolled > 176 * 2 ? states[2].classList.add('active') : states[2].classList.remove('active');
-  topOffsetNegative + scrolled > 176 * 3 ? states[3].classList.add('active') : states[3].classList.remove('active');
-  topOffsetNegative + scrolled > 176 * 4 ? states[4].classList.add('active') : states[4].classList.remove('active');
-  topOffsetNegative + scrolled > 176 * 5 ? states[5].classList.add('active') : states[5].classList.remove('active');
-  topOffsetNegative + scrolled > 176 * 5 ? states[5].classList.add('active') : states[5].classList.remove('active');
-  topOffsetNegative + scrolled > 176 * 5 ? finish.classList.add('active') : finish.classList.remove('active');
-});
+if (productionProgress) {
+  window.addEventListener('scroll', e => {
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    const line = productionProgress.querySelector('.production-progress__line');
+    const finish = productionProgress.querySelector('.production-progress__finish');
+    const states = productionProgress.querySelectorAll('.state');
+    const topOffset = line.getBoundingClientRect().top + window.pageYOffset;
+    const topOffsetNegative = ~topOffset + 1 + headerHeight + 300;
+    const scrolled = window.pageYOffset;
+    if (scrolled > topOffsetNegative) line.style.setProperty('--height', `${topOffsetNegative + scrolled}px`);
+    topOffsetNegative + scrolled > 0 ? states[0].classList.add('active') : states[0].classList.remove('active');
+    topOffsetNegative + scrolled > 176 ? states[1].classList.add('active') : states[1].classList.remove('active');
+    topOffsetNegative + scrolled > 176 * 2 ? states[2].classList.add('active') : states[2].classList.remove('active');
+    topOffsetNegative + scrolled > 176 * 3 ? states[3].classList.add('active') : states[3].classList.remove('active');
+    topOffsetNegative + scrolled > 176 * 4 ? states[4].classList.add('active') : states[4].classList.remove('active');
+    topOffsetNegative + scrolled > 176 * 5 ? states[5].classList.add('active') : states[5].classList.remove('active');
+    topOffsetNegative + scrolled > 176 * 5 ? states[5].classList.add('active') : states[5].classList.remove('active');
+    topOffsetNegative + scrolled > 176 * 5 ? finish.classList.add('active') : finish.classList.remove('active');
+  });
+}
 
 /***/ }),
 
@@ -312,37 +317,66 @@ window.addEventListener('scroll', e => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery__inner', {
-  slidesPerView: 1.25,
-  spaceBetween: 13,
-  autoHeight: true,
-  observer: true,
-  observeParents: true,
-  centeredSlides: true,
-  loop: true,
-  speed: 600,
-  breakpoints: {
-    450: {
-      slidesPerView: 1.8,
-      spaceBetween: 20
-    },
-    577: {
-      slidesPerView: 2.4,
-      spaceBetween: 20,
-      autoHeight: false
-    },
-    769: {
-      slidesPerView: 3.2,
-      autoHeight: false
-    },
-    1025: {
-      slidesPerView: 4.1,
-      autoHeight: false
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade]);
+if (document.querySelector('.gallery__inner')) {
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery__inner', {
+    slidesPerView: 1.25,
+    spaceBetween: 13,
+    autoHeight: true,
+    observer: true,
+    observeParents: true,
+    centeredSlides: true,
+    loop: true,
+    speed: 600,
+    breakpoints: {
+      450: {
+        slidesPerView: 1.8,
+        spaceBetween: 20
+      },
+      577: {
+        slidesPerView: 2.4,
+        spaceBetween: 20,
+        autoHeight: false
+      },
+      769: {
+        slidesPerView: 3.2,
+        autoHeight: false
+      },
+      1025: {
+        slidesPerView: 4.1,
+        autoHeight: false
+      }
     }
-  }
-});
+  });
+}
+if (document.querySelector('.boat-hero')) {
+  const container = document.querySelector('.boat-hero');
+  const nav = container.querySelector('.boat-hero__nav');
+  const body = container.querySelector('.boat-hero__body');
+  let navSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](nav, {
+    slidesPerView: 2.5,
+    spaceBetween: 12,
+    observer: true,
+    observeParents: true,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      569: {
+        slidesPerView: 3
+      }
+    }
+  });
+  let bodySlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](body, {
+    spaceBetween: 50,
+    observer: true,
+    observeParents: true,
+    effect: 'fade',
+    thumbs: {
+      swiper: navSlider
+    }
+  });
+}
 
 /***/ }),
 
@@ -520,6 +554,152 @@ const disableScroll = () => {
 
 /***/ }),
 
+/***/ "./src/js/modules/dynamicAdapt.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/dynamicAdapt.js ***!
+  \****************************************/
+/***/ (() => {
+
+"use strict";
+
+
+function DynamicAdapt(type) {
+  this.type = type;
+}
+DynamicAdapt.prototype.init = function () {
+  const _this = this;
+  // массив объектов
+  this.оbjects = [];
+  this.daClassname = "_dynamic_adapt_";
+  // массив DOM-элементов
+  this.nodes = document.querySelectorAll("[data-da]");
+  // наполнение оbjects объктами
+  for (let i = 0; i < this.nodes.length; i++) {
+    const node = this.nodes[i];
+    const data = node.dataset.da.trim();
+    const dataArray = data.split(",");
+    const оbject = {};
+    оbject.element = node;
+    оbject.parent = node.parentNode;
+    оbject.destination = document.querySelector(dataArray[0].trim());
+    оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
+    оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
+    оbject.index = this.indexInParent(оbject.parent, оbject.element);
+    this.оbjects.push(оbject);
+  }
+  this.arraySort(this.оbjects);
+  // массив уникальных медиа-запросов
+  this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
+    return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
+  }, this);
+  this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
+    return Array.prototype.indexOf.call(self, item) === index;
+  });
+  // навешивание слушателя на медиа-запрос
+  // и вызов обработчика при первом запуске
+  for (let i = 0; i < this.mediaQueries.length; i++) {
+    const media = this.mediaQueries[i];
+    const mediaSplit = String.prototype.split.call(media, ',');
+    const matchMedia = window.matchMedia(mediaSplit[0]);
+    const mediaBreakpoint = mediaSplit[1];
+    // массив объектов с подходящим брейкпоинтом
+    const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
+      return item.breakpoint === mediaBreakpoint;
+    });
+    matchMedia.addListener(function () {
+      _this.mediaHandler(matchMedia, оbjectsFilter);
+    });
+    this.mediaHandler(matchMedia, оbjectsFilter);
+  }
+};
+DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
+  if (matchMedia.matches) {
+    for (let i = 0; i < оbjects.length; i++) {
+      const оbject = оbjects[i];
+      оbject.index = this.indexInParent(оbject.parent, оbject.element);
+      this.moveTo(оbject.place, оbject.element, оbject.destination);
+    }
+  } else {
+    //for (let i = 0; i < оbjects.length; i++) {
+    for (let i = оbjects.length - 1; i >= 0; i--) {
+      const оbject = оbjects[i];
+      if (оbject.element.classList.contains(this.daClassname)) {
+        this.moveBack(оbject.parent, оbject.element, оbject.index);
+      }
+    }
+  }
+};
+// Функция перемещения
+DynamicAdapt.prototype.moveTo = function (place, element, destination) {
+  element.classList.add(this.daClassname);
+  if (place === 'last' || place >= destination.children.length) {
+    destination.insertAdjacentElement('beforeend', element);
+    return;
+  }
+  if (place === 'first') {
+    destination.insertAdjacentElement('afterbegin', element);
+    return;
+  }
+  destination.children[place].insertAdjacentElement('beforebegin', element);
+};
+// Функция возврата
+DynamicAdapt.prototype.moveBack = function (parent, element, index) {
+  element.classList.remove(this.daClassname);
+  if (parent.children[index] !== undefined) {
+    parent.children[index].insertAdjacentElement('beforebegin', element);
+  } else {
+    parent.insertAdjacentElement('beforeend', element);
+  }
+};
+// Функция получения индекса внутри родителя
+DynamicAdapt.prototype.indexInParent = function (parent, element) {
+  const array = Array.prototype.slice.call(parent.children);
+  return Array.prototype.indexOf.call(array, element);
+};
+// Функция сортировки массива по breakpoint и place 
+// по возрастанию для this.type = min
+// по убыванию для this.type = max
+DynamicAdapt.prototype.arraySort = function (arr) {
+  if (this.type === "min") {
+    Array.prototype.sort.call(arr, function (a, b) {
+      if (a.breakpoint === b.breakpoint) {
+        if (a.place === b.place) {
+          return 0;
+        }
+        if (a.place === "first" || b.place === "last") {
+          return -1;
+        }
+        if (a.place === "last" || b.place === "first") {
+          return 1;
+        }
+        return a.place - b.place;
+      }
+      return a.breakpoint - b.breakpoint;
+    });
+  } else {
+    Array.prototype.sort.call(arr, function (a, b) {
+      if (a.breakpoint === b.breakpoint) {
+        if (a.place === b.place) {
+          return 0;
+        }
+        if (a.place === "first" || b.place === "last") {
+          return 1;
+        }
+        if (a.place === "last" || b.place === "first") {
+          return -1;
+        }
+        return b.place - a.place;
+      }
+      return b.breakpoint - a.breakpoint;
+    });
+    return;
+  }
+};
+const da = new DynamicAdapt("max");
+da.init();
+
+/***/ }),
+
 /***/ "./src/js/modules/enableScroll.js":
 /*!****************************************!*\
   !*** ./src/js/modules/enableScroll.js ***!
@@ -673,19 +853,7 @@ const videoBlock = () => {
       content.insertAdjacentHTML('beforeend', contentHTML);
     });
   });
-
-  // $('.play_btn').on('click', function (e) {
-  //     e.preventDefault();
-  //     let $block = $('.video-block');
-
-  //     $(this).hide();
-  //     $block.find('img.poster').hide();
-  //     $block.append('<iframe class="frameYouTube" src="https://www.youtube.com/embed/KtBLV-FF9Dk?autoplay=1&mute=1&start=25" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>');
-
-  //     return false;
-  // });
 };
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (videoBlock);
 
 /***/ }),

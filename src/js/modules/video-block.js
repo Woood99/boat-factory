@@ -15,23 +15,6 @@ const videoBlock = () => {
             content.insertAdjacentHTML('beforeend', contentHTML);
         });
     })
-
-
-
-
-
-    // $('.play_btn').on('click', function (e) {
-    //     e.preventDefault();
-    //     let $block = $('.video-block');
-
-    //     $(this).hide();
-    //     $block.find('img.poster').hide();
-    //     $block.append('<iframe class="frameYouTube" src="https://www.youtube.com/embed/KtBLV-FF9Dk?autoplay=1&mute=1&start=25" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>');
-
-    //     return false;
-    // });
-
-
 };
 
 

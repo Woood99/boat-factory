@@ -121,11 +121,12 @@
     padding: 0 55px;
 
     &:hover {
-        background-color: var(--red-dark);
+        background-color: var(--black);
+        ;
     }
 
     &:focus {
-        background-color: var(--red-dark);
+        background-color: var(--black);
     }
 
     @media (max-width:$tablet-max) {
