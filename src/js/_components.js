@@ -36,7 +36,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // =======================================================
 
-    sliderBreakpoint('.hero-home__list', 1150);
+    const heroHomeSliderOptions = {
+        slidesPerView: 1.2,
+        spaceBetween: 15,
+        breakpoints: {
+            577: {
+                slidesPerView: 1.7,
+            },
+            750: {
+                slidesPerView: 2.2,
+            },
+        }
+    }
+    const newsSliderOptions = {
+        slidesPerView: 1.2,
+        spaceBetween: 15,
+        breakpoints: {
+            577: {
+                slidesPerView: 1.7,
+            },
+            750: {
+                slidesPerView: 2.2,
+            },
+        }
+    }
+    sliderBreakpoint('.hero-home__list', 1150, heroHomeSliderOptions);
+    sliderBreakpoint('.news__list', 1150, newsSliderOptions);
 
     // =======================================================
 

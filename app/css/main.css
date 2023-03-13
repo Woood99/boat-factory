@@ -1846,6 +1846,109 @@ a {
   transform: translateY(0);
 }
 
+.news-card {
+  -webkit-filter: drop-shadow(0px 10px 28px rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(0px 10px 28px rgba(0, 0, 0, 0.05));
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  -o-transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+.news-card__img {
+  padding-bottom: 42.5480769231%;
+  border-radius: 20px 20px 0px 0px;
+}
+.news-card__img img {
+  border-radius: 20px 20px 0px 0px;
+}
+.news-card__content {
+  padding: 25px 32px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  background-color: var(--white);
+  border-radius: 0 0 20px 20px;
+}
+@media (max-width: 768px) {
+  .news-card__content {
+    padding: 20px;
+  }
+}
+.news-card__descr {
+  grid-column: 1/-1;
+  color: var(--shark);
+  font-size: 14px;
+  line-height: 1.3571428571;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+.news-card__date {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  font-size: 14px;
+  line-height: 1.3571428571;
+  color: #bfbfbf;
+}
+.news-card__btn {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-column-align: end;
+  justify-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--red);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3333333333;
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
+}
+.news-card__btn svg {
+  margin-right: 10px;
+  width: 12px;
+  height: 14px;
+  fill: currentColor;
+}
+@media (max-width: 1024px) {
+  .news-card__btn {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .news-card__btn span {
+    display: none;
+  }
+}
+.news-card:hover {
+  -webkit-filter: drop-shadow(0px 9px 29px rgba(0, 0, 0, 0.04));
+  filter: drop-shadow(0px 9px 29px rgba(0, 0, 0, 0.04));
+}
+.news-card:hover .news-card__btn {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
 @media (max-width: 1024px) {
   .logo {
     width: 200px;
@@ -4158,6 +4261,59 @@ a {
   .video-block__play svg {
     width: 40px;
     height: 40px;
+  }
+}
+
+.news {
+  margin-top: 56px;
+}
+.news__list {
+  margin: -10px -15px -10px;
+  padding: 10px 15px 10px;
+}
+@media (min-width: 1151px) {
+  .news__list .swiper-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1151px) {
+  .news__list .swiper-slide {
+    width: 100%;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+  .news__list .swiper-slide:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.news__more {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 35px;
+  font-family: "Halvar Breitschrift", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 2.3125;
+  color: var(--black);
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.news__more:hover {
+  color: var(--red);
+}
+@media (max-width: 1024px) {
+  .news {
+    margin-top: 28px;
   }
 }
 
