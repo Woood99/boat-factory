@@ -31,8 +31,9 @@
         @media (max-width:$smallTablet-max) {
             justify-content: center;
         }
-        @media (max-width:$mobile-max){
-             justify-content: start; 
+
+        @media (max-width:$mobile-max) {
+            justify-content: start;
         }
     }
 
