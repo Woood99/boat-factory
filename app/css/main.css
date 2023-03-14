@@ -5398,6 +5398,11 @@ a {
     height: 100%;
   }
 }
+@media (max-width: 576px) {
+  .boat-above__boat {
+    max-width: 220px;
+  }
+}
 .boat-above__prompt--1 {
   top: 45%;
   right: 8%;
@@ -5495,7 +5500,8 @@ a {
 }
 @media (max-width: 576px) {
   .boat-above {
-    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 
