@@ -8,9 +8,9 @@ import validateForm from './components/validation';
 import './components/map';
 import sliderBreakpoint from './modules/sliderBreakpoint';
 import './components/sliders';
-import videoBlock from './modules/video-block';
+import videoBlock from './components/video-block';
 import './components/production-progress';
-import './modules/dynamicAdapt';
+import './components/dynamicAdapt';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();

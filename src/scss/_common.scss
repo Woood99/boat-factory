@@ -55,8 +55,6 @@
 
 
 .gallery {
-    margin-top: -80px;
-    max-height: 200px;
     position: relative;
     z-index: 3;
     overflow: hidden;
@@ -82,7 +80,25 @@
         }
     }
 
+}
+
+.gallery--home {
+    margin-top: -80px;
+    max-height: 200px;
+
     @media (max-width:$smallTablet-max) {
         margin-top: -50px;
+    }
+}
+
+.gallery--boat {
+    margin-top: 80px;
+
+    &--2 {
+        margin-top: 0;
+    }
+
+    @media (max-width:$smallTablet-max) {
+        margin-top: 55px;
     }
 }

@@ -84,7 +84,7 @@
     &--white {
         .quote {
             &__inner {
-                background-color: #f5f5f5;
+                background-color: var(--primary);
                 border: 1px solid #d0d0d0;
             }
 

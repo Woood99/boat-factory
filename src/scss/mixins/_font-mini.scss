@@ -13,3 +13,7 @@
 @mixin fontRoboto {
     font-family: 'Roboto', sans-serif;
 }
+
+@mixin fontOpenSans {
+    font-family: $fontFamily, sans-serif;
+}

@@ -1,5 +1,4 @@
 .nav {
-    overflow: auto;
 
     &__list {
         display: flex;
@@ -7,12 +6,69 @@
     }
 
     &__item {
+        position: relative;
+
         &:not(:last-child) {
             @include adaptiveValue("margin-right", 67, 25, 1318, 1024, 1);
         }
 
         &:last-child {
             margin-left: auto;
+        }
+
+        &:hover {
+            .nav__link {
+                color: var(--red);
+            }
+
+            .nav__item-dropdown {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+    }
+
+    &__item-dropdown {
+        transition: opacity $transitionSpeed $transitionFunction,
+            visibility $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+
+        background: rgba(245, 245, 245, 0.74);
+        border: 1px solid #eee;
+        box-shadow: 0px 5px 15px rgba(86, 72, 70, 0.05);
+        backdrop-filter: blur(3.5px);
+        border-radius: 11px;
+        padding: 13px 22px;
+
+        li {
+            @include fontOpenSans;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: math.div(22, 17);
+            color: var(--black);
+            white-space: nowrap;
+            transition: color $transitionSpeed $transitionFunction;
+
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+
+            &:hover {
+                color: var(--red);
+            }
+        }
+
+        @media (max-width:$max-1150) {
+            display: none;
         }
     }
 
@@ -24,10 +80,9 @@
         line-height: math.div(16, 14);
         transition: color $transitionSpeed $transitionFunction;
         outline: none;
-        &:hover {
-            color: var(--red);
-        }
-        &:focus{
+        padding: 8px 0;
+
+        &:focus {
             color: var(--red);
         }
     }

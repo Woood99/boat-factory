@@ -162,10 +162,12 @@
         line-height: math.div(29, 27);
         color: #dedede;
         text-transform: uppercase;
-
+        transition: color $transitionSpeed $transitionFunction;
         &.active {
-            margin-top: 45px;
             color: var(--red);
+        }
+        @media (max-width:$smallTablet-max){
+            margin-top: 45px; 
         }
     }
 }
@@ -183,35 +185,44 @@
     justify-content: center;
 
     img {
-
+        display: block;
+        transition: opacity $transitionSpeed $transitionFunction,
+        visibility $transitionSpeed $transitionFunction;
+        position: absolute;
         &:nth-child(1) {
             width: 22px;
             height: 22px;
         }
 
         &:nth-child(2) {
+            
             width: 26px;
             height: 26px;
-            display: none;
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
     &:first-child {
         align-items: start;
+        top: -2px;
     }
 
     &:last-child {
         align-items: end;
+        top: 2px;
     }
 
     &.active {
         img {
             &:nth-child(1) {
-                display: none;
+                opacity: 0;
+                visibility: hidden;
             }
 
             &:nth-child(2) {
-                display: block;
+                opacity: 1;
+                visibility: visible;
             }
         }
     }

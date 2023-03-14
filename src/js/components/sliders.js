@@ -7,8 +7,8 @@ import Swiper, {
 Swiper.use([Navigation, Pagination, Thumbs, EffectFade]);
 
 
-if (document.querySelector('.gallery__inner')) {
-    const swiper = new Swiper('.gallery__inner', {
+if (document.querySelector('.gallery--home .gallery__inner')) {
+    const swiper = new Swiper('.gallery--home .gallery__inner', {
         slidesPerView: 1.25,
         spaceBetween: 13,
         autoHeight: true,
@@ -39,6 +39,33 @@ if (document.querySelector('.gallery__inner')) {
     })
 }
 
+if (document.querySelector('.gallery--boat .gallery__inner')) {
+    const swiper = new Swiper('.gallery--boat .gallery__inner', {
+        slidesPerView: 1.25,
+        spaceBetween: 13,
+        autoHeight: true,
+        observer: true,
+        observeParents: true,
+        centeredSlides: true,
+        loop: true,
+        speed: 600,
+        breakpoints: {
+            569: {
+                slidesPerView: 1.9,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+                autoHeight: false,
+            },
+            1400: {
+                slidesPerView: 3.2,
+                autoHeight: false,
+            },
+        }
+    })
+}
 
 
 

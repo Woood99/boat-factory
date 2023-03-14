@@ -20,11 +20,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/sliderBreakpoint */ "./src/js/modules/sliderBreakpoint.js");
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
-/* harmony import */ var _modules_video_block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/video-block */ "./src/js/modules/video-block.js");
+/* harmony import */ var _components_video_block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/video-block */ "./src/js/components/video-block.js");
 /* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/production-progress */ "./src/js/components/production-progress.js");
 /* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_production_progress__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _modules_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/dynamicAdapt */ "./src/js/modules/dynamicAdapt.js");
-/* harmony import */ var _modules_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/dynamicAdapt */ "./src/js/components/dynamicAdapt.js");
+/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__);
 
 
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // =======================================================
 
-  (0,_modules_video_block__WEBPACK_IMPORTED_MODULE_10__["default"])();
+  (0,_components_video_block__WEBPACK_IMPORTED_MODULE_10__["default"])();
 
   // Ненужное
   // const maskMap = {
@@ -153,6 +153,152 @@ const burgerMenu = () => {
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (burgerMenu);
+
+/***/ }),
+
+/***/ "./src/js/components/dynamicAdapt.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/dynamicAdapt.js ***!
+  \*******************************************/
+/***/ (() => {
+
+"use strict";
+
+
+function DynamicAdapt(type) {
+  this.type = type;
+}
+DynamicAdapt.prototype.init = function () {
+  const _this = this;
+  // массив объектов
+  this.оbjects = [];
+  this.daClassname = "_dynamic_adapt_";
+  // массив DOM-элементов
+  this.nodes = document.querySelectorAll("[data-da]");
+  // наполнение оbjects объктами
+  for (let i = 0; i < this.nodes.length; i++) {
+    const node = this.nodes[i];
+    const data = node.dataset.da.trim();
+    const dataArray = data.split(",");
+    const оbject = {};
+    оbject.element = node;
+    оbject.parent = node.parentNode;
+    оbject.destination = document.querySelector(dataArray[0].trim());
+    оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
+    оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
+    оbject.index = this.indexInParent(оbject.parent, оbject.element);
+    this.оbjects.push(оbject);
+  }
+  this.arraySort(this.оbjects);
+  // массив уникальных медиа-запросов
+  this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
+    return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
+  }, this);
+  this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
+    return Array.prototype.indexOf.call(self, item) === index;
+  });
+  // навешивание слушателя на медиа-запрос
+  // и вызов обработчика при первом запуске
+  for (let i = 0; i < this.mediaQueries.length; i++) {
+    const media = this.mediaQueries[i];
+    const mediaSplit = String.prototype.split.call(media, ',');
+    const matchMedia = window.matchMedia(mediaSplit[0]);
+    const mediaBreakpoint = mediaSplit[1];
+    // массив объектов с подходящим брейкпоинтом
+    const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
+      return item.breakpoint === mediaBreakpoint;
+    });
+    matchMedia.addListener(function () {
+      _this.mediaHandler(matchMedia, оbjectsFilter);
+    });
+    this.mediaHandler(matchMedia, оbjectsFilter);
+  }
+};
+DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
+  if (matchMedia.matches) {
+    for (let i = 0; i < оbjects.length; i++) {
+      const оbject = оbjects[i];
+      оbject.index = this.indexInParent(оbject.parent, оbject.element);
+      this.moveTo(оbject.place, оbject.element, оbject.destination);
+    }
+  } else {
+    //for (let i = 0; i < оbjects.length; i++) {
+    for (let i = оbjects.length - 1; i >= 0; i--) {
+      const оbject = оbjects[i];
+      if (оbject.element.classList.contains(this.daClassname)) {
+        this.moveBack(оbject.parent, оbject.element, оbject.index);
+      }
+    }
+  }
+};
+// Функция перемещения
+DynamicAdapt.prototype.moveTo = function (place, element, destination) {
+  element.classList.add(this.daClassname);
+  if (place === 'last' || place >= destination.children.length) {
+    destination.insertAdjacentElement('beforeend', element);
+    return;
+  }
+  if (place === 'first') {
+    destination.insertAdjacentElement('afterbegin', element);
+    return;
+  }
+  destination.children[place].insertAdjacentElement('beforebegin', element);
+};
+// Функция возврата
+DynamicAdapt.prototype.moveBack = function (parent, element, index) {
+  element.classList.remove(this.daClassname);
+  if (parent.children[index] !== undefined) {
+    parent.children[index].insertAdjacentElement('beforebegin', element);
+  } else {
+    parent.insertAdjacentElement('beforeend', element);
+  }
+};
+// Функция получения индекса внутри родителя
+DynamicAdapt.prototype.indexInParent = function (parent, element) {
+  const array = Array.prototype.slice.call(parent.children);
+  return Array.prototype.indexOf.call(array, element);
+};
+// Функция сортировки массива по breakpoint и place 
+// по возрастанию для this.type = min
+// по убыванию для this.type = max
+DynamicAdapt.prototype.arraySort = function (arr) {
+  if (this.type === "min") {
+    Array.prototype.sort.call(arr, function (a, b) {
+      if (a.breakpoint === b.breakpoint) {
+        if (a.place === b.place) {
+          return 0;
+        }
+        if (a.place === "first" || b.place === "last") {
+          return -1;
+        }
+        if (a.place === "last" || b.place === "first") {
+          return 1;
+        }
+        return a.place - b.place;
+      }
+      return a.breakpoint - b.breakpoint;
+    });
+  } else {
+    Array.prototype.sort.call(arr, function (a, b) {
+      if (a.breakpoint === b.breakpoint) {
+        if (a.place === b.place) {
+          return 0;
+        }
+        if (a.place === "first" || b.place === "last") {
+          return 1;
+        }
+        if (a.place === "last" || b.place === "first") {
+          return -1;
+        }
+        return b.place - a.place;
+      }
+      return b.breakpoint - a.breakpoint;
+    });
+    return;
+  }
+};
+const da = new DynamicAdapt("max");
+da.init();
 
 /***/ }),
 
@@ -318,8 +464,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade]);
-if (document.querySelector('.gallery__inner')) {
-  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery__inner', {
+if (document.querySelector('.gallery--home .gallery__inner')) {
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery--home .gallery__inner', {
     slidesPerView: 1.25,
     spaceBetween: 13,
     autoHeight: true,
@@ -344,6 +490,33 @@ if (document.querySelector('.gallery__inner')) {
       },
       1025: {
         slidesPerView: 4.1,
+        autoHeight: false
+      }
+    }
+  });
+}
+if (document.querySelector('.gallery--boat .gallery__inner')) {
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery--boat .gallery__inner', {
+    slidesPerView: 1.25,
+    spaceBetween: 13,
+    autoHeight: true,
+    observer: true,
+    observeParents: true,
+    centeredSlides: true,
+    loop: true,
+    speed: 600,
+    breakpoints: {
+      569: {
+        slidesPerView: 1.9,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+        autoHeight: false
+      },
+      1400: {
+        slidesPerView: 3.2,
         autoHeight: false
       }
     }
@@ -526,6 +699,39 @@ const validateForm = () => {
 
 /***/ }),
 
+/***/ "./src/js/components/video-block.js":
+/*!******************************************!*\
+  !*** ./src/js/components/video-block.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const videoBlock = () => {
+  const videos = document.querySelectorAll('.video-block');
+  if (!videos) return;
+  videos.forEach(video => {
+    const btn = video.querySelector('.video-block__button');
+    const content = video.querySelector('.video-block__video');
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const contentHTML = `
+                <iframe src="${btn.dataset.src}?autoplay=1&mute=1" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen></iframe>
+                </iframe>
+                `;
+      content.insertAdjacentHTML('beforeend', contentHTML);
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (videoBlock);
+
+/***/ }),
+
 /***/ "./src/js/modules/disableScroll.js":
 /*!*****************************************!*\
   !*** ./src/js/modules/disableScroll.js ***!
@@ -551,152 +757,6 @@ const disableScroll = () => {
   document.body.style.top = `-${pagePosition}px`;
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (disableScroll);
-
-/***/ }),
-
-/***/ "./src/js/modules/dynamicAdapt.js":
-/*!****************************************!*\
-  !*** ./src/js/modules/dynamicAdapt.js ***!
-  \****************************************/
-/***/ (() => {
-
-"use strict";
-
-
-function DynamicAdapt(type) {
-  this.type = type;
-}
-DynamicAdapt.prototype.init = function () {
-  const _this = this;
-  // массив объектов
-  this.оbjects = [];
-  this.daClassname = "_dynamic_adapt_";
-  // массив DOM-элементов
-  this.nodes = document.querySelectorAll("[data-da]");
-  // наполнение оbjects объктами
-  for (let i = 0; i < this.nodes.length; i++) {
-    const node = this.nodes[i];
-    const data = node.dataset.da.trim();
-    const dataArray = data.split(",");
-    const оbject = {};
-    оbject.element = node;
-    оbject.parent = node.parentNode;
-    оbject.destination = document.querySelector(dataArray[0].trim());
-    оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
-    оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
-    оbject.index = this.indexInParent(оbject.parent, оbject.element);
-    this.оbjects.push(оbject);
-  }
-  this.arraySort(this.оbjects);
-  // массив уникальных медиа-запросов
-  this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
-    return '(' + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
-  }, this);
-  this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
-    return Array.prototype.indexOf.call(self, item) === index;
-  });
-  // навешивание слушателя на медиа-запрос
-  // и вызов обработчика при первом запуске
-  for (let i = 0; i < this.mediaQueries.length; i++) {
-    const media = this.mediaQueries[i];
-    const mediaSplit = String.prototype.split.call(media, ',');
-    const matchMedia = window.matchMedia(mediaSplit[0]);
-    const mediaBreakpoint = mediaSplit[1];
-    // массив объектов с подходящим брейкпоинтом
-    const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
-      return item.breakpoint === mediaBreakpoint;
-    });
-    matchMedia.addListener(function () {
-      _this.mediaHandler(matchMedia, оbjectsFilter);
-    });
-    this.mediaHandler(matchMedia, оbjectsFilter);
-  }
-};
-DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
-  if (matchMedia.matches) {
-    for (let i = 0; i < оbjects.length; i++) {
-      const оbject = оbjects[i];
-      оbject.index = this.indexInParent(оbject.parent, оbject.element);
-      this.moveTo(оbject.place, оbject.element, оbject.destination);
-    }
-  } else {
-    //for (let i = 0; i < оbjects.length; i++) {
-    for (let i = оbjects.length - 1; i >= 0; i--) {
-      const оbject = оbjects[i];
-      if (оbject.element.classList.contains(this.daClassname)) {
-        this.moveBack(оbject.parent, оbject.element, оbject.index);
-      }
-    }
-  }
-};
-// Функция перемещения
-DynamicAdapt.prototype.moveTo = function (place, element, destination) {
-  element.classList.add(this.daClassname);
-  if (place === 'last' || place >= destination.children.length) {
-    destination.insertAdjacentElement('beforeend', element);
-    return;
-  }
-  if (place === 'first') {
-    destination.insertAdjacentElement('afterbegin', element);
-    return;
-  }
-  destination.children[place].insertAdjacentElement('beforebegin', element);
-};
-// Функция возврата
-DynamicAdapt.prototype.moveBack = function (parent, element, index) {
-  element.classList.remove(this.daClassname);
-  if (parent.children[index] !== undefined) {
-    parent.children[index].insertAdjacentElement('beforebegin', element);
-  } else {
-    parent.insertAdjacentElement('beforeend', element);
-  }
-};
-// Функция получения индекса внутри родителя
-DynamicAdapt.prototype.indexInParent = function (parent, element) {
-  const array = Array.prototype.slice.call(parent.children);
-  return Array.prototype.indexOf.call(array, element);
-};
-// Функция сортировки массива по breakpoint и place 
-// по возрастанию для this.type = min
-// по убыванию для this.type = max
-DynamicAdapt.prototype.arraySort = function (arr) {
-  if (this.type === "min") {
-    Array.prototype.sort.call(arr, function (a, b) {
-      if (a.breakpoint === b.breakpoint) {
-        if (a.place === b.place) {
-          return 0;
-        }
-        if (a.place === "first" || b.place === "last") {
-          return -1;
-        }
-        if (a.place === "last" || b.place === "first") {
-          return 1;
-        }
-        return a.place - b.place;
-      }
-      return a.breakpoint - b.breakpoint;
-    });
-  } else {
-    Array.prototype.sort.call(arr, function (a, b) {
-      if (a.breakpoint === b.breakpoint) {
-        if (a.place === b.place) {
-          return 0;
-        }
-        if (a.place === "first" || b.place === "last") {
-          return 1;
-        }
-        if (a.place === "last" || b.place === "first") {
-          return -1;
-        }
-        return b.place - a.place;
-      }
-      return b.breakpoint - a.breakpoint;
-    });
-    return;
-  }
-};
-const da = new DynamicAdapt("max");
-da.init();
 
 /***/ }),
 
@@ -822,39 +882,6 @@ const throttle = function (func) {
   };
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (throttle);
-
-/***/ }),
-
-/***/ "./src/js/modules/video-block.js":
-/*!***************************************!*\
-  !*** ./src/js/modules/video-block.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const videoBlock = () => {
-  const videos = document.querySelectorAll('.video-block');
-  if (!videos) return;
-  videos.forEach(video => {
-    const btn = video.querySelector('.video-block__button');
-    const content = video.querySelector('.video-block__video');
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      const contentHTML = `
-                <iframe src="${btn.dataset.src}?autoplay=1&mute=1" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen></iframe>
-                </iframe>
-                `;
-      content.insertAdjacentHTML('beforeend', contentHTML);
-    });
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (videoBlock);
 
 /***/ }),
 
