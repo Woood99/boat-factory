@@ -1,6 +1,6 @@
 .burger {
-    --burger-width: 30px;
-    --burger-height: 18px;
+    --burger-width: 29px;
+    --burger-height: 10px;
     --burger-line-height: 2px;
 
     position: relative;
@@ -12,7 +12,9 @@
     background-color: transparent;
     cursor: pointer;
     flex: 0 0 var(--burger-width);
-    &::before,
+
+
+
     &::after {
         content: "";
         position: absolute;
@@ -20,12 +22,11 @@
         width: 100%;
         height: var(--burger-line-height);
         background-color: currentColor;
-        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+        transition: transform 0.4s ease-in-out, top 0.4s ease-in-out;
+        border-radius: 5px;
     }
 
-    &::before {
-        top: 0;
-    }
+
 
     &::after {
         top: calc(100% - var(--burger-line-height));
@@ -34,30 +35,28 @@
     &__line {
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 0;
         width: 100%;
         height: var(--burger-line-height);
         background-color: currentColor;
         transform: translateY(-50%);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.4s ease-in-out, top 0.4s ease-in-out;
+        border-radius: 5px;
     }
 
     &--active {
-        &::before {
-            top: 50%;
-            transform: rotate(45deg);
-            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-        }
 
-        &::after {
-            top: 50%;
-            transform: rotate(-45deg);
-            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+
+        .burger {
+            &::after {
+                top: 50%;
+                transform: rotate(-45deg);
+            }
         }
 
         .burger__line {
-            transform: scale(0);
-            transition: transform 0.3s ease-in-out;
+            transform: rotate(45deg);
+            top: 50%;
         }
     }
 }

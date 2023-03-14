@@ -140,11 +140,11 @@
         outline: none;
 
         &:hover {
-            color: var(--red);
+            color: #F5A39F;
         }
 
         &:focus {
-            color: var(--red);
+            color: #F5A39F;
         }
 
         @media (max-width:$tablet-max) {
