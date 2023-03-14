@@ -18,7 +18,7 @@
 
 <body class="page__body">
     <div class="site-container">
-        <header class="header">
+        <header class="header fix-block">
     <div class="header__container container grid">
         <a href="#" class="header__logo logo">
             <picture>
@@ -27,80 +27,6 @@
             </picture>
         </a>
         <nav class="header__nav nav" data-menu>
-            <!-- <ul class="nav__list list-reset">
-                <li class="nav__item">
-                    <a href="#" class="nav__link">О нас</a>
-                    <ul class="nav__item-dropdown list-reset">
-                        <li>
-                            <a href="#">
-                                Компания
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Производство
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Новости и события
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Вопрос-ответ
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Катера</a>
-                    <ul class="nav__item-dropdown list-reset">
-                        <li>
-                            <a href="#">
-                                ФЛ—55
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ФЛ—47
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                ФЛ—70
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Как купить</a>
-                    <ul class="nav__item-dropdown list-reset">
-                        <li>
-                            <a href="#">
-                                Где купить
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Гарантия
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Как стать дилером
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-            </ul> -->
-
-
-
-
-
             <ul data-one-spoller data-spollers="1150,max" class="nav__list list-reset">
                 <li class="nav__item">
                     <a href="#" data-spoller class="nav__link">
@@ -366,7 +292,7 @@
                         </p>
                     </div>
                     <div class="feedback__btns">
-                        <button type="submit" class="btn btn-reset btn-third feedback__btn">Заказать звонок</button>
+                        <button type="submit" class="btn btn-reset btn-third feedback__btn" data-popup-path="request-call">Заказать звонок</button>
                         <button type="submit" class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
                     </div>
                 </div>
@@ -520,6 +446,51 @@
 </footer>
 
     </div>
+    <div class="popup">
+    <div class="popup__container" role="dialog" aria-modal="true" data-popup-target="request-call">
+        <button class="btn-reset js-popup-close popup__close" aria-label="Закрыть модальное окно"></button>
+        <div class="popup__content request-call">
+            <h3 class="request-call__title">
+                Заказать звонок
+            </h3>
+            <p class="request-call__descr">
+                Оставьте свои контакты, свяжемся с вами
+                в самое ближийшее время
+            </p>
+            <form action="#" class="request-call__form form-primary">
+
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Имя</span>
+                    <input type="text" name="Имя"
+                        class="input-reset input-primary label-primary__input--name label-primary__input"
+                        placeholder="">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Номер телефона</span>
+                    <input type="tel" name="Номер телефона"
+                        class="input-reset input-primary label-primary__input--tel label-primary__input"
+                        placeholder="+7">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Сообщение или вопрос</span>
+                    <textarea class="input-reset input-primary textarea-primary label-primary__input"
+                        placeholder=""></textarea>
+                </label>
+                <div class="form-primary__agree checkbox">
+                    <input id="c_2" class="checkbox__input" type="checkbox" value="1">
+                    <label for="c_2" class="checkbox__label">
+                        <span class="checkbox__text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <button class="btn btn-reset btn-fourth form-primary__btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 
 

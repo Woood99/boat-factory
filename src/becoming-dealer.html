@@ -102,8 +102,8 @@
                             </p>
                         </div>
                         <div class="feedback__btns">
-                            <button type="submit" class="btn btn-reset btn-third feedback__btn">Заказать звонок</button>
-                            <button type="submit"
+                            <button type="button" class="btn btn-reset btn-third feedback__btn" data-popup-path="request-call">Заказать звонок</button>
+                            <button type="button"
                                 class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
                         </div>
                     </div>
@@ -112,6 +112,7 @@
         </main>
         @include('partials/footer.html')
     </div>
+    @include('partials/popup.html')
 </body>
 
 

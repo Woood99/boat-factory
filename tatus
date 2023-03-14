@@ -1,0 +1,137 @@
+[33mcommit 1a73a467c6b538ac30de00a19256d3ec4e2eccc3[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Tue Mar 14 22:25:23 2023 +0300
+
+    fix fl-47
+
+[33mcommit 467943fa7fae0869be81c1537e6a98e52be10590[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Tue Mar 14 22:20:27 2023 +0300
+
+    added fl-47 and fl-70 page
+
+[33mcommit 0da04e87e0711973306a7d1e52dfa0fcb08bf91e[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Tue Mar 14 22:03:18 2023 +0300
+
+    added fl-55
+
+[33mcommit 5731fd0a284930d3ef876ee7f807d6bfd6dec8cb[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Tue Mar 14 21:48:45 2023 +0300
+
+    fix bugs
+
+[33mcommit 252a9b8ce772dcdca2b0ba94379467b974f7e11f[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Tue Mar 14 19:48:01 2023 +0300
+
+    finished boat page
+
+[33mcommit 1fc20fcda733d23d00d1d85ea17b096a9695c47f[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Tue Mar 14 13:42:48 2023 +0300
+
+    added nav-dropdown and changes boat page
+
+[33mcommit de5b8823e5374e4d7bddbc5095062f7c18ef10dc[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Tue Mar 14 01:23:21 2023 +0300
+
+    added boat-hero section
+
+[33mcommit 2dfb5c5fcd5f4b447e5a10ee3044c689ecdd19af[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Mon Mar 13 19:08:28 2023 +0300
+
+    finished production section
+
+[33mcommit 1764fd173f383b3dcd1672ac96004cd9911b4b78[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Mon Mar 13 13:39:32 2023 +0300
+
+    finished news section
+
+[33mcommit 19c21fee1a7368e2b53b04839a9ae77719a43a1f[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Mon Mar 13 12:44:50 2023 +0300
+
+    added white and black style for quote section
+
+[33mcommit f37a394ca556a25bded90efd8c2b376b50c666fd[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Mon Mar 13 12:13:17 2023 +0300
+
+    finished video section
+
+[33mcommit a3c1f79ac44f7980779a271afb49677f16e2b135[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Mon Mar 13 11:21:01 2023 +0300
+
+    finished quote section
+
+[33mcommit 3e06f670f3ca2cef4e1a4ec9b45107fe1fde6a94[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Mon Mar 13 10:44:35 2023 +0300
+
+    finished all-began section
+
+[33mcommit 68c98488ea567bf8ef298087a4825e9dc3e18d0c[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Mon Mar 13 01:42:59 2023 +0300
+
+    finished choice-obvious section
+
+[33mcommit 860be98b39e2e9a373ab960602a89a4ac29838de[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sun Mar 12 21:10:12 2023 +0300
+
+    finished hero-home section
+
+[33mcommit 69fd2d441663bd8c9ea4b38e27e8c850556c6e4b[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sun Mar 12 17:31:08 2023 +0300
+
+    finished delivery page
+
+[33mcommit 42db3444ead060865857bfe4c4b0a9cd6993de0a[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sun Mar 12 17:06:48 2023 +0300
+
+    finished guarantee page
+
+[33mcommit b179e90cc3e23a7e1b0fa6223dfbc6a316f14a25[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sun Mar 12 14:49:38 2023 +0300
+
+    finished becoming dealer page
+
+[33mcommit 576add3bd9da02fe330da7b3487111ff3916bd91[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sun Mar 12 12:56:53 2023 +0300
+
+    added becoming dealer pages and fix bugs
+
+[33mcommit 71dffaa7a90822d80b36238a69d90bd068dedbd4[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sat Mar 11 18:19:01 2023 +0300
+
+    fix fonts
+
+[33mcommit 06525069fcdab00b4f1630ba62bde48b8cd9ddf4[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sat Mar 11 17:14:30 2023 +0300
+
+    finished article page
+
+[33mcommit 768600dfecbb11e5795201f8b3d5b81a412e967c[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sat Mar 11 14:46:50 2023 +0300
+
+    finished news-event page
+
+[33mcommit 64d124d324e82769eebac9d165ee22176d983a82[m
+Author: Sergey Stryuchkov <serega.stryuchkov@gmail.com>
+Date:   Sat Mar 11 00:48:34 2023 +0300
+
+    finished where-buy page

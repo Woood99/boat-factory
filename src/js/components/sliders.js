@@ -7,66 +7,89 @@ import Swiper, {
 Swiper.use([Navigation, Pagination, Thumbs, EffectFade]);
 
 
-if (document.querySelector('.gallery--home .gallery__inner')) {
-    const swiper = new Swiper('.gallery--home .gallery__inner', {
-        slidesPerView: 1.25,
-        spaceBetween: 13,
-        autoHeight: true,
-        observer: true,
-        observeParents: true,
-        centeredSlides: true,
-        loop: true,
-        speed: 600,
-        breakpoints: {
-            450: {
-                slidesPerView: 1.8,
-                spaceBetween: 20,
+
+
+const galleryHomeSlider = document.querySelectorAll('.gallery--home');
+if (galleryHomeSlider) {
+    galleryHomeSlider.forEach(el => {
+        const section = el;
+        const slider = section.querySelector('.gallery__inner');
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1.25,
+            spaceBetween: 13,
+            autoHeight: true,
+            observer: true,
+            observeParents: true,
+            centeredSlides: true,
+            loop: true,
+            speed: 600,
+            navigation: {
+                nextEl: slider.closest('.gallery--home').querySelector('.nav-primary-arrow--next'),
+                prevEl: slider.closest('.gallery--home').querySelector('.nav-primary-arrow--prev'),
             },
-            577: {
-                slidesPerView: 2.4,
-                spaceBetween: 20,
-                autoHeight: false,
+            breakpoints: {
+                450: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 20,
+                },
+                577: {
+                    slidesPerView: 2.4,
+                    spaceBetween: 20,
+                    autoHeight: false,
+                },
+                769: {
+                    slidesPerView: 3.2,
+                    autoHeight: false,
+                },
+                1025: {
+                    slidesPerView: 4.1,
+                    autoHeight: false,
+                },
+            }
+
+        })
+    })
+}
+const gallerySlider = document.querySelectorAll('.gallery-slider');
+if (gallerySlider) {
+    gallerySlider.forEach(el => {
+        const section = el;
+        const slider = section.querySelector('.gallery__inner');
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1.25,
+            spaceBetween: 13,
+            autoHeight: true,
+            observer: true,
+            observeParents: true,
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: 50,
+            speed: 600,
+            navigation: {
+                nextEl: slider.closest('.gallery-slider').querySelector('.nav-primary-arrow--next'),
+                prevEl: slider.closest('.gallery-slider').querySelector('.nav-primary-arrow--prev'),
             },
-            769: {
-                slidesPerView: 3.2,
-                autoHeight: false,
-            },
-            1025: {
-                slidesPerView: 4.1,
-                autoHeight: false,
-            },
-        }
+            breakpoints: {
+                569: {
+                    slidesPerView: 1.9,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                    autoHeight: false,
+                },
+                1400: {
+                    slidesPerView: 3.2,
+                    autoHeight: false,
+                },
+            }
+        })
     })
 }
 
-if (document.querySelector('.gallery--boat .gallery__inner')) {
-    const swiper = new Swiper('.gallery--boat .gallery__inner', {
-        slidesPerView: 1.25,
-        spaceBetween: 13,
-        autoHeight: true,
-        observer: true,
-        observeParents: true,
-        centeredSlides: true,
-        loop: true,
-        loopedSlides: 50,
-        speed: 600,
-        breakpoints: {
-            569: {
-                slidesPerView: 1.9,
-                spaceBetween: 20,
-            },
-            1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 20,
-                autoHeight: false,
-            },
-            1400: {
-                slidesPerView: 3.2,
-                autoHeight: false,
-            },
-        }
-    })
-}
+
+
 
 
 

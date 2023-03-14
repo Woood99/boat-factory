@@ -13,7 +13,7 @@ import './components/production-progress';
 import './components/dynamicAdapt';
 import './components/galleryPhoto';
 import tabs from './modules/tabs';
-
+import popup from './modules/popup';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();
@@ -70,6 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // =======================================================
 
     videoBlock();
+
+    // =======================================================
+
+    const requestCall = new popup();
 
     // Ненужное
     // const maskMap = {

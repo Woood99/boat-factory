@@ -84,7 +84,13 @@
                 grid-column: 1/-1;
                 margin-bottom: 27px;
                 overflow-x: auto;
+
+                grid-template-columns: repeat(3, max-content);
+                justify-content: space-between;
+                grid-gap: 25px;
             }
+
+            @media (max-width:$mobile-max) {}
 
             .boat-hero__option {
                 @media (max-width:$smallTablet-max) {
@@ -341,5 +347,3 @@
     }
 
 }
-
-

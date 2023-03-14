@@ -184,7 +184,8 @@
                                 Стоимость в базовой комплектации
                             </div>
                             <div class="boat-hero__btns">
-                                <button type="button" class="btn btn-reset btn-third boat-hero__btn">Заказать
+                                <button type="button" class="btn btn-reset btn-third boat-hero__btn"
+                                    data-popup-path="request-call">Заказать
                                     звонок</button>
                                 <button type="button"
                                     class="btn btn-reset btn-secondary boat-hero__btn">Конфигуратор</button>
@@ -195,7 +196,7 @@
                 </div>
             </section>
 
-            <section class="container-big gallery gallery--boat">
+            <section class="container-big gallery gallery--boat gallery-slider">
                 <div class="container">
                     <div class="swiper gallery__inner">
                         <div class="swiper-wrapper gallery-photo">
@@ -241,20 +242,18 @@
                                         alt="Картинка">
                                 </picture>
                             </a>
-                            <a href="./img/gallery/6.jpg" class="swiper-slide">
-                                <picture>
-                                    <source srcset="./img/gallery/6.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169"
-                                        alt="Картинка">
-                                </picture>
-                            </a>
-                            <a href="./img/gallery/6.jpg" class="swiper-slide">
-                                <picture>
-                                    <source srcset="./img/gallery/6.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169"
-                                        alt="Картинка">
-                                </picture>
-                            </a>
+                        </div>
+                    </div>
+                    <div class="gallery__navigation">
+                        <div class="nav-primary-arrow nav-primary-arrow--prev">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                        <div class="nav-primary-arrow nav-primary-arrow--next">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -449,7 +448,7 @@
                 </div>
             </section>
 
-            <section class="container-big gallery gallery--boat gallery--boat-2">
+            <section class="container-big gallery gallery--boat gallery--boat-2 gallery-slider">
                 <div class="container">
                     <div class="swiper gallery__inner">
                         <div class="swiper-wrapper gallery-photo">
@@ -495,6 +494,18 @@
                                         alt="Картинка">
                                 </picture>
                             </a>
+                        </div>
+                    </div>
+                    <div class="gallery__navigation">
+                        <div class="nav-primary-arrow nav-primary-arrow--prev">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                        <div class="nav-primary-arrow nav-primary-arrow--next">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -666,7 +677,8 @@
                             Стоимость в базовой комплектации
                         </div>
                         <div class="boat-info__btns">
-                            <button type="button" class="btn btn-reset btn-third boat-info__btn">
+                            <button type="button" class="btn btn-reset btn-third boat-info__btn"
+                                data-popup-path="request-call">
                                 Заказать звонок
                             </button>
                             <button type="button" class="btn btn-reset btn-secondary boat-info__btn">
@@ -681,6 +693,7 @@
         </main>
         @include('partials/footer.html')
     </div>
+    @include('partials/popup.html')
 </body>
 
 

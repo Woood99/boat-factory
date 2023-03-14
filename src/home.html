@@ -236,8 +236,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="gallery__navigation">
+                        <div class="nav-primary-arrow nav-primary-arrow--prev">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                        <div class="nav-primary-arrow nav-primary-arrow--next">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-
             </section>
             @include('partials/all-began.html')
             <section class="quote quote--white">
@@ -342,7 +353,7 @@
                                 <div class="production-progress__stage stage">
                                     <div class="stage__icon">
                                         <svg>
-                                            <use xlink:href="img/sprite.svg#scissors"></use>
+                                            <use xlink:href="img/sprite.svg#settings"></use>
                                         </svg>
                                     </div>
                                     <div class="stage__info">
@@ -359,7 +370,7 @@
                                 <div class="production-progress__stage stage">
                                     <div class="stage__icon">
                                         <svg>
-                                            <use xlink:href="img/sprite.svg#scissors"></use>
+                                            <use xlink:href="img/sprite.svg#sea"></use>
                                         </svg>
                                     </div>
                                     <div class="stage__info">
@@ -376,7 +387,7 @@
                                 <div class="production-progress__stage stage">
                                     <div class="stage__icon">
                                         <svg>
-                                            <use xlink:href="img/sprite.svg#scissors"></use>
+                                            <use xlink:href="img/sprite.svg#wires"></use>
                                         </svg>
                                     </div>
                                     <div class="stage__info">
@@ -393,7 +404,7 @@
                                 <div class="production-progress__stage stage">
                                     <div class="stage__icon">
                                         <svg>
-                                            <use xlink:href="img/sprite.svg#scissors"></use>
+                                            <use xlink:href="img/sprite.svg#other"></use>
                                         </svg>
                                     </div>
                                     <div class="stage__info">
@@ -540,6 +551,7 @@
         </main>
         @include('partials/footer.html')
     </div>
+    @include('partials/popup.html')
 </body>
 
 

@@ -8,6 +8,7 @@ Swiper.use([Navigation, Pagination]);
 /**
  * @param {string} containerSelector container selector (where class swiper)
  * @param {number} breakpoint screen resolution
+ * @param {object} options options slider
  */
 const sliderBreakpoint = (containerSelector, breakpoint, options) => {
     if (document.querySelector(containerSelector)) {

@@ -69,7 +69,15 @@
         height: 100%;
 
     }
-
+    &__navigation {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        @media (max-width:$tablet-max){
+            display: none;
+        }
+    }
     img {
         border-radius: 30px;
         width: 100%;
@@ -84,11 +92,13 @@
 
 .gallery--home {
     margin-top: -80px;
-    max-height: 200px;
-
+    .gallery__inner{
+        max-height: 200px;
+    }
     @media (max-width:$smallTablet-max) {
         margin-top: -50px;
     }
+
 }
 
 .gallery--boat {
@@ -96,7 +106,7 @@
 
     &.gallery--boat-2 {
         margin-top: 0;
-       
+
     }
 
     .lg-counter {
@@ -111,6 +121,30 @@
 
 
 
-.lg-counter{
+.lg-counter {
     display: none;
+}
+
+
+
+
+.nav-primary-arrow {
+    cursor: pointer;
+
+    svg {
+        width: 45px;
+        height: 12px;
+        fill: var(--black);
+    }
+
+    &--prev {
+        margin-right: 28px;
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &--next {}
+    
 }
