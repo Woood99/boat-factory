@@ -1,22 +1,67 @@
 .tabs {
-    &__navigation {
-        display: flex;
-    }
 
-    &__title {
-        border: 1px solid #eee;
-        padding: 10px 15px;
-        border-radius: 5px;
+    @media (max-width:$tablet-max) {
+        &__navigation {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--white);
+            border-radius: 19px;
+            padding: 5px;
+        }
 
-        &._tab-active {
-            border: 1px solid #000;
+        &__title {
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            padding: 15px 40px;
+            color: #232323;
+            border-radius: 19px;
+
+            &._tab-active {
+                background-color: #232323;
+                color: var(--white);
+            }
+        }
+
+        &__content {
+            margin-top: 50px;
+
+            @media (max-width:$smallTablet-max) {
+                margin-top: 30px;
+            }
+        }
+
+        &__body {
+            .boat-info__title {
+                display: none;
+            }
         }
     }
 
-    &__content {
-        border: 1px solid #eee;
-        padding: 10px 15px;
+    @media (min-width:$tablet-min) {
+        &__title {}
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__body {
+
+            &:nth-child(1) {
+                padding-right: 65px;
+                border-right: 1px solid var(--black);
+            }
+
+            &:nth-child(2) {
+                padding-left: 65px;
+            }
+        }
     }
 
-    &__body {}
+    @media (max-width:$mobile-max) {
+        &__title {
+            font-size: 12px;
+            padding: 12px 20px;
+        }
+    }
 }

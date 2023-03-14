@@ -53,7 +53,7 @@
             @include fontOpenSans;
             font-weight: 500;
             font-size: 14px;
-            line-height: math.div(22, 17);
+            line-height: math.div(22, 14);
             color: var(--black);
             white-space: nowrap;
             transition: color $transitionSpeed $transitionFunction;

@@ -20,18 +20,17 @@
     <div class="site-container">
         @include('partials/header.html')
         <main class="main">
-            <div class="boat-hero p-top-page">
+            <section class="boat-hero p-top-page">
                 <div class="boat-hero__container container">
 
 
 
                     <div class="boat-hero__left">
                         <div class="swiper boat-hero__body boat-hero-body">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper gallery-photo">
 
 
-
-                                <div class="swiper-slide boat-hero-body__slide">
+                                <a href="./img/boat-hero-slide-1.png" class="swiper-slide boat-hero-body__slide">
                                     <div class="boat-hero-body__img ibg">
                                         <picture>
                                             <source srcset="./img/boat-hero-slide-1.webp" type="image/webp">
@@ -39,8 +38,8 @@
                                                 alt="">
                                         </picture>
                                     </div>
-                                </div>
-                                <div class="swiper-slide boat-hero-body__slide">
+                                </a>
+                                <a href="./img/boat-hero-slide-2.png" class="swiper-slide boat-hero-body__slide">
                                     <div class="boat-hero-body__img ibg">
                                         <picture>
                                             <source srcset="./img/boat-hero-slide-2.webp" type="image/webp">
@@ -48,8 +47,8 @@
                                                 alt="">
                                         </picture>
                                     </div>
-                                </div>
-                                <div class="swiper-slide boat-hero-body__slide">
+                                </a>
+                                <a href="./img/boat-hero-slide-3.png" class="swiper-slide boat-hero-body__slide">
                                     <div class="boat-hero-body__img ibg">
                                         <picture>
                                             <source srcset="./img/boat-hero-slide-3.webp" type="image/webp">
@@ -57,7 +56,7 @@
                                                 alt="">
                                         </picture>
                                     </div>
-                                </div>
+                                </a>
 
 
 
@@ -68,11 +67,12 @@
 
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide boat-hero-nav__slide">
+
                                     <div class="boat-hero-nav__img ibg">
                                         <picture>
                                             <source srcset="./img/boat-hero-slide-1.webp" type="image/webp">
-                                            <img loading="lazy" src="./img/boat-hero-slide-1.png" class="image" width=""
-                                                height="" alt="">
+                                            <img loading="lazy" src="./img/boat-hero-slide-1.png" width="" height=""
+                                                alt="">
                                         </picture>
                                     </div>
                                 </div>
@@ -80,8 +80,8 @@
                                     <div class="boat-hero-nav__img ibg">
                                         <picture>
                                             <source srcset="./img/boat-hero-slide-2.webp" type="image/webp">
-                                            <img loading="lazy" src="./img/boat-hero-slide-2.png" class="image" width=""
-                                                height="" alt="">
+                                            <img loading="lazy" src="./img/boat-hero-slide-2.png" width="" height=""
+                                                alt="">
                                         </picture>
                                     </div>
                                 </div>
@@ -89,8 +89,8 @@
                                     <div class="boat-hero-nav__img ibg">
                                         <picture>
                                             <source srcset="./img/boat-hero-slide-3.webp" type="image/webp">
-                                            <img loading="lazy" src="./img/boat-hero-slide-3.png" class="image" width=""
-                                                height="" alt="">
+                                            <img loading="lazy" src="./img/boat-hero-slide-3.png" width="" height=""
+                                                alt="">
                                         </picture>
                                     </div>
                                 </div>
@@ -193,52 +193,72 @@
                     </div>
 
                 </div>
-            </div>
+            </section>
 
             <section class="container-big gallery gallery--boat">
                 <div class="container">
                     <div class="swiper gallery__inner">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                        <div class="swiper-wrapper gallery-photo">
+                            <a href="./img/gallery/1.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/1.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/1.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/1.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/2.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/2.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/2.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/2.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/3.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/3.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/3.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/3.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/4.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/4.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/4.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/4.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/5.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/5.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/5.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/5.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/6.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/6.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
+                            </a>
+                            <a href="./img/gallery/6.jpg" class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/6.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </a>
+                            <a href="./img/gallery/6.jpg" class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/6.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </a>
                         </div>
                     </div>
                 </div>
-            
+
             </section>
 
 
@@ -256,10 +276,13 @@
                         <span class="choice-obvious__name">[ФЛ]</span>
                         <div class="choice-obvious__text">
                             <p>
-                            Моторная лодка FL – 55 максимальна по скорости, максимальна по мореходным качествам, максимальна по остойчивости и идеально подходит для рыбалки.
+                                Моторная лодка FL – 55 максимальна по скорости, максимальна по мореходным качествам,
+                                максимальна по остойчивости и идеально подходит для рыбалки.
                             </p>
                             <p>
-                                Например, опытные рыболовы-спортсмены развивали на FL-55 скорость 82-85 км/час при моторе 150 л.с. На этом судне будьте уверены, что все пойдет так, как вы запланировали. Вы стабильно дойдете до места лова, и вернетесь с трофеями.
+                                Например, опытные рыболовы-спортсмены развивали на FL-55 скорость 82-85 км/час при
+                                моторе 150 л.с. На этом судне будьте уверены, что все пойдет так, как вы запланировали.
+                                Вы стабильно дойдете до места лова, и вернетесь с трофеями.
                             </p>
                         </div>
                     </div>
@@ -426,50 +449,232 @@
                 </div>
             </section>
 
-            <section class="container-big gallery gallery--boat gallery--boat--2">
+            <section class="container-big gallery gallery--boat gallery--boat-2">
                 <div class="container">
                     <div class="swiper gallery__inner">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                        <div class="swiper-wrapper gallery-photo">
+                            <a href="./img/gallery/1.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/1.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/1.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/1.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/2.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/2.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/2.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/2.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/3.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/3.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/3.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/3.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/4.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/4.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/4.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/4.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/5.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/5.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/5.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/5.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
-                            <div class="swiper-slide">
+                            </a>
+                            <a href="./img/gallery/6.jpg" class="swiper-slide">
                                 <picture>
                                     <source srcset="./img/gallery/6.webp" type="image/webp">
-                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169" alt="Картинка">
+                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169"
+                                        alt="Картинка">
                                 </picture>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-            
+
+            </section>
+
+            <section class="boat-above">
+                <div class="boat-above__container container">
+
+                    <picture>
+                        <source srcset="./img/boat-above-2.png" media="(max-width: 576px)">
+                        <img loading="lazy" src="./img/boat-above.png" class="boat-above__boat" alt="Лодка вид сверху">
+                    </picture>
+
+                    <div class="tooltip boat-above__prompt boat-above__prompt--1 prompt">
+                        <button class="tooltip__btn btn btn-reset prompt__point" aria-describedby=""></button>
+                        <span class="tooltip__content prompt__block" role="tooltip" id="">
+                            <span class="visually-hidden">Тултип: </span>
+                            <p>
+                                Электроякорь и эхолот, который не будет подвержен внешним волнениям
+                            </p>
+                            <img src="./img/runduc.jpg" alt="">
+                        </span>
+                    </div>
+                    <div class="tooltip boat-above__prompt boat-above__prompt--2 prompt">
+                        <button class="tooltip__btn btn btn-reset prompt__point" aria-describedby=""></button>
+
+                        <span class="tooltip__content prompt__block" role="tooltip" id="">
+                            <span class="visually-hidden">Тултип: </span>
+                            <p>
+                                Вместительные рундуки носовой палубы. Оснащены естественной вентиляцией.
+                            </p>
+                            <img src="./img/runduc-2.jpg" alt="">
+                        </span>
+                    </div>
+                    <div class="tooltip boat-above__prompt boat-above__prompt--3 prompt">
+                        <button class="tooltip__btn btn btn-reset prompt__point" aria-describedby=""></button>
+                        <span class="tooltip__content prompt__block" role="tooltip" id="">
+                            <span class="visually-hidden">Тултип: </span>
+                            <p>
+                                Водительское сидение со специальным валиком настраивается на нужное расстояние
+                                относительно руля.  стекло
+                            </p>
+                        </span>
+                    </div>
+                    <div class="tooltip boat-above__prompt boat-above__prompt--4 prompt">
+                        <button class="tooltip__btn btn btn-reset prompt__point" aria-describedby=""></button>
+                        <span class="tooltip__content prompt__block" role="tooltip" id="">
+                            <span class="visually-hidden">Тултип: </span>
+                            <p>
+                                Водительское сидение со специальным валиком настраивается на нужное расстояние
+                                относительно руля. 
+                            </p>
+                        </span>
+                    </div>
+                    <div class="tooltip boat-above__prompt boat-above__prompt--5 prompt">
+                        <button class="tooltip__btn btn btn-reset prompt__point" aria-describedby=""></button>
+                        <span class="tooltip__content prompt__block" role="tooltip" id="">
+                            <span class="visually-hidden">Тултип: </span>
+                            <p>
+                                Водительское сидение со специальным валиком настраивается на нужное расстояние
+                                относительно руля. низ
+                            </p>
+                        </span>
+                    </div>
+                    <div class="tooltip boat-above__prompt boat-above__prompt--6 prompt">
+                        <button class="tooltip__btn btn btn-reset prompt__point" aria-describedby=""></button>
+                        <span class="tooltip__content prompt__block" role="tooltip" id="">
+                            <span class="visually-hidden">Тултип: </span>
+                            <p>
+                                Водительское сидение со специальным валиком настраивается на нужное расстояние
+                                относительно руля. мотор
+                            </p>
+                        </span>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="boat-info">
+                <div class="boat-info__container container">
+                    <div class="boat-info__body">
+
+                        <div data-tabs class="tabs">
+                            <nav data-tabs-titles class="tabs__navigation">
+                                <button type="button"
+                                    class="btn btn-reset tabs__title boat-info__title boat-info__title--1 _tab-active">
+
+                                </button>
+                                <button type="button"
+                                    class="btn btn-reset tabs__title boat-info__title boat-info__title--2">
+
+                                </button>
+                            </nav>
+                            <div data-tabs-body class="tabs__content">
+                                <div class="tabs__body">
+                                    <div class="boat-info__title">
+                                        <span data-da=".boat-info__title--1,1024,first">
+                                            Технические
+                                            характеристики
+                                        </span>
+                                    </div>
+                                    <div class="boat-info__content">
+                                        <ul class="boat-info__list list-reset">
+                                            <li>Высота борта на миделе — <span>0,98м</span></li>
+                                            <li>Высота транца в ДП — <span>0,63м</span></li>
+                                            <li>Масса укомплектованного судна — <span>1006,5кг</span></li>
+                                            <li>Осадка укомплектованного (пустого) судна — <span>0,39м</span></li>
+                                            <li>Масса судна при буксировке на прицепе — <span>1099,5кг</span></li>
+                                            <li>Масса экипажа — <span>300кг</span></li>
+                                            <li>Масса топлива — <span>94кг</span></li>
+                                        </ul>
+                                        <ul class="boat-info__list list-reset">
+                                            <li>Максимальная масса двигателя — <span>230кг</span></li>
+                                            <li>Масса АКБ — <span>20,5кг</span></li>
+                                            <li> Максимальная скорость движения — <span>82км/час</span></li>
+                                            <li> Масса судна при скоростных испытаниях — <span>1207,5 кг</span></li>
+                                            <li> Расчётная высота волны — <span>1,2 м</span></li>
+                                            <li> Удаление от берега — <span>2,7 морских миль</span></li>
+                                            <li> Район плавания по ТР ТС <span>026/2012–IV–III</span></li>
+                                        </ul>
+                                        <ul class="boat-info__list list-reset">
+                                            <li> Масса провизии и личных вещей — <span>56кг</span></li>
+                                            <li> Масса основного оборудования — <span>150кг</span></li>
+                                            <li> Максимальная грузоподъёмность — <span>550кг</span></li>
+                                            <li> Масса судна при полной загрузке — <span>1556,5кг</span></li>
+                                            <li> Осадка при полной загрузке, <span>м</span></li>
+                                            <li> Полное водоизмещение — <span>1,55 м3</span></li>
+                                            <li> Максимальная мощность двигателя — <span>147,2кВт</span></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="tabs__body">
+                                    <div class="boat-info__title">
+                                        <span data-da=".boat-info__title--2,1024,first">
+                                            Комплект
+                                            поставки
+                                        </span>
+                                    </div>
+                                    <div class="boat-info__content">
+                                        <ul class="boat-info__list list-reset">
+                                            <li>Корпус лодки с блоками плавучести — <span>1</span></li>
+                                            <li>Система осушения — <span>1</span></li>
+                                            <li>Стационарная топливная система — <span>1</span></li>
+                                        </ul>
+                                        <ul class="boat-info__list list-reset">
+                                            <li>Аэратор — <span>1</span></li>
+                                            <li>Рундук для шести спиннингов — <span>asd</span></li>
+                                            <li>Пилон с остеклением — <span>2</span></li>
+                                            <li>Кресло поворотное съёмное — <span>2</span></li>
+                                        </ul>
+                                        <ul class="boat-info__list list-reset">
+                                            <li>Система рулевого управления — <span>1</span></li>
+                                            <li>Бортовая электросеть с сигнально-отличительными огнями — <span>1</span>
+                                            </li>
+                                            <li>Руководство по эксплуатации — <span>1</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="boat-info__bottom">
+                        <div class="boat-info__price">
+                            <span>2 100 000 ₽</span>
+                            Стоимость в базовой комплектации
+                        </div>
+                        <div class="boat-info__btns">
+                            <button type="button" class="btn btn-reset btn-third boat-info__btn">
+                                Заказать звонок
+                            </button>
+                            <button type="button" class="btn btn-reset btn-secondary boat-info__btn">
+                                Конфигуратор
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 

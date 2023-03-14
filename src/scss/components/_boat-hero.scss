@@ -283,6 +283,7 @@
     &__img {
         border-radius: 30px;
         padding-bottom: percent(337, 651);
+        display: block;
 
         img {
             border-radius: 30px;
@@ -340,3 +341,5 @@
     }
 
 }
+
+

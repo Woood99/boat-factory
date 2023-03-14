@@ -48,6 +48,7 @@ if (document.querySelector('.gallery--boat .gallery__inner')) {
         observeParents: true,
         centeredSlides: true,
         loop: true,
+        loopedSlides: 50,
         speed: 600,
         breakpoints: {
             569: {

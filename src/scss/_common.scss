@@ -94,11 +94,23 @@
 .gallery--boat {
     margin-top: 80px;
 
-    &--2 {
+    &.gallery--boat-2 {
         margin-top: 0;
+       
+    }
+
+    .lg-counter {
+        display: none;
     }
 
     @media (max-width:$smallTablet-max) {
         margin-top: 55px;
     }
+}
+
+
+
+
+.lg-counter{
+    display: none;
 }

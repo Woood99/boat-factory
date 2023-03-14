@@ -11,6 +11,9 @@ import './components/sliders';
 import videoBlock from './components/video-block';
 import './components/production-progress';
 import './components/dynamicAdapt';
+import './components/galleryPhoto';
+import tabs from './modules/tabs';
+
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =======================================================
 
     spollers();
+    if (window.innerWidth <= 1024) tabs();
 
     // =======================================================
 
@@ -66,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // =======================================================
 
     videoBlock();
-
 
     // Ненужное
     // const maskMap = {
