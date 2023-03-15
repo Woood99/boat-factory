@@ -14,6 +14,8 @@ import './components/dynamicAdapt';
 import './components/galleryPhoto';
 import tabs from './modules/tabs';
 import popup from './modules/popup';
+import scrolling from './components/scrolling';
+// import increaseImage from './components/increaseImage';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();
@@ -84,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // customSelect(maskMap);
 
-
-
+    scrolling();
+    // increaseImage();
 
 
 })

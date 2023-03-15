@@ -95,6 +95,11 @@
             margin-right: 5px;
 
         }
+
+        @media (max-width:$max-1150) {
+            width: 28px;
+            height: 28px;
+        }
     }
 
     &__link {
@@ -116,12 +121,20 @@
     &__link--tg {
         svg {
             width: 10px;
+
+            @media (max-width:$max-1150) {
+                width: 13px;
+            }
         }
     }
 
     &__link--wa {
         svg {
             width: 10px;
+
+            @media (max-width:$max-1150) {
+                width: 13px;
+            }
         }
     }
 }

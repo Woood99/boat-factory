@@ -191,8 +191,8 @@
                         </p>
                     </div>
                     <div class="feedback__btns">
-                        <button type="submit" class="btn btn-reset btn-third feedback__btn" data-popup-path="request-call">Заказать звонок</button>
-                        <button type="submit" class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
+                        <button type="button" class="btn btn-reset btn-third feedback__btn" data-popup-path="request-call">Заказать звонок</button>
+                        <button type="button" class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
                     </div>
                 </div>
             </div>
@@ -345,6 +345,51 @@
 </footer>
 
     </div>
+    <div class="popup">
+    <div class="popup__container" role="dialog" aria-modal="true" data-popup-target="request-call">
+        <button class="btn-reset js-popup-close popup__close" aria-label="Закрыть модальное окно"></button>
+        <div class="popup__content request-call">
+            <h3 class="request-call__title">
+                Заказать звонок
+            </h3>
+            <p class="request-call__descr">
+                Оставьте свои контакты, свяжемся с вами
+                в самое ближийшее время
+            </p>
+            <form action="#" class="request-call__form form-primary" id="request-call__valid">
+
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Имя</span>
+                    <input type="text" name="Имя"
+                        class="input-reset input-primary label-primary__input--name label-primary__input"
+                        placeholder="">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Номер телефона</span>
+                    <input type="tel" name="Номер телефона"
+                        class="input-reset input-primary label-primary__input--tel label-primary__input"
+                        placeholder="+7">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Сообщение или вопрос</span>
+                    <textarea class="input-reset input-primary textarea-primary label-primary__input"
+                        placeholder=""></textarea>
+                </label>
+                <div class="form-primary__agree checkbox">
+                    <input id="c_2" class="checkbox__input" type="checkbox" value="1">
+                    <label for="c_2" class="checkbox__label">
+                        <span class="checkbox__text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <button class="btn btn-reset btn-fourth form-primary__btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 
 

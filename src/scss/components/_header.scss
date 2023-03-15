@@ -10,6 +10,10 @@
     &.header-scroll {
         @media (min-width:$min-1150) {
             border-bottom: 1px solid var(--alto);
+
+            .header__social {
+                opacity: 0;
+            }
         }
 
         .header__container {
@@ -17,10 +21,6 @@
                 padding-top: 15px;
                 padding-bottom: 15px;
             }
-        }
-
-        .header__social {
-            opacity: 0;
         }
     }
 
@@ -118,6 +118,8 @@
         @media (max-width:$max-1150) {
             margin-left: auto;
             align-self: auto;
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -125,11 +127,18 @@
         position: absolute;
         top: -10px;
         right: 0;
-        transition: opacity $transitionSpeed $transitionFunction;
+        transition: opacity $transitionSpeed $transitionFunction,
+            visibility $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
         transform: translateY(-100%);
 
         @media (max-width:$max-1150) {
-            display: none;
+            top: 0;
+            right: 30px;
+            transform: translateY(-20px) translateX(0);
+            opacity: 0;
+            margin-right: 15px;
+
         }
     }
 
@@ -153,26 +162,21 @@
             width: 25px;
             height: 25px;
             fill: currentColor;
-
-            @media (min-width:$smallTablet-min) {
-                display: none;
-            }
-
-            @media (max-width:$mobile-max) {
-                width: 20px;
-                height: 20px;
-            }
+            display: none;
         }
 
         span {
             color: inherit;
             white-space: nowrap;
-
-            @media (max-width:$smallTablet-max) {
-                display: none;
-            }
         }
 
+        @media (max-width:$max-1150) {
+            height: 25px;
+            display: flex;
+            align-items: center;
+
+            span {}
+        }
 
     }
 
@@ -191,6 +195,26 @@
 
         @media (min-width:$min-1150) {
             display: none;
+        }
+    }
+
+    &--active {
+        @media (max-width:$max-1150) {
+            .header__social {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .header__tel {
+                svg {
+                    display: block;
+                }
+
+                span {
+                    display: none;
+                }
+            }
         }
     }
 
