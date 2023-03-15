@@ -29,6 +29,8 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(10px);
+        display: inline-block;
+        word-wrap: break-word;
         transition:
             opacity $transitionSpeed $transitionFunction,
             transform $transitionSpeed $transitionFunction,

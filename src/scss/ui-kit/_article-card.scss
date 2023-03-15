@@ -3,10 +3,12 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        @media (max-width:$mobile-max){
-             flex-direction: column; 
+
+        @media (max-width:$mobile-max) {
+            flex-direction: column;
         }
     }
+
     &__img {
         flex: 0 1 percent(584, 1070);
         margin-right: 44px;
@@ -28,32 +30,38 @@
                 border-radius: 15px;
             }
         }
-        @media (max-width:$mobile-max){
-             flex: 0 1 auto; 
-             margin-right: 0;
-             padding-bottom: percent(272,584);
+
+        @media (max-width:$mobile-max) {
+            flex: 0 1 auto;
+            margin-right: 0;
+            padding-bottom: percent(272, 584);
         }
     }
 
     &__content {
         flex: 0 1 percent(442, 1070);
-        @media (max-width:$mobile-max){
-            flex: 0 1 auto; 
-       }
-    }
-    &__type{
-        @media (max-width:$mobile-max){
-             display: none; 
+
+        @media (max-width:$mobile-max) {
+            flex: 0 1 auto;
         }
-        &--mobile{
+    }
+
+    &__type {
+        @media (max-width:$mobile-max) {
+            display: none;
+        }
+
+        &--mobile {
             margin-bottom: 10px;
             display: block;
-           align-self: start;
-            @media (min-width:$mobile-min){
-                 display: none; 
+            align-self: start;
+
+            @media (min-width:$mobile-min) {
+                display: none;
             }
         }
     }
+
     &__title {
         margin-top: 21px;
         font-weight: 600;
@@ -86,10 +94,7 @@
     }
 
     &__bottom {
-        margin-top: 21px;
-        padding-top: 13px;
-        // border-top: 1px solid var(--black);
-        border-top: 1px solid var(--alto);
+        margin-top: 30px;
 
         display: flex;
         align-items: center;
@@ -103,7 +108,7 @@
 
     &__date,
     &__time {
-        color: var(--shark);
+        color: #9c9d9e;
         font-size: 14px;
         line-height: math.div(19, 14);
 

@@ -1,5 +1,5 @@
 .news-card {
-    filter: drop-shadow(0px 10px 28px rgba(0, 0, 0, 0.05));
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.05));
     transition: filter $transitionSpeed $transitionFunction;
 
     &__wrapper {}
@@ -79,7 +79,7 @@
     }
 
     &:hover {
-        filter: drop-shadow(0px 9px 29px rgba(0, 0, 0, 0.04));
+        filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.04));
 
         .news-card {
             &__btn {

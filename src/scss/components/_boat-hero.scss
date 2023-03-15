@@ -271,14 +271,14 @@
 }
 
 .boat-hero-body {
-    padding: 20px 30px 15px 30px;
-    margin: -20px -30px -15px -30px;
+    padding: 20px 30px 15px 40px;
+    margin: -20px -30px -15px -40px;
 
     box-sizing: content-box;
 
     &__slide {
         background-color: var(--white);
-        box-shadow: 0px 10px 32px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.06);
         border-radius: 30px;
 
         @media (max-width:$max-1150) {
@@ -308,13 +308,13 @@
 }
 
 .boat-hero-nav {
-    padding: 20px 30px 15px 30px;
-    margin: -8px -30px -15px -30px;
+    padding: 25px 20px 15px 40px;
+    margin: -12px -20px -15px -40px;
     box-sizing: content-box;
 
     &__slide {
         background-color: #fff;
-        box-shadow: 0px 8.20555px 26.2577px rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
         border-radius: 24px;
         cursor: pointer;
 
