@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Контакты</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <div class="contacts container grid p-top-page">
+                <div class="contacts__info top-border-page">
+                    <div class="contacts__row contacts__row--1">
+                        <div class="contacts__col contacts__col--1">
+                            <h3 class="contacts__title">
+                                телефоны
+                            </h3>
+                            <div class="contacts__field">
+                                <div class="contacts__field-title">
+                                    Отдел по работе с дилерами
+                                </div>
+                                <div class="contacts__field-content">
+                                    <a href="#">8 (926) 144 99 35<span>Александр Бычков</span></a>
+                                </div>
+                            </div>
+                            <div class="contacts__field">
+                                <div class="contacts__field-title">
+                                    Отдел по работе с частными лицами
+                                </div>
+                                <div class="contacts__field-content">
+                                    <a href="#">8 (ххх) ххх хх хх</a>
+                                </div>
+                            </div>
+                            <div class="contacts__field">
+                                <div class="contacts__field-title">
+                                    Сервисный центр
+                                </div>
+                                <div class="contacts__field-content">
+                                    <a href="#">8 (ххх) ххх хх хх
+                                        <span data-text-mobile="Компьютерная диагностика и ТО">
+                                            Компьютерная диагностика и ТО моторов</span>
+                                    </a>
+                                </div>
+                                <div class="contacts__field-content">
+                                    <a href="#">8 (ххх) ххх хх хх
+                                        <span data-text-mobile="Установка доп. оборудования">
+                                            Установка дополнительного оборудования
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__col contacts__col--2">
+                            <h3 class="contacts__title">
+                                почта
+                            </h3>
+                            <div class="contacts__field">
+                                <div class="contacts__field-content">
+                                    <a href="#">info@fl-boats.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__row contacts__row--2">
+                        <div class="contacts__col contacts__col--1">
+                            <h3 class="contacts__title">
+                                адрес
+                            </h3>
+                            <div class="contacts__field">
+                                <div class="contacts__field-content">
+                                    Московская область, город Дмитров,
+                                    2-я Левонабарежная, дом 12
+                                </div>
+                                <div data-spollers data-one-spollers class="contacts__field-get contacts-get">
+                                    <button data-spoller type="button" class="btn btn-reset contacts-get__btn">
+                                        <span>Как добраться</span>
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="contacts-get__content">
+                                        <div class="contacts-get__item">
+                                            <h3 class="contacts-get__title">
+                                                На автомобиле
+                                            </h3>
+                                            <div class="contacts-get__text">
+                                                <p>
+                                                    Первый съезд на кольце с Дмитровского шоссе в сторону въездного
+                                                    знака Дмитров и памятника танку Т—34
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="contacts-get__item">
+                                            <h3 class="contacts-get__title">
+                                                На общественном транспорте из Москвы
+                                            </h3>
+                                            <div class="contacts-get__elements">
+                                                <p>
+                                                    от метро Окружная на электричке Голицыно — Савёлово до г. Дмитров,
+                                                    далее от Автовокзала на маршрутке 36, 41к до остановки Заречье
+                                                </p>
+                                                <p>
+                                                    от Белорусского или Савёловского вокзалов (метро Белорусская и метро
+                                                    Савёловская) на электричке Голицыно — Дубна до г. Дмитров. Далее
+                                                    от Автовокзала на маршрутке 36, 41к до остановки Заречье
+                                                </p>
+                                                <p>
+                                                    от метро Алтуфьево на автобусе 401 до г. Дмитров
+                                                    далее от Автовокзала на маршрутке 36, 41к до остановки “Заречье”
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__col contacts__col--2">
+                            <h3 class="contacts__title">
+                                часы работы
+                            </h3>
+                            <div class="contacts__field">
+                                <div class="contacts__field-content">
+                                    С 09:00 до 18:00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__map contacts-map">
+                    <div class="contacts-map__inner style-balloon copyrights-pane--delete" id="contacts-map">
+
+                    </div>
+                </div>
+                <div class="contacts__feedback">
+                    <div class="request-call">
+                        <h3 class="request-call__title">
+                            обратная связь
+                        </h3>
+                        <p class="request-call__descr">
+                            Напишите свой вопрос, ответим
+                            в самое ближайшее время
+                        </p>
+                        <form action="#" class="request-call__form form-primary" id="contacts__feedback-valid">
+
+                            <label class="form-primary__label label-primary">
+                                <span class="label-primary__name">Имя</span>
+                                <input type="text" name="Имя"
+                                    class="input-reset input-primary label-primary__input--name label-primary__input"
+                                    placeholder="">
+                            </label>
+                            <label class="form-primary__label label-primary">
+                                <span class="label-primary__name">Номер телефона</span>
+                                <input type="tel" name="Номер телефона"
+                                    class="input-reset input-primary label-primary__input--tel label-primary__input"
+                                    placeholder="+7">
+                            </label>
+                            <label class="form-primary__label label-primary">
+                                <span class="label-primary__name">Сообщение или вопрос</span>
+                                <textarea class="input-reset input-primary textarea-primary label-primary__input"
+                                    placeholder=""></textarea>
+                            </label>
+                            <div class="form-primary__agree checkbox">
+                                <input id="c_2" class="checkbox__input" type="checkbox" value="1">
+                                <label for="c_2" class="checkbox__label">
+                                    <span class="checkbox__text">
+                                        Соглашаюсь на обработку персональных данных
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button class="btn btn-reset btn-fourth form-primary__btn">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

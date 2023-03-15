@@ -447,6 +447,43 @@ if (document.querySelector('.where-buy__map')) {
       iconImageSize: [48, 48],
       iconImageOffset: [-17, -27]
     });
+    removeControls(map);
+    map.geoObjects.add(placemark1);
+  }
+  ymaps.ready(init);
+}
+if (document.querySelector('.contacts__map')) {
+  function init() {
+    let map = new ymaps.Map('contacts-map', {
+      center: [55.85299910266709, 37.30898264843751],
+      zoom: 9
+    });
+    let placemark1 = new ymaps.Placemark([55.7462485754695, 37.25679758984377], {
+      balloonContent: `
+            <div class="balloon">
+                <div class="balloon__content">
+                    <h4 class="balloon__title">
+                        ООО Фабрика Лодок
+                    </h4>
+                    <p class="balloon__location">
+                        г. Дмитров
+                    </p>
+                    <a href="mailto:info@fl-boats.ru" class="balloon__link">
+                        info@fl-boats.ru
+                    </a>
+                    <a href="tel:79261449935" class="balloon__link">
+                        +7 926 144-99-35
+                    </a>
+                </div>
+            </div>
+            `
+    }, {
+      iconLayout: "default#image",
+      iconImageHref: "./img/placemark.svg",
+      iconImageSize: [48, 48],
+      iconImageOffset: [-17, -27]
+    });
+    removeControls(map);
     map.geoObjects.add(placemark1);
   }
   ymaps.ready(init);
@@ -723,7 +760,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const validateForm = () => {
   const becomingDealerForm = document.querySelector('.becoming-dealer__form');
-  const requestCallForm = document.querySelector('.request-call__form ');
+  const requestCallForm = document.querySelector('#request-call__valid');
+  const contactsFeedbackValid = document.querySelector('#contacts__feedback-valid');
   if (becomingDealerForm) {
     const tel = becomingDealerForm.querySelector('.label-primary__input--tel');
     const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())('+7 (999) 999-99-99');
@@ -758,6 +796,27 @@ const validateForm = () => {
     }]).addField('.label-primary__input--tel', [{
       validator: function () {
         const phone = requestCallForm.querySelector('.label-primary__input--tel').inputmask.unmaskedvalue();
+        return phone.length === 10;
+      }
+    }]);
+    validator.onSuccess(e => {
+      console.log('Проверка успешна');
+      e.target.reset();
+    });
+  }
+  if (contactsFeedbackValid) {
+    const tel = contactsFeedbackValid.querySelector('.label-primary__input--tel');
+    const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())('+7 (999) 999-99-99');
+    inputMask.mask(tel);
+    const validator = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](contactsFeedbackValid);
+    validator.addField('.label-primary__input--name', [{
+      rule: 'required'
+    }, {
+      rule: 'minLength',
+      value: 3
+    }]).addField('.label-primary__input--tel', [{
+      validator: function () {
+        const phone = contactsFeedbackValid.querySelector('.label-primary__input--tel').inputmask.unmaskedvalue();
         return phone.length === 10;
       }
     }]);
