@@ -25,9 +25,16 @@
 
     &__icon {
         border-radius: 19px;
-
+        width: 132px;
+        height: 132px;
         img {
             border-radius: 19px;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width:$smallTablet-max){
+             width: 72px;
+             height: 72px; 
         }
     }
 

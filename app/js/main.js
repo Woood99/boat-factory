@@ -351,11 +351,27 @@ const fixFullheight = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lightgallery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lightgallery */ "./node_modules/lightgallery/lightgallery.es5.js");
 
+
+// Плагины
+// lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, 
+// lgShare, lgThumbnail, lgVideo, lgMediumZoom
+// import lgZoom from 'lightgallery/plugins/zoom';
 const galleries = document.querySelectorAll('.gallery-photo');
 galleries.forEach(gallery => {
   (0,lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(gallery, {
     licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
-    speed: 500
+    speed: 500,
+    addClass: 'gallery-photo-popup',
+    download: false
+  });
+});
+const galleryPhotoList = document.querySelectorAll('.gallery-photo-list');
+galleryPhotoList.forEach(gallery => {
+  (0,lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(gallery, {
+    licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
+    speed: 500,
+    selector: '.photo-card__wrapper',
+    download: false
   });
 });
 

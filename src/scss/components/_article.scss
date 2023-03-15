@@ -224,7 +224,7 @@
             .feedback {
                 &__text {
                     margin-right: 0;
-
+                    @include adaptiveValue("margin-bottom", 60, 20);
                     p {
                         font-size: 14px;
                         line-height: math.div(21, 14);
@@ -233,7 +233,6 @@
                 }
 
                 &__btns {
-                    @include adaptiveValue("margin-top", 60, 20);
                     align-self: start;
                 }
             }

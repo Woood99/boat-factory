@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Галерея</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <section class="photo-gallery container grid p-top-page">
+                <div class="photo-gallery__container top-border-page">
+                    <h2 class="photo-gallery__title">
+                        фотогалерея
+                    </h2>
+                    <ul class="photo-gallery__list list-reset gallery-photo-list">
+                        <li class="photo-gallery__item">
+                            <article class="photo-card">
+                                <a href="./img/photo-card-1.jpg" class="photo-card__wrapper">
+                                    <div class="photo-card__img ibg">
+                                        <picture>
+                                            <source srcset="./img/photo-card-1.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/photo-card-1.jpg" width="528" height="326"
+                                                alt="ФЛ—55">
+                                        </picture>
+                                    </div>
+                                    <div class="photo-card__title">
+                                        [ФЛ—55]
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="photo-gallery__item">
+                            <article class="photo-card">
+                                <a href="./img/photo-card-2.jpg" class="photo-card__wrapper">
+                                    <div class="photo-card__img ibg">
+                                        <picture>
+                                            <source srcset="./img/photo-card-2.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/photo-card-2.jpg" width="528" height="326"
+                                                alt="ФЛ—70">
+                                        </picture>
+                                    </div>
+                                    <div class="photo-card__title">
+                                        [ФЛ—70]
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="photo-gallery__item">
+                            <article class="photo-card">
+                                <a href="./img/photo-card-3.jpg" class="photo-card__wrapper">
+                                    <div class="photo-card__img ibg">
+                                        <picture>
+                                            <source srcset="./img/photo-card-3.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/photo-card-3.jpg" width="528" height="326"
+                                                alt="ФЛ—47">
+                                        </picture>
+                                    </div>
+                                    <div class="photo-card__title">
+                                        [ФЛ—47]
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="photo-gallery__item">
+                            <article class="photo-card">
+                                <a href="./img/photo-card-4.jpg" class="photo-card__wrapper">
+                                    <div class="photo-card__img ibg">
+                                        <picture>
+                                            <source srcset="./img/photo-card-4.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/photo-card-4.jpg" width="528" height="326"
+                                                alt="Boat Show 2023">
+                                        </picture>
+                                    </div>
+                                    <div class="photo-card__title">
+                                        [Boat Show 2023]
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="video-reviews">
+                <div class="video-reviews__container container grid">
+                    <div class="video-reviews__inner">
+                        <h2 class="video-reviews__title">
+                            видеообзоры
+                        </h2>
+                        <ul class="video-reviews__list list-reset">
+                            <li class="video-reviews__item">
+
+
+                                <article class="article-card article-card--video">
+                                    <div class="article-card__wrapper">
+                                        <button type="button"
+                                            class="btn btn-reset btn-primary btn-primary--small article-card__type article-card__type--mobile"
+                                            tabindex="-1">ФЛ55</button>
+                                        <div class="article-card__video video-block">
+                                            <!-- в data-src указываем путь к видео по примеру (embed обязательно) -->
+                                            <button type="button" class="btn btn-reset video-block__button"
+                                                data-src="https://www.youtube.com/embed/KtBLV-FF9Dk">
+                                                <picture>
+                                                    <source srcset="./img/video-poster-2.webp" type="image/webp">
+                                                    <img loading="lazy" src="./img/video-poster-2.jpg"
+                                                        class="video-block__poster"
+                                                        alt="Обзор на самую скоростную лодку в линейке: ФЛ-55">
+                                                </picture>
+                                                <div class="video-block__video">
+
+                                                </div>
+                                                <div class="video-block__play">
+                                                    <svg>
+                                                        <use xlink:href="img/sprite.svg#arrow-right-fill"></use>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="article-card__content">
+                                            <button type="button"
+                                                class="btn btn-reset btn-primary btn-primary--small article-card__type"
+                                                tabindex="-1">ФЛ55</button>
+                                            <h4 class="article-card__title">
+                                                Обзор на самую скоростную лодку в линейке: ФЛ-55
+                                            </h4>
+                                            <p class="article-card__descr">
+                                                Опытные рыболовы-спортсмены развивали на FL-55 скорость 82-85 км/час при
+                                                моторе 150 л.с. На этом судне будьте уверены, что все пойдет так, как вы
+                                                запланировали. Вы стабильно дойдете до места лова, и вернетесь с
+                                                трофеями.
+                                            </p>
+                                            <div class="article-card__bottom">
+                                                <time class="article-card__date" datetime="2023-03-12">12.03.2023</time>
+                                                <span class="article-card__time">
+                                                    6 мин
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery-feedback feedback">
+                <div class="gallery-feedback__container container grid">
+                    <div class="gallery-feedback__inner">
+                        <div class="feedback__text">
+                            <p>
+                                Остались вопросы? Свяжитесь с нами, поможем
+                                в выборе комплектации и расскажем обо всём подробно.
+                            </p>
+                            <p>
+                                Предварительные характеристики и стоимость можно узнать
+                                с помощью конфигуратора
+                            </p>
+                        </div>
+                        <div class="feedback__btns">
+                            <button type="button" class="btn btn-reset btn-third feedback__btn"
+                                data-popup-path="request-call">Заказать звонок</button>
+                            <button type="button"
+                                class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

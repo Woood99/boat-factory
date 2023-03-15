@@ -126,10 +126,12 @@
 
 
 
-.lg-counter {
-    display: none;
-}
 
+.gallery-photo-popup {
+    .lg-counter {
+        display: none;
+    }
+}
 
 
 
@@ -199,4 +201,41 @@
 
 .lg-backdrop {
     background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.gallery-feedback {
+    margin-top: 145px;
+
+    &.feedback {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    &__inner {
+        padding-top: 60px;
+        border-top: 1px solid var(--alto);
+        grid-column: 3/-1;
+        display: flex;
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            flex-direction: column;
+        }
+
+        @media (max-width:$mobile-max) {
+            padding-top: 40px;
+        }
+    }
+
+    @media (max-width:$smallTablet-max) {
+        margin-top: 105px;
+    }
+
+    @media (max-width:$mobile-max) {
+        margin-top: 40px;
+    }
 }
