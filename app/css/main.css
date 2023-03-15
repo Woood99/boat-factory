@@ -5999,9 +5999,6 @@ a {
     font-size: 16px;
   }
 }
-.contacts__field-get {
-  margin-top: 16px;
-}
 .contacts__map {
   margin-top: 50px;
   background-color: transparent;
@@ -6197,6 +6194,11 @@ a {
 .contacts-get__item:not(:last-child) {
   margin-bottom: 38px;
 }
+@media (max-width: 576px) {
+  .contacts-get__item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
 .contacts-get__title {
   margin-bottom: 22px;
   font-family: "Halvar Breitschrift", sans-serif;
@@ -6204,6 +6206,11 @@ a {
   color: var(--black);
   font-size: 16px;
   line-height: 1.375;
+}
+@media (max-width: 576px) {
+  .contacts-get__title {
+    margin-bottom: 15px;
+  }
 }
 .contacts-get__text {
   font-size: 14px;
@@ -6233,6 +6240,15 @@ a {
   height: 9px;
   border-radius: 50%;
   background-color: var(--red);
+}
+@media (max-width: 576px) {
+  .contacts-get__elements p {
+    padding-left: 20px;
+  }
+  .contacts-get__elements p::after {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .footer {

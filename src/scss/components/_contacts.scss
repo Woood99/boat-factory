@@ -148,8 +148,7 @@
     }
 
     &__field-get {
-        margin-top: 16px;
-
+      
     }
 
     &__map {
@@ -324,6 +323,11 @@
         &:not(:last-child) {
             margin-bottom: 38px;
         }
+        @media (max-width:$mobile-max){
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            } 
+        }
     }
 
     &__title {
@@ -333,6 +337,9 @@
         color: var(--black);
         font-size: 16px;
         line-height: math.div(22, 16);
+        @media (max-width:$mobile-max){
+             margin-bottom: 15px; 
+        }
     }
 
     &__text {
@@ -369,6 +376,13 @@
                 height: 9px;
                 border-radius: 50%;
                 background-color: var(--red);
+            }
+            @media (max-width:$mobile-max){
+                 padding-left: 20px;
+                 &::after{
+                    width: 8px;
+                    height: 8px;
+                 } 
             }
         }
     }
