@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>О производстве</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main about-production">
+            <section class="about-production__hero production-hero p-top-page">
+                <div class="production-hero__container container grid">
+                    <h1 class="production-hero__title top-border-page">
+                        Производство цельносварных <br>
+                        алюминиевых лодок
+                    </h1>
+                    <div class="production-hero__images">
+                        <div class="production-hero__img ibg">
+                            <picture>
+                                <source srcset="./img/production-hero-1.webp" type="image/webp">
+                                <img loading="lazy" src="./img/production-hero-1.jpg" width="416" height="319"
+                                    alt="Картинка">
+                            </picture>
+                        </div>
+                        <div class="production-hero__img ibg">
+                            <picture>
+                                <source srcset="./img/production-hero-2.webp" type="image/webp">
+                                <img loading="lazy" src="./img/production-hero-2.jpg" width="416" height="319"
+                                    alt="Картинка">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="production-hero__text">
+                        <p>
+                            Добро пожаловать в г. Дмитров на завод по производству алюминиевых лодок. В настоящий момент
+                            здесь с нуля собирают три модели в разных комплектациях и модификациях: ФЛ-47,
+                            ФЛ-55 и ФЛ-70. Этапы производства идентичны для всех моделей, выпускаемых ООО «Фабрика
+                            лодок».
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="about-production__stages production-stages">
+                <div class="production-stages__inner">
+                    <div class="production-stages__container container grid">
+                        <h2 class="production-stages__title">
+                            этапы производства
+                        </h2>
+                        <ul class="production-stages__list list-reset">
+                            <li class="production-stages__item stage">
+                                <div class="stage__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#scissors"></use>
+                                    </svg>
+                                </div>
+                                <div class="stage__info">
+                                    <h4 class="stage__title">
+                                        Этап 1 — предсварка
+                                    </h4>
+                                    <p class="stage__descr">
+                                        Алюминиевый профиль нарезается в нужные размеры. Далее собираются крупные узлы:
+                                        планширь, задний транец, основной и носовой кокпит, подиум.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="production-stages__item stage">
+                                <div class="stage__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#settings"></use>
+                                    </svg>
+                                </div>
+                                <div class="stage__info">
+                                    <h4 class="stage__title">
+                                        Этап 2 — сварка
+                                    </h4>
+                                    <p class="stage__descr">
+                                        Начинается на стапелях. Закладывают днище и борта, начинают формировать корпус
+                                        будущей лодки. Далее собирается внутренний силовой каркас лодки.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="production-stages__item stage">
+                                <div class="stage__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#sea"></use>
+                                    </svg>
+                                </div>
+                                <div class="stage__info">
+                                    <h4 class="stage__title">
+                                        Этап 3 — придание плавучести
+                                    </h4>
+                                    <p class="stage__descr">
+                                        Придание катеру дополнительной плавучести происходит за счёт заполнения
+                                        технических
+                                        отсеков специальной пеной.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="production-stages__item stage">
+                                <div class="stage__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#wires"></use>
+                                    </svg>
+                                </div>
+                                <div class="stage__info">
+                                    <h4 class="stage__title">
+                                        Этап 4 — покраска
+                                    </h4>
+                                    <p class="stage__descr">
+                                        После нанесения пены лодка отправляется на подготовку к покраске. В то время,
+                                        когда
+                                        лодка находится на покраске, специальным винилом и ковролином оклеиваются
+                                        детали.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="production-stages__item stage">
+                                <div class="stage__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#other"></use>
+                                    </svg>
+                                </div>
+                                <div class="stage__info">
+                                    <h4 class="stage__title">
+                                        Этап 5 — сборка
+                                    </h4>
+                                    <p class="stage__descr">
+                                        После выхода корпуса катера из покрасочной камеры, он поступает на этап сборки,
+                                        и вскоре приобретает законченный вид.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="production-stages__slider production-stages-slider container grid">
+                    <div class="swiper production-stages-slider__inner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h4 class="production-stages-slider__title">
+                                    ЭТАП 1 — ПРЕДСВАРКА
+                                </h4>
+                                <picture>
+                                    <source srcset="./img/production-stages-slider-1.webp"
+                                        class="production-stages-slider__img" type="image/webp">
+                                    <img loading="lazy" src="./img/production-stages-slider-1.jpg"
+                                        class="production-stages-slider__img" alt="ЭТАП — ПРЕДСВАРКА">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4 class="production-stages-slider__title">
+                                    ЭТАП 2 — СВАРКА
+                                </h4>
+                                <picture>
+                                    <source srcset="./img/production-stages-slider-2.webp"
+                                        class="production-stages-slider__img" type="image/webp">
+                                    <img loading="lazy" src="./img/production-stages-slider-2.jpg"
+                                        class="production-stages-slider__img" alt="ЭТАП 2 — СВАРКА">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4 class="production-stages-slider__title">
+                                    ЭТАП 3 — ЗАПОЛНЕНИЕ ПЕНОЙ
+                                </h4>
+                                <picture>
+                                    <source srcset="./img/production-stages-slider-3.webp"
+                                        class="production-stages-slider__img" type="image/webp">
+                                    <img loading="lazy" src="./img/production-stages-slider-3.jpg"
+                                        class="production-stages-slider__img" alt="ЭТАП 3 — ЗАПОЛНЕНИЕ ПЕНОЙ">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4 class="production-stages-slider__title">
+                                    ЭТАП 4 — ПОКРАСКА
+                                </h4>
+                                <picture>
+                                    <source srcset="./img/production-stages-slider-4.webp"
+                                        class="production-stages-slider__img" type="image/webp">
+                                    <img loading="lazy" src="./img/production-stages-slider-4.jpg"
+                                        class="production-stages-slider__img" alt="ЭТАП 4 — ПОКРАСКА">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <h4 class="production-stages-slider__title">
+                                    ЭТАП 5 — СБОРКА
+                                </h4>
+                                <picture>
+                                    <source srcset="./img/production-stages-slider-5.webp"
+                                        class="production-stages-slider__img" type="image/webp">
+                                    <img loading="lazy" src="./img/production-stages-slider-5.jpg"
+                                        class="production-stages-slider__img" alt="ЭТАП 5 — СБОРКА">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production-stages-slider__navigation">
+                        <div class="nav-primary-arrow nav-primary-arrow--prev">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                        <div class="nav-primary-arrow nav-primary-arrow--next">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-production__composition production-composition">
+                <div class="production-composition__container container grid">
+                    <div class="production-composition__item production-composition-item">
+                        <div class="swiper production-composition-item__slider">
+                            <div class="swiper-wrapper production-composition-gallery">
+                                <a href="./img/production-composition-item-5.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-5.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-5.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-1.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-1.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-1.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-2.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-2.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-2.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-3.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-3.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-3.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-4.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-4.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-4.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="production-composition-item__pagination pagination-dots"></div>
+                        </div>
+                        <div class="production-composition-item__info">
+                            <h1 class="production-composition-item__title">
+                                корпус
+                            </h1>
+                            <div class="production-composition-item__text">
+                                <p>
+                                    Алюминиевый цельносварной корпус.
+                                    На днище используется аллюминий 4 мм, на бортах и фальшбортах — 3 мм
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production-composition__item production-composition-item">
+                        <div class="swiper production-composition-item__slider">
+                            <div class="swiper-wrapper production-composition-gallery">
+                                <a href="./img/production-composition-item-6.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-6.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-6.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-7.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-7.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/photo-production-composition-item-7.jpg"
+                                            width="390" height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-8.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-8.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-8.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-9.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-9.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-9.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-10.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-10.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-10.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="production-composition-item__pagination pagination-dots"></div>
+                        </div>
+                        <div class="production-composition-item__info">
+                            <h1 class="production-composition-item__title">
+                                электрика
+                            </h1>
+                            <div class="production-composition-item__text">
+                                <p>
+                                    Лодки в базовой комплектации подготовлены для установки дополнительного
+                                    электрооборудования. Внутри корпуса проложены
+                                    гофры для протягивания силовых кабелей.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="production-composition__item production-composition-item">
+                        <div class="swiper production-composition-item__slider">
+                            <div class="swiper-wrapper production-composition-gallery">
+                                <a href="./img/production-composition-item-16.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-16.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-16.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-11.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-11.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-11.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-12.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-12.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-12.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-13.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-13.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-13.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-14.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-14.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-14.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                                <a href="./img/production-composition-item-15.jpg" class="swiper-slide">
+                                    <picture>
+                                        <source srcset="./img/production-composition-item-15.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/production-composition-item-15.jpg" width="390"
+                                            height="390" alt="ФЛ—70">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="production-composition-item__pagination pagination-dots"></div>
+                        </div>
+                        <div class="production-composition-item__info">
+                            <h1 class="production-composition-item__title">
+                                комплектация
+                            </h1>
+                            <ul class="production-composition-item__list list-reset">
+                                <span>На производстве мы также можем установить дополнительные детали:</span>
+                                <li>
+                                    Тент транспортировочный для стоянки на воде
+                                </li>
+                                <li>
+                                    Ходовой тент-трансформер
+                                </li>
+                                <li>
+                                    Москитные сетки для тента-трансформера
+                                </li>
+                                <li>
+                                    Рыбацкое велосипедное кресло
+                                </li>
+                                <li>
+                                    Дополнительный аэратор
+                                </li>
+                                <li>
+                                    Второй контур аэратора
+                                </li>
+                                <li>
+                                    Площадка транцевая
+                                </li>
+                                <li>
+                                    Рамки стекла черного цвета
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-production__feedback">
+                <div class="about-production__feedback-container container grid">
+                    <div class="about-production__feedback-inner feedback">
+                        <div class="feedback__text">
+                            <p>
+                                Остались вопросы? Свяжитесь с нами, поможем
+                                в выборе комплектации и расскажем обо всём подробно.
+                            </p>
+                            <p>
+                                Предварительные характеристики и стоимость можно узнать
+                                с помощью конфигуратора
+                            </p>
+                        </div>
+                        <div class="feedback__btns">
+                            <button type="button" class="btn btn-reset btn-third feedback__btn"
+                                data-popup-path="request-call">Заказать звонок</button>
+                            <button type="button"
+                                class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

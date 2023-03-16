@@ -138,19 +138,6 @@
             font-size: 14px;
         }
     }
-
-    &__pagination {
-        position: absolute;
-        z-index: 2;
-        bottom: 32px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @media (max-width:$smallTablet-max) {
-            bottom: 20px !important;
-        }
-    }
 }
 
 

@@ -154,6 +154,10 @@
 
     &--next {}
 
+    &.swiper-button-disabled {
+        cursor: default;
+        opacity: 0.4;
+    }
 }
 
 .copyrights-pane--delete {
@@ -242,6 +246,16 @@
 
 
 .pagination-dots {
+    position: absolute;
+    z-index: 2;
+    bottom: 32px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width:$smallTablet-max) {
+        bottom: 20px !important;
+    }
     .swiper-pagination-bullet {
         width: 14px;
         height: 14px;
@@ -258,5 +272,13 @@
             width: 12px;
             height: 12px;
         }
+    }
+}
+
+
+
+.production-composition-gallery__wrapper{
+    .lg-image{
+        border-radius: 40px;
     }
 }

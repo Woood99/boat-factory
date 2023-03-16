@@ -107,6 +107,54 @@ if (aboutCompanySlider) {
 }
 
 
+const productionStages = document.querySelectorAll('.production-stages');
+if (productionStages) {
+    productionStages.forEach(el => {
+        const section = el;
+        const slider = section.querySelector('.production-stages-slider__inner');
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            observer: true,
+            observeParents: true,
+            speed: 600,
+            navigation: {
+                nextEl: slider.closest('.production-stages').querySelector('.nav-primary-arrow--next'),
+                prevEl: slider.closest('.production-stages').querySelector('.nav-primary-arrow--prev'),
+            },
+        })
+
+    })
+}
+
+
+
+const productionComposition = document.querySelectorAll('.production-composition-item__slider');
+if (productionComposition) {
+    productionComposition.forEach(el => {
+        const swiper = new Swiper(el, {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            observer: true,
+            observeParents: true,
+            loopedSlides: 50,
+            speed: 600,
+            pagination: {
+                el: '.production-composition-item__pagination',
+                clickable: true,
+            },
+        })
+    })
+}
+
+
+
+
+
+
+
+
+
 
 
 if (document.querySelector('.boat-hero')) {
