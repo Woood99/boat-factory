@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>О нас - Вопрос/ответ</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <header class="header fix-block">
+    <div class="header__container container grid">
+        <a href="#" class="header__logo logo">
+            <picture>
+                <source srcset="./img/logo-small.svg" media="(max-width: 576px)">
+                <img loading="lazy" src="./img/logo.svg" class="logo__img" width="218" height="48" alt="Фабрика Лодок">
+            </picture>
+        </a>
+        <nav class="header__nav nav" data-menu>
+            <ul data-one-spoller data-spollers="1150,max" class="nav__list list-reset">
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>О нас</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                Компания
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Производство
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Новости и события
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Вопрос-ответ
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>Катера</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                ФЛ—55
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ФЛ—47
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ФЛ—70
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>Как купить</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                Где купить
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Гарантия
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Как стать дилером
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+
+
+
+
+
+        </nav>
+        <div class="header__links">
+            <ul class="header__social social-secondary list-reset" data-da=".header__nav,1150,last">
+                <li class="social-secondary__item">
+                    <a href="#" target="_blank" class="social-secondary__link social-secondary__link--tg"
+                        aria-label="Мы в телеграмме" title="Мы в телеграмме">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-secondary__item">
+                    <a href="#" target="_blank" class="social-secondary__link social-secondary__link--wa"
+                        aria-label="Мы в WhatsApp" title="Мы в WhatsApp">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <a href="tel:88004441461" class="header__tel">
+                <span>8 800 444-14-61</span>
+            </a>
+        </div>
+        <button class="btn-reset header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <div class="burger">
+                <span class="burger__line"></span>
+            </div>
+        </button>
+    </div>
+</header>
+
+        <main class="main">
+            <section class="question-answer p-top-page">
+                <div class="question-answer__container container grid">
+                    <h1 class="question-answer__title top-border-page">
+                        вопрос-ответ
+                    </h1>
+                    <div class="question-answer__inner">
+                        <ul data-spollers data-one-spoller class="question-answer__list list-reset spollers">
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Какие материалы используются для катеров FL?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Лодки FL отличает высокое качество алюминиевого профиля и сварных швов.
+                                            Специалисты на предприятии проходят строгий отбор и обучение. Раскрой
+                                            алюминиевых листов происходит на высокоточных станках ЧПУ, а корпуса лодок
+                                            заполняются двухкомпонентной пеной с закрытыми порами.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Возможен ли тюнинг катера?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Да, такая возможность есть. Мы сотрудничаем с тюнинг-центром BoatProfi,
+                                            которые профессионально устанавливают любое дополнительное оборудование на
+                                            лодки и катера различных марок
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Где можно посмотреть лодку «вживую»?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Весь модельный ряд катеров FL размещен на территории производства (г.
+                                            Дмитров). Там вы можете посмотреть любой интересующий вас корпус (как
+                                            снаружи, так и изнутри), получить дополнительную консультацию. Некоторые
+                                            модификации лодок размещены у наших дилеров.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Что с регистрацией в ГИМС?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <ul class="list-reset">
+                                            <span>Необходимые для подачи заявления на регистрацию судна
+                                                документы:</span>
+                                            <li>
+                                                <span>—</span>
+                                                чеки, договор купли-продажи или дарственную (всё, что подтверждает ваш
+                                                статус владельца плавсредства), а также паспорт и ИНН
+                                            </li>
+                                            <li>
+                                                <span>—</span>
+                                                техдокументация на лодку и на двигатель
+                                            </li>
+                                            <li>
+                                                <span>—</span>
+                                                квитанция об оплате госпошлины
+                                            </li>
+                                            <li>
+                                                <span>—</span>
+                                                заполненная регистрационная карта (она же — заявление)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Если регистрируете судно впервые, придется и его предоставить для верности.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul data-spollers data-one-spoller class="question-answer__list list-reset spollers">
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Можно ли записаться на тест-драйв?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Да, такая возможность есть. Для этого позвоните нам или отправьте форму
+                                            заявки, после чего мы свяжемся с вами и согласуем время и место тест-драйва.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Каковы сроки изготовления катера с нуля?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Сроки изготовления катера зависят от загруженности производства и ваших
+                                            пожеланий, и варьируются от 1 месяца до 3 (в особых случаях). Если вы хотите
+                                            приобрести катер по индивидуальному проект-заказу, лучше заняться этим
+                                            вопросом в осенне-зимний период, когда нет предсезонного ажиотажа. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Как осуществляется доставка лодок?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        Вопросы доставки индивидуальны  и обсуждаются с дилером на этапе заказа. При
+                                        заказе лодки у производителя, клиент забирает готовую модель самостоятельно
+                                        согласно режиму работы производства.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Где мне обслуживать катер?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Гарантийное и постгарантийное обслуживание катера Вы можете проводить у
+                                            любого ближайшего от вас<a href="#">дилера</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Какие мы даём гарантии?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Мы даём гарантию 3 года на корпус и 12 месяцев на лакокрасочное покрытие,
+                                            электрику и дополнительное оборудование (при условии соблюдения
+                                            <a href="#">требований эксплуатации, транспортировки и хранения</a>).
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul data-spollers data-one-spoller class="question-answer__list list-reset spollers">
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Как оформить заказ?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Для оформления заказа создайте заявку на нашем сайте, напишите нам в любой
+                                            удобный мессенджер или позвоните нашим менеджерам или официальным
+                                            представителям. Если вы точно знаете, какую лодку хотите, смело переходите в
+                                            раздел <a href="#">конфигуратор</a> и создавайте свой уникальный проект.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Какие у вас бывают акции?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Мы часто радуем наших клиентов акциями к праздникам. Также возможны скидки
+                                            при оформлении пакетного предложения (катер + мотор + прицеп). Благодаря
+                                            производству полного цикла и контракту с дистрибьюторами подвесных лодочных
+                                            моторов YAMAHA и Mercury, мы можем предложить клиентам действительно
+                                            привлекательные цены.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Возможны ли рассрочка или кредит?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Сроки оплаты прописываются в договоре и обычно делятся на 2-3 транша.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="question-answer__item spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Каким способом можно оплатить?</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Оплата заказов осуществляется безналичным платежом по реквизитам в
+                                            выставленном счете на оплату после согласования и оформления Договора. Наши
+                                            банковские реквизиты <a href="#">(ссылка)</a>.Обратитесь к нашим менеджерам или дилеру в
+                                            вашем регионе за консультацией по расчету заказа и составления графика
+                                            платежей.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="question-answer__feedback feedback">
+                        <div class="feedback__text">
+                            <p>
+                                Остались вопросы? Свяжитесь с нами, поможем
+                                в выборе комплектации и расскажем обо всём подробно.
+                            </p>
+                            <p>
+                                Предварительные характеристики и стоимость можно узнать
+                                с помощью конфигуратора
+                            </p>
+                        </div>
+                        <div class="feedback__btns">
+                            <button type="button" class="btn btn-reset btn-third feedback__btn"
+                                data-popup-path="request-call">Заказать звонок</button>
+                            <button type="button"
+                                class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer img-bg">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <div class="footer__info footer-info">
+                <h3 class="footer-info__title">
+                    хочу стать дилером
+                </h3>
+                <p class="footer-info__descr">
+                    Станьте дилером лучших лодок для рыбалки и отдыха.
+                </p>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    О нас
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О производстве
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Новости и события
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Вопрос-ответ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Катера
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–47
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–55
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–70
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Конфигуратор
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Покупателю
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Где купить
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Гарантия
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Контакты
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            info@fl-boats.ru
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="tel:88004441461" class="footer-item__link">
+                            8 800 444 14 61
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <ul class="footer__social social list-reset">
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--vk"
+                        aria-label="Наша страничка во Вконтакте" title="Наша страничка во Вконтакте">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Мы в телеграмме"
+                        title="Мы в телеграмме">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--wa" aria-label="Мы в WhatsApp"
+                        title="Мы в WhatsApp">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--yt" aria-label="Наш канал на YouTube"
+                        title="Наш канал на YouTube">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#yt"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__rights-reserved">
+                ООО «Фабрика Лодок» | Все права защищены
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="popup">
+    <div class="popup__container" role="dialog" aria-modal="true" data-popup-target="request-call">
+        <button class="btn-reset js-popup-close popup__close" aria-label="Закрыть модальное окно"></button>
+        <div class="popup__content request-call">
+            <h3 class="request-call__title">
+                Заказать звонок
+            </h3>
+            <p class="request-call__descr">
+                Оставьте свои контакты, свяжемся с вами
+                в самое ближийшее время
+            </p>
+            <form action="#" class="request-call__form form-primary" id="request-call__valid">
+
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Имя</span>
+                    <input type="text" name="Имя"
+                        class="input-reset input-primary label-primary__input--name label-primary__input"
+                        placeholder="">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Номер телефона</span>
+                    <input type="tel" name="Номер телефона"
+                        class="input-reset input-primary label-primary__input--tel label-primary__input"
+                        placeholder="+7">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Сообщение или вопрос</span>
+                    <textarea class="input-reset input-primary textarea-primary label-primary__input"
+                        placeholder=""></textarea>
+                </label>
+                <div class="form-primary__agree checkbox">
+                    <input id="c_2" class="checkbox__input" type="checkbox" value="1">
+                    <label for="c_2" class="checkbox__label">
+                        <span class="checkbox__text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <button class="btn btn-reset btn-fourth form-primary__btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+</html>
