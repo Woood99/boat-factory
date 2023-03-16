@@ -241,16 +241,22 @@
 }
 
 
-.pagination-dots{
-    .swiper-pagination-bullet{
+.pagination-dots {
+    .swiper-pagination-bullet {
         width: 14px;
         height: 14px;
         border-radius: 50%;
         background-color: var(--white);
         border: 1px solid var(--white);
         opacity: 1;
-        &.swiper-pagination-bullet-active{
+
+        &.swiper-pagination-bullet-active {
             background-color: var(--black);
+        }
+
+        @media (max-width:$smallTablet-max) {
+            width: 12px;
+            height: 12px;
         }
     }
 }

@@ -1,25 +1,77 @@
 .about-company {
 
-    &__hero {}
+    &__hero {
+        @media (min-width:$smallTablet-min) {
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                background-image: url('../img/becoming-dealer-bg.svg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: bottom center;
+
+                position: absolute;
+                right: -45%;
+                top: 0;
+                transform: translateX(-50%) translateY(-22%);
+
+                --size: 55%;
+                width: var(--size);
+                padding-bottom: var(--size);
+                height: 0;
+                z-index: -1;
+
+                @media (max-width:$smallTablet-max) {
+                    --size: 82%;
+                    bottom: 32%;
+                }
+
+                @media (max-width:$mobile-max) {
+                    bottom: 40%;
+                }
+            }
+        }
+    }
+
     &__images {
         margin-top: 92px;
+
+        @media (max-width:$smallTablet-max) {
+            margin-top: 45px;
+        }
+    }
+
+    &__quotes {
+        margin-top: 82px;
+
+        @media (max-width:$tablet-max) {
+            margin-top: 45px;
+        }
     }
 }
 
 .company-hero {
 
     &__inner {
-        grid-column: 2/12;
+        grid-column: 2/-1;
         display: flex;
         justify-content: space-between;
-        @media (max-width:$max-1150){
-             grid-column: 1/-1; 
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            flex-direction: column;
         }
     }
 
     &__slider {
         max-height: 390px;
         flex: 0 0 390px;
+        border-radius: 38px;
 
         .swiper-slide {
             img {
@@ -27,11 +79,31 @@
                 height: 100%;
             }
         }
+
+        @media (max-width:$smallTablet-max) {
+            flex: auto;
+            width: 100%;
+            max-height: none;
+            border-radius: 19px;
+            max-width: 450px;
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     &__info {
         padding-left: 45px;
-      flex-grow: 1
+        padding-right: 50px;
+        flex-grow: 1;
+
+        @media (max-width:$max-1150) {
+            padding-right: 0;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            padding-left: 0;
+            margin-top: 25px;
+        }
     }
 
     &__title {
@@ -42,6 +114,10 @@
         font-size: 26px;
         line-height: math.div(30, 26);
         text-transform: uppercase;
+
+        @media (max-width:$smallTablet-max) {
+            margin-bottom: 22px;
+        }
     }
 
     &__text {
@@ -51,27 +127,34 @@
         p {
             &:not(:last-child) {
                 margin-bottom: 30px;
+
+                @media (max-width:$smallTablet-max) {
+                    margin-bottom: 20px;
+                }
             }
         }
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 14px;
+        }
     }
-    &__pagination{
+
+    &__pagination {
         position: absolute;
         z-index: 2;
         bottom: 32px !important;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width:$smallTablet-max) {
+            bottom: 20px !important;
+        }
     }
 }
 
 
 
-
-
-.about-company {
-
-  
-}
 .company-images {
 
     &__container {
@@ -80,30 +163,135 @@
         transform: translateX(-7%);
         height: 162px;
         max-height: 162px;
+
+        @media (max-width:1700px) {
+            height: 100%;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            transform: translateX(-40%);
+        }
     }
 
     &__image {
-        height: 100%;
+        max-height: 162px;
+        height: 162px;
         flex-shrink: 0;
         width: calc(100% / 3 + 7%);
-        &:not(:last-child){
-         
-        }
-        img{
+
+        img {
             width: 100%;
-          height: 100%;
+            height: 100%;
+
+            @media (min-width:1701px) {
+                max-height: 162px;
+                height: 162px;
+            }
         }
-        &:nth-child(1){
-         position: relative;
-         right: -5%;
+
+        &:nth-child(1) {
+            position: relative;
+            right: -5%;
             z-index: 1;
+
+            @media (max-width:$smallTablet-max) {
+                width: calc(100% / 3 + 25%);
+                right: -7%;
+            }
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
+            position: relative;
             z-index: 0;
+
+            @media (max-width:$smallTablet-max) {
+                width: calc(100% / 3 + 50%);
+            }
         }
-        &:nth-child(3){
-         position: relative;
-         right: 5%;
+
+        &:nth-child(3) {
+            position: relative;
+            right: 5%;
+
+            @media (max-width:$smallTablet-max) {
+                width: calc(100% / 3 + 25%);
+                right: 7%;
+            }
+        }
+
+        @media (max-width:1700px) {
+            height: auto;
+            padding-bottom: 8%;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            height: 75px;
+        }
+
+        @media (max-width:390px) {
+            height: 60px;
+        }
+    }
+}
+
+
+
+.company-quotes {
+
+    &__container {}
+
+    &__item {
+        grid-column: 2/12;
+
+        &:nth-child(even) {
+            .quote-secondary {
+                grid-template-columns: 1fr 132px;
+
+                &__icon {
+                    order: 2;
+
+                    @media (max-width:$mobile-max) {
+                        order: 1;
+                    }
+                }
+
+                &__content {
+                    margin-right: 32px;
+                    margin-left: 0;
+                    order: 1;
+
+                    @media (max-width:$max-1150) {
+                        margin-right: 16px;
+                    }
+
+                    @media (max-width:$mobile-max) {
+                        order: 2;
+                        margin-right: 0;
+                    }
+                }
+
+                @media (max-width:$smallTablet-max) {
+                    grid-template-columns: 1fr 72px;
+                }
+
+                @media (max-width:$mobile-max) {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 45px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
         }
     }
 }
