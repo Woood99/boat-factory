@@ -9,27 +9,25 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/throttle */ "./src/js/modules/throttle.js");
-/* harmony import */ var _components_getHeaderHeight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/getHeaderHeight */ "./src/js/components/getHeaderHeight.js");
-/* harmony import */ var _components_headerFixed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/headerFixed */ "./src/js/components/headerFixed.js");
-/* harmony import */ var _components_fixFullHeight__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/fixFullHeight */ "./src/js/components/fixFullHeight.js");
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_spollers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/spollers */ "./src/js/components/spollers.js");
-/* harmony import */ var _components_validation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/validation */ "./src/js/components/validation.js");
-/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
-/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/sliderBreakpoint */ "./src/js/modules/sliderBreakpoint.js");
-/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
-/* harmony import */ var _components_video_block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/video-block */ "./src/js/components/video-block.js");
-/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/production-progress */ "./src/js/components/production-progress.js");
-/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_production_progress__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/dynamicAdapt */ "./src/js/components/dynamicAdapt.js");
-/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _components_galleryPhoto__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/galleryPhoto */ "./src/js/components/galleryPhoto.js");
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
-/* harmony import */ var _modules_popup__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/popup */ "./src/js/modules/popup.js");
-/* harmony import */ var _components_scrolling__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/scrolling */ "./src/js/components/scrolling.js");
-
+/* harmony import */ var _components_getHeaderHeight__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/getHeaderHeight */ "./src/js/components/getHeaderHeight.js");
+/* harmony import */ var _components_headerFixed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/headerFixed */ "./src/js/components/headerFixed.js");
+/* harmony import */ var _components_fixFullHeight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/fixFullHeight */ "./src/js/components/fixFullHeight.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_spollers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/spollers */ "./src/js/components/spollers.js");
+/* harmony import */ var _components_validation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/validation */ "./src/js/components/validation.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/sliderBreakpoint */ "./src/js/modules/sliderBreakpoint.js");
+/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_video_block__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/video-block */ "./src/js/components/video-block.js");
+/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/production-progress */ "./src/js/components/production-progress.js");
+/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_production_progress__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/dynamicAdapt */ "./src/js/components/dynamicAdapt.js");
+/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _components_galleryPhoto__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/galleryPhoto */ "./src/js/components/galleryPhoto.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _modules_popup__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/popup */ "./src/js/modules/popup.js");
+/* harmony import */ var _components_scrolling__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/scrolling */ "./src/js/components/scrolling.js");
 
 
 
@@ -48,28 +46,27 @@ __webpack_require__.r(__webpack_exports__);
 
 // import increaseImage from './components/increaseImage';
 document.addEventListener('DOMContentLoaded', () => {
-  (0,_components_burger__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_components_headerFixed__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_components_burger__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_components_headerFixed__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
   // =======================================================
 
-  const fixHeight = (0,_modules_throttle__WEBPACK_IMPORTED_MODULE_0__["default"])(_components_fixFullHeight__WEBPACK_IMPORTED_MODULE_3__["default"]);
-  const headerHeight = (0,_modules_throttle__WEBPACK_IMPORTED_MODULE_0__["default"])(_components_getHeaderHeight__WEBPACK_IMPORTED_MODULE_1__["default"]);
-  fixHeight();
-  headerHeight();
+  (0,_components_fixFullHeight__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_components_getHeaderHeight__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  if (window.innerWidth <= 1024) (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_13__["default"])();
   window.addEventListener('resize', () => {
-    fixHeight();
-    headerHeight();
+    (0,_components_fixFullHeight__WEBPACK_IMPORTED_MODULE_2__["default"])();
+    (0,_components_getHeaderHeight__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    if (window.innerWidth <= 1024) (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_13__["default"])();
   });
 
   // =======================================================
 
-  (0,_components_spollers__WEBPACK_IMPORTED_MODULE_5__["default"])();
-  if (window.innerWidth <= 1024) (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_14__["default"])();
+  (0,_components_spollers__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
   // =======================================================
 
-  (0,_components_validation__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_components_validation__WEBPACK_IMPORTED_MODULE_5__["default"])();
 
   // =======================================================
 
@@ -97,16 +94,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   };
-  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.hero-home__list', 1150, heroHomeSliderOptions);
-  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.news__list', 1150, newsSliderOptions);
+  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_7__["default"])('.hero-home__list', 1150, heroHomeSliderOptions);
+  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_7__["default"])('.news__list', 1150, newsSliderOptions);
 
   // =======================================================
 
-  (0,_components_video_block__WEBPACK_IMPORTED_MODULE_10__["default"])();
+  (0,_components_video_block__WEBPACK_IMPORTED_MODULE_9__["default"])();
 
   // =======================================================
 
-  const requestCall = new _modules_popup__WEBPACK_IMPORTED_MODULE_15__["default"]();
+  const requestCall = new _modules_popup__WEBPACK_IMPORTED_MODULE_14__["default"]();
 
   // Ненужное
   // const maskMap = {
@@ -117,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // customSelect(maskMap);
 
-  (0,_components_scrolling__WEBPACK_IMPORTED_MODULE_16__["default"])();
+  (0,_components_scrolling__WEBPACK_IMPORTED_MODULE_15__["default"])();
   // increaseImage();
 });
 
@@ -139,7 +136,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const burgerMenu = () => {
-  const header = document.querySelector('.header');
   const burger = document.querySelector('[data-burger]');
   const menu = document.querySelector('[data-menu]');
   const menuItems = document.querySelectorAll('[data-menu-item]');
@@ -156,7 +152,6 @@ const burgerMenu = () => {
     });
   }
   function openMenu() {
-    header.classList.add('header--active');
     burger.classList.add('burger--active');
     menu.classList.add('menu--active');
     burger.setAttribute('aria-expanded', 'true');
@@ -164,7 +159,6 @@ const burgerMenu = () => {
     (0,_modules_disableScroll__WEBPACK_IMPORTED_MODULE_0__["default"])();
   }
   function closeMenu() {
-    header.classList.remove('header--active');
     burger.setAttribute('aria-expanded', 'false');
     burger.setAttribute('aria-label', 'Открыть меню');
     burger.classList.remove('burger--active');
@@ -679,6 +673,24 @@ if (gallerySlider) {
     });
   });
 }
+const aboutCompanySlider = document.querySelectorAll('.company-hero__slider');
+if (aboutCompanySlider) {
+  console.log(aboutCompanySlider);
+  aboutCompanySlider.forEach(el => {
+    const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      observer: true,
+      observeParents: true,
+      loopedSlides: 50,
+      speed: 600,
+      pagination: {
+        el: '.company-hero__pagination',
+        clickable: true
+      }
+    });
+  });
+}
 if (document.querySelector('.boat-hero')) {
   const container = document.querySelector('.boat-hero');
   const nav = container.querySelector('.boat-hero__nav');
@@ -848,9 +860,8 @@ const validateForm = () => {
         return phone.length === 10;
       }
     }]);
-    validator.onSuccess(e => {
-      console.log('Проверка успешна');
-      e.target.reset();
+    validator.onSuccess(ev => {
+      ev.target.submit();
     });
   }
   if (requestCallForm) {
@@ -869,9 +880,8 @@ const validateForm = () => {
         return phone.length === 10;
       }
     }]);
-    validator.onSuccess(e => {
-      console.log('Проверка успешна');
-      e.target.reset();
+    validator.onSuccess(ev => {
+      ev.target.submit();
     });
   }
   if (contactsFeedbackValid) {
@@ -890,9 +900,8 @@ const validateForm = () => {
         return phone.length === 10;
       }
     }]);
-    validator.onSuccess(e => {
-      console.log('Проверка успешна');
-      e.target.reset();
+    validator.onSuccess(ev => {
+      ev.target.submit();
     });
   }
 };
@@ -1366,46 +1375,6 @@ const tabs = () => {
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tabs);
-
-/***/ }),
-
-/***/ "./src/js/modules/throttle.js":
-/*!************************************!*\
-  !*** ./src/js/modules/throttle.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const throttle = function (func) {
-  let delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
-  let isThrottled = false;
-  let savedArgs = null;
-  let savedThis = null;
-  return function wrap() {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    if (isThrottled) {
-      savedArgs = args, savedThis = this;
-      return;
-    }
-    func.apply(this, args);
-    isThrottled = true;
-    setTimeout(() => {
-      isThrottled = false;
-      if (savedThis) {
-        wrap.apply(savedThis, savedArgs);
-        savedThis = null;
-        savedArgs = null;
-      }
-    }, delay);
-  };
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (throttle);
 
 /***/ }),
 

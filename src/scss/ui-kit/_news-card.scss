@@ -30,6 +30,7 @@
         grid-column: 1/-1;
         font-weight: 600;
         font-size: 18px;
+        line-height: math.div(24, 18);
         transition: color $transitionSpeed $transitionFunction;
     }
 

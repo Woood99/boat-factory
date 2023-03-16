@@ -124,6 +124,10 @@
             display: flex;
             align-items: center;
             margin-left: 0;
+
+            .header__social {
+                display: none;
+            }
         }
     }
 
@@ -140,13 +144,14 @@
             position: static;
             transform: translateY(0);
             justify-content: center;
+            margin-top: 40px;
         }
     }
 
     &__tel {
         color: var(--black);
         font-weight: 500;
-        @include adaptiveValue("font-size", 16, 14);
+        font-size: 16px;
         line-height: math.div(19, 16);
         transition: color $transitionSpeed $transitionFunction;
         outline: none;
@@ -185,16 +190,6 @@
 
         @media (min-width:$min-1150) {
             display: none;
-        }
-    }
-
-    &--active {
-        @media (max-width:$max-1150) {
-            // .header__social {
-            //     visibility: visible;
-            //     opacity: 1;
-            //     transform: translateY(0);
-            // }
         }
     }
 

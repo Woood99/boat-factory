@@ -23,6 +23,10 @@
             &:hover {
                 .nav__link {
                     color: var(--red);
+
+                    &>svg {
+                        transform: rotate(180deg) translateX(-2px);
+                    }
                 }
 
                 .nav__item-dropdown {
@@ -93,7 +97,7 @@
         text-transform: uppercase;
         font-weight: 500;
         font-size: 14px;
-        line-height: math.div(16, 14);
+        line-height: math.div(14, 14);
         transition: color $transitionSpeed $transitionFunction;
         outline: none;
         padding: 8px 0;
@@ -103,16 +107,12 @@
         }
 
         svg {
+            display: inline-block;
             width: 8px;
             height: 8px;
             fill: currentColor;
-            position: relative;
-            top: -2px;
-            right: -8px;
-
-            @media (min-width:$min-1150) {
-                display: none;
-            }
+            transition: transform $transitionSpeed $transitionFunction;
+            transform: translateY(-2px) translateX(2px);
         }
 
         @media (max-width:$max-1150) {
@@ -120,6 +120,19 @@
             align-items: center;
             width: 100%;
             justify-content: center;
+
+            svg {
+                transform: translateY(-2px) translateX(7px);
+            }
+
+            &._spoller-active {
+                svg {
+                    transform: rotate(180deg) translateX(-7px);
+                }
+            }
         }
+    }
+    @media (max-width:$max-1150){
+        overflow-y: auto; 
     }
 }

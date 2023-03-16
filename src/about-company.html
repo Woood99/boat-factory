@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>О компании</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main about-company">
+            <section class="about-company__hero company-hero p-top-page container grid">
+                <div class="company-hero__inner top-border-page">
+                    <div class="swiper company-hero__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/photo-card-1.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/photo-card-1.jpg" width="390" height="390"
+                                        alt="ФЛ—70">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/photo-card-1.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/photo-card-1.jpg" width="390" height="390"
+                                        alt="ФЛ—70">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/photo-card-1.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/photo-card-1.jpg" width="390" height="390"
+                                        alt="ФЛ—70">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/photo-card-1.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/photo-card-1.jpg" width="390" height="390"
+                                        alt="ФЛ—70">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="company-hero__pagination pagination-dots"></div>
+                    </div>
+                    <div class="company-hero__info">
+                        <h1 class="company-hero__title">
+                            о компании
+                        </h1>
+                        <div class="company-hero__text">
+                            <p>
+                                2022 стал годом возможностей в развитии промышленности, модернизации производств,
+                                инновациях. В городе Дмитров Московской области появилась новая точка на карте — завод
+                                ООО «Фабрика лодок». В октябре с конвейера вышла первая модель цельносварной алюминиевой
+                                лодки для рыбалки и активного отдыха на воде – FL–55. 
+                            </p>
+                            <p>
+                                За несколько месяцев мы наладили технологический и производственный процессы, создали
+                                дополнительную модификацию лодки FL–55 Sport и начали разработку 2 новых моделей.
+                                В каждой из них мы учли требования рыболовов любителей и профессиональных спортсменов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-company__images company-images">
+                <div class="company-images__container">
+                    <div class="company-images__image">
+                        <picture>
+                            <source srcset="./img/about-company-image.webp" type="image/webp">
+                            <img loading="lazy" src="./img/about-company-image.png" width="638"
+                                height="162" alt="Картинка">
+                        </picture>
+                    </div>
+                    <div class="company-images__image">
+                        <picture>
+                            <source srcset="./img/about-company-image-2.webp" type="image/webp">
+                            <img loading="lazy" src="./img/about-company-image-2.png" width="638"
+                                height="162" alt="Картинка">
+                        </picture>
+                    </div>
+                    <div class="company-images__image">
+                        <picture>
+                            <source srcset="./img/about-company-image-3.webp" type="image/webp">
+                            <img loading="lazy" src="./img/about-company-image-3.png" width="638"
+                                height="162" alt="Картинка">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+
+</html>

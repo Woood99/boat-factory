@@ -89,6 +89,24 @@ if (gallerySlider) {
 }
 
 
+const aboutCompanySlider = document.querySelectorAll('.company-hero__slider');
+if (aboutCompanySlider) {
+    console.log(aboutCompanySlider);
+    aboutCompanySlider.forEach(el => {
+        const swiper = new Swiper(el, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            observer: true,
+            observeParents: true,
+            loopedSlides: 50,
+            speed: 600,
+            pagination: {
+                el: '.company-hero__pagination',
+                clickable: true,
+            },
+        })
+    })
+}
 
 
 

@@ -24,12 +24,10 @@ const validateForm = () => {
                     return phone.length === 10;
                 },
             }])
+        validator.onSuccess((ev) => {
+            ev.target.submit();
+        })
 
-
-        validator.onSuccess(e => {
-            console.log('Проверка успешна');
-            e.target.reset();
-        });
     }
     if (requestCallForm) {
         const tel = requestCallForm.querySelector('.label-primary__input--tel');
@@ -51,12 +49,9 @@ const validateForm = () => {
                     return phone.length === 10;
                 },
             }])
-
-
-        validator.onSuccess(e => {
-            console.log('Проверка успешна');
-            e.target.reset();
-        });
+            validator.onSuccess((ev) => {
+                ev.target.submit();
+            })
     }
     if (contactsFeedbackValid) {
         const tel = contactsFeedbackValid.querySelector('.label-primary__input--tel');
@@ -78,12 +73,9 @@ const validateForm = () => {
                     return phone.length === 10;
                 },
             }])
-
-
-        validator.onSuccess(e => {
-            console.log('Проверка успешна');
-            e.target.reset();
-        });
+            validator.onSuccess((ev) => {
+                ev.target.submit();
+            })
     }
 }
 

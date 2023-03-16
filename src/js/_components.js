@@ -1,4 +1,3 @@
-import throttle from './modules/throttle';
 import getHeaderHeight from './components/getHeaderHeight';
 import headerFixed from './components/headerFixed';
 import fixFullheight from './components/fixFullHeight'
@@ -22,19 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // =======================================================
 
-    const fixHeight = throttle(fixFullheight);
-    const headerHeight = throttle(getHeaderHeight);
-    fixHeight();
-    headerHeight();
+    fixFullheight();
+    getHeaderHeight();
+    if (window.innerWidth <= 1024) tabs();
     window.addEventListener('resize', () => {
-        fixHeight();
-        headerHeight();
+        fixFullheight();
+        getHeaderHeight();
+        if (window.innerWidth <= 1024) tabs();
     });
+
 
     // =======================================================
 
     spollers();
-    if (window.innerWidth <= 1024) tabs();
 
     // =======================================================
 
