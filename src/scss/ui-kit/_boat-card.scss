@@ -34,7 +34,8 @@
 
         display: grid;
         grid-template-columns: repeat(1fr, max-content);
-        grid-gap: 7px 10px;
+        grid-row-gap: 7px;
+        grid-column-gap: 10px;
     }
 
     &__title {

@@ -40,10 +40,11 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 45px 16px;
-
+        grid-row-gap: 45px;
+        grid-row-gap: 16px;
         @media (max-width:$smallTablet-max) {
-            grid-gap: 30px 12px;
+            grid-row-gap: 30px;
+            grid-column-gap: 12px;
         }
     }
 

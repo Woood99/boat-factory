@@ -15,11 +15,12 @@
     &__top {
         display: grid;
         grid-template-columns: 132px max-content;
-        grid-gap: 40px;
-
+        grid-row-gap: 40px;
+        grid-column-gap: 40px;
         @media (max-width:$smallTablet-max) {
             grid-template-columns: 72px max-content;
-            grid-gap: 20px;
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
         }
     }
 

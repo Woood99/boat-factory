@@ -12,8 +12,8 @@
         display: grid;
         grid-template-columns: percent(490, 852) percent(315, 852);
         justify-content: space-between;
-        grid-gap: 25px;
-
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
         @media (min-width:$smallTablet-min) {
             &:not(:last-child) {
                 padding-bottom: 56px;
@@ -37,8 +37,8 @@
 
         @media (max-width:$smallTablet-max) {
             grid-template-columns: 1fr;
-            grid-gap: 0;
-
+            grid-column-gap: 0;
+            grid-row-gap: 0;
             &:not(:last-child) {
                 padding-bottom: 0px;
             }

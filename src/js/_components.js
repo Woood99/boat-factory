@@ -14,6 +14,12 @@ import './components/galleryPhoto';
 import tabs from './modules/tabs';
 import popup from './modules/popup';
 import scrolling from './components/scrolling';
+
+import Choices from 'choices.js';
+import {
+    _slideToggle
+} from './support-modules/slide';
+
 // import increaseImage from './components/increaseImage';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
@@ -89,4 +95,54 @@ document.addEventListener('DOMContentLoaded', () => {
     // increaseImage();
 
 
+
+
+    const selectPrimary = document.querySelectorAll('.select-primary');
+    selectPrimary.forEach(el => {
+        const choices = new Choices(el, {
+            searchEnabled: false,
+            itemSelectText: '',
+            position: 'bottom',
+        })
+    });
+
+
+
+
+
+    // const selectColor = document.querySelectorAll('.select-color');
+    // selectColor.forEach(el => {
+    //     const choices = new Choices(el, {
+    //         searchEnabled: false,
+    //         itemSelectText: '',
+    //         position: 'bottom',
+    //         shouldSort: false,
+    //         placeholder: true,
+    //         classNames: {
+    //             containerOuter: 'choices select-color-container',
+    //         }
+    //     })
+    //     const defaultPlaceholder = el.closest('.select-color-container').querySelector('.choices__placeholder.choices__item--selectable').textContent;
+    //     el.addEventListener('change', (e) => {
+    //         el.closest('.select-color-container').setAttribute('data-color', e.target.value);
+    //         el.closest('.select-color-container').querySelector('.choices__item.choices__item--selectable').textContent = defaultPlaceholder;
+    //         console.log(defaultPlaceholder);
+    //     })
+    // });
+
+
+
+
+
+    const choiceColor = document.querySelectorAll('.choice-color');
+    choiceColor.forEach(container => {
+        container.querySelectorAll('.choice-color__input').forEach(el => {
+            if (el.checked){
+                el.closest('.choice-color').querySelector('.choice-color__selected').setAttribute('data-color',el.value);
+            }
+            el.addEventListener('change',(e)=>{
+                el.closest('.choice-color').querySelector('.choice-color__selected').setAttribute('data-color',e.target.value);
+            })
+       })
+    });
 })

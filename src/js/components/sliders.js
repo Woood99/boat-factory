@@ -7,6 +7,34 @@ import Swiper, {
 Swiper.use([Navigation, Pagination, Thumbs, EffectFade]);
 
 
+if (document.querySelector('.boat-hero')) {
+    const container = document.querySelector('.boat-hero');
+    const nav = container.querySelector('.boat-hero__nav');
+    const body = container.querySelector('.boat-hero__body');
+    let navSlider = new Swiper(nav, {
+        slidesPerView: 2.5,
+        spaceBetween: 12,
+        observer: true,
+        observeParents: true,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            569: {
+                slidesPerView: 3,
+            }
+        },
+    });
+    let bodySlider = new Swiper(body, {
+        spaceBetween: 50,
+        observer: true,
+        observeParents: true,
+        effect: 'fade',
+        thumbs: {
+            swiper: navSlider,
+        },
+    })
+}
 
 
 const galleryHomeSlider = document.querySelectorAll('.gallery--home');
@@ -129,6 +157,28 @@ if (productionStages) {
 
 
 
+const configuratorAdditional = document.querySelectorAll('.configurator-additional');
+if (configuratorAdditional) {
+    configuratorAdditional.forEach(el => {
+        const container = el;
+        const slider = container.querySelector('.configurator-additional__slider');
+        const swiper = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            observer: true,
+            observeParents: true,
+            speed: 600,
+            navigation: {
+                nextEl: slider.closest('.configurator-additional').querySelector('.nav-primary-arrow--next'),
+                prevEl: slider.closest('.configurator-additional').querySelector('.nav-primary-arrow--prev'),
+            },
+        })
+
+    })
+}
+
+
+
 const productionComposition = document.querySelectorAll('.production-composition-item__slider');
 if (productionComposition) {
     productionComposition.forEach(el => {
@@ -148,40 +198,32 @@ if (productionComposition) {
 }
 
 
-
-
-
-
-
-
-
-
-
-if (document.querySelector('.boat-hero')) {
-    const container = document.querySelector('.boat-hero');
-    const nav = container.querySelector('.boat-hero__nav');
-    const body = container.querySelector('.boat-hero__body');
-    let navSlider = new Swiper(nav, {
-        slidesPerView: 2.5,
-        spaceBetween: 12,
-        observer: true,
-        observeParents: true,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-            569: {
-                slidesPerView: 3,
-            }
-        },
-    });
-    let bodySlider = new Swiper(body, {
-        spaceBetween: 50,
-        observer: true,
-        observeParents: true,
-        effect: 'fade',
-        thumbs: {
-            swiper: navSlider,
-        },
+const configuratorSlider = document.querySelectorAll('.configurator-content__slider');
+if (configuratorSlider) {
+    configuratorSlider.forEach(el => {
+        const swiper = new Swiper(el, {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            observer: true,
+            observeParents: true,
+            loopedSlides: 50,
+            speed: 600,
+            pagination: {
+                el: '.configurator-content__pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: el.querySelector('.nav-secondary-arrow--next'),
+                prevEl: el.querySelector('.nav-secondary-arrow--prev'),
+            },
+        })
     })
 }
+
+
+
+
+
+
+
+

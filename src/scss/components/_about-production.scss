@@ -50,8 +50,8 @@
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px 19px;
-
+        grid-row-gap: 15px;
+        grid-column-gap: 19px;
         @media (max-width:$max-1150) {
             grid-column: 1/-1;
         }
@@ -150,18 +150,21 @@
         grid-column: 3/11;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 60px 50px;
+        grid-row-gap: 60px;
+        grid-column-gap: 50px;
         justify-content: space-between;
 
         @media (max-width:$max-1150) {
             margin-top: 50px;
             grid-column: 1/-1;
-            grid-gap: 30px;
+            grid-row-gap: 30px;
+            grid-column-gap: 30px;
         }
 
         @media (max-width:$tablet-max) {
             .stage {
-                grid-gap: 0 20px;
+                grid-row-gap: 0;
+                grid-column-gap: 20px;
             }
 
             .stage__icon {

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Главная</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <div class="hero-home-video">
+            @include('partials/header.html')
+            <video playsiline preload muted autoplay loop class="hero-home-video__video">
+                <source src="./hero-video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <main class="main">
+            <section class="choice-obvious choice-obvious--black choice-obvious--home">
+                <div class="choice-obvious__container container grid">
+                    <div class="choice-obvious__top grid">
+                        <h3 class="choice-obvious__subtitle">
+                            [ О ПРЕИМУЩЕСТВАХ ]
+                        </h3>
+                        <h2 class="choice-obvious__title title-1">
+                            почему выбор <br>
+                            очевиден
+                        </h2>
+                        <span class="choice-obvious__name">[ФЛ]</span>
+                        <div class="choice-obvious__text">
+                            <p>
+                                Оптимальный баланс — это когда лодка и скоростная, и мореходная. Несмотря на скорость,
+                                рыбак не должен
+                                испытывать трудностей при встрече с волной, сильным ударам или тряской при плохой
+                                погоде. Лодки ФЛ
+                                именно такие, вот что отличает их от других.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="choice-obvious__content">
+
+
+                        <div data-spollers data-one-spoller class="spollers-secondary">
+                            <div class="spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>мореходность и остойчивость</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Лодки ФЛ совместили в себе оптимальную ширину и килеватость. Расположение
+                                            раданов
+                                            и конструкция днища обеспечивают быстрое передвижение при сильном ветре
+                                            и волнении воды.
+                                            Все детали силового набора завязаны на продольную скулу, которая усилена
+                                            оригинальным
+                                            профилем, а это значит, что любые нагрузки от столкновения с волной
+                                            или препятствием
+                                            будут равномерно распределяться по всему корпусу лодки.
+                                        </p>
+                                        <p>
+                                            Идеально гладкие борта и днище из алюминиево-магниевого сплава не создают
+                                            дополнительного сопротивления скольжению по воде.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <picture>
+                                            <source srcset="./img/boat-2.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/boat-2.png" width="638" height="162"
+                                                alt="мореходность и остойчивость">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>Прочность и безопасность</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Лодки ФЛ совместили в себе оптимальную ширину и килеватость. Расположение
+                                            раданов
+                                            и конструкция днища обеспечивают быстрое передвижение при сильном ветре
+                                            и волнении воды.
+                                            Все детали силового набора завязаны на продольную скулу, которая усилена
+                                            оригинальным
+                                            профилем, а это значит, что любые нагрузки от столкновения с волной
+                                            или препятствием
+                                            будут равномерно распределяться по всему корпусу лодки.
+                                        </p>
+                                        <p>
+                                            Идеально гладкие борта и днище из алюминиево-магниевого сплава не создают
+                                            дополнительного сопротивления скольжению по воде.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <picture>
+                                            <source srcset="./img/boat-2.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/boat-2.png" width="638" height="162"
+                                                alt="мореходность и остойчивость">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>комфорт и эргономика</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Лодки ФЛ совместили в себе оптимальную ширину и килеватость. Расположение
+                                            раданов
+                                            и конструкция днища обеспечивают быстрое передвижение при сильном ветре
+                                            и волнении воды.
+                                            Все детали силового набора завязаны на продольную скулу, которая усилена
+                                            оригинальным
+                                            профилем, а это значит, что любые нагрузки от столкновения с волной
+                                            или препятствием
+                                            будут равномерно распределяться по всему корпусу лодки.
+                                        </p>
+                                        <p>
+                                            Идеально гладкие борта и днище из алюминиево-магниевого сплава не создают
+                                            дополнительного сопротивления скольжению по воде.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <picture>
+                                            <source srcset="./img/boat-2.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/boat-2.png" width="638" height="162"
+                                                alt="мореходность и остойчивость">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spollers-secondary__item">
+                                <button type="button" data-spoller class="btn btn-reset spollers-secondary__title">
+                                    <span>современное производство и новейшие технологии</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="spollers-secondary__body">
+                                    <div>
+                                        <p>
+                                            Лодки ФЛ совместили в себе оптимальную ширину и килеватость. Расположение
+                                            раданов
+                                            и конструкция днища обеспечивают быстрое передвижение при сильном ветре
+                                            и волнении воды.
+                                            Все детали силового набора завязаны на продольную скулу, которая усилена
+                                            оригинальным
+                                            профилем, а это значит, что любые нагрузки от столкновения с волной
+                                            или препятствием
+                                            будут равномерно распределяться по всему корпусу лодки.
+                                        </p>
+                                        <p>
+                                            Идеально гладкие борта и днище из алюминиево-магниевого сплава не создают
+                                            дополнительного сопротивления скольжению по воде.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <picture>
+                                            <source srcset="./img/boat-2.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/boat-2.png" width="638" height="162"
+                                                alt="мореходность и остойчивость">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            <section class="container-big gallery gallery--home">
+                <div class="container">
+                    <div class="swiper gallery__inner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/1.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/1.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/2.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/2.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/3.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/3.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/4.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/4.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/5.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/5.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide">
+                                <picture>
+                                    <source srcset="./img/gallery/6.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/gallery/6.jpg" width="307" height="169"
+                                        alt="Картинка">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__navigation">
+                        <div class="nav-primary-arrow nav-primary-arrow--prev">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                        <div class="nav-primary-arrow nav-primary-arrow--next">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/all-began.html')
+            <section class="quote quote--white">
+                <div class="quote__container container">
+                    <div class="quote__inner">
+                        <div class="quote__top">
+                            <div class="quote__icon">
+                                <picture>
+                                    <source srcset="./img/avatar-3.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/avatar-3.jpg" width="132" height="132"
+                                        alt="Дмитрий Зюзин">
+                                </picture>
+                            </div>
+                            <div class="quote__info">
+                                <h3 class="quote__name">
+                                    Дмитрий Зюзин
+                                </h3>
+                                <span class="quote__post">
+                                    Сооснователь компании
+                                </span>
+                            </div>
+                        </div>
+                        <blockquote class="quote__text">
+                            «Мной, моими друзьями и коллегами проведено тысячи тестов катеров на воде, что 
+                            <span>позволило нам создать лодку, максимально приспособленную</span>
+                            для полноценной профессиональной и любительской рыбалки»
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+            @include('partials/video-block.html')
+
+            <section class="production">
+                <div class="container">
+                    <div class="production__top">
+                        <h2 class="production__title title-1">
+                            от резки профиля <br>
+                            до первой волны
+                        </h2>
+                        <div class="production__bubble-speech bubble-speech">
+                            <p class="bubble-speech__text">
+                                Производственный процесс строго контролируется на каждом из этапов: это позволяет
+                                вовремя выявлять ошибки и давать 100%-ное качество на выходе
+                            </p>
+                        </div>
+                    </div>
+                    <div class="production__content production-progress">
+                        <div class="production-progress__container">
+                            <div class="production-progress__img">
+                                <picture>
+                                    <source srcset="./img/production.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/production.png" width="417" height="884"
+                                        alt="Картинка">
+                                </picture>
+                            </div>
+                            <div class="production-progress__center">
+                                <div class="production-progress__line production-progress__line">
+                                    <div class="state">
+                                        <img src="./img/state.svg" alt="">
+                                        <img src="./img/state-active.svg" alt="">
+                                    </div>
+                                    <div class="state">
+                                        <img src="./img/state.svg" alt="">
+                                        <img src="./img/state-active.svg" alt="">
+                                    </div>
+                                    <div class="state">
+                                        <img src="./img/state.svg" alt="">
+                                        <img src="./img/state-active.svg" alt="">
+                                    </div>
+                                    <div class="state">
+                                        <img src="./img/state.svg" alt="">
+                                        <img src="./img/state-active.svg" alt="">
+                                    </div>
+                                    <div class="state">
+                                        <img src="./img/state.svg" alt="">
+                                        <img src="./img/state-active.svg" alt="">
+                                    </div>
+                                    <div class="state">
+                                        <img src="./img/state.svg" alt="">
+                                        <img src="./img/state-active.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="production-progress__stages">
+                                <div class="production-progress__stage stage">
+                                    <div class="stage__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#scissors"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="stage__info">
+                                        <h4 class="stage__title">
+                                            Этап 1 — предсварка
+                                        </h4>
+                                        <p class="stage__descr">
+                                            Алюминиевый профиль нарезается в нужные размеры. Далее собираются крупные
+                                            узлы:
+                                            планширь, задний транец, основной и носовой кокпит, подиум.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="production-progress__stage stage">
+                                    <div class="stage__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#settings"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="stage__info">
+                                        <h4 class="stage__title">
+                                            Этап 2 — сварка
+                                        </h4>
+                                        <p class="stage__descr">
+                                            Алюминиевый профиль нарезается в нужные размеры. Далее собираются крупные
+                                            узлы:
+                                            планширь, задний транец, основной и носовой кокпит, подиум.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="production-progress__stage stage">
+                                    <div class="stage__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#sea"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="stage__info">
+                                        <h4 class="stage__title">
+                                            Этап 3 — придание плавучести
+                                        </h4>
+                                        <p class="stage__descr">
+                                            Алюминиевый профиль нарезается в нужные размеры. Далее собираются крупные
+                                            узлы:
+                                            планширь, задний транец, основной и носовой кокпит, подиум.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="production-progress__stage stage">
+                                    <div class="stage__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wires"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="stage__info">
+                                        <h4 class="stage__title">
+                                            Этап 4 — покраска
+                                        </h4>
+                                        <p class="stage__descr">
+                                            Алюминиевый профиль нарезается в нужные размеры. Далее собираются крупные
+                                            узлы:
+                                            планширь, задний транец, основной и носовой кокпит, подиум.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="production-progress__stage stage">
+                                    <div class="stage__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#other"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="stage__info">
+                                        <h4 class="stage__title">
+                                            Этап 5 — сборка
+                                        </h4>
+                                        <p class="stage__descr">
+                                            Алюминиевый профиль нарезается в нужные размеры. Далее собираются крупные
+                                            узлы:
+                                            планширь, задний транец, основной и носовой кокпит, подиум.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="production-progress__finish">
+                            лодка готова.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quote quote--black">
+                <div class="quote__container container">
+                    <div class="quote__inner">
+                        <div class="quote__top">
+                            <div class="quote__icon">
+                                <picture>
+                                    <source srcset="./img/avatar-2.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/avatar-2.jpg" width="132" height="132"
+                                        alt="Дмитрий Зюзин">
+                                </picture>
+                            </div>
+                            <div class="quote__info">
+                                <h3 class="quote__name">
+                                    адель шарафутдинов
+                                </h3>
+                                <span class="quote__post">
+                                    Сооснователь компании
+                                </span>
+                            </div>
+                        </div>
+                        <blockquote class="quote__text">
+                            «Мы пришли, чтобы доказать всем.
+                            В России <span>лучшее производство алюминиевых лодок</span> для рыбалки и активного отдыха.
+                            Нам удалось объединить <span>технологичность, практичность, комфорт и безопасность»</span>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="news__container container">
+                    <div class="swiper news__list" data-slider-breakpoint="false">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="news-card">
+                                    <a href="#" class="news-card__wrapper">
+                                        <div class="news-card__img ibg">
+                                            <picture>
+                                                <source srcset="./img/news-card-1.webp" type="image/webp">
+                                                <img loading="lazy" src="./img/news-card-1.jpg" width="416" height="177"
+                                                    alt="Выбор лодки">
+                                            </picture>
+                                        </div>
+                                        <div class="news-card__content">
+                                            <h3 class="news-card__title">
+                                                Выбор лодки
+                                            </h3>
+                                            <p class="news-card__descr">
+                                                Как выбирают лодку для рыбалки профессионалы? Профессиональные
+                                                рыболовы-спортсмены
+                                                знают, что успех рыбалки зависит не только от того, на что и как ловить,
+                                                но и на чем это делать.
+                                            </p>
+                                            <time class="news-card__date" datetime="2023-03-03">03.03.2023</time>
+                                            <button type="button" class="btn btn-reset news-card__btn">
+                                                <svg class="">
+                                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="news-card">
+                                    <a href="#" class="news-card__wrapper">
+                                        <div class="news-card__img ibg">
+                                            <picture>
+                                                <source srcset="./img/news-card-2.webp" type="image/webp">
+                                                <img loading="lazy" src="./img/news-card-2.jpg" width="416" height="177"
+                                                    alt="Картинка">
+                                            </picture>
+                                        </div>
+                                        <div class="news-card__content">
+                                            <h3 class="news-card__title">
+                                                Испытание ФЛ-70
+                                            </h3>
+                                            <p class="news-card__descr">
+                                                Андрей Питерцов испытал модель ФЛ-70: это идеальная лодка для рыбалки,
+                                                где продуман каждый элемент. Обводы, корпус и килеватость формируют ту
+                                                схему,
+                                            </p>
+                                            <time class="news-card__date" datetime="2023-03-03">03.03.2023</time>
+                                            <button type="button" class="btn btn-reset news-card__btn">
+                                                <svg class="">
+                                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="news-card">
+                                    <a href="#" class="news-card__wrapper">
+                                        <div class="news-card__img ibg">
+                                            <picture>
+                                                <source srcset="./img/news-card-3.webp" type="image/webp">
+                                                <img loading="lazy" src="./img/news-card-3.jpg" width="416" height="177"
+                                                    alt="Картинка">
+                                            </picture>
+                                        </div>
+                                        <div class="news-card__content">
+                                            <h3 class="news-card__title">
+                                                На выставке
+                                            </h3>
+                                            <p class="news-card__descr">
+                                                Впервые на Moscow Boat Show 2023 — лодки ФЛ.
+                                                «Крокус Экспо», 2 — 5 марта 2023 года. Международная выставка катеров и
+                                                яхт Moscow Boat Show
+                                            </p>
+                                            <time class="news-card__date" datetime="2023-03-03">03.03.2023</time>
+                                            <button type="button" class="btn btn-reset news-card__btn">
+                                                <svg class="">
+                                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="news__more">
+                        [ все новости и события ]
+                    </a>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

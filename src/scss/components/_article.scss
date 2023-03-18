@@ -14,18 +14,20 @@
         grid-column: 1/-1;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 21px;
-
+        grid-column-gap: 21px;
+        grid-row-gap: 21px;
         @media (max-width:$max-1150) {
             order: 5;
         }
 
         @media (max-width:$tablet-max) {
-            grid-gap: 15px;
+            grid-row-gap: 15px;
+            grid-column-gap: 15px;
         }
 
         @media (max-width:$smallTablet-max) {
-            grid-gap: 5px;
+            grid-row-gap: 5px;
+            grid-column-gap: 5px;
         }
 
         @media (max-width:$mobile-max) {
