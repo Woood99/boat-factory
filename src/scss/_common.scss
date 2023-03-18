@@ -417,7 +417,7 @@
 .hero-home-video {
 
     &__video {
-        min-height: 100vh;
+        min-height: calc(100vh - 80px);
         height: var(--vh);
         width: 100%;
         object-fit: cover;
