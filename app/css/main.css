@@ -1750,6 +1750,7 @@ a {
 }
 
 .hero-home-video__video {
+  min-height: 100vh;
   height: var(--vh);
   width: 100%;
   -o-object-fit: cover;
