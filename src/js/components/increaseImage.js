@@ -21,12 +21,12 @@ const increaseImage = () => {
     elements.forEach(el => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
-            const href = el.getAttribute('href'); 
+            const href = el.getAttribute('href');
 
             setTimeout(() => {
                 open(settingsModal);
             }, 1);
-           
+
 
             window.addEventListener('keydown', (e) => {
                 if (e.keyCode == 27) {
@@ -39,7 +39,7 @@ const increaseImage = () => {
     })
 
 
-    function open(settingsModal){
+    function open(settingsModal) {
         if (!settingsModal.isOpen) {
             settingsModal.container.scrollTo(0, 0);
             settingsModal.modal.style.setProperty('--transition-time', `${settingsModal.speed / 1000}s`);
@@ -55,7 +55,8 @@ const increaseImage = () => {
             settingsModal.isOpen = true;
         }
     }
-    function close(settingsModal){
+
+    function close(settingsModal) {
         if (settingsModal.isOpen) {
             settingsModal.container.classList.remove('animate-open');
             settingsModal.container.classList.remove(settingsModal.animation);
@@ -74,3 +75,6 @@ const increaseImage = () => {
 
 
 export default increaseImage;
+
+
+// increaseImage();

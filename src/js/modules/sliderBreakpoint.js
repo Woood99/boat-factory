@@ -22,7 +22,7 @@ const sliderBreakpoint = (containerSelector, breakpoint, options) => {
                         swiper = new Swiper(el, {
                             slidesPerView: options.slidesPerView,
                             spaceBetween: options.spaceBetween,
-                            autoHeight: true,
+                            autoHeight: options.autoHeight,
                             observer: true,
                             observeParents: true,
                             speed: 600,

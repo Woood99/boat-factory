@@ -76,14 +76,13 @@
             height: 14px;
             fill: currentColor;
         }
-
-        @media (max-width:$tablet-max) {
+        @media (max-width:$max-1150){
             opacity: 1;
             transform: translateY(0);
 
             span {
                 display: none;
-            }
+            } 
         }
     }
 

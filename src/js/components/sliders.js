@@ -163,8 +163,8 @@ if (configuratorAdditional) {
         const container = el;
         const slider = container.querySelector('.configurator-additional__slider');
         const swiper = new Swiper(slider, {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: 1.15,
+            spaceBetween: 10,
             observer: true,
             observeParents: true,
             speed: 600,
@@ -172,6 +172,19 @@ if (configuratorAdditional) {
                 nextEl: slider.closest('.configurator-additional').querySelector('.nav-primary-arrow--next'),
                 prevEl: slider.closest('.configurator-additional').querySelector('.nav-primary-arrow--prev'),
             },
+            breakpoints: {
+                481: {
+                    slidesPerView: 1.6,
+                },
+                769: {
+                    slidesPerView: 2.6,
+                    spaceBetween: 20,
+                },
+                1025: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 20,
+                },
+            }
         })
 
     })
@@ -219,11 +232,3 @@ if (configuratorSlider) {
         })
     })
 }
-
-
-
-
-
-
-
-

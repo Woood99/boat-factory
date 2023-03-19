@@ -8,17 +8,32 @@
         .swiper-wrapper {
             @media (min-width:$min-1150) {
                 display: flex;
-                align-items: center;
             }
         }
 
         .swiper-slide {
+            height: auto;
             @media (min-width:$min-1150) {
                 width: 100%;
                 flex-shrink: 1;
-
+                
                 &:not(:last-child) {
                     margin-right: 20px;
+                }
+            }
+            .news-card{
+                height: 100%;
+                &__wrapper{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__content{
+                  height: 100%;
+                  grid-template-rows: max-content max-content 1fr;
+                }
+                &__date,&__btn{
+            align-self: end;
                 }
             }
         }

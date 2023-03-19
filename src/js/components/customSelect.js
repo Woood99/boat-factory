@@ -65,3 +65,13 @@ const customSelect = (maskMap) => {
 };
 
 export default customSelect
+
+
+
+// const maskMap = {
+//     'tur': "+\\90 999 999-9999",
+//     'usa': "+1 999 999-99-99",
+//     'ru': "+7 (999) 999-9999",
+// };
+
+// customSelect(maskMap);
