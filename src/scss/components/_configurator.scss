@@ -5,8 +5,9 @@
     &__line {
         padding-top: 35px;
         grid-column: 3/-1;
-        @media (max-width:$max-1150){
-             grid-column: 1/-1; 
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
         }
     }
 
@@ -311,7 +312,7 @@
             height: 100%;
             width: 50px;
             z-index: 7;
-
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             &--prev {
                 left: 30px;
             }
@@ -432,9 +433,74 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
         @media (max-width:$tablet-max) {
             margin-top: 30px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:$mobile-max) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        &:nth-child(n+4) {
+            display: none;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            &:nth-child(n+3) {
+                display: none;
+            }
+        }
+
+        &.is-visible {
+            display: block;
+        }
+    }
+
+    &__more {
+        margin-top: 24px;
+        border: 1px solid #D9D9D9;
+        border-radius: 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 41px 30px;
+        color: #151515;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: math.div(22, 16);
+
+        svg {
+            margin-left: 16px;
+            width: 11px;
+            height: 11px;
+            fill: currentColor;
+        }
+
+        &.hide {
+            display: none;
+        }
+
+        &:hover {
+            color: var(--red);
+        }
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 14px;
+            padding: 15px 20px;
         }
     }
 }
@@ -484,11 +550,13 @@
         img {
             height: 100%;
         }
-        @media (max-width:$max-1150){
-             padding: 0 30px; 
+
+        @media (max-width:$max-1150) {
+            padding: 0 30px;
         }
-        @media (max-width:$mobile-max){
-             padding: 0 20px; 
+
+        @media (max-width:$mobile-max) {
+            padding: 0 20px;
         }
     }
 

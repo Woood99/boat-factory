@@ -22,16 +22,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_popup__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/popup */ "./src/js/modules/popup.js");
 /* harmony import */ var _components_scrolling__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/scrolling */ "./src/js/components/scrolling.js");
-/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
-/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
-/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/production-progress */ "./src/js/components/production-progress.js");
-/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_components_production_progress__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/dynamicAdapt */ "./src/js/components/dynamicAdapt.js");
-/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _components_galleryPhoto__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/galleryPhoto */ "./src/js/components/galleryPhoto.js");
-/* harmony import */ var _components_choiceColor__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/choiceColor */ "./src/js/components/choiceColor.js");
-/* harmony import */ var _components_choiceColor__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_components_choiceColor__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _components_configuratorMore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/configuratorMore */ "./src/js/components/configuratorMore.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
+/* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/production-progress */ "./src/js/components/production-progress.js");
+/* harmony import */ var _components_production_progress__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_production_progress__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/dynamicAdapt */ "./src/js/components/dynamicAdapt.js");
+/* harmony import */ var _components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_components_dynamicAdapt__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _components_galleryPhoto__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/galleryPhoto */ "./src/js/components/galleryPhoto.js");
+/* harmony import */ var _components_choiceColor__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/choiceColor */ "./src/js/components/choiceColor.js");
+/* harmony import */ var _components_choiceColor__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_components_choiceColor__WEBPACK_IMPORTED_MODULE_18__);
+
 
 
 
@@ -102,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   const requestCall = new _modules_popup__WEBPACK_IMPORTED_MODULE_10__["default"]();
+  (0,_components_configuratorMore__WEBPACK_IMPORTED_MODULE_12__["default"])();
 });
 
 /***/ }),
@@ -178,6 +181,45 @@ choiceColor.forEach(choiceColor => {
     });
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/components/configuratorMore.js":
+/*!***********************************************!*\
+  !*** ./src/js/components/configuratorMore.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const configuratorMore = () => {
+  const btn = document.querySelector('.configurator-additional__more');
+  const items = document.querySelectorAll('.configurator-additional__list .configurator-additional__item');
+  let counter = 0;
+  let increaseNumber = 3;
+  items.forEach(item => {
+    if (window.getComputedStyle(item).getPropertyValue('display') !== 'none') {
+      counter++;
+      console.log(item);
+    }
+  });
+  btn.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      increaseNumber = 2;
+    }
+    counter += increaseNumber;
+    const array = Array.from(document.querySelector('.configurator-additional__list').children);
+    const visItems = array.slice(0, counter);
+    visItems.forEach(el => el.classList.add('is-visible'));
+    if (visItems.length === items.length) {
+      btn.classList.add('hide');
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configuratorMore);
 
 /***/ }),
 
@@ -756,7 +798,7 @@ if (productionStages) {
   });
 }
 const configuratorAdditional = document.querySelectorAll('.configurator-additional');
-if (configuratorAdditional) {
+if (configuratorAdditional && document.querySelector('.configurator-additional__slider')) {
   configuratorAdditional.forEach(el => {
     const container = el;
     const slider = container.querySelector('.configurator-additional__slider');

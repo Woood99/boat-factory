@@ -158,7 +158,7 @@ if (productionStages) {
 
 
 const configuratorAdditional = document.querySelectorAll('.configurator-additional');
-if (configuratorAdditional) {
+if (configuratorAdditional && document.querySelector('.configurator-additional__slider')) {
     configuratorAdditional.forEach(el => {
         const container = el;
         const slider = container.querySelector('.configurator-additional__slider');

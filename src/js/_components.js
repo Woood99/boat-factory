@@ -11,7 +11,7 @@ import sliderBreakpoint from './modules/sliderBreakpoint';
 import tabs from './modules/tabs';
 import popup from './modules/popup';
 import scrolling from './components/scrolling';
-
+import configuratorMore from './components/configuratorMore';
 import './components/map';
 import './components/sliders';
 import './components/production-progress';
@@ -79,4 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const requestCall = new popup();
+
+    configuratorMore();
 })
