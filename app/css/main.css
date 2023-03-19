@@ -3508,8 +3508,18 @@ a {
 .configurator-content__slider .nav-secondary-arrow--prev {
   left: 30px;
 }
+@media (max-width: 576px) {
+  .configurator-content__slider .nav-secondary-arrow--prev {
+    left: 0;
+  }
+}
 .configurator-content__slider .nav-secondary-arrow--next {
   right: 30px;
+}
+@media (max-width: 576px) {
+  .configurator-content__slider .nav-secondary-arrow--next {
+    right: 0;
+  }
 }
 @media (max-width: 1024px) {
   .configurator-content__slider {
@@ -4220,6 +4230,8 @@ a {
     grid-row: 2/3;
     margin-top: 0;
     margin-left: 0;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 }
 .additional-option__close {
