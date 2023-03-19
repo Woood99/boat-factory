@@ -5,9 +5,8 @@
     &__line {
         padding-top: 35px;
         grid-column: 3/-1;
-
-        @media (max-width:$max-1150) {
-            display: none;
+        @media (max-width:$max-1150){
+             grid-column: 1/-1; 
         }
     }
 
@@ -453,7 +452,7 @@
         width: 100%;
         display: grid;
         height: 100%;
-        grid-row-gap: 45px;
+        grid-row-gap: 25px;
         grid-column-gap: 15px;
 
         @media (max-width:$max-1150) {
@@ -479,10 +478,24 @@
         }
     }
 
+    &__image {
+        padding: 0 50px;
+
+        img {
+            height: 100%;
+        }
+        @media (max-width:$max-1150){
+             padding: 0 30px; 
+        }
+        @media (max-width:$mobile-max){
+             padding: 0 20px; 
+        }
+    }
+
     &__bottom {
         align-self: end;
         border-top: 1px solid #eee;
-        padding: 16px 35px 0 50px;
+        padding: 30px 35px 0 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;

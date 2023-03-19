@@ -18,7 +18,136 @@
 
 <body class="page__body">
     <div class="site-container">
-        @include('partials/header.html')
+        <header class="header fix-block">
+    <div class="header__container container grid">
+        <a href="#" class="header__logo logo">
+            <picture>
+                <source srcset="./img/logo-small.svg" media="(max-width: 576px)">
+                <img loading="lazy" src="./img/logo.svg" class="logo__img" width="218" height="48" alt="Фабрика Лодок">
+            </picture>
+        </a>
+        <nav class="header__nav nav" data-menu>
+            <ul data-one-spoller data-spollers="1150,max" class="nav__list list-reset">
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>О нас</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                Компания
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Производство
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Новости и события
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Вопрос-ответ
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>Катера</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                ФЛ—55
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ФЛ—47
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ФЛ—70
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>Как купить</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                Где купить
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Гарантия
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Как стать дилером
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+
+
+
+
+
+        </nav>
+        <div class="header__links">
+            <ul class="header__social social-secondary list-reset" data-da=".header__nav,1150,last">
+                <li class="social-secondary__item">
+                    <a href="#" target="_blank" class="social-secondary__link social-secondary__link--tg"
+                        aria-label="Мы в телеграмме" title="Мы в телеграмме">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-secondary__item">
+                    <a href="#" target="_blank" class="social-secondary__link social-secondary__link--wa"
+                        aria-label="Мы в WhatsApp" title="Мы в WhatsApp">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <a href="tel:88004441461" class="header__tel">
+                <span>8 800 444-14-61</span>
+            </a>
+        </div>
+        <button class="btn-reset header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <div class="burger">
+                <span class="burger__line"></span>
+            </div>
+        </button>
+    </div>
+</header>
+
         <main class="main">
             <section class="configurator">
                 <div class="configurator__container container grid">
@@ -293,6 +422,7 @@
                         <div class="configurator-content__additional configurator-additional">
                             <div class="swiper configurator-additional__slider">
                                 <div class="swiper-wrapper">
+
                                     <div class="swiper-slide additional-card">
                                         <div class="additional-card__container">
                                             <div class="additional-card__title">
@@ -323,205 +453,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide additional-card">
-                                        <div class="additional-card__container">
-                                            <div class="additional-card__title">
-                                                Ходовой тент-трансформер, яхтенная ткань
-                                            </div>
-                                            <div class="additional-card__image">
-                                                <picture>
-                                                    <source srcset="./img/additional-card-2.webp" type="image/webp">
-                                                    <img loading="lazy" src="./img/additional-card-2.png" width="316"
-                                                        height="139"
-                                                        alt="Тент транспортировочный на кнопках для стоянки на воде">
-                                                </picture>
-                                            </div>
-                                            <div class="additional-card__bottom">
-                                                <div class="additional-card__price">
-                                                    165 000 ₽
-                                                </div>
-                                                <button type="button" class="btn btn-reset additional-card__status">
-                                                    <svg class="additional-card__status--active">
-                                                        <use xlink:href="img/sprite.svg#check-mark"></use>
-                                                    </svg>
-                                                    <svg class="additional-card__status--no-active">
-                                                        <use xlink:href="img/sprite.svg#plus"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide additional-card">
-                                        <div class="additional-card__container">
-                                            <div class="additional-card__title">
-                                                Москитные сетки для тента-трансформера
-                                            </div>
-                                            <div class="additional-card__image">
-                                                <picture>
-                                                    <source srcset="./img/additional-card-3.webp" type="image/webp">
-                                                    <img loading="lazy" src="./img/additional-card-3.png" width="206"
-                                                        height="139"
-                                                        alt="Тент транспортировочный на кнопках для стоянки на воде">
-                                                </picture>
-                                            </div>
-                                            <div class="additional-card__bottom">
-                                                <div class="additional-card__price">
-                                                    25 000 ₽
-                                                </div>
-                                                <button type="button" class="btn btn-reset additional-card__status">
-                                                    <svg class="additional-card__status--active">
-                                                        <use xlink:href="img/sprite.svg#check-mark"></use>
-                                                    </svg>
-                                                    <svg class="additional-card__status--no-active">
-                                                        <use xlink:href="img/sprite.svg#plus"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide additional-card">
-                                        <div class="additional-card__container">
-                                            <div class="additional-card__title">
-                                                Рыбацкое велосипедное
-                                                кресло
-                                            </div>
-                                            <div class="additional-card__image">
-                                                <picture>
-                                                    <source srcset="./img/additional-card-1.webp" type="image/webp">
-                                                    <img loading="lazy" src="./img/additional-card-1.png" width="316"
-                                                        height="139"
-                                                        alt="Тент транспортировочный на кнопках для стоянки на воде">
-                                                </picture>
-                                            </div>
-                                            <div class="additional-card__bottom">
-                                                <div class="additional-card__price">
-                                                    26 000 ₽
-                                                </div>
-                                                <button type="button" class="btn btn-reset additional-card__status">
-                                                    <svg class="additional-card__status--active">
-                                                        <use xlink:href="img/sprite.svg#check-mark"></use>
-                                                    </svg>
-                                                    <svg class="additional-card__status--no-active">
-                                                        <use xlink:href="img/sprite.svg#plus"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide additional-card">
-                                        <div class="additional-card__container">
-                                            <div class="additional-card__title">
-                                                Дополнительный
-                                                аэратор
-                                            </div>
-                                            <div class="additional-card__image">
-                                                <picture>
-                                                    <source srcset="./img/additional-card-2.webp" type="image/webp">
-                                                    <img loading="lazy" src="./img/additional-card-2.png" width="316"
-                                                        height="139"
-                                                        alt="Тент транспортировочный на кнопках для стоянки на воде">
-                                                </picture>
-                                            </div>
-                                            <div class="additional-card__bottom">
-                                                <div class="additional-card__price">
-                                                    20 000 ₽
-                                                </div>
-                                                <button type="button" class="btn btn-reset additional-card__status">
-                                                    <svg class="additional-card__status--active">
-                                                        <use xlink:href="img/sprite.svg#check-mark"></use>
-                                                    </svg>
-                                                    <svg class="additional-card__status--no-active">
-                                                        <use xlink:href="img/sprite.svg#plus"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide additional-card">
-                                        <div class="additional-card__container">
-                                            <div class="additional-card__title">
-                                                Второй контур аэратора (эффект аквариума)
-                                            </div>
-                                            <div class="additional-card__image">
-                                                <picture>
-                                                    <source srcset="./img/additional-card-3.webp" type="image/webp">
-                                                    <img loading="lazy" src="./img/additional-card-3.png" width="206"
-                                                        height="139"
-                                                        alt="Тент транспортировочный на кнопках для стоянки на воде">
-                                                </picture>
-                                            </div>
-                                            <div class="additional-card__bottom">
-                                                <div class="additional-card__price">
-                                                    20 000 ₽
-                                                </div>
-                                                <button type="button" class="btn btn-reset additional-card__status">
-                                                    <svg class="additional-card__status--active">
-                                                        <use xlink:href="img/sprite.svg#check-mark"></use>
-                                                    </svg>
-                                                    <svg class="additional-card__status--no-active">
-                                                        <use xlink:href="img/sprite.svg#plus"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide additional-card">
-                                        <div class="additional-card__container">
-                                            <div class="additional-card__title">
-                                                Площадка транцевая
-                                            </div>
-                                            <div class="additional-card__image">
-                                                <picture>
-                                                    <source srcset="./img/additional-card-1.webp" type="image/webp">
-                                                    <img loading="lazy" src="./img/additional-card-1.png" width="316"
-                                                        height="139"
-                                                        alt="Тент транспортировочный на кнопках для стоянки на воде">
-                                                </picture>
-                                            </div>
-                                            <div class="additional-card__bottom">
-                                                <div class="additional-card__price">
-                                                    35 000 ₽
-                                                </div>
-                                                <button type="button" class="btn btn-reset additional-card__status">
-                                                    <svg class="additional-card__status--active">
-                                                        <use xlink:href="img/sprite.svg#check-mark"></use>
-                                                    </svg>
-                                                    <svg class="additional-card__status--no-active">
-                                                        <use xlink:href="img/sprite.svg#plus"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide additional-card">
-                                        <div class="additional-card__container">
-                                            <div class="additional-card__title">
-                                                Рамки стекла чёрного
-                                                цвета
-                                            </div>
-                                            <div class="additional-card__image">
-                                                <picture>
-                                                    <source srcset="./img/additional-card-2.webp" type="image/webp">
-                                                    <img loading="lazy" src="./img/additional-card-2.png" width="316"
-                                                        height="139"
-                                                        alt="Тент транспортировочный на кнопках для стоянки на воде">
-                                                </picture>
-                                            </div>
-                                            <div class="additional-card__bottom">
-                                                <div class="additional-card__price">
-                                                    20 000 ₽
-                                                </div>
-                                                <button type="button" class="btn btn-reset additional-card__status">
-                                                    <svg class="additional-card__status--active">
-                                                        <use xlink:href="img/sprite.svg#check-mark"></use>
-                                                    </svg>
-                                                    <svg class="additional-card__status--no-active">
-                                                        <use xlink:href="img/sprite.svg#plus"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="configurator-additional__navigation">
@@ -606,9 +538,199 @@
                 </div>
             </section>
         </main>
-        @include('partials/footer.html')
+        <footer class="footer img-bg">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <div class="footer__info footer-info">
+                <h3 class="footer-info__title">
+                    хочу стать дилером
+                </h3>
+                <p class="footer-info__descr">
+                    Станьте дилером лучших лодок для рыбалки и отдыха.
+                </p>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    О нас
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О производстве
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Новости и события
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Вопрос-ответ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Катера
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–47
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–55
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–70
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Конфигуратор
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Покупателю
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Где купить
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Гарантия
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Контакты
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            info@fl-boats.ru
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="tel:88004441461" class="footer-item__link">
+                            8 800 444 14 61
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <ul class="footer__social social list-reset">
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--vk"
+                        aria-label="Наша страничка во Вконтакте" title="Наша страничка во Вконтакте">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Мы в телеграмме"
+                        title="Мы в телеграмме">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--wa" aria-label="Мы в WhatsApp"
+                        title="Мы в WhatsApp">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--yt" aria-label="Наш канал на YouTube"
+                        title="Наш канал на YouTube">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#yt"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__rights-reserved">
+                ООО «Фабрика Лодок» | Все права защищены
+            </p>
+        </div>
     </div>
-    @include('partials/popup.html')
+</footer>
+
+    </div>
+    <div class="popup">
+    <div class="popup__container" role="dialog" aria-modal="true" data-popup-target="request-call">
+        <button class="btn-reset js-popup-close popup__close" aria-label="Закрыть модальное окно"></button>
+        <div class="popup__content request-call">
+            <h3 class="request-call__title">
+                Заказать звонок
+            </h3>
+            <p class="request-call__descr">
+                Оставьте свои контакты, свяжемся с вами
+                в самое ближийшее время
+            </p>
+            <form action="#" class="request-call__form form-primary" id="request-call__valid">
+
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Имя</span>
+                    <input type="text" name="Имя"
+                        class="input-reset input-primary label-primary__input--name label-primary__input"
+                        placeholder="">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Номер телефона</span>
+                    <input type="tel" name="Номер телефона"
+                        class="input-reset input-primary label-primary__input--tel label-primary__input"
+                        placeholder="+7">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Сообщение или вопрос</span>
+                    <textarea class="input-reset input-primary textarea-primary label-primary__input"
+                        placeholder=""></textarea>
+                </label>
+                <div class="form-primary__agree checkbox">
+                    <input id="c_2" class="checkbox__input" type="checkbox" value="1">
+                    <label for="c_2" class="checkbox__label">
+                        <span class="checkbox__text">
+                            Соглашаюсь на обработку персональных данных
+                        </span>
+                    </label>
+                </div>
+
+                <button class="btn btn-reset btn-fourth form-primary__btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 
 
