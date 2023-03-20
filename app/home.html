@@ -18,12 +18,19 @@
 
 <body class="page__body">
     <div class="site-container">
-        <header class="header fix-block">
+        <div class="hero-home-video">
+            <header class="header fix-block">
     <div class="header__container container grid">
         <a href="#" class="header__logo logo">
             <picture>
+                <source srcset="./img/logo-small--white.svg" media="(max-width: 576px)">
+                <img loading="lazy" src="./img/logo--white.svg" class="logo__img logo__img--white" width="218"
+                    height="48" alt="Фабрика Лодок">
+            </picture>
+            <picture>
                 <source srcset="./img/logo-small.svg" media="(max-width: 576px)">
-                <img loading="lazy" src="./img/logo.svg" class="logo__img" width="218" height="48" alt="Фабрика Лодок">
+                <img loading="lazy" src="./img/logo.svg" class="logo__img logo__img--black" width="218" height="48"
+                    alt="Фабрика Лодок">
             </picture>
         </a>
         <nav class="header__nav nav" data-menu>
@@ -148,163 +155,181 @@
     </div>
 </header>
 
-        <main class="main">
-            <section class="hero-home">
-    <div class="hero-home__container container">
-        <h1 class="hero-home__title">
-            фабрика лодок
-        </h1>
-        <button type="button" class="btn btn-reset hero-home__call" data-popup-path="request-call">
-            <img class="" src="./img/call.png" alt="Заказать звонок">
-        </button>
-        <div class="hero-home__decor--plus hero-home__decor--plus-1">
-            <svg>
-                <use xlink:href="img/sprite.svg#plus"></use>
-            </svg>
-        </div>
-        <div class="hero-home__decor--plus hero-home__decor--plus-2">
-            <svg>
-                <use xlink:href="img/sprite.svg#plus"></use>
-            </svg>
-        </div>
-        <div class="hero-home__decor--plus hero-home__decor--plus-3">
-            <svg>
-                <use xlink:href="img/sprite.svg#plus"></use>
-            </svg>
-        </div>
-        <div class="hero-home__decor--elipse hero-home__decor--elipse-1">
-            <picture>
-                <source srcset="./img/hero-home-decor-1.webp" type="image/webp">
-                <img loading="lazy" src="./img/hero-home-decor-1.png" width="62" height="62" aria-hidden="true" alt="">
-            </picture>
-        </div>
-        <div class="hero-home__decor--elipse hero-home__decor--elipse-2">
-            <picture>
-                <source srcset="./img/hero-home-decor-2.webp" type="image/webp">
-                <img loading="lazy" src="./img/hero-home-decor-2.png" width="151" height="151" aria-hidden="true"
-                    alt="">
-            </picture>
-        </div>
-        <div class="hero-home__content">
-            <div class="hero-home__image">
-                <picture>
-                    <source srcset="./img/boat.webp" type="image/webp">
-                    <img loading="lazy" src="./img/boat.png" width="353" height="348" alt="Лодка">
-                </picture>
-            </div>
-            <div class="hero-home__bubble-speech hero-home__bubble-speech--1 bubble-speech">
-                <p class="bubble-speech__text">
-                    Безупречные ходовые качества, большая грузоподъёмность и максимальное количество места
-                    на судне — мы учли всё, что важно
-                </p>
-            </div>
-            <div class="hero-home__bubble-speech hero-home__bubble-speech--2 bubble-speech">
-                <p class="bubble-speech__text">
-                    Моторные лодки ФЛ разработаны в России при участии опытных водомоторников и рыболовов
-                </p>
-            </div>
-            <a href="#" class="hero-home__bubble-speech hero-home__bubble-speech--3 bubble-speech">
-                <h4 class="bubble-speech__title">
-                    [КОНФИГУРАТОР]
-                </h4>
-                <p class="bubble-speech__text">
-                    Когда каждая лодка уникальна
-                </p>
-            </a>
-        </div>
-        <div class="swiper hero-home__list" data-slider-breakpoint="false">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide boat-card">
-                    <a href="#" class="boat-card__wrapper">
-                        <div class="boat-card__img">
-                            <picture>
-                                <source srcset="./img/boat-card/boat-card-1.webp" type="image/webp">
-                                <img loading="lazy" src="./img/boat-card/boat-card-1.png" width="387" height="200"
-                                    alt="[ФЛ–47]">
-                            </picture>
-                        </div>
-                        <div class="boat-card__content">
-                            <h3 class="boat-card__title">
-                                [ФЛ–47]
-                            </h3>
-                            <p class="boat-card__descr">
-                                Навстречу приключениям
-                            </p>
-                            <button type="button" class="btn btn-reset boat-card__btn">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
-                                </svg>
-                                Подробнее
-                            </button>
-                        </div>
-                    </a>
+            <video playsinline preload muted autoplay loop class="hero-home-video__video">
+                <source src="./hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-home-video__container container">
+                <div class="hero-home-video--plus hero-home-video--plus-1">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                    </svg>
                 </div>
-                <div class="swiper-slide boat-card">
-                    <a href="#" class="boat-card__wrapper">
-                        <div class="boat-card__img">
-                            <picture>
-                                <source srcset="./img/boat-card/boat-card-1.webp" type="image/webp">
-                                <img loading="lazy" src="./img/boat-card/boat-card-1.png" width="387" height="200"
-                                    alt="[ФЛ–55]">
-                            </picture>
-                        </div>
-                        <div class="boat-card__content">
-                            <h3 class="boat-card__title">
-                                [ФЛ–55]
-                            </h3>
-                            <p class="boat-card__descr">
-                                Максимум скорости и драйва
-                            </p>
-                            <button type="button" class="btn btn-reset boat-card__btn">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
-                                </svg>
-                                Подробнее
-                            </button>
-                        </div>
-                    </a>
+                <div class="hero-home-video--plus hero-home-video--plus-2">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                    </svg>
                 </div>
-                <div class="swiper-slide boat-card">
-                    <a href="#" class="boat-card__wrapper">
-                        <div class="boat-card__img">
-                            <picture>
-                                <source srcset="./img/boat-card/boat-card-1.webp" type="image/webp">
-                                <img loading="lazy" src="./img/boat-card/boat-card-1.png" width="387" height="200"
-                                    alt="[ФЛ–70]">
-                            </picture>
+                <div class="hero-home-video__btns">
+                    <button type="button" class="btn btn-reset btn-third hero-home-video__btn"
+                        data-popup-path="request-call">
+                        Заказать звонок
+                    </button>
+                    <button type="button" class="btn btn-reset btn-secondary hero-home-video__btn">
+                        Конфигуратор
+                        <div class="hero-home-video__btn-soon soon">
+                            Скоро
                         </div>
-                        <div class="boat-card__content">
-                            <h3 class="boat-card__title">
-                                [ФЛ–70]
-                            </h3>
-                            <p class="boat-card__descr">
-                                Удовольствие на воде
-                            </p>
-                            <button type="button" class="btn btn-reset boat-card__btn">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#arrow-right"></use>
-                                </svg>
-                                Подробнее
-                            </button>
-                        </div>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<a href="#" class="configurator-banner container">
-    <h4 class="configurator-banner__title">
-        КОНФИГУРАТОР
-    </h4>
-    <div class="configurator-banner__text">
-        Когда каждая лодка уникальна
-    </div>
-    <div class="configurator-banner__soon soon">
-        Скоро
-    </div>
-</a>
-
+        <main class="main hero-home-video--main">
+            <section class="hero-home-cards">
+                <div class="hero-home-cards__container container">
+                    <div class="hero-home-cards--plus hero-home-cards--plus-1">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                    <div class="hero-home-cards--plus hero-home-cards--plus-2">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#plus"></use>
+                        </svg>
+                    </div>
+                    <div class="hero-home-cards__list">
+                        <a href="#" class="hero-home-cards__item boat-card-secondary">
+                            <div class="boat-card-secondary__top">
+                                <h2 class="boat-card-secondary__title">
+                                    [ФЛ–55]
+                                </h2>
+                                <p class="boat-card-secondary__descr">
+                                    Максимум скорости и драйва
+                                </p>
+                            </div>
+                            <div class="boat-card-secondary__body">
+                                <div class="boat-card-secondary__image ibg">
+                                    <picture>
+                                        <source srcset="./img/boat-card-1.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/boat-card-1.jpg" width="602" height="280"
+                                            alt="ФЛ–55">
+                                    </picture>
+                                </div>
+                                <div class="boat-card-secondary__content">
+                                    <div class="boat-card-secondary__options">
+                                        <div class="boat-card-secondary__option">
+                                            <span>Вес / кг</span>
+                                            <span>756</span>
+                                        </div>
+                                        <div class="boat-card-secondary__option">
+                                            <span>Запас топлива / л</span>
+                                            <span>125</span>
+                                        </div>
+                                        <div class="boat-card-secondary__option">
+                                            <span>Двигатель / лс </span>
+                                            <span>200</span>
+                                        </div>
+                                    </div>
+                                    <svg class="boat-card-secondary__icon">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="hero-home-cards__item boat-card-secondary">
+                            <div class="boat-card-secondary__top">
+                                <h2 class="boat-card-secondary__title">
+                                    [ФЛ–70]
+                                </h2>
+                                <p class="boat-card-secondary__descr">
+                                    Продуманность и комфорт
+                                </p>
+                            </div>
+                            <div class="boat-card-secondary__body">
+                                <div class="boat-card-secondary__image ibg">
+                                    <picture>
+                                        <source srcset="./img/boat-card-2.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/boat-card-2.jpg" width="602" height="280"
+                                            alt="ФЛ–70">
+                                    </picture>
+                                </div>
+                                <div class="boat-card-secondary__content">
+                                    <div class="boat-card-secondary__options">
+                                        <div class="boat-card-secondary__option">
+                                            <span>Вес / кг</span>
+                                            <span>756</span>
+                                        </div>
+                                        <div class="boat-card-secondary__option">
+                                            <span>Запас топлива / л</span>
+                                            <span>125</span>
+                                        </div>
+                                        <div class="boat-card-secondary__option">
+                                            <span>Двигатель / лс </span>
+                                            <span>200</span>
+                                        </div>
+                                    </div>
+                                    <svg class="boat-card-secondary__icon">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="hero-home-cards__item boat-card-secondary">
+                            <div class="boat-card-secondary__top">
+                                <h2 class="boat-card-secondary__title">
+                                    [ФЛ–55 sport]
+                                </h2>
+                                <p class="boat-card-secondary__descr">
+                                    Для активного отдыха
+                                </p>
+                            </div>
+                            <div class="boat-card-secondary__body">
+                                <div class="boat-card-secondary__image ibg">
+                                    <picture>
+                                        <source srcset="./img/boat-card-3.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/boat-card-3.jpg" width="602" height="280"
+                                            alt="ФЛ–55 sport">
+                                    </picture>
+                                </div>
+                                <div class="boat-card-secondary__content">
+                                    <div class="boat-card-secondary__options">
+                                        <div class="boat-card-secondary__option">
+                                            <span>Вес / кг</span>
+                                            <span>756</span>
+                                        </div>
+                                        <div class="boat-card-secondary__option">
+                                            <span>Запас топлива / л</span>
+                                            <span>125</span>
+                                        </div>
+                                        <div class="boat-card-secondary__option">
+                                            <span>Двигатель / лс </span>
+                                            <span>200</span>
+                                        </div>
+                                    </div>
+                                    <svg class="boat-card-secondary__icon">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="hero-home-cards__item boat-card-secondary boat-card-secondary--not">
+                            <div class="boat-card-secondary__top">
+                                <h2 class="boat-card-secondary__title">
+                                    [ФЛ–47]
+                                </h2>
+                                <p class="boat-card-secondary__descr">
+                                    Навстречу приключениям
+                                </p>
+                            </div>
+                            <div class="boat-card-secondary__body">
+                                <div class="boat-card-secondary__content">
+                                    в продаже
+                                    с мая 2023
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
             <section class="choice-obvious choice-obvious--black choice-obvious--home">
                 <div class="choice-obvious__container container grid">
                     <div class="choice-obvious__top grid">
@@ -854,7 +879,7 @@
                                         </div>
                                         <div class="news-card__content">
                                             <h3 class="news-card__title">
-                                                Алюминиевые катера и лодки для рыбалки
+                                                Выбор лодки
                                             </h3>
                                             <p class="news-card__descr">
                                                 Как выбирают лодку для рыбалки профессионалы? Профессиональные
@@ -915,7 +940,7 @@
                                         </div>
                                         <div class="news-card__content">
                                             <h3 class="news-card__title">
-                                                На выставке   
+                                                На выставке
                                             </h3>
                                             <p class="news-card__descr">
                                                 Впервые на Moscow Boat Show 2023 — лодки ФЛ.

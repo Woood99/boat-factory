@@ -4362,24 +4362,24 @@ a {
   transform: translateY(-50%) translateX(-50%);
   fill: none;
 }
-.additional-card__status.active {
+@media (max-width: 1150px) {
+  .additional-card__status {
+    width: 30px;
+    height: 30px;
+  }
+}
+.additional-card.active-added .additional-card__status {
   cursor: default;
   pointer-events: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: #44cc83;
 }
-.additional-card__status.active .additional-card__status--active {
+.additional-card.active-added .additional-card__status .additional-card__status--active {
   display: block;
 }
-.additional-card__status.active .additional-card__status--no-active {
+.additional-card.active-added .additional-card__status .additional-card__status--no-active {
   display: none;
-}
-@media (max-width: 1150px) {
-  .additional-card__status {
-    width: 30px;
-    height: 30px;
-  }
 }
 @media (max-width: 1150px) {
   .additional-card {

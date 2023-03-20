@@ -645,24 +645,28 @@
             fill: none;
         }
 
-        &.active {
-            cursor: default;
-            pointer-events: none;
-            box-shadow: none;
-            background-color: #44cc83;
-
-            .additional-card__status--active {
-                display: block;
-            }
-
-            .additional-card__status--no-active {
-                display: none;
-            }
-        }
-
         @media (max-width:$max-1150) {
             width: 30px;
             height: 30px;
+        }
+    }
+
+    &.active-added {
+        .additional-card {
+            &__status {
+                cursor: default;
+                pointer-events: none;
+                box-shadow: none;
+                background-color: #44cc83;
+
+                .additional-card__status--active {
+                    display: block;
+                }
+
+                .additional-card__status--no-active {
+                    display: none;
+                }
+            }
         }
     }
 

@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_popup__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/popup */ "./src/js/modules/popup.js");
 /* harmony import */ var _components_scrolling__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/scrolling */ "./src/js/components/scrolling.js");
-/* harmony import */ var _components_configuratorMore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/configuratorMore */ "./src/js/components/configuratorMore.js");
+/* harmony import */ var _components_configuratorActions__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/configuratorActions */ "./src/js/components/configuratorActions.js");
 /* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/map */ "./src/js/components/map.js");
 /* harmony import */ var _components_map__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_components_map__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
@@ -104,7 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   const requestCall = new _modules_popup__WEBPACK_IMPORTED_MODULE_10__["default"]();
-  (0,_components_configuratorMore__WEBPACK_IMPORTED_MODULE_12__["default"])();
+  (0,_components_configuratorActions__WEBPACK_IMPORTED_MODULE_12__.configuratorMore)();
+  (0,_components_configuratorActions__WEBPACK_IMPORTED_MODULE_12__.configuratorAddedAdditional)();
+  (0,_components_configuratorActions__WEBPACK_IMPORTED_MODULE_12__.configuratorRemoveOrder)();
 });
 
 /***/ }),
@@ -184,31 +186,33 @@ choiceColor.forEach(choiceColor => {
 
 /***/ }),
 
-/***/ "./src/js/components/configuratorMore.js":
-/*!***********************************************!*\
-  !*** ./src/js/components/configuratorMore.js ***!
-  \***********************************************/
+/***/ "./src/js/components/configuratorActions.js":
+/*!**************************************************!*\
+  !*** ./src/js/components/configuratorActions.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "configuratorAddedAdditional": () => (/* binding */ configuratorAddedAdditional),
+/* harmony export */   "configuratorMore": () => (/* binding */ configuratorMore),
+/* harmony export */   "configuratorRemoveOrder": () => (/* binding */ configuratorRemoveOrder)
 /* harmony export */ });
 const configuratorMore = () => {
   const btn = document.querySelector('.configurator-additional__more');
   const items = document.querySelectorAll('.configurator-additional__list .configurator-additional__item');
   if (!(btn && items)) return false;
   let counter = 0;
-  let increaseNumber = 3;
+  let increaseNumber = items.length;
   items.forEach(item => {
     if (window.getComputedStyle(item).getPropertyValue('display') !== 'none') {
       counter++;
     }
   });
   btn.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      increaseNumber = 2;
+    if (window.innerWidth <= 1024) {
+      increaseNumber = 3;
     }
     counter += increaseNumber;
     const array = Array.from(document.querySelector('.configurator-additional__list').children);
@@ -219,7 +223,75 @@ const configuratorMore = () => {
     }
   });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configuratorMore);
+const configuratorAddedAdditional = () => {
+  const container = document.querySelector('.configurator-order__more');
+  if (!container) return false;
+  const items = document.querySelectorAll('.configurator-additional__list .configurator-additional__item');
+  const list = container.querySelector('.configurator-order__list');
+  const title = container.querySelector('.configurator-order__more-title');
+  items.forEach(item => {
+    const btn = item.querySelector('.additional-card__status');
+    btn.addEventListener('click', () => {
+      if (!item.classList.contains('active-added')) {
+        item.classList.add('active-added');
+        const itemMap = {
+          title: item.querySelector('.additional-card__title').textContent,
+          price: item.querySelector('.additional-card__price').textContent
+        };
+        const itemHTML = `
+                <div class="configurator-order__item additional-option">
+                    <div class="additional-option__icon">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#check-mark"></use>
+                        </svg>
+                    </div>
+                    <span class="additional-option__title">${itemMap.title}</span>
+                    <span class="additional-option__price">${itemMap.price}</span>
+                    <button type="button" class="btn btn-reset additional-option__close">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#plus"></use>
+                        </svg>
+                    </button>
+                </div>
+                `;
+        list.insertAdjacentHTML('beforeend', itemHTML);
+        configuratorSum(itemMap.price.replace(/\s/g, "").slice(0, -1), 'add');
+      }
+      if (list.children.length >= 1) {
+        container.classList.add('active-added');
+        title.textContent = 'Дополнительные опции';
+      }
+    });
+  });
+};
+const configuratorRemoveOrder = () => {
+  const itemsAdditional = document.querySelectorAll('.configurator-additional__list .configurator-additional__item');
+  const list = document.querySelector('.configurator-order__list');
+  list.addEventListener('click', e => {
+    if (e.target.classList.contains('additional-option__close') || e.target.closest('.additional-option__close')) {
+      const item = e.target.closest('.configurator-order__item');
+      itemsAdditional.forEach(el => {
+        if (el.querySelector('.additional-card__title').textContent === item.querySelector('.additional-option__title').textContent) {
+          el.classList.remove('active-added');
+        }
+      });
+      configuratorSum(item.querySelector('.additional-option__price').textContent.replace(/\s/g, "").slice(0, -1), 'decrease');
+      item.remove();
+    }
+    if (list.children.length === 0) {
+      document.querySelector('.configurator-order__more').classList.remove('active-added');
+      document.querySelector('.configurator-order__more-title').textContent = 'Дополнительные опции не выбраны';
+    }
+  });
+};
+function configuratorSum(price, operator) {
+  const sum = +document.querySelector('.configurator-order__based-sum').textContent.replace(/\s/g, '').replace('₽', '');
+  let temp = sum;
+  if (operator === 'add') temp += +price;
+  if (operator === 'decrease') temp -= +price;
+  const result = `${temp.toLocaleString('ru-RU')} ₽`;
+  document.querySelector('.configurator-order__based-sum').textContent = result;
+}
 
 /***/ }),
 
