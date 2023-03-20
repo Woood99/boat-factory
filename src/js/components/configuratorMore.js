@@ -1,12 +1,12 @@
 const configuratorMore = () => {
     const btn = document.querySelector('.configurator-additional__more');
     const items = document.querySelectorAll('.configurator-additional__list .configurator-additional__item');
+    if (!(btn && items)) return false;
     let counter = 0;
     let increaseNumber = 3;
     items.forEach(item => {
         if (window.getComputedStyle(item).getPropertyValue('display') !== 'none') {
             counter++;
-            console.log(item);
         }
     })
     btn.addEventListener('click', () => {

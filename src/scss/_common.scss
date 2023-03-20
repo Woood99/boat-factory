@@ -425,30 +425,163 @@
 
 
 .hero-home-video {
+    &--main {
+        margin-top: 0;
+    }
 
     &__video {
-        min-height: var(--vh);
-        height: 100vh;
+        min-height: 300px;
+        height: var(--vh);
         width: 100%;
         object-fit: cover;
         background-color: var(--white);
+        transition: height 1000000s, min-height 1000000s;
+    }
+
+    &__container {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        min-height: 300px;
+        height: var(--vh);
+        width: 100%;
+        transition: height 1000000s, min-height 1000000s;
+    }
+
+    &--plus {
+        position: absolute;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--black);
+        }
+
+        &-1 {
+            top: 162px;
+            left: 15px;
+        }
+
+        &-2 {
+            top: 162px;
+            right: 15px;
+        }
+
+
+        @media (max-width:$tablet-max) {
+            display: none;
+        }
+    }
+
+    &__btns {
+        position: absolute;
+        bottom: 52px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width:$mobile-max) {
+            flex-direction: column;
+            width: 100%;
+            right: 0;
+            bottom: 30px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+
+        &:nth-child(1) {
+            &:hover {
+                background-color: var(--white);
+                color: var(--black);
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: rgba(255, 255, 255, .8);
+            color: var(--black);
+
+            @media (min-width:$smallTablet-min) {
+                &:hover {
+                    background-color: var(--white);
+
+                    .soon {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            @media (max-width:$smallTablet-max) {
+                background-color: var(--white);
+
+                .soon {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        &-soon {
+            transform: translateY(8px);
+            position: absolute;
+            top: -10px;
+            right: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity $transitionSpeed $transitionFunction,
+                visibility $transitionSpeed $transitionFunction,
+                transform $transitionSpeed $transitionFunction;
+
+            @media (max-width:$tablet-max) {
+                padding: 0 10px;
+                font-size: 12px;
+                top: -14px;
+                right: 6px;
+            }
+        }
+
+        @media (max-width:$mobile-max) {
+            width: calc(100% - 15px);
+
+            &:not(:last-child) {
+                margin-right: 0px;
+                margin-bottom: 15px;
+            }
+        }
     }
 
     .header {
         border-bottom: none;
+        background-color: transparent;
+        transition: background-color $transitionSpeed $transitionFunction;
 
         &.header-scroll {
-            border-bottom: none;
-        }
+            background-color: var(--white);
 
-        background-color: transparent;
+            .nav__link {
+                color: var(--black);
+            }
 
-        .nav__link {
-            color: var(--white);
-        }
+            .header__tel {
+                color: var(--black);
+            }
 
-        &__tel {
-            color: var(--white);
+            .logo__img--white {
+                display: none;
+            }
+
+            .logo__img--black {
+                display: block;
+            }
         }
 
         .menu--active {
@@ -457,8 +590,36 @@
             }
         }
 
+        .logo__img--white {
+            display: block;
+        }
+
+        .logo__img--black {
+            display: none;
+        }
+
+        .nav__link {
+            color: var(--white);
+
+            &._spoller-active {
+                color: var(--red);
+            }
+        }
+
+        &__tel {
+            color: var(--white);
+        }
+
         &.header--active {
             background-color: var(--white);
+
+            .logo__img--white {
+                display: none;
+            }
+
+            .logo__img--black {
+                display: block;
+            }
 
             .header__tel {
                 color: var(--black);

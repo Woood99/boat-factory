@@ -101,3 +101,228 @@
         }
     }
 }
+
+
+
+
+.boat-card-secondary {
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+
+        @media (max-width:$tablet-max) {
+            padding: 0 10px;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        @include fontHalvar;
+        color: var(--black);
+        @include adaptiveValue("font-size", 32, 18);
+        line-height: math.div(37, 32);
+        margin-right: 20px;
+    }
+
+    &__descr {
+        color: #8F8F8F;
+        @include adaptiveValue("font-size", 14, 12);
+        line-height: math.div(19, 14);
+    }
+
+    &__body {
+        margin-top: 30px;
+        position: relative;
+        --border-r: 28px;
+        border-radius: var(--border-r);
+        background-color: var(--white);
+        filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
+
+        @media (max-width:$tablet-max) {
+            margin-top: 15px;
+            --border-r: 16px;
+        }
+    }
+
+    &__image {
+        padding-bottom: percent(280, 602);
+        border-radius: var(--border-r);
+
+        img {
+            border-radius: var(--border-r);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33));
+            z-index: 5;
+            border-radius: var(--border-r);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity $transitionSpeed $transitionFunction,
+                visibility $transitionSpeed $transitionFunction;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        padding: 0 35px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 6;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: opacity $transitionSpeed $transitionFunction,
+            visibility $transitionSpeed $transitionFunction,
+            transform $transitionSpeed $transitionFunction;
+
+        @media (max-width:$tablet-max) {
+            bottom: 20px;
+            padding: 0 20px;
+        }
+    }
+
+    &__options {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        grid-column-gap: 25px;
+        grid-row-gap: 15px;
+
+        @media (max-width:$tablet-max) {
+            grid-column-gap: 15px;
+        }
+    }
+
+    &__option {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:first-child) {
+            padding-left: 27px;
+            border-left: 1px solid var(--white);
+
+            @media (max-width:$tablet-max) {
+                padding-left: 15px;
+            }
+        }
+
+        span:nth-child(1) {
+            @include adaptiveValue("font-size", 11, 10);
+            line-height: math.div(15, 11);
+            color: var(--white);
+        }
+
+        span:nth-child(2) {
+            margin-top: 6px;
+            @include fontHalvar;
+            color: var(--white);
+            @include adaptiveValue("font-size", 25, 16);
+            line-height: math.div(28, 25);
+            font-weight: 700;
+        }
+
+        @media (max-width:480px) {
+            &:nth-child(1) {
+                grid-column: 1/-1;
+            }
+
+            &:nth-child(2) {
+                border-left: none;
+                padding-left: 0;
+            }
+
+            &:nth-child(3) {}
+        }
+    }
+
+    &__icon {
+        width: 17px;
+        height: 16px;
+        fill: var(--white);
+        align-self: end;
+    }
+
+    &--not {
+        .boat-card-secondary {
+            &__body {
+                padding-bottom: percent(280, 602);
+                width: 100%;
+            }
+
+            &__content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                @include fontHalvar;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+
+                font-weight: 500;
+                color: var(--black);
+                @include adaptiveValue("font-size", 24, 16);
+                line-height: math.div(28, 24);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width:$tablet-max) {
+        .boat-card-secondary {
+            &__image {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &__content {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    @media (min-width:$tablet-min) {
+        &:hover {
+            &:not(.boat-card-secondary--not) {
+                .boat-card-secondary {
+                    &__image {
+                        &::before {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    &__content {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+        }
+    }
+}

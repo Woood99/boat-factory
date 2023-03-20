@@ -105,7 +105,9 @@
         &:focus {
             color: var(--red);
         }
-
+        &._spoller-active{
+            color: var(--red);
+           }
         svg {
             display: inline-block;
             width: 8px;
