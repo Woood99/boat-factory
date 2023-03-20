@@ -267,6 +267,7 @@ const configuratorAddedAdditional = () => {
 const configuratorRemoveOrder = () => {
   const itemsAdditional = document.querySelectorAll('.configurator-additional__list .configurator-additional__item');
   const list = document.querySelector('.configurator-order__list');
+  if (!(itemsAdditional && list)) return false;
   list.addEventListener('click', e => {
     if (e.target.classList.contains('additional-option__close') || e.target.closest('.additional-option__close')) {
       const item = e.target.closest('.configurator-order__item');
