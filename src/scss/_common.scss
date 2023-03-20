@@ -431,11 +431,15 @@
 
     &__video {
         min-height: 300px;
-        height: var(--vh);
+        height: calc(var(--vh) + 35px);
         width: 100%;
         object-fit: cover;
         background-color: var(--white);
         transition: height 1000000s, min-height 1000000s;
+
+        @media (max-width:$tablet-max) {
+            height: calc(var(--vh) + 20px);
+        }
     }
 
     &__container {
@@ -444,9 +448,13 @@
         transform: translateX(-50%);
         position: absolute;
         min-height: 300px;
-        height: var(--vh);
+        height: calc(var(--vh) + 35px);
         width: 100%;
         transition: height 1000000s, min-height 1000000s;
+
+        @media (max-width:$tablet-max) {
+            height: calc(var(--vh) + 20px);
+        }
     }
 
     &--plus {
@@ -476,16 +484,16 @@
 
     &__btns {
         position: absolute;
-        bottom: 52px;
+        bottom: 65px;
         right: 15px;
         display: flex;
         align-items: center;
 
         @media (max-width:$mobile-max) {
             flex-direction: column;
+            bottom: 50px;
             width: 100%;
             right: 0;
-            bottom: 30px;
         }
     }
 
