@@ -501,3 +501,148 @@
         }
     }
 }
+
+
+.fl-55-sport__prompt {
+    &--1 {
+        top: 36%;
+        left: 21%;
+
+        @media (max-width:$mobile-max) {
+            top: 21%;
+            left: 38%;
+        }
+    }
+
+    &--2 {
+        top: 57%;
+        left: 21%;
+
+        @media (max-width:$mobile-max) {
+            top: 21%;
+            left: 56%;
+        }
+    }
+
+    &--3 {
+        top: 57%;
+        left: 30%;
+
+        @media (max-width:$mobile-max) {
+            top: 27%;
+            left: 46%;
+        }
+    }
+
+    &--4 {
+        top: 57%;
+        left: 35%;
+
+        @media (max-width:$mobile-max) {
+            top: 34%;
+            left: 42%;
+        }
+    }
+
+
+
+    &--5 {
+        top: 57%;
+        left: 48%;
+
+        @media (max-width:$mobile-max) {
+            top: 46%;
+            left: 42%;
+        }
+    }
+
+    &--6 {
+        top: 50%;
+        left: 58%;
+
+        @media (max-width:$mobile-max) {
+            top: 57%;
+            left: 45%;
+        }
+    }
+
+    &--7 {
+        top: 86%;
+        left: 61%;
+
+        @media (max-width:$mobile-max) {
+            top: 60%;
+            left: 21%;
+        }
+    }
+
+    &--8 {
+        top: 6%;
+        left: 62%;
+
+        @media (max-width:$mobile-max) {
+            top: 61%;
+            left: 74%;
+        }
+    }
+
+    &--9 {
+        top: 72%;
+        left: 69%;
+
+        @media (max-width:$mobile-max) {
+            top: 69%;
+            left: 32%;
+        }
+    }
+
+    &--10 {
+        top: 50%;
+        left: 69%;
+
+        @media (max-width:$mobile-max) {
+            top: 69%;
+            left: 48%;
+        }
+    }
+
+    &--11 {
+        top: 11%;
+        left: 70%;
+
+        @media (max-width:$mobile-max) {
+            top: 71%;
+            left: 68%;
+        }
+    }
+
+    &--12 {
+        top: 77%;
+        left: 75%;
+
+        @media (max-width:$mobile-max) {
+            top: 76%;
+            left: 27%;
+        }
+    }
+
+    &--13 {
+        top: 50%;
+        left: 74%;
+
+        @media (max-width:$mobile-max) {
+            top: 73%;
+            left: 44%;
+        }
+    }
+
+    &--14 {
+        top: 26%;
+        left: 73%;
+
+        @media (max-width:$mobile-max) {
+            top: 75%;
+            left: 60%;
+        }
+    }
+}

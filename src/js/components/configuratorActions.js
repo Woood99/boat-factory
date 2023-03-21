@@ -48,7 +48,7 @@ export const configuratorAddedAdditional = () => {
                     </div>
                     <span class="additional-option__title">${itemMap.title}</span>
                     <span class="additional-option__price">${itemMap.price}</span>
-                    <button type="button" class="btn btn-reset additional-option__close">
+                    <button type="button" class="btn btn-reset additional-option__close" title="Удалить">
                         <svg>
                             <use xlink:href="img/sprite.svg#plus"></use>
                         </svg>

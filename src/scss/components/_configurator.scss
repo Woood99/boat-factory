@@ -671,6 +671,7 @@
                     .additional-card__status--no-active {
                        display: block;
                        stroke: var(--white);
+                       transform: translateY(-50%) translateX(-50%) rotate(45deg);
                     }
                 }
             }

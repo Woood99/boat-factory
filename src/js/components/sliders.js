@@ -21,7 +21,7 @@ if (document.querySelector('.boat-hero')) {
         watchSlidesProgress: true,
         breakpoints: {
             569: {
-                slidesPerView: 3,
+                slidesPerView: 3.5,
             }
         },
     });

@@ -45,14 +45,16 @@
     }
 
 
-
+    &__video{
+        margin-top: 70px;
+    }
 
     &__bottom {
-        margin-top: 110px;
+        margin-top: 70px;
         text-align: center;
 
         @media (max-width:$tablet-max) {
-            margin-top: 65px;
+            margin-top: 40px;
             padding-top: 65px;
             border-top: 1px solid #dfdfdf;
         }

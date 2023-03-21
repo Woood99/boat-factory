@@ -16,7 +16,7 @@
         font-size: 10px;
         line-height: math.div(12, 10);
         color: var(--white);
-
+        text-transform: uppercase;
         @media (max-width:$smallTablet-max) {
             position: static;
             margin-top: 12px;

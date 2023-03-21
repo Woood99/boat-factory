@@ -1524,6 +1524,12 @@ a {
   max-width: 1950px;
 }
 
+.container-very-big {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 3280px;
+}
+
 .list-reset {
   list-style: none;
   margin: 0;
@@ -4463,6 +4469,9 @@ a {
 .additional-card.active-added .additional-card__status:hover .additional-card__status--no-active {
   display: block;
   stroke: var(--white);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(45deg);
 }
 @media (max-width: 1150px) {
   .additional-card {
@@ -7213,6 +7222,7 @@ a {
   font-size: 10px;
   line-height: 1.2;
   color: var(--white);
+  text-transform: uppercase;
 }
 @media (max-width: 768px) {
   .video-block__title {
@@ -7842,10 +7852,24 @@ a {
   left: 0;
 }
 .boat-hero__title {
-  font-size: 43px;
   font-family: "Halvar Breitschrift", sans-serif;
   line-height: 2.1860465116;
   font-weight: 500;
+}
+@media (min-width: 82.375em) {
+  .boat-hero__title {
+    font-size: 2.6875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 82.375em) {
+  .boat-hero__title {
+    font-size: calc(1.75rem + 0.9375 * (((100vw - 20rem)) / ((62.375))));
+  }
+}
+@media (max-width: 20em) {
+  .boat-hero__title {
+    font-size: 1.75rem;
+  }
 }
 @media (max-width: 768px) {
   .boat-hero__title {
@@ -7979,15 +8003,12 @@ a {
 }
 
 .boat-hero-nav {
-  padding: 25px 20px 15px 40px;
-  margin: -12px -20px -15px -40px;
+  margin-top: 20px;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 .boat-hero-nav__slide {
   background-color: #fff;
-  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
   border-radius: 24px;
   cursor: pointer;
 }
@@ -8490,6 +8511,147 @@ a {
   }
 }
 
+.fl-55-sport__prompt--1 {
+  top: 36%;
+  left: 21%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--1 {
+    top: 21%;
+    left: 38%;
+  }
+}
+.fl-55-sport__prompt--2 {
+  top: 57%;
+  left: 21%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--2 {
+    top: 21%;
+    left: 56%;
+  }
+}
+.fl-55-sport__prompt--3 {
+  top: 57%;
+  left: 30%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--3 {
+    top: 27%;
+    left: 46%;
+  }
+}
+.fl-55-sport__prompt--4 {
+  top: 57%;
+  left: 35%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--4 {
+    top: 34%;
+    left: 42%;
+  }
+}
+.fl-55-sport__prompt--5 {
+  top: 57%;
+  left: 48%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--5 {
+    top: 46%;
+    left: 42%;
+  }
+}
+.fl-55-sport__prompt--6 {
+  top: 50%;
+  left: 58%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--6 {
+    top: 57%;
+    left: 45%;
+  }
+}
+.fl-55-sport__prompt--7 {
+  top: 86%;
+  left: 61%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--7 {
+    top: 60%;
+    left: 21%;
+  }
+}
+.fl-55-sport__prompt--8 {
+  top: 6%;
+  left: 62%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--8 {
+    top: 61%;
+    left: 74%;
+  }
+}
+.fl-55-sport__prompt--9 {
+  top: 72%;
+  left: 69%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--9 {
+    top: 69%;
+    left: 32%;
+  }
+}
+.fl-55-sport__prompt--10 {
+  top: 50%;
+  left: 69%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--10 {
+    top: 69%;
+    left: 48%;
+  }
+}
+.fl-55-sport__prompt--11 {
+  top: 11%;
+  left: 70%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--11 {
+    top: 71%;
+    left: 68%;
+  }
+}
+.fl-55-sport__prompt--12 {
+  top: 77%;
+  left: 75%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--12 {
+    top: 76%;
+    left: 27%;
+  }
+}
+.fl-55-sport__prompt--13 {
+  top: 50%;
+  left: 74%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--13 {
+    top: 73%;
+    left: 44%;
+  }
+}
+.fl-55-sport__prompt--14 {
+  top: 26%;
+  left: 73%;
+}
+@media (max-width: 576px) {
+  .fl-55-sport__prompt--14 {
+    top: 75%;
+    left: 60%;
+  }
+}
+
 .boat-info {
   margin-top: 165px;
 }
@@ -8527,13 +8689,16 @@ a {
     font-size: 12px;
   }
 }
+.boat-info__video {
+  margin-top: 70px;
+}
 .boat-info__bottom {
-  margin-top: 110px;
+  margin-top: 70px;
   text-align: center;
 }
 @media (max-width: 1024px) {
   .boat-info__bottom {
-    margin-top: 65px;
+    margin-top: 40px;
     padding-top: 65px;
     border-top: 1px solid #dfdfdf;
   }
