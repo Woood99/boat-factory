@@ -644,7 +644,6 @@
             transform: translateY(-50%) translateX(-50%);
             fill: none;
         }
-
         @media (max-width:$max-1150) {
             width: 30px;
             height: 30px;
@@ -654,8 +653,6 @@
     &.active-added {
         .additional-card {
             &__status {
-                cursor: default;
-                pointer-events: none;
                 box-shadow: none;
                 background-color: #44cc83;
 
@@ -665,6 +662,16 @@
 
                 .additional-card__status--no-active {
                     display: none;
+                }
+                &:hover{
+                    .additional-card__status--active {
+                      display: none;
+                    }
+    
+                    .additional-card__status--no-active {
+                       display: block;
+                       stroke: var(--white);
+                    }
                 }
             }
         }

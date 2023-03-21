@@ -4447,8 +4447,6 @@ a {
   }
 }
 .additional-card.active-added .additional-card__status {
-  cursor: default;
-  pointer-events: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: #44cc83;
@@ -4458,6 +4456,13 @@ a {
 }
 .additional-card.active-added .additional-card__status .additional-card__status--no-active {
   display: none;
+}
+.additional-card.active-added .additional-card__status:hover .additional-card__status--active {
+  display: none;
+}
+.additional-card.active-added .additional-card__status:hover .additional-card__status--no-active {
+  display: block;
+  stroke: var(--white);
 }
 @media (max-width: 1150px) {
   .additional-card {

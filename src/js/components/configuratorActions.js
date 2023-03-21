@@ -33,12 +33,12 @@ export const configuratorAddedAdditional = () => {
     items.forEach(item => {
         const btn = item.querySelector('.additional-card__status');
         btn.addEventListener('click', () => {
+            const itemMap = {
+                title: item.querySelector('.additional-card__title').textContent,
+                price: item.querySelector('.additional-card__price').textContent,
+            };
             if (!item.classList.contains('active-added')) {
                 item.classList.add('active-added');
-                const itemMap = {
-                    title: item.querySelector('.additional-card__title').textContent,
-                    price: item.querySelector('.additional-card__price').textContent,
-                };
                 const itemHTML = `
                 <div class="configurator-order__item additional-option">
                     <div class="additional-option__icon">
@@ -57,11 +57,23 @@ export const configuratorAddedAdditional = () => {
                 `;
                 list.insertAdjacentHTML('beforeend', itemHTML);
                 configuratorSum(itemMap.price.replace(/\s/g, "").slice(0, -1), 'add');
-
+            } else if (item.classList.contains('active-added')) {
+                item.classList.remove('active-added');
+                list.querySelectorAll('.configurator-order__item').forEach(el => {
+                    if (el.querySelector('.additional-option__title').textContent === item.querySelector('.additional-card__title').textContent) {
+                        el.classList.remove('active-added');
+                        el.remove();
+                    }
+                })
+                configuratorSum(itemMap.price.replace(/\s/g, "").slice(0, -1), 'decrease');
             }
             if (list.children.length >= 1) {
                 container.classList.add('active-added');
                 title.textContent = 'Дополнительные опции';
+            }
+            if (list.children.length === 0) {
+                document.querySelector('.configurator-order__more').classList.remove('active-added');
+                document.querySelector('.configurator-order__more-title').textContent = 'Дополнительные опции не выбраны';
             }
         })
     });
