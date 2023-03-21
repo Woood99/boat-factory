@@ -1,8 +1,13 @@
 .choice-color {
-    --red: #FA4545;
-    --black: #2B2B2B;
-    --gray: #A1A1A1;
-    --orange: #ED9453;
+    --yellow: #EED815;
+    --dark-blue: #002182;
+    --mystic: #E0E8ED;
+    --spruce: #37454E;
+    --pearl: #010305;
+    --red: #BF0E15;
+    --blue: #0064BC;
+    --orange: #D0490E;
+    --aubergine: #3C070F;
 
     &__title {
         padding: 12px 11px 12px 30px;
@@ -38,9 +43,10 @@
             text-transform: none;
             font-size: 16px;
             line-height: math.div(24, 16);
-            color: var(--black);
+            color: #000;
             font-weight: 400;
-            @media (max-width:$tablet-max){
+
+            @media (max-width:$tablet-max) {
                 font-size: 14px;
             }
         }
@@ -54,12 +60,14 @@
             fill: currentColor;
             transition: transform 0.3s ease-in-out;
             transform: translate(0);
-            @media (max-width:$tablet-max){
+
+            @media (max-width:$tablet-max) {
                 width: 12px;
                 height: 12px;
             }
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             padding: 12px 15px;
         }
     }
@@ -86,22 +94,44 @@
         background-color: gray;
         transition: background-color $transitionSpeed $transitionFunction;
 
+
+        &[data-color="yellow"] {
+            background-color: var(--yellow);
+        }
+
+        &[data-color="dark-blue"] {
+            background-color: var(--dark-blue);
+        }
+
+        &[data-color="mystic"] {
+            background-color: var(--mystic);
+        }
+
+        &[data-color="spruce"] {
+            background-color: var(--spruce);
+        }
+
+        &[data-color="pearl"] {
+            background-color: var(--pearl);
+        }
+
         &[data-color="red"] {
             background-color: var(--red);
         }
 
-        &[data-color="black"] {
-            background-color: var(--black);
-        }
-
-        &[data-color="gray"] {
-            background-color: var(--gray);
+        &[data-color="blue"] {
+            background-color: var(--blue);
         }
 
         &[data-color="orange"] {
             background-color: var(--orange);
         }
-        @media (max-width:$tablet-max){
+
+        &[data-color="aubergine"] {
+            background-color: var(--aubergine);
+        }
+
+        @media (max-width:$tablet-max) {
             width: 60px;
             height: 30px;
             border-radius: 8px;
@@ -124,29 +154,51 @@
                 width: 100%;
                 height: 43px;
                 border-radius: 13px;
-                @media (max-width:$tablet-max){
+
+                @media (max-width:$tablet-max) {
                     height: 30px;
                     border-radius: 8px;
                 }
             }
 
+            &[value="yellow"]+.choice-color__label::before {
+                background-color: var(--yellow);
+            }
+
+            &[value="dark-blue"]+.choice-color__label::before {
+                background-color: var(--dark-blue);
+            }
+
+            &[value="mystic"]+.choice-color__label::before {
+                background-color: var(--mystic);
+            }
+
+            &[value="spruce"]+.choice-color__label::before {
+                background-color: var(--spruce);
+            }
+
+            &[value="pearl"]+.choice-color__label::before {
+                background-color: var(--pearl);
+            }
+
             &[value="red"]+.choice-color__label::before {
-                background-color: #FA4545;
+                background-color: var(--red);
             }
 
-            &[value="black"]+.choice-color__label::before {
-                background-color: #2B2B2B;
-            }
-
-            &[value="gray"]+.choice-color__label::before {
-                background-color: #A1A1A1;
+            &[value="blue"]+.choice-color__label::before {
+                background-color: var(--blue);
             }
 
             &[value="orange"]+.choice-color__label::before {
-                background-color: #ED9453;
+                background-color: var(--orange);
+            }
+
+            &[value="aubergine"]+.choice-color__label::before {
+                background-color: var(--aubergine);
             }
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             grid-column-gap: 15px;
             grid-row-gap: 15px;
         }
@@ -157,12 +209,15 @@
         cursor: pointer;
         border: 1px solid #d9d9d9;
         border-radius: 21px;
-        background-color: var(--white);
+        background-color: #fff;
+
         &:not(:last-child) {
             margin-bottom: 16px;
         }
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             border-radius: 16px;
+
             &:not(:last-child) {
                 margin-bottom: 12px;
             }
@@ -174,7 +229,8 @@
     &__body {
         padding: 15px 11px 15px 15px;
         cursor: default;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             padding: 10px 12px;
         }
     }

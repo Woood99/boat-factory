@@ -300,7 +300,7 @@
         .swiper-slide {
             display: flex;
             justify-content: center;
-            padding: 20px 50px 0;
+            padding: 50px 65px 0;
             box-sizing: border-box;
 
             @media (max-width:850px) {
@@ -342,7 +342,7 @@
 
     &__colors {
         grid-column: 2/3;
-        grid-row: 2/4;
+        grid-row: 2/5;
 
         @media (max-width:850px) {
             grid-column: 1/-1;

@@ -161,16 +161,12 @@
                             <div class="configurator-content__top">
                                 <select class="configurator-content__select select-primary" name="model">
                                     <option value="fl55">ФЛ-55</option>
-                                    <option value="fl47">ФЛ-47</option>
+                                    <option value="fl55">ФЛ-55 СПОРТ</option>
                                     <option value="fl70">ФЛ-70</option>
                                 </select>
                                 <select class="configurator-content__select select-primary" name="motor">
                                     <option value="">Выбрать мотор</option>
-                                    <option disabled value="motor1">Мотор №1</option>
-                                    <option value="motor2">Мотор №2</option>
-                                    <option value="motor3">Мотор №3</option>
-                                    <option value="motor4">Мотор №4</option>
-                                    <option value="motor5">Мотор №5</option>
+                                    <option value="Yamaha F175 AETX">Yamaha F175 AETX</option>
                                 </select>
                                 <select class="configurator-content__select select-primary" name="trailer">
                                     <option value="">Выбрать прицеп</option>
@@ -185,22 +181,22 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <picture>
-                                            <source srcset="./img/boat-red.webp" type="image/webp">
-                                            <img loading="lazy" src="./img/boat-red.png" width="508" height="203"
+                                            <source srcset="./img/boat-6.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/boat-6.png" width="508" height="203"
                                                 alt="Красная лодка">
                                         </picture>
                                     </div>
                                     <div class="swiper-slide">
                                         <picture>
-                                            <source srcset="./img/boat-red.webp" type="image/webp">
-                                            <img loading="lazy" src="./img/boat-red.png" width="508" height="203"
+                                            <source srcset="./img/boat-7.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/boat-7.png" width="508" height="203"
                                                 alt="Красная лодка">
                                         </picture>
                                     </div>
                                     <div class="swiper-slide">
                                         <picture>
-                                            <source srcset="./img/boat-red.webp" type="image/webp">
-                                            <img loading="lazy" src="./img/boat-red.png" width="508" height="203"
+                                            <source srcset="./img/boat-8.webp" type="image/webp">
+                                            <img loading="lazy" src="./img/boat-8.png" width="508" height="203"
                                                 alt="Красная лодка">
                                         </picture>
                                     </div>
@@ -251,30 +247,55 @@
                                         <div class="choice-color__radio">
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-up_1" class="choice-color__input" checked
-                                                    type="radio" value="red" name="color-body_up">
+                                                    type="radio" value="yellow" name="color-body_up">
                                                 <label for="color-body-up_1" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-up_2" class="choice-color__input"
-                                                    type="radio" value="black" name="color-body_up">
+                                                    type="radio" value="dark-blue" name="color-body_up">
                                                 <label for="color-body-up_2" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-up_3" class="choice-color__input"
-                                                    type="radio" value="gray" name="color-body_up">
+                                                    type="radio" value="mystic" name="color-body_up">
                                                 <label for="color-body-up_3" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-up_4" class="choice-color__input"
-                                                    type="radio" value="orange" name="color-body_up">
+                                                    type="radio" value="spruce" name="color-body_up">
                                                 <label for="color-body-up_4" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-up_5" class="choice-color__input"
+                                                    type="radio" value="pearl" name="color-body_up">
+                                                <label for="color-body-up_5" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-up_6" class="choice-color__input"
+                                                    type="radio" value="red" name="color-body_up">
+                                                <label for="color-body-up_6" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-up_7" class="choice-color__input"
+                                                    type="radio" value="blue" name="color-body_up">
+                                                <label for="color-body-up_7" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-up_8" class="choice-color__input"
+                                                    type="radio" value="orange" name="color-body_up">
+                                                <label for="color-body-up_8" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-up_9" class="choice-color__input"
+                                                    type="radio" value="aubergine" name="color-body_up">
+                                                <label for="color-body-up_9" class="choice-color__label"></label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="choice-color__item">
                                     <button type="button" data-spoller class="btn btn-reset choice-color__title">
-                                        <span>Цвет корпуса низ</span>
+                                        <span>Цвет консоли</span>
                                         <svg>
                                             <use xlink:href="img/sprite.svg#check"></use>
                                         </svg>
@@ -284,23 +305,48 @@
                                         <div class="choice-color__radio">
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-down_1" class="choice-color__input"
-                                                    type="radio" value="red" name="color-body_down">
+                                                    type="radio" value="yellow" name="color-body_down">
                                                 <label for="color-body-down_1" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-down_2" class="choice-color__input" checked
-                                                    type="radio" value="black" name="color-body_down">
+                                                    type="radio" value="dark-blue" name="color-body_down">
                                                 <label for="color-body-down_2" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-down_3" class="choice-color__input"
-                                                    type="radio" value="gray" name="color-body_down">
+                                                    type="radio" value="mystic" name="color-body_down">
                                                 <label for="color-body-down_3" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-body-down_4" class="choice-color__input"
-                                                    type="radio" value="orange" name="color-body_down">
+                                                    type="radio" value="spruce" name="color-body_down">
                                                 <label for="color-body-down_4" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-down_5" class="choice-color__input"
+                                                    type="radio" value="pearl" name="color-body_down">
+                                                <label for="color-body-down_5" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-down_6" class="choice-color__input"
+                                                    type="radio" value="red" name="color-body_down">
+                                                <label for="color-body-down_6" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-down_7" class="choice-color__input"
+                                                    type="radio" value="blue" name="color-body_down">
+                                                <label for="color-body-down_7" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-down_8" class="choice-color__input"
+                                                    type="radio" value="orange" name="color-body_down">
+                                                <label for="color-body-down_8" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-body-down_9" class="choice-color__input"
+                                                    type="radio" value="aubergine" name="color-body_down">
+                                                <label for="color-body-down_9" class="choice-color__label"></label>
                                             </div>
                                         </div>
                                     </div>
@@ -317,23 +363,48 @@
                                         <div class="choice-color__radio">
                                             <div class="choice-color__element">
                                                 <input hidden id="color-console_1" class="choice-color__input"
-                                                    type="radio" value="red" name="color_console">
+                                                    type="radio" value="yellow" name="color_console">
                                                 <label for="color-console_1" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-console_2" class="choice-color__input"
-                                                    type="radio" value="black" name="color_console">
+                                                    type="radio" value="dark-blue" name="color_console">
                                                 <label for="color-console_2" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-console_3" class="choice-color__input" checked
-                                                    type="radio" value="gray" name="color_console">
+                                                    type="radio" value="mystic" name="color_console">
                                                 <label for="color-console_3" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-console_4" class="choice-color__input"
-                                                    type="radio" value="orange" name="color_console">
+                                                    type="radio" value="spruce" name="color_console">
                                                 <label for="color-console_4" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-console_5" class="choice-color__input"
+                                                    type="radio" value="pearl" name="color_console">
+                                                <label for="color-console_5" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-console_6" class="choice-color__input"
+                                                    type="radio" value="red" name="color_console">
+                                                <label for="color-console_6" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-console_7" class="choice-color__input"
+                                                    type="radio" value="blue" name="color_console">
+                                                <label for="color-console_7" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-console_8" class="choice-color__input"
+                                                    type="radio" value="orange" name="color_console">
+                                                <label for="color-console_8" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-console_9" class="choice-color__input"
+                                                    type="radio" value="aubergine" name="color_console">
+                                                <label for="color-console_9" class="choice-color__label"></label>
                                             </div>
                                         </div>
                                     </div>
@@ -350,23 +421,71 @@
                                         <div class="choice-color__radio">
                                             <div class="choice-color__element">
                                                 <input hidden id="color-seat_1" class="choice-color__input" type="radio"
-                                                    value="red" name="color_seat">
+                                                    value="yellow" name="color_seat">
                                                 <label for="color-seat_1" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-seat_2" class="choice-color__input" type="radio"
-                                                    value="black" name="color_seat">
+                                                    value="dark-blue" name="color_seat">
                                                 <label for="color-seat_2" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
                                                 <input hidden id="color-seat_3" class="choice-color__input" type="radio"
-                                                    value="gray" name="color_seat">
+                                                    value="mystic" name="color_seat">
                                                 <label for="color-seat_3" class="choice-color__label"></label>
                                             </div>
                                             <div class="choice-color__element">
-                                                <input hidden id="color-seat_4" class="choice-color__input" checked
-                                                    type="radio" value="orange" name="color_seat">
+                                                <input hidden id="color-seat_4" class="choice-color__input" type="radio"
+                                                    value="spruce" name="color_seat">
                                                 <label for="color-seat_4" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-seat_5" class="choice-color__input" type="radio"
+                                                    value="pearl" name="color_seat">
+                                                <label for="color-seat_5" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-seat_6" class="choice-color__input" type="radio"
+                                                    value="red" name="color_seat">
+                                                <label for="color-seat_6" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-seat_7" class="choice-color__input" type="radio"
+                                                    value="blue" name="color_seat">
+                                                <label for="color-seat_7" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-seat_8" class="choice-color__input" checked
+                                                    type="radio" value="orange" name="color_seat">
+                                                <label for="color-seat_8" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-seat_9" class="choice-color__input" type="radio"
+                                                    value="aubergine" name="color_seat">
+                                                <label for="color-seat_9" class="choice-color__label"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="choice-color__item">
+                                    <button type="button" data-spoller class="btn btn-reset choice-color__title">
+                                        <span>Цвет рамок стекла</span>
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#check"></use>
+                                        </svg>
+                                        <div class="choice-color__selected" aria-hidden="true"></div>
+                                    </button>
+                                    <div class="choice-color__body">
+                                        <div class="choice-color__radio">
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-glass_1" class="choice-color__input"
+                                                    type="radio" value="pearl" name="color_glass" checked>
+                                                <label for="color-glass_1" class="choice-color__label"></label>
+                                            </div>
+                                            <div class="choice-color__element">
+                                                <input hidden id="color-glass_2" class="choice-color__input"
+                                                    type="radio" value="mystic" name="color_glass">
+                                                <label for="color-glass_2" class="choice-color__label"></label>
                                             </div>
                                         </div>
                                     </div>
