@@ -572,6 +572,7 @@ __webpack_require__.r(__webpack_exports__);
 const homeVideo = () => {
   const desktop = document.querySelector('.hero-home-video__video--desktop');
   const mobile = document.querySelector('.hero-home-video__video--mobile');
+  if (!(desktop && mobile)) return false;
   desktop.innerHTML = '';
   mobile.innerHTML = '';
   if (window.innerWidth <= 1024) {
