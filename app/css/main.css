@@ -1937,6 +1937,22 @@ a {
   -o-transition: height 1000000s, min-height 1000000s;
   transition: height 1000000s, min-height 1000000s;
 }
+.hero-home-video__video--desktop {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .hero-home-video__video--desktop {
+    display: none;
+  }
+}
+.hero-home-video__video--mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .hero-home-video__video--mobile {
+    display: block;
+  }
+}
 @media (max-width: 1024px) {
   .hero-home-video__video {
     height: calc(var(--vh) + 20px);
@@ -2973,6 +2989,25 @@ a {
   background-color: var(--white);
   -webkit-filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
   filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
+  padding: 50px;
+}
+.boat-card-secondary__body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.55)), to(rgba(0, 0, 0, 0.55)));
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+  z-index: 5;
+  border-radius: var(--border-r);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 @media (max-width: 1024px) {
   .boat-card-secondary__body {
@@ -2981,29 +3016,11 @@ a {
   }
 }
 .boat-card-secondary__image {
-  padding-bottom: 46.511627907%;
+  padding-bottom: 32.273152479%;
   border-radius: var(--border-r);
 }
 .boat-card-secondary__image img {
   border-radius: var(--border-r);
-}
-.boat-card-secondary__image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33)));
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33));
-  z-index: 5;
-  border-radius: var(--border-r);
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 .boat-card-secondary__content {
   position: absolute;
@@ -3126,9 +3143,35 @@ a {
   -ms-grid-row-align: end;
   align-self: end;
 }
+.boat-card-secondary--not {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 .boat-card-secondary--not .boat-card-secondary__body {
-  padding-bottom: 46.511627907%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .boat-card-secondary--not .boat-card-secondary__body {
+    height: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .boat-card-secondary--not .boat-card-secondary__body {
+    height: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .boat-card-secondary--not .boat-card-secondary__body {
+    height: 175px;
+  }
 }
 .boat-card-secondary--not .boat-card-secondary__content {
   -webkit-filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
@@ -3175,11 +3218,11 @@ a {
   }
 }
 @media (max-width: 1024px) {
-  .boat-card-secondary .boat-card-secondary__image::before {
+  .boat-card-secondary:not(.boat-card-secondary--not) .boat-card-secondary__body::before {
     opacity: 1;
     visibility: visible;
   }
-  .boat-card-secondary .boat-card-secondary__content {
+  .boat-card-secondary:not(.boat-card-secondary--not) .boat-card-secondary__content {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translateY(0);
@@ -3188,7 +3231,7 @@ a {
   }
 }
 @media (min-width: 1025px) {
-  .boat-card-secondary:hover:not(.boat-card-secondary--not) .boat-card-secondary__image::before {
+  .boat-card-secondary:hover:not(.boat-card-secondary--not) .boat-card-secondary__body::before {
     opacity: 1;
     visibility: visible;
   }
@@ -6782,6 +6825,19 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+.all-began__names--fl47 {
+  position: relative;
+}
+.all-began__names--fl47 .soon {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+  font-size: 10px;
+  padding: 0 10px;
+  height: 20px;
 }
 .all-began__names a {
   font-family: "Halvar Breitschrift", sans-serif;

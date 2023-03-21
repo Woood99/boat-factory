@@ -174,7 +174,17 @@
         margin-top: 25px;
         display: flex;
         flex-direction: column;
-
+        &--fl47{
+            position: relative;
+            .soon{
+                position: absolute;
+                top: 0;
+                transform: translateX(2px);
+                font-size: 10px;
+                padding: 0 10px;
+                height: 20px;
+            }
+        }
         a {
             @include fontHalvar;
             text-transform: uppercase;

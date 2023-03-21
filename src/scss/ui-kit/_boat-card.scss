@@ -141,20 +141,7 @@
         border-radius: var(--border-r);
         background-color: var(--white);
         filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
-
-        @media (max-width:$tablet-max) {
-            margin-top: 15px;
-            --border-r: 16px;
-        }
-    }
-
-    &__image {
-        padding-bottom: percent(280, 602);
-        border-radius: var(--border-r);
-
-        img {
-            border-radius: var(--border-r);
-        }
+        padding: 50px;
 
         &::before {
             content: '';
@@ -163,7 +150,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33));
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
             z-index: 5;
             border-radius: var(--border-r);
             opacity: 0;
@@ -171,6 +158,21 @@
             transition: opacity $transitionSpeed $transitionFunction,
                 visibility $transitionSpeed $transitionFunction;
         }
+
+        @media (max-width:$tablet-max) {
+            margin-top: 15px;
+            --border-r: 16px;
+        }
+    }
+
+    &__image {
+        padding-bottom: percent(345, 1069);
+        border-radius: var(--border-r);
+
+        img {
+            border-radius: var(--border-r);
+        }
+
     }
 
     &__content {
@@ -256,10 +258,26 @@
     }
 
     &--not {
+        display: flex;
+        flex-direction: column;
+
         .boat-card-secondary {
+
             &__body {
-                padding-bottom: percent(280, 602);
+                flex-grow: 1;
                 width: 100%;
+
+                @media (max-width:$smallTablet-max) {
+                    height: 250px;
+                }
+
+                @media (max-width:$mobile-max) {
+                    height: 200px;
+                }
+
+                @media (max-width:480px) {
+                    height: 175px;
+                }
             }
 
             &__content {
@@ -289,27 +307,30 @@
     }
 
     @media (max-width:$tablet-max) {
-        .boat-card-secondary {
-            &__image {
-                &::before {
+        &:not(.boat-card-secondary--not) {
+            .boat-card-secondary {
+                &__body {
+                    &::before {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                &__content {
                     opacity: 1;
                     visibility: visible;
+                    transform: translateY(0);
                 }
             }
-
-            &__content {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
         }
+
     }
 
     @media (min-width:$tablet-min) {
         &:hover {
             &:not(.boat-card-secondary--not) {
                 .boat-card-secondary {
-                    &__image {
+                    &__body {
                         &::before {
                             opacity: 1;
                             visibility: visible;

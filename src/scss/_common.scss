@@ -437,6 +437,22 @@
         background-color: var(--white);
         transition: height 1000000s, min-height 1000000s;
 
+        &--desktop {
+            display: block;
+
+            @media (max-width:$tablet-max) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @media (max-width:$tablet-max) {
+                display: block;
+            }
+        }
+
         @media (max-width:$tablet-max) {
             height: calc(var(--vh) + 20px);
         }

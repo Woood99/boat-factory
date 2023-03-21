@@ -11,6 +11,7 @@ import sliderBreakpoint from './modules/sliderBreakpoint';
 import tabs from './modules/tabs';
 import popup from './modules/popup';
 import scrolling from './components/scrolling';
+import homeVideo from './components/homeVideo';
 import {
     configuratorMore,
     configuratorAddedAdditional,
@@ -32,10 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
     validateForm();
     videoBlock();
     scrolling();
+    homeVideo();
     if (window.innerWidth <= 1024) tabs();
     window.addEventListener('resize', () => {
         fixFullheight();
         getHeaderHeight();
+        homeVideo();
         if (window.innerWidth <= 1024) tabs();
     });
 

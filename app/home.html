@@ -155,8 +155,11 @@
     </div>
 </header>
 
-            <video playsinline preload muted autoplay loop class="hero-home-video__video">
-                <source src="./hero-video.mp4" type="video/mp4">
+            <video data-src="./hero-video.mp4" playsinline preload muted autoplay loop
+                class="hero-home-video__video hero-home-video__video--desktop">
+            </video>
+            <video data-src="./hero-video-mobile.mp4" playsinline preload muted autoplay loop
+                class="hero-home-video__video hero-home-video__video--mobile">
             </video>
             <div class="hero-home-video__container container">
                 <div class="hero-home-video--plus hero-home-video--plus-1">
@@ -209,9 +212,8 @@
                             <div class="boat-card-secondary__body">
                                 <div class="boat-card-secondary__image ibg">
                                     <picture>
-                                        <source srcset="./img/boat-card-1.webp" type="image/webp">
-                                        <img loading="lazy" src="./img/boat-card-1.jpg" width="602" height="280"
-                                            alt="ФЛ–55">
+                                        <source srcset="./img/boat-6.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/boat-6.jpg" width="602" height="280" alt="ФЛ–55">
                                     </picture>
                                 </div>
                                 <div class="boat-card-secondary__content">
@@ -247,24 +249,23 @@
                             <div class="boat-card-secondary__body">
                                 <div class="boat-card-secondary__image ibg">
                                     <picture>
-                                        <source srcset="./img/boat-card-2.webp" type="image/webp">
-                                        <img loading="lazy" src="./img/boat-card-2.jpg" width="602" height="280"
-                                            alt="ФЛ–70">
+                                        <source srcset="./img/boat-7.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/boat-7.jpg" width="602" height="280" alt="ФЛ–70">
                                     </picture>
                                 </div>
                                 <div class="boat-card-secondary__content">
                                     <div class="boat-card-secondary__options">
                                         <div class="boat-card-secondary__option">
                                             <span>Вес / кг</span>
-                                            <span>756</span>
+                                            <span>980</span>
                                         </div>
                                         <div class="boat-card-secondary__option">
                                             <span>Запас топлива / л</span>
-                                            <span>125</span>
+                                            <span>250</span>
                                         </div>
                                         <div class="boat-card-secondary__option">
                                             <span>Двигатель / лс </span>
-                                            <span>200</span>
+                                            <span>200-300</span>
                                         </div>
                                     </div>
                                     <svg class="boat-card-secondary__icon">
@@ -276,7 +277,7 @@
                         <a href="#" class="hero-home-cards__item boat-card-secondary">
                             <div class="boat-card-secondary__top">
                                 <h2 class="boat-card-secondary__title">
-                                    [ФЛ–55 sport]
+                                    [ФЛ–55] СПОРТ
                                 </h2>
                                 <p class="boat-card-secondary__descr">
                                     Для активного отдыха
@@ -285,8 +286,8 @@
                             <div class="boat-card-secondary__body">
                                 <div class="boat-card-secondary__image ibg">
                                     <picture>
-                                        <source srcset="./img/boat-card-3.webp" type="image/webp">
-                                        <img loading="lazy" src="./img/boat-card-3.jpg" width="602" height="280"
+                                        <source srcset="./img/boat-8.webp" type="image/webp">
+                                        <img loading="lazy" src="./img/boat-8.jpg" width="602" height="280"
                                             alt="ФЛ–55 sport">
                                     </picture>
                                 </div>
@@ -563,8 +564,8 @@
     <div class="all-began__container container">
         <div class="all-began__options">
             <div class="all-began__option">
-                <span data-text-mobile="41">
-                    20+
+                <span data-text-mobile="20">
+                    20
                 </span>
                 <span>
                     дилер в регионах РФ
@@ -607,6 +608,9 @@
                 </div>
                 <div class="all-began__names">
                     <a href="#">
+                        [ ФЛ—55 ] СПОРТ
+                    </a>
+                    <a href="#">
                         [ ФЛ—55 ]
                     </a>
                 </div>
@@ -621,8 +625,9 @@
                     </p>
                 </div>
                 <div class="all-began__names">
-                    <a href="#">
+                    <a href="#" class="all-began__names--fl47">
                         [ ФЛ—47 ]
+                        <span class="soon">Скоро</span>
                     </a>
                     <a href="#">
                         [ ФЛ—70 ]
