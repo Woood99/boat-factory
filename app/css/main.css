@@ -1601,7 +1601,7 @@ a {
   overflow: visible;
 }
 .gallery .swiper-slide {
-  height: 100%;
+  height: auto;
 }
 .gallery__navigation {
   margin-top: 35px;
