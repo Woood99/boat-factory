@@ -112,8 +112,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 25px;
-
-        @media (max-width:$tablet-max) {
+        @media (max-width:$max-1150){
             padding: 0 10px;
             flex-direction: column;
             justify-content: center;
@@ -166,7 +165,7 @@
     }
 
     &__image {
-        padding-bottom: percent(345, 1069);
+        padding-bottom: percent(370, 1069);
         border-radius: var(--border-r);
 
         img {
@@ -260,13 +259,22 @@
     &--not {
         display: flex;
         flex-direction: column;
-
+        &__title{
+            @include fontHalvar;
+            font-weight: 500;
+            color: var(--black);
+            @include adaptiveValue("font-size", 24, 16);
+            line-height: math.div(28, 24);
+        }
         .boat-card-secondary {
 
             &__body {
                 flex-grow: 1;
                 width: 100%;
-
+                display: flex;
+                align-items: center;
+                justify-content: center;
+             
                 @media (max-width:$smallTablet-max) {
                     height: 250px;
                 }
@@ -281,33 +289,13 @@
             }
 
             &__content {
-                filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                @include fontHalvar;
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-
-                font-weight: 500;
-                color: var(--black);
-                @include adaptiveValue("font-size", 24, 16);
-                line-height: math.div(28, 24);
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                width: 100%;
+               
             }
         }
     }
 
     @media (max-width:$tablet-max) {
-        &:not(.boat-card-secondary--not) {
+       
             .boat-card-secondary {
                 &__body {
                     &::before {
@@ -322,13 +310,12 @@
                     transform: translateY(0);
                 }
             }
-        }
 
     }
 
     @media (min-width:$tablet-min) {
         &:hover {
-            &:not(.boat-card-secondary--not) {
+          
                 .boat-card-secondary {
                     &__body {
                         &::before {
@@ -343,7 +330,7 @@
                         transform: translateY(0);
                     }
                 }
-            }
+        
 
         }
     }

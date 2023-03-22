@@ -9,10 +9,6 @@
     font-size: 26px;
     line-height: math.div(31, 26);
     text-transform: uppercase;
-
-    @media (max-width:$tablet-max) {
-        margin-bottom: 15px;
-    }
 }
 
 

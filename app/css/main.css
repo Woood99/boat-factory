@@ -1544,11 +1544,6 @@ a {
   line-height: 1.1923076923;
   text-transform: uppercase;
 }
-@media (max-width: 1024px) {
-  .title-1 {
-    margin-bottom: 15px;
-  }
-}
 
 .grid {
   display: -ms-grid;
@@ -2970,7 +2965,7 @@ a {
   justify-content: space-between;
   padding: 0 25px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
   .boat-card-secondary__top {
     padding: 0 10px;
     -webkit-box-orient: vertical;
@@ -3057,7 +3052,7 @@ a {
   }
 }
 .boat-card-secondary__image {
-  padding-bottom: 32.273152479%;
+  padding-bottom: 34.6117867166%;
   border-radius: var(--border-r);
 }
 .boat-card-secondary__image img {
@@ -3193,11 +3188,41 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.boat-card-secondary--not__title {
+  font-family: "Halvar Breitschrift", sans-serif;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.1666666667;
+}
+@media (min-width: 82.375em) {
+  .boat-card-secondary--not__title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 82.375em) {
+  .boat-card-secondary--not__title {
+    font-size: calc(1rem + 0.5 * (((100vw - 20rem)) / ((62.375))));
+  }
+}
+@media (max-width: 20em) {
+  .boat-card-secondary--not__title {
+    font-size: 1rem;
+  }
+}
 .boat-card-secondary--not .boat-card-secondary__body {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 @media (max-width: 768px) {
   .boat-card-secondary--not .boat-card-secondary__body {
@@ -3214,56 +3239,12 @@ a {
     height: 175px;
   }
 }
-.boat-card-secondary--not .boat-card-secondary__content {
-  -webkit-filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
-  filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.06));
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  font-family: "Halvar Breitschrift", sans-serif;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  font-weight: 500;
-  color: var(--black);
-  line-height: 1.1666666667;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-@media (min-width: 82.375em) {
-  .boat-card-secondary--not .boat-card-secondary__content {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 82.375em) {
-  .boat-card-secondary--not .boat-card-secondary__content {
-    font-size: calc(1rem + 0.5 * (((100vw - 20rem)) / ((62.375))));
-  }
-}
-@media (max-width: 20em) {
-  .boat-card-secondary--not .boat-card-secondary__content {
-    font-size: 1rem;
-  }
-}
 @media (max-width: 1024px) {
-  .boat-card-secondary:not(.boat-card-secondary--not) .boat-card-secondary__body::before {
+  .boat-card-secondary .boat-card-secondary__body::before {
     opacity: 1;
     visibility: visible;
   }
-  .boat-card-secondary:not(.boat-card-secondary--not) .boat-card-secondary__content {
+  .boat-card-secondary .boat-card-secondary__content {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translateY(0);
@@ -3272,11 +3253,11 @@ a {
   }
 }
 @media (min-width: 1025px) {
-  .boat-card-secondary:hover:not(.boat-card-secondary--not) .boat-card-secondary__body::before {
+  .boat-card-secondary:hover .boat-card-secondary__body::before {
     opacity: 1;
     visibility: visible;
   }
-  .boat-card-secondary:hover:not(.boat-card-secondary--not) .boat-card-secondary__content {
+  .boat-card-secondary:hover .boat-card-secondary__content {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translateY(0);
@@ -4864,6 +4845,101 @@ a {
     grid-template-columns: 22px 1fr max-content 35px;
     grid-column-gap: 15px;
     grid-row-gap: 10px;
+  }
+}
+
+.boat-table {
+  margin-bottom: 100px;
+}
+.boat-table__title {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 7;
+  grid-column: 5/12;
+}
+@media (min-width: 82.375em) {
+  .boat-table__title {
+    font-size: 1.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 82.375em) {
+  .boat-table__title {
+    font-size: calc(1.125rem + 0.5 * (((100vw - 20rem)) / ((62.375))));
+  }
+}
+@media (max-width: 20em) {
+  .boat-table__title {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 1150px) {
+  .boat-table__title {
+    grid-column: 1/-1;
+  }
+}
+.boat-table__content {
+  margin-top: 35px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+@media (max-width: 1150px) {
+  .boat-table__content {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 1024px) {
+  .boat-table__content {
+    margin-top: 15px;
+    overflow-x: auto;
+  }
+}
+.boat-table__row {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 30px;
+  padding: 40px 0;
+  position: relative;
+  padding-left: 30.2%;
+}
+.boat-table__row::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #dcdcdc;
+  border-radius: 10px;
+}
+@media (max-width: 1150px) {
+  .boat-table__row {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 1024px) {
+  .boat-table__row {
+    width: 100%;
+  }
+}
+.boat-table__col {
+  font-size: 14px;
+  line-height: 1.5714285714;
+  color: var(--black);
+  min-width: 150px;
+}
+@media (max-width: 768px) {
+  .boat-table__col {
+    min-width: 130px;
+  }
+}
+@media (max-width: 1024px) {
+  .boat-table {
+    margin-bottom: 60px;
   }
 }
 
@@ -8756,6 +8832,23 @@ a {
 .boat-info__video {
   margin-top: 70px;
 }
+.boat-info__video.video-no-preview {
+  height: 430px;
+}
+.boat-info__video.video-no-preview iframe {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .boat-info__video.video-no-preview {
+    height: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .boat-info__video.video-no-preview {
+    height: 220px;
+  }
+}
 .boat-info__bottom {
   margin-top: 70px;
   text-align: center;
@@ -9512,10 +9605,11 @@ a {
   }
 }
 .company-hero__slider {
-  max-height: 390px;
+  max-height: 320px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 390px;
   flex: 0 0 390px;
+  height: 320px;
   border-radius: 38px;
 }
 .company-hero__slider .swiper-slide img {
@@ -9533,6 +9627,11 @@ a {
     max-width: 450px;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .company-hero__slider {
+    height: 250px;
   }
 }
 .company-hero__info {
@@ -9623,8 +9722,8 @@ a {
 }
 @media (min-width: 1701px) {
   .company-images__image img {
-    max-height: 162px;
-    height: 162px;
+    max-height: 160px;
+    height: 160px;
   }
 }
 .company-images__image:nth-child(1) {
@@ -10105,6 +10204,7 @@ a {
   width: 100%;
   padding-top: 25px;
   margin-top: -25px;
+  height: 425px;
 }
 @media (max-width: 1150px) {
   .production-stages-slider__inner {
@@ -10143,6 +10243,8 @@ a {
 }
 .production-stages-slider__img {
   border-radius: 44px;
+  height: 100%;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .production-stages-slider__img {
