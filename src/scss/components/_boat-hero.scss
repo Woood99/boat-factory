@@ -280,6 +280,34 @@
 
     box-sizing: content-box;
 
+    &--not-on-sale {
+        @include adaptiveValue("height", 365, 250);
+        background-color: var(--white);
+        box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.06);
+        box-sizing: border-box;
+        margin: 0;
+        padding: 20px 35px;
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--black);
+        font-weight: 500;
+        @include adaptiveValue("font-size", 32, 18);
+        line-height: math.div(28, 24);
+        @include fontHalvar;
+        border-radius: 30px;
+
+        @media (max-width:$max-1150) {
+            border-radius: 18px;
+        }
+
+        @media (max-width:$mobile-max) {
+            height: 200px;
+        }
+    }
+
     &__slide {
         background-color: var(--white);
         box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.06);
@@ -313,7 +341,7 @@
 
 .boat-hero-nav {
     //  padding: 25px 20px 15px 40px;
-  //     margin: -12px -20px -15px -40px;
+    //     margin: -12px -20px -15px -40px;
     margin-top: 20px;
     box-sizing: content-box;
 

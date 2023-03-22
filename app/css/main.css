@@ -7974,6 +7974,70 @@ a {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
+.boat-hero-body--not-on-sale {
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.06);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 35px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--black);
+  font-weight: 500;
+  line-height: 1.1666666667;
+  font-family: "Halvar Breitschrift", sans-serif;
+  border-radius: 30px;
+}
+@media (min-width: 82.375em) {
+  .boat-hero-body--not-on-sale {
+    height: 22.8125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 82.375em) {
+  .boat-hero-body--not-on-sale {
+    height: calc(15.625rem + 7.1875 * (((100vw - 20rem)) / ((62.375))));
+  }
+}
+@media (max-width: 20em) {
+  .boat-hero-body--not-on-sale {
+    height: 15.625rem;
+  }
+}
+@media (min-width: 82.375em) {
+  .boat-hero-body--not-on-sale {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 82.375em) {
+  .boat-hero-body--not-on-sale {
+    font-size: calc(1.125rem + 0.875 * (((100vw - 20rem)) / ((62.375))));
+  }
+}
+@media (max-width: 20em) {
+  .boat-hero-body--not-on-sale {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 1150px) {
+  .boat-hero-body--not-on-sale {
+    border-radius: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .boat-hero-body--not-on-sale {
+    height: 200px;
+  }
+}
 .boat-hero-body__slide {
   background-color: var(--white);
   -webkit-box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.06);
