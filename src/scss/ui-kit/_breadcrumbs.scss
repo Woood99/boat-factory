@@ -13,7 +13,7 @@
         font-size: 16px;
         line-height: math.div(20, 16);
         color: var(--gray);
-        font-weight: 600;
+        font-weight: 400;
 
         &:first-child {
             padding-left: 0;
@@ -58,7 +58,6 @@
     &__item--last {
         color: var(--shaft);
         padding-right: 0;
-        font-weight: 500;
     }
 
 }

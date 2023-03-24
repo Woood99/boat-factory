@@ -51,10 +51,10 @@ if (document.querySelector('.where-buy__map')) {
 if (document.querySelector('.contacts__map')){
     function init() {
         let map = new ymaps.Map('contacts-map', {
-            center: [55.85299910266709, 37.30898264843751],
-            zoom: 9
+            center: [56.35873763447769,37.50274807026462],
+            zoom: 16
         });
-        let placemark1 = new ymaps.Placemark([55.7462485754695, 37.25679758984377], {
+        let placemark1 = new ymaps.Placemark([56.35873763447769,37.50274807026462], {
             balloonContent: `
             <div class="balloon">
                 <div class="balloon__content">
@@ -76,8 +76,8 @@ if (document.querySelector('.contacts__map')){
         }, {
             iconLayout: "default#image",
             iconImageHref: "./img/placemark.svg",
-            iconImageSize: [48, 48],
-            iconImageOffset: [-17, -27]
+            iconImageSize: [32, 32],
+            iconImageOffset: [-12, -25]
         });
         removeControls(map);
         map.geoObjects.add(placemark1);

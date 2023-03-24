@@ -647,3 +647,22 @@
         }
     }
 }
+
+
+.fl47 {
+    .boat-info {
+        margin-top: 80px;
+
+        &__bottom {
+            margin-top: 0;
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        &__btns {}
+
+        @media (max-width:$mobile-max) {
+            margin-top: 0;
+        }
+    }
+}

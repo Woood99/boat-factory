@@ -2179,6 +2179,20 @@ a {
   color: var(--black);
 }
 
+.fl47 .boat-info {
+  margin-top: 80px;
+}
+.fl47 .boat-info__bottom {
+  margin-top: 0;
+  border-top: 0;
+  padding-top: 0;
+}
+@media (max-width: 576px) {
+  .fl47 .boat-info {
+    margin-top: 0;
+  }
+}
+
 .address-item {
   background-color: var(--primary);
 }
@@ -2276,7 +2290,7 @@ a {
   font-size: 16px;
   line-height: 1.25;
   color: var(--gray);
-  font-weight: 600;
+  font-weight: 400;
 }
 .breadcrumbs__item:first-child {
   padding-left: 0;
@@ -2321,7 +2335,6 @@ a {
 .breadcrumbs__item--last {
   color: var(--shaft);
   padding-right: 0;
-  font-weight: 500;
 }
 
 .article-card__wrapper {
