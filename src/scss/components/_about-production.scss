@@ -52,6 +52,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 15px;
         grid-column-gap: 19px;
+
         @media (max-width:$max-1150) {
             grid-column: 1/-1;
         }
@@ -205,6 +206,7 @@
         padding-top: 25px;
         margin-top: -25px;
         height: 425px;
+
         @media (max-width:$max-1150) {
             grid-column: 1/-1;
         }
@@ -243,6 +245,7 @@
         border-radius: 44px;
         height: 100%;
         width: 100%;
+
         @media (max-width:$tablet-max) {
             border-radius: 20px;
         }
