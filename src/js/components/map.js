@@ -4,8 +4,8 @@ function removeControls(map) {
     map.controls.remove('trafficControl'); // удаляем контроль трафика
     map.controls.remove('typeSelector'); // удаляем тип
     map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
     map.controls.remove('rulerControl'); // удаляем контрол правил
+    map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 }
 
 
@@ -48,13 +48,13 @@ if (document.querySelector('.where-buy__map')) {
 
 
 
-if (document.querySelector('.contacts__map')){
+if (document.querySelector('.contacts__map')) {
     function init() {
         let map = new ymaps.Map('contacts-map', {
-            center: [56.35873763447769,37.50274807026462],
+            center: [56.35873763447769, 37.50274807026462],
             zoom: 16
         });
-        let placemark1 = new ymaps.Placemark([56.35873763447769,37.50274807026462], {
+        let placemark1 = new ymaps.Placemark([56.35873763447769, 37.50274807026462], {
             balloonContent: `
             <div class="balloon">
                 <div class="balloon__content">

@@ -1,0 +1,91 @@
+.personal-info {
+
+    &__container {}
+
+    &__title {
+        grid-column: 1/-1;
+        margin-bottom: 20px;
+
+        @media (max-width:$tablet-max) {
+            font-size: 18px;
+        }
+    }
+
+    &__content {
+        grid-column: 1/-1;
+
+        a {
+            text-decoration: underline;
+            transition: color $transitionSpeed $transitionFunction;
+
+            &:hover {
+                color: var(--red);
+            }
+        }
+
+        >p {
+            font-size: 16px;
+            line-height: math.div(22, 16);
+
+            @media (max-width:$tablet-max) {
+                font-size: 14px;
+            }
+        }
+
+        >ol {
+            padding: 0;
+            counter-reset: section;
+            list-style-type: none;
+
+            span:first-child {
+                display: inline-block;
+                margin-bottom: 20px;
+
+                @media (max-width:$tablet-max) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            >li {
+                list-style-type: none;
+                font-size: 16px;
+                line-height: math.div(22, 16);
+
+                &:not(:first-child) {
+                    margin-top: 15px;
+
+                    @media (max-width:$tablet-max) {
+                        margin-top: 10px;
+                    }
+                }
+
+                >p {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+
+                        @media (max-width:$tablet-max) {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                &::before {
+                    counter-increment: section;
+                    content: counter(section) ". ";
+                    font-weight: 700;
+                }
+
+                ul {
+                    list-style-type: disc;
+                    margin-top: 15px;
+                }
+
+                @media (max-width:$tablet-max) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+
+    }
+}

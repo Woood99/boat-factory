@@ -42,13 +42,13 @@
                         <form action="#" class="becoming-dealer__form form-primary">
 
                             <label class="form-primary__label label-primary">
-                                <span class="label-primary__name">Имя</span>
+                                <span class="label-primary__name">Имя <span>*</span></span>
                                 <input type="text" name="Имя"
                                     class="input-reset input-primary label-primary__input--name label-primary__input"
                                     placeholder="">
                             </label>
                             <label class="form-primary__label label-primary">
-                                <span class="label-primary__name">Номер телефона</span>
+                                <span class="label-primary__name">Номер телефона <span>*</span></span>
                                 <input type="tel" name="Номер телефона"
                                     class="input-reset input-primary label-primary__input--tel label-primary__input"
                                     placeholder="+7">
@@ -69,11 +69,6 @@
                                     placeholder="">
                             </label>
                             <label class="form-primary__label label-primary">
-                                <span class="label-primary__name">ЛПР</span>
-                                <input type="text" name="ЛПР" class="input-reset input-primary label-primary__input"
-                                    placeholder="">
-                            </label>
-                            <label class="form-primary__label label-primary">
                                 <span class="label-primary__name">Сообщение или вопрос</span>
                                 <textarea class="input-reset input-primary textarea-primary label-primary__input"
                                     placeholder=""></textarea>
@@ -82,7 +77,7 @@
                                 <input id="c_1" class="checkbox__input" type="checkbox" value="1">
                                 <label for="c_1" class="checkbox__label">
                                     <span class="checkbox__text">
-                                        Соглашаюсь на обработку персональных данных
+                                        Соглашаюсь на обработку <a href="./personal-info.html">персональных данных</a>
                                     </span>
                                 </label>
                             </div>
@@ -102,7 +97,8 @@
                             </p>
                         </div>
                         <div class="feedback__btns">
-                            <button type="button" class="btn btn-reset btn-third feedback__btn" data-popup-path="request-call">Заказать звонок</button>
+                            <button type="button" class="btn btn-reset btn-third feedback__btn"
+                                data-popup-path="request-call">Заказать звонок</button>
                             <button type="button"
                                 class="btn btn-reset btn-secondary feedback__btn">Конфигуратор</button>
                         </div>
