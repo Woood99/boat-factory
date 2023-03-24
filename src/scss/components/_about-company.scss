@@ -70,10 +70,10 @@
 
     &__slider {
         max-height: 320px;
-        flex: 0 0 390px;
         height: 320px;
+        flex: 0 0 390px;
+        width: 390px;
         border-radius: 38px;
-
         .swiper-slide {
             img {
                 width: 100%;
@@ -85,15 +85,16 @@
             flex: auto;
             width: 100%;
             max-height: none;
+            height: 250px;
             border-radius: 19px;
             max-width: 450px;
             margin-left: 0;
             margin-right: 0;
         }
 
-        @media (max-width:$smallTablet-max) {
-            height: 250px;
-        }
+       @media (max-width:$mobile-max){
+         height: 200px; 
+       }
     }
 
     &__info {

@@ -9648,10 +9648,11 @@ a {
 }
 .company-hero__slider {
   max-height: 320px;
+  height: 320px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 390px;
   flex: 0 0 390px;
-  height: 320px;
+  width: 390px;
   border-radius: 38px;
 }
 .company-hero__slider .swiper-slide img {
@@ -9665,15 +9666,16 @@ a {
     flex: auto;
     width: 100%;
     max-height: none;
+    height: 250px;
     border-radius: 19px;
     max-width: 450px;
     margin-left: 0;
     margin-right: 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .company-hero__slider {
-    height: 250px;
+    height: 200px;
   }
 }
 .company-hero__info {
