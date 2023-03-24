@@ -14,6 +14,7 @@
         justify-content: space-between;
         grid-row-gap: 25px;
         grid-column-gap: 25px;
+
         @media (min-width:$smallTablet-min) {
             &:not(:last-child) {
                 padding-bottom: 56px;
@@ -39,12 +40,19 @@
             grid-template-columns: 1fr;
             grid-column-gap: 0;
             grid-row-gap: 0;
+
             &:not(:last-child) {
                 padding-bottom: 0px;
             }
         }
 
         &--1 {
+            .contacts__field-content {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+
             @media (max-width:$smallTablet-max) {
                 .contacts__col--2 {
                     margin-top: 48px;
@@ -93,7 +101,7 @@
 
     &__field {
         &:not(:last-child) {
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
     }
 
@@ -114,16 +122,14 @@
 
         a {
             transition: color $transitionSpeed $transitionFunction;
+
+            &:hover {
+                color: var(--red);
+            }
         }
 
         span {
             margin-left: 13px;
-        }
-
-        &:hover {
-            a {
-                color: var(--red);
-            }
         }
 
         @media (max-width:$smallTablet-max) {
@@ -148,7 +154,7 @@
     }
 
     &__field-get {
-      
+        margin-top: 15px;
     }
 
     &__map {
@@ -323,10 +329,11 @@
         &:not(:last-child) {
             margin-bottom: 38px;
         }
-        @media (max-width:$mobile-max){
+
+        @media (max-width:$mobile-max) {
             &:not(:last-child) {
                 margin-bottom: 25px;
-            } 
+            }
         }
     }
 
@@ -337,8 +344,9 @@
         color: var(--black);
         font-size: 16px;
         line-height: math.div(22, 16);
-        @media (max-width:$mobile-max){
-             margin-bottom: 15px; 
+
+        @media (max-width:$mobile-max) {
+            margin-bottom: 15px;
         }
     }
 
@@ -377,12 +385,14 @@
                 border-radius: 50%;
                 background-color: var(--red);
             }
-            @media (max-width:$mobile-max){
-                 padding-left: 20px;
-                 &::after{
+
+            @media (max-width:$mobile-max) {
+                padding-left: 20px;
+
+                &::after {
                     width: 8px;
                     height: 8px;
-                 } 
+                }
             }
         }
     }

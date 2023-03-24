@@ -178,8 +178,8 @@
             position: relative;
             .soon{
                 position: absolute;
-                top: 0;
-                transform: translateX(2px);
+                top: -2px;
+                transform: translateX(8px);
                 font-size: 10px;
                 padding: 0 10px;
                 height: 20px;
@@ -192,7 +192,7 @@
             font-size: 16px;
             line-height: math.div(37, 16);
             transition: color $transitionSpeed $transitionFunction;
-
+            align-self: start;
             &:hover {
                 color: var(--red);
             }
@@ -203,5 +203,3 @@
         }
     }
 }
-
-.container {}

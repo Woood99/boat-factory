@@ -17,6 +17,7 @@
         grid-template-columns: 132px max-content;
         grid-row-gap: 40px;
         grid-column-gap: 40px;
+
         @media (max-width:$smallTablet-max) {
             grid-template-columns: 72px max-content;
             grid-row-gap: 20px;
@@ -80,14 +81,14 @@
     }
 
     &__text {
-        margin: 40px 0 0 0;
+        margin: 25px 0 0 0;
         font-weight: 600;
-        @include adaptiveValue("font-size", 33, 14);
+        @include adaptiveValue("font-size", 24, 14);
         line-height: math.div(42, 33);
         color: #a7a7a7;
 
         @media (max-width:$tablet-max) {
-            margin: 20px 0 0 0;
+            margin: 15px 0 0 0;
         }
     }
 

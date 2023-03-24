@@ -8,7 +8,7 @@
         opacity: 0;
 
         &:focus+.checkbox__label:before {
-            border: 1px solid var(--oxford-blue);
+            border: 1px solid var(--black);
         }
 
         &:checked+.checkbox__label:after {
@@ -31,16 +31,18 @@
             border: 1px solid #D0D5DD;
             border-radius: 6px;
             transition: border $transitionSpeed $transitionFunction;
+            position: relative;
+            top: 2px;
         }
 
         &::after {
             content: '';
-            background-color: var(--oxford-blue);
+            background-color: var(--black);
             flex: 0 0 14px;
             width: 14px;
             height: 14px;
             position: absolute;
-            top: 3px;
+            top: 5px;
             left: 3px;
             border-radius: 4px;
             transform: scale(0);
@@ -52,7 +54,7 @@
     &__text {
         margin-left: 12px;
         @include fontInter;
-        color: var(--oxford-blue);
+        color: var(--black);
         font-weight: 500;
         font-size: 16px;
         line-height: math.div(24, 16);
