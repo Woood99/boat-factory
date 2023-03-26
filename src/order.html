@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Заказ</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <section class="order">
+                <div class="order__container container grid">
+                    <span class="order__line top-border-page" aria-hidden="true"></span>
+                    <h1 class="order__title title-1">
+                        ваш заказ
+                    </h1>
+                    <div class="order__images">
+
+                    </div>
+                    <div class="order__content order-content">
+                        <div class="order-content__top">
+                            <h2 class="order-content__name">
+                                ФЛ—55
+                            </h2>
+                            <h3 class="order-content__subtitle">
+                                Индивидуальная комплектация
+                            </h3>
+                        </div>
+                        <ul class="order-content__colors list-reset">
+                            <li class="order-content__color order-content__color--yellow">
+                                Цвет корпуса верх
+                            </li>
+                            <li class="order-content__color order-content__color--mystic">
+                                Цвет корпуса низ
+                            </li>
+                            <li class="order-content__color order-content__color--dark-blue">
+                                Цвет консоли
+                            </li>
+                            <li class="order-content__color order-content__color--orange">
+                                Цвет сидений
+                            </li>
+                            <li class="order-content__color order-content__color--pearl">
+                                Цвет рамок стекла
+                            </li>
+                        </ul>
+                        <div class="order-content__selected">
+                            <span>Мотор</span>
+                            <span>Прицеп МЗСА L 7022-2.25</span>
+                        </div>
+                        <div data-spollers data-one-spoller class="order-content__options">
+                            <div class="order-content__option">
+                                <button data-spoller type="button" class="btn btn-reset order-content__option-btn">
+                                    <span>Включены базовые опции</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#check"></use>
+                                    </svg>
+                                    <span class="order-content__price order-content__based-price">2 100 000 ₽</span>
+                                </button>
+                                <div class="order-content__option-content">
+                                    <ul class="list-reset">
+                                        <li>
+                                            — цельносварной корпус из сплава морского алюминия AlMg4,5/5083 толщиной
+                                            3–4 мм
+                                        </li>
+                                        <li>
+                                            — две консоли с остеклением, форточкой и калиткой между ними
+                                        </li>
+                                        <li>
+                                            — палуба носовой части и кокпита, оклеенная винилом премиум-класса
+                                        </li>
+                                        <li>
+                                            — борта и кормовой подиум, оклеенные морским ковролином премиум-класса
+                                        </li>
+                                        <li>
+                                            — встроенная топливная система с алюминиевым баком объёмом 125 л 
+                                        </li>
+                                        <li>
+                                            — центральный подпалубный рундук для шести спиннингов длиной 2,5–2,7 м 
+                                        </li>
+                                        <li>
+                                            — одноконтурный аэратор объёмом 110 л с автонаполнением
+                                        </li>
+                                        <li>
+                                            — два эргономичных сиденья водителя и пассажира ErgoLuxe
+                                        </li>
+                                        <li>
+                                            — два трансформируемых откидных сиденья, встроенных в кормовую платформу
+                                        </li>
+                                        <li>
+                                            — два основания для стойки сиденья в кормовой и носовой частях
+                                        </li>
+                                        <li>
+                                            — две электророзетки 12V на консолях водителя и пассажира
+                                        </li>
+                                        <li>
+                                            — открытые полки с подстаканниками из нерж. стали по правому и левому борту
+                                        </li>
+                                        <li>
+                                            — сухие рундуки с естественной вентиляцией, дренажной системой и ковриками
+                                        </li>
+                                        <li>
+                                            — органайзер для спиннингов и рыболовных принадлежностей
+                                        </li>
+                                        <li>
+                                            — ниша для хранения подсака
+                                        </li>
+                                        <li>
+                                            — подготовка для установки аудиосистемы, эхолота, электромотора,
+                                            электролебёдки
+                                        </li>
+                                        <li>
+                                            — LED-подсветка бардачков консолей и полочек в бортах
+                                        </li>
+                                        <li>
+                                            — механическая рулевая система без обратной связи, рулевое колесо, рулевой
+                                            трос
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="order-content__option">
+                                <button data-spoller type="button" class="btn btn-reset order-content__option-btn">
+                                    <span>Дополнительные опции</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#check"></use>
+                                    </svg>
+                                    <span class="order-content__price order-content__additional-price">Сумма</span>
+                                </button>
+                                <div class="order-content__option-content order-content__option-content--additional">
+                                    <ul class="list-reset">
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Ходовой тент-трансформер, яхтенная ткань
+                                            </span>
+                                            <span class="additional-option__price">
+                                                165 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Москитные сетки для тента-трансформера
+                                            </span>
+                                            <span class="additional-option__price">
+                                                25 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Тент транспортировочный
+                                                на кнопках для стоянки на воде
+                                            </span>
+                                            <span class="additional-option__price">
+                                                70 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Ходовой тент-трансформер, яхтенная ткань
+                                            </span>
+                                            <span class="additional-option__price">
+                                                165 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Москитные сетки для тента-трансформера
+                                            </span>
+                                            <span class="additional-option__price">
+                                                25 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Тент транспортировочный
+                                                на кнопках для стоянки на воде
+                                            </span>
+                                            <span class="additional-option__price">
+                                                70 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" download="file.pdf" class="btn btn-reset btn-primary order-content__pdf">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#printer"></use>
+                            </svg>
+                            Сохранить в PDF
+                        </a>
+                    </div>
+                    <div class="order__bottom">
+                        <span>
+                            Общая сумма заказа
+                        </span>
+                        <span class="order-content__price order-content__price-full">Сумма</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+    @include('partials/popup.html')
+</body>
+
+
+</html>

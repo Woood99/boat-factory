@@ -644,6 +644,7 @@
             transform: translateY(-50%) translateX(-50%);
             fill: none;
         }
+
         @media (max-width:$max-1150) {
             width: 30px;
             height: 30px;
@@ -663,15 +664,18 @@
                 .additional-card__status--no-active {
                     display: none;
                 }
-                &:hover{
-                    .additional-card__status--active {
-                      display: none;
-                    }
-    
-                    .additional-card__status--no-active {
-                       display: block;
-                       stroke: var(--white);
-                       transform: translateY(-50%) translateX(-50%) rotate(45deg);
+
+                @media (min-width:$tablet-min) {
+                    &:hover {
+                        .additional-card__status--active {
+                            display: none;
+                        }
+
+                        .additional-card__status--no-active {
+                            display: block;
+                            stroke: var(--white);
+                            transform: translateY(-50%) translateX(-50%) rotate(45deg);
+                        }
                     }
                 }
             }

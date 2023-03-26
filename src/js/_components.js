@@ -17,6 +17,10 @@ import {
     configuratorAddedAdditional,
     configuratorRemoveOrder
 } from './components/configuratorActions';
+import {
+    orderRemoveItem,
+    orderSum
+} from './components/orderActions';
 import './components/map';
 import './components/sliders';
 import './components/production-progress';
@@ -90,4 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     configuratorMore();
     configuratorAddedAdditional();
     configuratorRemoveOrder();
+
+    orderRemoveItem();
+    orderSum();
 })

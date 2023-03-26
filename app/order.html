@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Заказ</title>
+    <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HalvarBreit-Md.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <header class="header fix-block">
+    <div class="header__container container grid">
+        <a href="#" class="header__logo logo">
+            <picture>
+                <source srcset="./img/logo-small.svg" media="(max-width: 576px)">
+                <img loading="lazy" src="./img/logo.svg" class="logo__img" width="218" height="48" alt="Фабрика Лодок">
+            </picture>
+        </a>
+        <nav class="header__nav nav" data-menu>
+            <ul data-one-spoller data-spollers="1150,max" class="nav__list list-reset">
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>О нас</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                Компания
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Производство
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Новости и события
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Вопрос-ответ
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>Катера</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                ФЛ—55
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ФЛ—47
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ФЛ—70
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+                <li class="nav__item">
+                    <a href="#" data-spoller class="nav__link">
+                        <span>Как купить</span>
+                        <svg class="nav__link-icon">
+                            <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                    </a>
+                    <ul class="nav__item-dropdown list-reset">
+                        <li>
+                            <a href="#">
+                                Где купить
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Гарантия
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Как стать дилером
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+
+
+
+
+
+        </nav>
+        <div class="header__links">
+            <ul class="header__social social-secondary list-reset" data-da=".header__nav,1150,last">
+                <li class="social-secondary__item">
+                    <a href="#" target="_blank" class="social-secondary__link social-secondary__link--tg"
+                        aria-label="Мы в телеграмме" title="Мы в телеграмме">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-secondary__item">
+                    <a href="#" target="_blank" class="social-secondary__link social-secondary__link--wa"
+                        aria-label="Мы в WhatsApp" title="Мы в WhatsApp">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <a href="tel:88004441461" class="header__tel">
+                <span>8 800 444-14-61</span>
+            </a>
+        </div>
+        <button class="btn-reset header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <div class="burger">
+                <span class="burger__line"></span>
+            </div>
+        </button>
+    </div>
+</header>
+
+        <main class="main">
+            <section class="order">
+                <div class="order__container container grid">
+                    <span class="order__line top-border-page" aria-hidden="true"></span>
+                    <h1 class="order__title title-1">
+                        ваш заказ
+                    </h1>
+                    <div class="order__images">
+
+                    </div>
+                    <div class="order__content order-content">
+                        <div class="order-content__top">
+                            <h2 class="order-content__name">
+                                ФЛ—55
+                            </h2>
+                            <h3 class="order-content__subtitle">
+                                Индивидуальная комплектация
+                            </h3>
+                        </div>
+                        <ul class="order-content__colors list-reset">
+                            <li class="order-content__color order-content__color--yellow">
+                                Цвет корпуса верх
+                            </li>
+                            <li class="order-content__color order-content__color--mystic">
+                                Цвет корпуса низ
+                            </li>
+                            <li class="order-content__color order-content__color--dark-blue">
+                                Цвет консоли
+                            </li>
+                            <li class="order-content__color order-content__color--orange">
+                                Цвет сидений
+                            </li>
+                            <li class="order-content__color order-content__color--pearl">
+                                Цвет рамок стекла
+                            </li>
+                        </ul>
+                        <div class="order-content__selected">
+                            <span>Мотор</span>
+                            <span>Прицеп МЗСА L 7022-2.25</span>
+                        </div>
+                        <div data-spollers data-one-spoller class="order-content__options">
+                            <div class="order-content__option">
+                                <button data-spoller type="button" class="btn btn-reset order-content__option-btn">
+                                    <span>Включены базовые опции</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#check"></use>
+                                    </svg>
+                                    <span class="order-content__price order-content__based-price">2 100 000 ₽</span>
+                                </button>
+                                <div class="order-content__option-content">
+                                    <ul class="list-reset">
+                                        <li>
+                                            — цельносварной корпус из сплава морского алюминия AlMg4,5/5083 толщиной
+                                            3–4 мм
+                                        </li>
+                                        <li>
+                                            — две консоли с остеклением, форточкой и калиткой между ними
+                                        </li>
+                                        <li>
+                                            — палуба носовой части и кокпита, оклеенная винилом премиум-класса
+                                        </li>
+                                        <li>
+                                            — борта и кормовой подиум, оклеенные морским ковролином премиум-класса
+                                        </li>
+                                        <li>
+                                            — встроенная топливная система с алюминиевым баком объёмом 125 л 
+                                        </li>
+                                        <li>
+                                            — центральный подпалубный рундук для шести спиннингов длиной 2,5–2,7 м 
+                                        </li>
+                                        <li>
+                                            — одноконтурный аэратор объёмом 110 л с автонаполнением
+                                        </li>
+                                        <li>
+                                            — два эргономичных сиденья водителя и пассажира ErgoLuxe
+                                        </li>
+                                        <li>
+                                            — два трансформируемых откидных сиденья, встроенных в кормовую платформу
+                                        </li>
+                                        <li>
+                                            — два основания для стойки сиденья в кормовой и носовой частях
+                                        </li>
+                                        <li>
+                                            — две электророзетки 12V на консолях водителя и пассажира
+                                        </li>
+                                        <li>
+                                            — открытые полки с подстаканниками из нерж. стали по правому и левому борту
+                                        </li>
+                                        <li>
+                                            — сухие рундуки с естественной вентиляцией, дренажной системой и ковриками
+                                        </li>
+                                        <li>
+                                            — органайзер для спиннингов и рыболовных принадлежностей
+                                        </li>
+                                        <li>
+                                            — ниша для хранения подсака
+                                        </li>
+                                        <li>
+                                            — подготовка для установки аудиосистемы, эхолота, электромотора,
+                                            электролебёдки
+                                        </li>
+                                        <li>
+                                            — LED-подсветка бардачков консолей и полочек в бортах
+                                        </li>
+                                        <li>
+                                            — механическая рулевая система без обратной связи, рулевое колесо, рулевой
+                                            трос
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="order-content__option">
+                                <button data-spoller type="button" class="btn btn-reset order-content__option-btn">
+                                    <span>Дополнительные опции</span>
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#check"></use>
+                                    </svg>
+                                    <span class="order-content__price order-content__additional-price">Сумма</span>
+                                </button>
+                                <div class="order-content__option-content order-content__option-content--additional">
+                                    <ul class="list-reset">
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Ходовой тент-трансформер, яхтенная ткань
+                                            </span>
+                                            <span class="additional-option__price">
+                                                165 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Москитные сетки для тента-трансформера
+                                            </span>
+                                            <span class="additional-option__price">
+                                                25 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Тент транспортировочный
+                                                на кнопках для стоянки на воде
+                                            </span>
+                                            <span class="additional-option__price">
+                                                70 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Ходовой тент-трансформер, яхтенная ткань
+                                            </span>
+                                            <span class="additional-option__price">
+                                                165 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Москитные сетки для тента-трансформера
+                                            </span>
+                                            <span class="additional-option__price">
+                                                25 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="order-content__option-item additional-option">
+                                            <div class="additional-option__icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#check-mark"></use>
+                                                </svg>
+                                            </div>
+                                            <span class="additional-option__title">
+                                                Тент транспортировочный
+                                                на кнопках для стоянки на воде
+                                            </span>
+                                            <span class="additional-option__price">
+                                                70 000 ₽
+                                            </span>
+                                            <button type="button" class="btn btn-reset additional-option__close"
+                                                title="Удалить">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#plus"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" download="file.pdf" class="btn btn-reset btn-primary order-content__pdf">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#printer"></use>
+                            </svg>
+                            Сохранить в PDF
+                        </a>
+                    </div>
+                    <div class="order__bottom">
+                        <span>
+                            Общая сумма заказа
+                        </span>
+                        <span class="order-content__price order-content__price-full">Сумма</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer img-bg">
+    <div class="footer__container container">
+        <div class="footer__main">
+            <div class="footer__info footer-info">
+                <h3 class="footer-info__title">
+                    <a href="#">
+                        хочу стать дилером
+                    </a>
+                </h3>
+                <p class="footer-info__descr">
+                    Станьте дилером лучших лодок для рыбалки и отдыха.
+                </p>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    О нас
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            О производстве
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Новости и события
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Вопрос-ответ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Катера
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–47
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–55
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            ФЛ–70
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Конфигуратор
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Покупателю
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Где купить
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            Гарантия
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__item footer-item">
+                <h4 class="footer-item__title">
+                    Контакты
+                </h4>
+                <ul class="footer-item__elements list-reset">
+                    <li class="footer-item__element">
+                        <a href="#" class="footer-item__link">
+                            info@fl-boats.ru
+                        </a>
+                    </li>
+                    <li class="footer-item__element">
+                        <a href="tel:88004441461" class="footer-item__link">
+                            8 800 444 14 61
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <ul class="footer__social social list-reset">
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--vk"
+                        aria-label="Наша страничка во Вконтакте" title="Наша страничка во Вконтакте">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--tg" aria-label="Мы в телеграмме"
+                        title="Мы в телеграмме">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--wa" aria-label="Мы в WhatsApp"
+                        title="Мы в WhatsApp">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" target="_blank" class="social__link social__link--yt" aria-label="Наш канал на YouTube"
+                        title="Наш канал на YouTube">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#yt"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__rights-reserved">
+                ООО «Фабрика Лодок» | Все права защищены
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="popup">
+    <div class="popup__container" role="dialog" aria-modal="true" data-popup-target="request-call">
+        <button class="btn-reset js-popup-close popup__close" aria-label="Закрыть модальное окно"></button>
+        <div class="popup__content request-call">
+            <h3 class="request-call__title">
+                Заказать звонок
+            </h3>
+            <p class="request-call__descr">
+                Оставьте свои контакты, свяжемся с вами
+                в самое ближийшее время
+            </p>
+            <form action="#" class="request-call__form form-primary" id="request-call__valid">
+
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Имя</span>
+                    <input type="text" name="Имя"
+                        class="input-reset input-primary label-primary__input--name label-primary__input"
+                        placeholder="">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Номер телефона</span>
+                    <input type="tel" name="Номер телефона"
+                        class="input-reset input-primary label-primary__input--tel label-primary__input"
+                        placeholder="+7">
+                </label>
+                <label class="form-primary__label label-primary">
+                    <span class="label-primary__name">Сообщение или вопрос</span>
+                    <textarea class="input-reset input-primary textarea-primary label-primary__input"
+                        placeholder=""></textarea>
+                </label>
+                <div class="form-primary__agree checkbox">
+                    <input id="c_2" class="checkbox__input" type="checkbox" value="1">
+                    <label for="c_2" class="checkbox__label">
+                        <span class="checkbox__text">
+                            Соглашаюсь на обработку <a href="./personal-info.html">персональных данных</a>
+                        </span>
+                    </label>
+                </div>
+
+                <button class="btn btn-reset btn-fourth form-primary__btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+</html>
