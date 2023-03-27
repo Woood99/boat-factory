@@ -12,6 +12,7 @@ import tabs from './modules/tabs';
 import popup from './modules/popup';
 import scrolling from './components/scrolling';
 import homeVideo from './components/homeVideo';
+import galleryAlbumMore from './components/galleryAlbumMore';
 import {
     configuratorMore,
     configuratorAddedAdditional,
@@ -110,4 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     orderRemoveItem();
     orderSum();
+
+    galleryAlbumMore();
 })

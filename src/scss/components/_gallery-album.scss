@@ -1,0 +1,108 @@
+.gallery-album {
+
+    &__container {}
+
+    &__line {
+        grid-column: 3/-1;
+
+        @media (max-width:$max-1150) {
+            display: none;
+        }
+    }
+
+    &__title {
+        grid-column: 4/-1;
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+        }
+    }
+
+    &__body {
+        --border-r: 46px;
+        grid-column: 3/-1;
+        margin-top: 56px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+
+        a {
+            border-radius: var(--border-r);
+        }
+
+        img {
+            border-radius: var(--border-r);
+            width: 100%;
+        }
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+            --border-r: 22px;
+            margin-top: 30px;
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            --border-r: 14px;
+            grid-column-gap: 7px;
+            grid-row-gap: 7px;
+        }
+    }
+
+    &__item {
+        &:nth-child(n+11) {
+            display: none;
+        }
+    }
+
+    &__more {
+        margin: 56px auto 0;
+        grid-column: 3/-1;
+        padding: 0 80px;
+
+        @media (max-width:$max-1150) {
+            grid-column: 1/-1;
+            margin-top: 30px;
+        }
+    }
+}
+
+.gallery-album-body__wrapper {
+    .lg-item {
+        border-radius: 46px;
+
+        img {
+            border-radius: 46px;
+
+            @media (max-width:$tablet-max) {
+                border-radius: 22px;
+            }
+
+            @media (max-width:$smallTablet-max) {
+                border-radius: 14px;
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            border-radius: 22px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            border-radius: 14px;
+        }
+    }
+
+    .lg-prev,
+    .lg-next {
+        color: #fff;
+        background-color: transparent;
+        font-size: 33px;
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 22px;
+        }
+    }
+}

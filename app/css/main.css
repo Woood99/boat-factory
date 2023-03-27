@@ -1730,7 +1730,7 @@ a {
 }
 
 .lg-backdrop {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .gallery-feedback {
@@ -11382,6 +11382,110 @@ a {
 @media (min-width: 1151px) {
   .order-images {
     overflow: visible;
+  }
+}
+
+.gallery-album__line {
+  grid-column: 3/-1;
+}
+@media (max-width: 1150px) {
+  .gallery-album__line {
+    display: none;
+  }
+}
+.gallery-album__title {
+  grid-column: 4/-1;
+}
+@media (max-width: 1150px) {
+  .gallery-album__title {
+    grid-column: 1/-1;
+  }
+}
+.gallery-album__body {
+  --border-r: 46px;
+  grid-column: 3/-1;
+  margin-top: 56px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.gallery-album__body a {
+  border-radius: var(--border-r);
+}
+.gallery-album__body img {
+  border-radius: var(--border-r);
+  width: 100%;
+}
+@media (max-width: 1150px) {
+  .gallery-album__body {
+    grid-column: 1/-1;
+    --border-r: 22px;
+    margin-top: 30px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-album__body {
+    --border-r: 14px;
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+  }
+}
+.gallery-album__item:nth-child(n+11) {
+  display: none;
+}
+.gallery-album__more {
+  margin: 56px auto 0;
+  grid-column: 3/-1;
+  padding: 0 80px;
+}
+@media (max-width: 1150px) {
+  .gallery-album__more {
+    grid-column: 1/-1;
+    margin-top: 30px;
+  }
+}
+
+.gallery-album-body__wrapper .lg-item {
+  border-radius: 46px;
+}
+.gallery-album-body__wrapper .lg-item img {
+  border-radius: 46px;
+}
+@media (max-width: 1024px) {
+  .gallery-album-body__wrapper .lg-item img {
+    border-radius: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-album-body__wrapper .lg-item img {
+    border-radius: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .gallery-album-body__wrapper .lg-item {
+    border-radius: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-album-body__wrapper .lg-item {
+    border-radius: 14px;
+  }
+}
+.gallery-album-body__wrapper .lg-prev,
+.gallery-album-body__wrapper .lg-next {
+  color: #fff;
+  background-color: transparent;
+  font-size: 33px;
+}
+@media (max-width: 768px) {
+  .gallery-album-body__wrapper .lg-prev,
+  .gallery-album-body__wrapper .lg-next {
+    font-size: 22px;
   }
 }
 

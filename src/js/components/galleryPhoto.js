@@ -34,3 +34,14 @@ productionCompositionGallery.forEach(gallery => {
         download: false,
     });
 });
+
+
+const galleryAlbum = document.querySelectorAll('#gallery-album-body');
+galleryAlbum.forEach(gallery => {
+    lightGallery(gallery, {
+        licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
+        speed: 500,
+        download: false,
+        addClass: 'gallery-album-body__wrapper',
+    });
+});
