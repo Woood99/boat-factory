@@ -73,34 +73,48 @@ document.addEventListener('DOMContentLoaded', () => {
     (0,_components_homeVideo__WEBPACK_IMPORTED_MODULE_12__["default"])();
     if (window.innerWidth <= 1024) (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_9__["default"])();
   });
-  const heroHomeSliderOptions = {
-    slidesPerView: 1.2,
-    spaceBetween: 15,
-    autoHeight: true,
-    breakpoints: {
-      577: {
-        slidesPerView: 1.7
-      },
-      750: {
-        slidesPerView: 2.2
+  const slidersBreakpointOptions = {
+    heroHome: {
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      autoHeight: true,
+      pagination: false,
+      breakpoints: {
+        577: {
+          slidesPerView: 1.7
+        },
+        750: {
+          slidesPerView: 2.2
+        }
+      }
+    },
+    news: {
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      autoHeight: false,
+      pagination: false,
+      breakpoints: {
+        577: {
+          slidesPerView: 1.7
+        },
+        750: {
+          slidesPerView: 2.2
+        }
+      }
+    },
+    orderImages: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      autoHeight: false,
+      pagination: {
+        el: '.order-images__pagination',
+        clickable: true
       }
     }
   };
-  const newsSliderOptions = {
-    slidesPerView: 1.2,
-    spaceBetween: 15,
-    autoHeight: false,
-    breakpoints: {
-      577: {
-        slidesPerView: 1.7
-      },
-      750: {
-        slidesPerView: 2.2
-      }
-    }
-  };
-  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.hero-home__list', 1150, heroHomeSliderOptions);
-  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.news__list', 1150, newsSliderOptions);
+  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.hero-home__list', 1150, slidersBreakpointOptions.heroHome);
+  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.news__list', 1150, slidersBreakpointOptions.news);
+  (0,_modules_sliderBreakpoint__WEBPACK_IMPORTED_MODULE_8__["default"])('.order-images', 1150, slidersBreakpointOptions.orderImages);
   const selectPrimary = document.querySelectorAll('.select-primary');
   selectPrimary.forEach(el => {
     const choices = new (choices_js__WEBPACK_IMPORTED_MODULE_0___default())(el, {
@@ -713,6 +727,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "orderSum": () => (/* binding */ orderSum)
 /* harmony export */ });
 const orderSum = () => {
+  if (!document.querySelector('.order-content__option-content--additional')) return false;
   const items = document.querySelector('.order-content__option-content--additional').querySelectorAll('.additional-option');
   const priceAdditional = document.querySelector('.order-content__additional-price');
   let temp = 0;
@@ -1528,7 +1543,8 @@ const sliderBreakpoint = (containerSelector, breakpoint, options) => {
               observer: true,
               observeParents: true,
               speed: 600,
-              breakpoints: options.breakpoints
+              breakpoints: options.breakpoints,
+              pagination: options.pagination
             });
             el.dataset.sliderBreakpoint = 'true';
           }

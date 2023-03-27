@@ -48,35 +48,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const heroHomeSliderOptions = {
-        slidesPerView: 1.2,
-        spaceBetween: 15,
-        autoHeight: true,
-        breakpoints: {
-            577: {
-                slidesPerView: 1.7,
+    const slidersBreakpointOptions = {
+        heroHome: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+            autoHeight: true,
+            pagination: false,
+            breakpoints: {
+                577: {
+                    slidesPerView: 1.7,
+                },
+                750: {
+                    slidesPerView: 2.2,
+                },
+            }
+        },
+        news: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+            autoHeight: false,
+            pagination: false,
+            breakpoints: {
+                577: {
+                    slidesPerView: 1.7,
+                },
+                750: {
+                    slidesPerView: 2.2,
+                },
+            }
+        },
+        orderImages: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            autoHeight: false,
+            pagination: {
+                el: '.order-images__pagination',
+                clickable: true,
             },
-            750: {
-                slidesPerView: 2.2,
-            },
-        }
+        },
     }
-    const newsSliderOptions = {
-        slidesPerView: 1.2,
-        spaceBetween: 15,
-        autoHeight: false,
-        breakpoints: {
-            577: {
-                slidesPerView: 1.7,
-            },
-            750: {
-                slidesPerView: 2.2,
-            },
-        }
-    }
-    sliderBreakpoint('.hero-home__list', 1150, heroHomeSliderOptions);
-    sliderBreakpoint('.news__list', 1150, newsSliderOptions);
-
+    sliderBreakpoint('.hero-home__list', 1150, slidersBreakpointOptions.heroHome);
+    sliderBreakpoint('.news__list', 1150, slidersBreakpointOptions.news);
+    sliderBreakpoint('.order-images', 1150, slidersBreakpointOptions.orderImages);
 
 
     const selectPrimary = document.querySelectorAll('.select-primary');

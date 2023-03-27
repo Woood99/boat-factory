@@ -1,4 +1,5 @@
 export const orderSum = () => {
+    if (!document.querySelector('.order-content__option-content--additional')) return false;
     const items = document.querySelector('.order-content__option-content--additional').querySelectorAll('.additional-option');
     const priceAdditional = document.querySelector('.order-content__additional-price');
     let temp = 0;

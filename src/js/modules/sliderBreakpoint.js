@@ -27,6 +27,7 @@ const sliderBreakpoint = (containerSelector, breakpoint, options) => {
                             observeParents: true,
                             speed: 600,
                             breakpoints: options.breakpoints,
+                            pagination: options.pagination
                         })
                         el.dataset.sliderBreakpoint = 'true';
                     }

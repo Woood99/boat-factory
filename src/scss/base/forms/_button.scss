@@ -152,7 +152,6 @@
     background-color: #000;
     border-radius: 39px;
     padding: 0 25px;
-    transition: background-color $transitionSpeed $transitionFunction;
 
     &:hover {
         background-color: var(--red);

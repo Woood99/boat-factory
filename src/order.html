@@ -26,11 +26,26 @@
                     <h1 class="order__title title-1">
                         ваш заказ
                     </h1>
-                    <div class="order__images">
 
+                    <div class="swiper order__images order-images" data-slider-breakpoint="false">
+                        <div class="swiper-wrapper order-images__wrapper">
+                            <div class="swiper-slide order-images__slide">
+                                <picture>
+                                    <source srcset="./img/boat-red.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/boat-red.png" alt="ФЛ-55">
+                                </picture>
+                            </div>
+                            <div class="swiper-slide order-images__slide">
+                                <picture>
+                                    <source srcset="./img/boat-red.webp" type="image/webp">
+                                    <img loading="lazy" src="./img/boat-red.png" alt="ФЛ-55">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="order-images__pagination pagination-dots-secondary"></div>
                     </div>
                     <div class="order__content order-content">
-                        <div class="order-content__top">
+                        <div class="order-content__top" data-da=".order__container,1150,2">
                             <h2 class="order-content__name">
                                 ФЛ—55
                             </h2>
@@ -273,6 +288,35 @@
                         </span>
                         <span class="order-content__price order-content__price-full">Сумма</span>
                     </div>
+
+
+                    <form action="#" class="order__form form-primary" id="request-call__valid">
+                        <div class="order__form-inner">
+                            <label class="form-primary__label label-primary">
+                                <span class="label-primary__name">Имя</span>
+                                <input type="text" name="Имя"
+                                    class="input-reset input-primary label-primary__input--name label-primary__input"
+                                    placeholder="">
+                            </label>
+                            <label class="form-primary__label label-primary">
+                                <span class="label-primary__name">Номер телефона</span>
+                                <input type="tel" name="Номер телефона"
+                                    class="input-reset input-primary label-primary__input--tel label-primary__input"
+                                    placeholder="+7">
+                            </label>
+                            <div class="form-primary__agree checkbox">
+                                <input id="c_2" class="checkbox__input" type="checkbox" value="1">
+                                <label for="c_2" class="checkbox__label">
+                                    <span class="checkbox__text">
+                                        Соглашаюсь на обработку <a href="./personal-info.html">персональных данных</a>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button class="btn btn-reset btn-fourth form-primary__btn">Заказать</button>
+                        </div>
+                    </form>
+
                 </div>
             </section>
         </main>
