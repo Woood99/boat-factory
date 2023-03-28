@@ -9,7 +9,7 @@ galleries.forEach(gallery => {
     lightGallery(gallery, {
         licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
         speed: 500,
-        addClass: 'gallery-photo-popup',
+        addClass: 'gallery-photo-popup gallery-primary',
         download: false,
     });
 });
@@ -20,6 +20,7 @@ galleryPhotoList.forEach(gallery => {
         licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
         speed: 500,
         selector: '.photo-card__wrapper',
+        addClass: 'gallery-primary',
         download: false,
     });
 });
@@ -30,7 +31,7 @@ productionCompositionGallery.forEach(gallery => {
     lightGallery(gallery, {
         licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
         speed: 500,
-        addClass: 'production-composition-gallery__wrapper',
+        addClass: 'production-composition-gallery__wrapper gallery-primary',
         download: false,
     });
 });
@@ -42,6 +43,6 @@ galleryAlbum.forEach(gallery => {
         licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
         speed: 500,
         download: false,
-        addClass: 'gallery-album-body__wrapper',
+        addClass: 'gallery-album-body__wrapper gallery-primary',
     });
 });

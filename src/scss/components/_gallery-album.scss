@@ -70,39 +70,3 @@
     }
 }
 
-.gallery-album-body__wrapper {
-    .lg-item {
-        border-radius: 46px;
-
-        img {
-            border-radius: 46px;
-
-            @media (max-width:$tablet-max) {
-                border-radius: 22px;
-            }
-
-            @media (max-width:$smallTablet-max) {
-                border-radius: 14px;
-            }
-        }
-
-        @media (max-width:$tablet-max) {
-            border-radius: 22px;
-        }
-
-        @media (max-width:$smallTablet-max) {
-            border-radius: 14px;
-        }
-    }
-
-    .lg-prev,
-    .lg-next {
-        color: #fff;
-        background-color: transparent;
-        font-size: 33px;
-
-        @media (max-width:$smallTablet-max) {
-            font-size: 22px;
-        }
-    }
-}

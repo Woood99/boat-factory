@@ -548,7 +548,7 @@ galleries.forEach(gallery => {
   (0,lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(gallery, {
     licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
     speed: 500,
-    addClass: 'gallery-photo-popup',
+    addClass: 'gallery-photo-popup gallery-primary',
     download: false
   });
 });
@@ -558,6 +558,7 @@ galleryPhotoList.forEach(gallery => {
     licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
     speed: 500,
     selector: '.photo-card__wrapper',
+    addClass: 'gallery-primary',
     download: false
   });
 });
@@ -566,7 +567,7 @@ productionCompositionGallery.forEach(gallery => {
   (0,lightgallery__WEBPACK_IMPORTED_MODULE_0__["default"])(gallery, {
     licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
     speed: 500,
-    addClass: 'production-composition-gallery__wrapper',
+    addClass: 'production-composition-gallery__wrapper gallery-primary',
     download: false
   });
 });
@@ -576,7 +577,7 @@ galleryAlbum.forEach(gallery => {
     licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
     speed: 500,
     download: false,
-    addClass: 'gallery-album-body__wrapper'
+    addClass: 'gallery-album-body__wrapper gallery-primary'
   });
 });
 
@@ -928,7 +929,6 @@ if (galleryHomeSlider) {
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
       slidesPerView: 1.25,
       spaceBetween: 13,
-      autoHeight: true,
       observer: true,
       observeParents: true,
       centeredSlides: true,
@@ -944,7 +944,7 @@ if (galleryHomeSlider) {
           spaceBetween: 20
         },
         577: {
-          slidesPerView: 2.4,
+          slidesPerView: 2.3,
           spaceBetween: 20,
           autoHeight: false
         },
@@ -968,7 +968,6 @@ if (gallerySlider) {
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
       slidesPerView: 1.25,
       spaceBetween: 13,
-      autoHeight: true,
       observer: true,
       observeParents: true,
       centeredSlides: true,

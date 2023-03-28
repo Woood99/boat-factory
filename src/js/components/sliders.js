@@ -45,7 +45,6 @@ if (galleryHomeSlider) {
         const swiper = new Swiper(slider, {
             slidesPerView: 1.25,
             spaceBetween: 13,
-            autoHeight: true,
             observer: true,
             observeParents: true,
             centeredSlides: true,
@@ -61,7 +60,7 @@ if (galleryHomeSlider) {
                     spaceBetween: 20,
                 },
                 577: {
-                    slidesPerView: 2.4,
+                    slidesPerView: 2.3,
                     spaceBetween: 20,
                     autoHeight: false,
                 },
@@ -86,7 +85,6 @@ if (gallerySlider) {
         const swiper = new Swiper(slider, {
             slidesPerView: 1.25,
             spaceBetween: 13,
-            autoHeight: true,
             observer: true,
             observeParents: true,
             centeredSlides: true,

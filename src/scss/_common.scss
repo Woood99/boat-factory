@@ -93,7 +93,11 @@
     margin-top: -80px;
 
     .gallery__inner {
-        max-height: 200px;
+        height: 189px;
+
+        @media (max-width:$tablet-max) {
+            height: 160px;
+        }
     }
 
     @media (max-width:$smallTablet-max) {
@@ -108,6 +112,18 @@
     &.gallery--boat-2 {
         margin-top: 0;
 
+    }
+
+    .gallery__inner {
+        height: 268px;
+
+        @media (max-width:$tablet-max) {
+            height: 200px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            height: 180px;
+        }
     }
 
     .lg-counter {
@@ -663,6 +679,44 @@
 
         @media (max-width:$mobile-max) {
             margin-top: 0;
+        }
+    }
+}
+
+
+.gallery-primary {
+    .lg-item {
+        border-radius: 46px;
+
+        img {
+            border-radius: 46px;
+
+            @media (max-width:$tablet-max) {
+                border-radius: 22px;
+            }
+
+            @media (max-width:$smallTablet-max) {
+                border-radius: 14px;
+            }
+        }
+
+        @media (max-width:$tablet-max) {
+            border-radius: 22px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            border-radius: 14px;
+        }
+    }
+
+    .lg-prev,
+    .lg-next {
+        color: #fff;
+        background-color: transparent;
+        font-size: 33px;
+
+        @media (max-width:$smallTablet-max) {
+            font-size: 22px;
         }
     }
 }
