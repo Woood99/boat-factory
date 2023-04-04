@@ -110,7 +110,7 @@
                     a {
                         font-weight: 600;
                         transition: color $transitionSpeed $transitionFunction;
-
+                        display: inline;
                         &:hover {
                             color: var(--red);
                         }
