@@ -1,6 +1,6 @@
 .hero-home-cards {
     margin-top: -35px;
-    padding-top: 120px;
+    padding-top: 77px;
     padding-bottom: 120px;
     background-color: #f5f5f5;
     border-radius: 36px 36px 0 0;
@@ -21,12 +21,12 @@
         }
 
         &-1 {
-            top: -60px;
+            top: -20px;
             left: 15px;
         }
 
         &-2 {
-            top: -60px;
+            top: -20px;
             right: 15px;
         }
 
@@ -35,8 +35,15 @@
             display: none;
         }
     }
-
+    &__title{
+        color: #1C1C1C;
+        text-transform: uppercase;text-align: center;
+        font-size: 26px;
+        line-height: math.div(29 , 26);font-weight: 700;
+        @include fontHalvar;
+    }
     &__list {
+        margin-top: 57px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 20px;

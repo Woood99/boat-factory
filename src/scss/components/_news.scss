@@ -1,6 +1,17 @@
 .news {
     margin-top: 56px;
-
+    &__title{
+        margin-bottom: 56px;
+        text-align: center;
+        @include fontHalvar;
+        @include adaptiveValue("font-size", 26,18 );
+        font-weight: 700;
+        line-height: 100%;
+        text-transform: uppercase;
+        @media (max-width:$tablet-max){
+            margin-bottom: 40px;
+        }
+    }
     &__list {
         margin: -30px -25px -40px;
         padding: 30px 25px 40px;
@@ -58,6 +69,6 @@
     }
 
     @media (max-width:$tablet-max) {
-        margin-top: 28px;
+        margin-top: 40px;
     }
 }
