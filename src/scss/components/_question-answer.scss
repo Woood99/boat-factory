@@ -18,7 +18,7 @@
     }
 
     &__inner {
-        margin-top: 66px;
+        margin-top: 46px;
         grid-column: 3/-1;
 
         @media (max-width:$max-1150) {
@@ -26,7 +26,7 @@
         }
 
         @media (max-width:$tablet-max) {
-            margin-top: 50px;
+            margin-top: 36px;
         }
     }
 
@@ -111,6 +111,7 @@
                         font-weight: 600;
                         transition: color $transitionSpeed $transitionFunction;
                         display: inline;
+
                         &:hover {
                             color: var(--red);
                         }

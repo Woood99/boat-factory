@@ -1584,6 +1584,12 @@ a {
   }
 }
 
+@media (max-width: 1150px) {
+  .p-top-page-mobile {
+    padding-top: 35px;
+  }
+}
+
 .top-border-page {
   padding-top: 56px;
   border-top: 1px solid var(--alto);
@@ -5398,7 +5404,7 @@ a {
 }
 
 .where-buy {
-  padding: 28px 0 55px;
+  padding: 0 0 55px;
 }
 .where-buy__info {
   grid-column: 3/-1;
@@ -9985,7 +9991,7 @@ a {
   }
 }
 .question-answer__inner {
-  margin-top: 66px;
+  margin-top: 46px;
   grid-column: 3/-1;
 }
 @media (max-width: 1150px) {
@@ -9995,7 +10001,7 @@ a {
 }
 @media (max-width: 1024px) {
   .question-answer__inner {
-    margin-top: 50px;
+    margin-top: 36px;
   }
 }
 .question-answer__list:not(:last-child) {

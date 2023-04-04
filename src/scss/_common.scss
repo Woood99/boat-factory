@@ -39,6 +39,12 @@
     }
 }
 
+.p-top-page-mobile {
+    @media (max-width:$max-1150) {
+        padding-top: 35px;
+    }
+}
+
 .top-border-page {
     padding-top: 56px;
     border-top: 1px solid var(--alto);
