@@ -1,5 +1,8 @@
 .contacts {
-
+    &__main-title{
+       
+        grid-column: 1/-1;
+    }
     &__info {
         grid-column: 3/11;
 

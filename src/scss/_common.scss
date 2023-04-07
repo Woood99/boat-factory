@@ -143,7 +143,17 @@
 
 
 
+.title-bracket-pseudo {
+    span {
+        &::before {
+            content: '[';
+        }
 
+        &::after {
+            content: ']';
+        }
+    }
+}
 
 .gallery-photo-popup {
     .lg-counter {

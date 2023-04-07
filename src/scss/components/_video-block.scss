@@ -17,6 +17,9 @@
         line-height: math.div(12, 10);
         color: var(--white);
         text-transform: uppercase;
+
+        span {}
+
         @media (max-width:$smallTablet-max) {
             position: static;
             margin-top: 12px;

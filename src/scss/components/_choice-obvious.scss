@@ -153,11 +153,15 @@
                 color: var(--black);
             }
         }
-        .spollers-secondary__item{
-            &::before,&::after{
+
+        .spollers-secondary__item {
+
+            &::before,
+            &::after {
                 background-color: #dcdcdc;
             }
         }
+
         .spollers-secondary__title {
             span {
                 color: var(--black);
@@ -179,20 +183,24 @@
             color: var(--black);
         }
     }
-    &--home{
+
+    &--home {
         margin-top: 64px;
         padding: 80px 0 150px;
         border-radius: 35px;
+
         @media (max-width:$tablet-max) {
             margin-top: 0;
             padding: 38px 0 100px;
             border-radius: 30px;
         }
     }
-    &--boat{
+
+    &--boat {
         padding: 80px 0;
         margin-top: 0;
-        @media (max-width:$tablet-max){
+
+        @media (max-width:$tablet-max) {
             padding: 55px 0;
         }
     }

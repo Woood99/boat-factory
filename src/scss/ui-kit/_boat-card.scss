@@ -112,7 +112,8 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 25px;
-        @media (max-width:$max-1150){
+
+        @media (max-width:$max-1150) {
             padding: 0 10px;
             flex-direction: column;
             justify-content: center;
@@ -259,13 +260,15 @@
     &--not {
         display: flex;
         flex-direction: column;
-        &__title{
+
+        &__title {
             @include fontHalvar;
             font-weight: 500;
             color: var(--black);
             @include adaptiveValue("font-size", 24, 16);
             line-height: math.div(28, 24);
         }
+
         .boat-card-secondary {
 
             &__body {
@@ -274,7 +277,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-             
+
                 @media (max-width:$smallTablet-max) {
                     height: 250px;
                 }
@@ -288,14 +291,32 @@
                 }
             }
 
-            &__content {
-               
-            }
+            &__content {}
         }
     }
 
     @media (max-width:$tablet-max) {
-       
+
+        .boat-card-secondary {
+            &__body {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &__content {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+    }
+
+    @media (min-width:$tablet-min) {
+        &:hover {
+
             .boat-card-secondary {
                 &__body {
                     &::before {
@@ -311,26 +332,6 @@
                 }
             }
 
-    }
-
-    @media (min-width:$tablet-min) {
-        &:hover {
-          
-                .boat-card-secondary {
-                    &__body {
-                        &::before {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
-
-                    &__content {
-                        opacity: 1;
-                        visibility: visible;
-                        transform: translateY(0);
-                    }
-                }
-        
 
         }
     }

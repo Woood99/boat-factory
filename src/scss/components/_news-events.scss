@@ -10,8 +10,14 @@
         }
     }
 
+    &__title {
+        margin-top: 30px;
+        grid-column: 1/-1;
+        text-align: center;
+    }
+
     &__list {
-        @include adaptiveValue("margin-top", 70, 30);
+        @include adaptiveValue("margin-top", 50, 20);
         grid-column: 2/12;
 
         @media (max-width:$max-1150) {
@@ -21,7 +27,7 @@
 
     &__card {
         &:not(:last-child) {
-         margin-bottom: 55px;
+            margin-bottom: 55px;
         }
     }
 
