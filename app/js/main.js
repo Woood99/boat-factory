@@ -36,6 +36,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_galleryPhoto__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/galleryPhoto */ "./src/js/components/galleryPhoto.js");
 /* harmony import */ var _components_choiceColor__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/choiceColor */ "./src/js/components/choiceColor.js");
 /* harmony import */ var _components_choiceColor__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_components_choiceColor__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _components_whereBuyFilter__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/whereBuyFilter */ "./src/js/components/whereBuyFilter.js");
+/* harmony import */ var _components_whereBuyFilter__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_components_whereBuyFilter__WEBPACK_IMPORTED_MODULE_22__);
+
 
 
 
@@ -681,39 +684,51 @@ function removeControls(map) {
   map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
 }
 
-if (document.querySelector('.where-buy__map')) {
+if (document.querySelector('.where-buy')) {
+  const container = document.querySelector('.where-buy');
+  const btns = container.querySelectorAll('.where-buy__btn');
+  const items = container.querySelectorAll('.address-item');
+  ;
   function init() {
     let map = new ymaps.Map('map', {
       center: [55.85299910266709, 37.30898264843751],
-      zoom: 9
+      zoom: 5
     });
-    let placemark1 = new ymaps.Placemark([55.7462485754695, 37.25679758984377], {
-      balloonContent: `
-            <div class="balloon">
-                <div class="balloon__content">
-                    <h4 class="balloon__title">
-                        ООО Фабрика Лодок
-                    </h4>
-                    <p class="balloon__location">
-                        г. Дмитров
-                    </p>
-                    <a href="mailto:info@fl-boats.ru" class="balloon__link">
-                        info@fl-boats.ru
-                    </a>
-                    <a href="tel:79261449935" class="balloon__link">
-                        +7 926 144-99-35
-                    </a>
+    items.forEach(item => {
+      addPlacemark(item);
+    });
+    function addPlacemark(item) {
+      const itemMap = {
+        coord: item.dataset.coord.split(','),
+        name: item.querySelector('.address-item__name').textContent,
+        address: item.querySelector('.address-item__address').textContent,
+        items: item.querySelector('.address-item__list').innerHTML
+      };
+      let placemark = new ymaps.Placemark(itemMap.coord, {
+        balloonContent: `
+                <div class="balloon">
+                    <div class="balloon__content">
+                        <h4 class="balloon__title">
+                           ${itemMap.name}
+                        </h4>
+                        <p class="balloon__location">
+                            ${itemMap.address}
+                        </p>
+                        <ul class="balloon__list list-reset">
+                            ${itemMap.items} 
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            `
-    }, {
-      iconLayout: "default#image",
-      iconImageHref: "./img/placemark.svg",
-      iconImageSize: [48, 48],
-      iconImageOffset: [-17, -27]
-    });
+                `
+      }, {
+        iconLayout: "default#image",
+        iconImageHref: "./img/placemark.svg",
+        iconImageSize: [48, 48],
+        iconImageOffset: [-17, -27]
+      });
+      map.geoObjects.add(placemark);
+    }
     removeControls(map);
-    map.geoObjects.add(placemark1);
   }
   ymaps.ready(init);
 }
@@ -1319,6 +1334,41 @@ const videoBlock = () => {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (videoBlock);
+
+/***/ }),
+
+/***/ "./src/js/components/whereBuyFilter.js":
+/*!*********************************************!*\
+  !*** ./src/js/components/whereBuyFilter.js ***!
+  \*********************************************/
+/***/ (() => {
+
+function whereBuyFilter() {
+  const container = document.querySelector('.where-buy');
+  if (!container) return;
+  const btns = container.querySelectorAll('.where-buy__btn');
+  const items = container.querySelectorAll('.address-item');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('where-buy__btn--all')) {
+        btns.forEach(el => el.classList.remove('active'));
+        btn.classList.add('active');
+        items.forEach(item => item.classList.remove('is-hidden'));
+      } else {
+        btns.forEach(el => el.classList.remove('active'));
+        items.forEach(item => {
+          if (btn.dataset.id !== item.dataset.region) {
+            item.classList.add('is-hidden');
+            btn.classList.add('active');
+          } else {
+            item.classList.remove('is-hidden');
+          }
+        });
+      }
+    });
+  });
+}
+whereBuyFilter();
 
 /***/ }),
 

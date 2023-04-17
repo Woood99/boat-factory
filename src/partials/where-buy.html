@@ -13,18 +13,51 @@
         </div>
         <div class="where-buy__map style-balloon copyrights-pane--delete" id="map"></div>
         <div class="where-buy__btns">
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn active">Все</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Москва и МО</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Ленинградская область</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Кировская область</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Ярославская область</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Республика Татарстан</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Удмуртская республика</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Республика Коми</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Саратовская область</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Волгоградская область</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Беларусь</button>
-            <button type="button" class="btn btn-reset btn-primary where-buy__btn">Калужская область</button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn where-buy__btn--all active">
+                Все
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="1">
+                Ярославская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="2">
+                Удмуртская Республика
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="3">
+                Саратовская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="4">
+                Беларусь
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="5">
+                Кировская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="6">
+                Республика Татарстан
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="7">
+                Ставропольский край
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="8">
+                Нижегородская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="9">
+                Ленинградская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="10">
+                Москва и Московская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="11">
+                Республика Коми
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="12">
+                Калужская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="13">
+                Волгоградская область
+            </button>
+            <button type="button" class="btn btn-reset btn-primary where-buy__btn" data-id="14">
+                Удмуртская Республика
+            </button>
         </div>
         <div data-spollers class="where-buy__addresses spollers">
             <div class="spollers__item">
@@ -36,245 +69,218 @@
                 </button>
                 <div class="spollers__body">
                     <ul class="where-buy__addresses-list list-reset">
-                        <li class="address-item">
+                        <li class="address-item" data-region="1" data-coord="57.620530, 39.859031">
                             <p class="address-item__name">
-                                Московская область
+                                Тюнинг-студия BoatProfi
+                            </p>
+                            <p class="address-item__address">
+                                ООО "Дом рыбака"
+                                Ярославль, пр. Толбухина, 8/75
                             </p>
                             <ul class="address-item__list list-reset">
                                 <li>
-                                    ООО ”Фабрика Лодок» г. Дмитров
-                                </li>
-                                <li>
-                                    <a href="mailto:info@fl-boats.ru">info@fl-boats.ru</a>
-                                </li>
-                                <li>
-                                    <a href="tel:79261449935">+7 926 144-99-35</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="address-item">
-                            <p class="address-item__name">
-                                Ленинградская область
-                            </p>
-                            <ul class="address-item__list list-reset">
-                                <li>
-                                    «ProAnglersBoats»
-                                    Санкт-Петербург, Пушкинский район,
-                                    посёлок Шушары, Московское шоссе, 162
-                                </li>
-                                <li>
-                                    <a href="mailto:info@proanglersboats.ru">info@proanglersboats.ru</a>
-                                </li>
-                                <li>
-                                    <a href="tel:78124093943">+7 812 409-39-43</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="address-item">
-                            <p class="address-item__name">
-                                Удмуртская Республика
-                            </p>
-                            <ul class="address-item__list list-reset">
-                                <li>
-                                    ИП Пыстогов
-                                    г. Ижевск, н/д
-                                </li>
-                                <li>
-                                    <a href="tel:+79225089944">+7 922 508-99-44</a>
-                                </li>
-                                <li>
-                                    <a href="mailto:mpystogov@mail.ru">mpystogov@mail.ru</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="address-item">
-                            <p class="address-item__name">
-                                Ярославская область
-                            </p>
-                            <ul class="address-item__list list-reset">
-                                <li>
-                                    BoatProfi, ООО «Дом рыбака»
-                                    Ярославль, пр. Толбухина, 8/75
-                                </li>
-                                <li>
-                                    <a href="tel:+79301014045">+7 930 101-40-45</a>
+                                    <a href="https://boatprofi.com/product-category/fl/" style="color: red;">
+                                        Перейти на страницу дилера ФЛ в Ярославле
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="mailto:info@boatprofi.com">info@boatprofi.com</a>
                                 </li>
-                            </ul>
-                        </li>
-                        <li class="address-item">
-                            <p class="address-item__name">
-                                Республика Коми
-                            </p>
-                            <ul class="address-item__list list-reset">
                                 <li>
-                                    Рыболов Сервис
-                                    Сыктывкар, Октябрьский пр., 129
-                                </li>
-                                <li>
-                                    <a href="mailto:stsles@yandex.ru">stsles@yandex.ru</a>
-                                </li>
-                                <li>
-                                    <a href="tel:+79121544367">+7 912 154-43-67</a>
+                                    <a href="tel:79301014045">+7 (930) 101-40-45</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="address-item">
+                        <li class="address-item" data-region="2" data-coord="56.913647, 53.272324">
                             <p class="address-item__name">
-                                Саратовская область
+                                ИП Пыстогов
+                            </p>
+                            <p class="address-item__address">
+                                г. Ижевск, Ижевск ул.Кольцевая 11
+                                Каракулино М.Горького 7
                             </p>
                             <ul class="address-item__list list-reset">
                                 <li>
-                                    ИП Шипов К.Н
+                                    <a href="mailto:mpystogov@mail.ru">mpystogov@mail.ru</a>
                                 </li>
+                                <li>
+                                    <a href="tel:79225089944">+7 (922) 508-99-44</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="address-item" data-region="3" data-coord="51.509739, 46.195504">
+                            <p class="address-item__name">
+                                ИП Шипов К.Н.
+                            </p>
+                            <p class="address-item__address">
+                                г. Энгельс, ул. Студенческа, 205к3
+                            </p>
+                            <ul class="address-item__list list-reset">
                                 <li>
                                     <a href="mailto:shipov256@gmail.com">shipov256@gmail.com</a>
                                 </li>
                                 <li>
-                                    <a href="tel:+79271603271">+7 927 160-32-71</a>
+                                    <a href="tel:79271603271">+7 (927) 160-32-71</a>
                                 </li>
                             </ul>
                         </li>
-
-                        <li class="address-item">
+                        <li class="address-item" data-region="4" data-coord="53.854422, 27.478944">
                             <p class="address-item__name">
-                                Волгоградская область
+                                ООО Драйвбот
+                            </p>
+                            <p class="address-item__address">
+                                г. Минск, ул.Чюрлёниса, дом 6, пом.154
                             </p>
                             <ul class="address-item__list list-reset">
-                                <li>
-                                    «Лодка Трейд»
-                                    г. Волгоград, ул. Череповецкая 1 «Д»
-                                </li>
-                                <li>
-                                    <a href="mailto:lodkatrade@gmail.com">lodkatrade@gmail.com</a>
-                                </li>
-                                <li>
-                                    <a href="tel:79585810778">+7 958 581-07-78</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="address-item">
-                            <p class="address-item__name">
-                                Беларусь
-                            </p>
-                            <ul class="address-item__list list-reset">
-                                <li>
-                                    ООО ”Драйвбот»
-                                    г. Минск, ул. Чюрлёниса
-                                    дом 6, пом.154.
-                                </li>
                                 <li>
                                     <a href="mailto:sales@driveboat.by">sales@driveboat.by</a>
                                 </li>
-                            </ul>
-                        </li>
-                        <li class="address-item">
-                            <p class="address-item__name">
-                                Калужская область
-                            </p>
-                            <ul class="address-item__list list-reset">
                                 <li>
-                                    Сервисный центр «Dynamics»
-                                    Калужская обл.
-                                    г. Обнинск, Киевское шоссе
-                                </li>
-                                <li>
-                                    <a href="mailto:7с1 info@dn-tech.ru">7с1 info@dn-tech.ru</a>
-                                </li>
-                                <li>
-                                    <a href="tel:74994600642">+7 499 460-06-42</a>
-                                </li>
-                                <li>
-                                    <a href="tel:79005722977">+7 900 572-29-77</a>
+                                    <a href="tel:"></a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="address-item">
+                        <li class="address-item" data-region="5" data-coord="58.598847, 49.650120">
                             <p class="address-item__name">
-                                Республика Татарстан
+                                магазин Японские снасти
+                            </p>
+                            <p class="address-item__address">
+                                г. Киров, Горького 7а, Тц «Город»
                             </p>
                             <ul class="address-item__list list-reset">
                                 <li>
-                                    Зеленодольск
-                                    ИП Громов А.В
-                                    Загородная ул., 7
-                                </li>
-                                <li>
-                                    <a href="mailto:asd">gromzdk@gmail.com</a>
-                                </li>
-                                <li>
-                                    <a href="tel:+79625555466">+7 962 555-54-66</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="address-item">
-                            <p class="address-item__name">
-                                Кировская область
-                            </p>
-                            <ul class="address-item__list list-reset">
-                                <li>
-                                    Город Киров, Горького 7а,
-                                    ТЦ «Город», магазин Японские снасти
+                                    8 912 734 43 39
+                                    8 912 722 03 33
                                     Fish3.ru
+                                    8-800-500-14-22
                                 </li>
                                 <li>
                                     <a href="mailto:fish3@list.ru">fish3@list.ru</a>
                                 </li>
                                 <li>
-                                    <a href="tel:+79127344339">+7 912 734-43-39</a>
-                                </li>
-                                <li>
-                                    <a href="tel:+79127220333">+7 912 722-03-33</a>
-                                </li>
-                                <li>
-                                    <a href="tel:88005001422">8 800 500-14-22</a>
+                                    <a href="tel:78005001422">+7 (800) 500-14-22</a>
                                 </li>
                             </ul>
                         </li>
-
-                        <li class="address-item">
+                        <li class="address-item" data-region="6" data-coord="55.841329, 48.444618">
                             <p class="address-item__name">
-                                Ставропольский край
+                                ИП Громов А.В.
+                            </p>
+                            <p class="address-item__address">
+                                г. Энгельс, ул. Студенческа, 205к3
                             </p>
                             <ul class="address-item__list list-reset">
                                 <li>
-                                    г. Ставрополь, пр. Кулакова, 18 И
-                                    Магазин Rosomaha
+                                    г. Зеленодольск, Загородная ул., 7
                                 </li>
                                 <li>
-                                    <a href="rosomaha.ru">rosomaha.ru</a>
+                                    <a href="mailto:gromzdk@gmail.com">gromzdk@gmail.com</a>
                                 </li>
+                                <li>
+                                    <a href="tel:79625555466">+7 (962) 555-54-66</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="address-item" data-region="7" data-coord="45.063648, 41.923055">
+                            <p class="address-item__name">
+                                Магазин Rosomaha
+                            </p>
+                            <p class="address-item__address">
+                                г. Ставрополь, пр. Кулакова, 18 И
+                                rosomaha.ru
+                            </p>
+                            <ul class="address-item__list list-reset">
                                 <li>
                                     <a href="mailto:info@rosomaha.ru">info@rosomaha.ru</a>
                                 </li>
                                 <li>
-                                    <a href="tel:+79624400023">+7 962 440 00 23</a>
+                                    <a href="tel:79624400023">+7 (962) 440-00-23</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="address-item">
+                        <li class="address-item" data-region="8" data-coord="56.287635, 44.002830">
                             <p class="address-item__name">
-                                Нижегородская область
+                                ВашаЛодка.рф
+                            </p>
+                            <p class="address-item__address">
+                                г. Нижний Новгород, пер. Нартова, 2Б
                             </p>
                             <ul class="address-item__list list-reset">
-                                <li>
-                                    г. Н.Новгород
-                                    пер. Нартова, 2Б
-                                </li>
-                                <li>
-                                    <a href="ВашаЛодка.рф">ВашаЛодка.рф</a>
-                                </li>
                                 <li>
                                     <a href="mailto:vashalodka@mail.ru">vashalodka@mail.ru</a>
                                 </li>
                                 <li>
-                                    <a href="tel:+79107931597">+7 910 793 15 97</a>
+                                    <a href="tel:79107931597">+7 (910) 793-15-97</a>
                                 </li>
                             </ul>
                         </li>
-
+                        <li class="address-item" data-region="9" data-coord="59.764422, 30.465344">
+                            <p class="address-item__name">
+                                ProAnglersBoats
+                            </p>
+                            <p class="address-item__address">
+                                Санкт-Петербург, Пушкинский район, посёлок Шушары, Московское шоссе, 162
+                            </p>
+                            <ul class="address-item__list list-reset">
+                                <li>
+                                    <a href="mailto:info@proanglersboats.ru">info@proanglersboats.ru</a>
+                                </li>
+                                <li>
+                                    <a href="tel:78124093943">+7 (812) 409-39-43</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="address-item" data-region="11" data-coord="61.686758, 50.806503">
+                            <p class="address-item__name">
+                                Рыболов Сервис
+                            </p>
+                            <p class="address-item__address">
+                                г. Сыктывкар, Октябрьский пр., 129
+                            </p>
+                            <ul class="address-item__list list-reset">
+                                <li>
+                                    <a href="mailto:stsles@yandex.ru">stsles@yandex.ru</a>
+                                </li>
+                                <li>
+                                    <a href="tel:79121544367">+7 (912) 154-43-67</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="address-item" data-region="12" data-coord="55.086340, 36.631911">
+                            <p class="address-item__name">
+                                Сервисный центр «Dynamics»
+                            </p>
+                            <p class="address-item__address">
+                                г. Обнинск, Киевское шоссе, 7с1 info@dn-tech.ru
+                            </p>
+                            <ul class="address-item__list list-reset">
+                                <li>
+                                    +7 (499) 460-06-42
+                                </li>
+                                <li>
+                                    <a href="mailto:"></a>
+                                </li>
+                                <li>
+                                    <a href="tel:79005722977">+7 (900) 572-29-77</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="address-item" data-region="13" data-coord="48.707529, 44.488009">
+                            <p class="address-item__name">
+                                Лодка Трейд
+                            </p>
+                            <p class="address-item__address">
+                                г. Волгоград, ул. Череповецкая 1 «Д»
+                            </p>
+                            <ul class="address-item__list list-reset">
+                                <li>
+                                    <a href="mailto:lodkatrade@gmail.com">lodkatrade@gmail.com</a>
+                                </li>
+                                <li>
+                                    <a href="tel:79585810778">+7 (958) 581-07-78</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

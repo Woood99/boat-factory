@@ -106,11 +106,13 @@ a {
     padding: 0 ($containerOffset + px);
     max-width: calc(1920 + ($containerOffset * 2)) + px;
 }
-.container-very-big{
+
+.container-very-big {
     margin: 0 auto;
     padding: 0 ($containerOffset + px);
     max-width: calc(3250 + ($containerOffset * 2)) + px;
 }
+
 .list-reset {
     list-style: none;
     margin: 0;

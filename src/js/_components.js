@@ -28,7 +28,7 @@ import './components/production-progress';
 import './components/dynamicAdapt';
 import './components/galleryPhoto';
 import './components/choiceColor';
-
+import './components/whereBuyFilter';
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
     headerFixed();

@@ -2287,8 +2287,15 @@ a {
     font-size: 14px;
   }
 }
-.address-item__list {
+.address-item__address {
   margin-top: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .address-item__address {
+    font-size: 14px;
+  }
 }
 .address-item__list li {
   font-size: 16px;
@@ -2333,13 +2340,17 @@ a {
 .balloon__title {
   font-weight: 700;
   font-size: 16px;
-  line-height: 2.375;
+  line-height: 1.3125;
 }
 .balloon__location {
+  margin-top: 15px;
   font-size: 16px;
-  line-height: 2.375;
+  line-height: 1.3125;
 }
-.balloon__link {
+.balloon__list {
+  margin-top: 23px;
+}
+.balloon__list li {
   display: block;
   font-size: 16px;
   line-height: 1.5;
@@ -2347,10 +2358,7 @@ a {
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
-.balloon__link:not(:last-child) {
-  margin-top: 23px;
-}
-.balloon__link:hover {
+.balloon__list li:hover {
   color: var(--red);
 }
 
