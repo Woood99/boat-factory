@@ -55,7 +55,7 @@
             &__item {}
 
             &__title {
-                span {
+                h2 {
                     @include fontOpenSans;
                     font-size: 16px;
                     font-weight: 600;

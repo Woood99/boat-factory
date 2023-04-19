@@ -8082,17 +8082,20 @@ a {
 }
 .boat-hero__title {
   font-family: "Halvar Breitschrift", sans-serif;
-  line-height: 2.1860465116;
+  line-height: 1.2;
   font-weight: 500;
+  white-space: nowrap;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 @media (min-width: 82.375em) {
   .boat-hero__title {
-    font-size: 2.6875rem;
+    font-size: 2.1875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 82.375em) {
   .boat-hero__title {
-    font-size: calc(1.75rem + 0.9375 * (((100vw - 20rem)) / ((62.375))));
+    font-size: calc(1.75rem + 0.4375 * (((100vw - 20rem)) / ((62.375))));
   }
 }
 @media (max-width: 20em) {
@@ -8104,6 +8107,9 @@ a {
   .boat-hero__title {
     grid-column: 1/-1;
     text-align: center;
+    white-space: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 }
 .boat-hero__text {
@@ -10057,7 +10063,7 @@ a {
 .question-answer__item:first-child::after {
   display: none;
 }
-.question-answer__item .spollers-secondary__title span {
+.question-answer__item .spollers-secondary__title h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -10065,11 +10071,11 @@ a {
   color: var(--black);
   text-transform: none;
 }
-.question-answer__item .spollers-secondary__title span::after {
+.question-answer__item .spollers-secondary__title h2::after {
   display: none;
 }
 @media (max-width: 1024px) {
-  .question-answer__item .spollers-secondary__title span {
+  .question-answer__item .spollers-secondary__title h2 {
     font-size: 14px;
   }
 }

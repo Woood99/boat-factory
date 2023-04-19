@@ -175,14 +175,20 @@
 
 
     &__title {
-        @include adaptiveValue("font-size", 43, 28);
+        @include adaptiveValue("font-size", 35, 28);
         @include fontHalvar;
-        line-height: math.div(94, 43);
+        line-height: math.div(42, 35);
         font-weight: 500;
+        white-space: nowrap;
+        margin-top: 5px;
+        margin-bottom: 5px;
 
         @media (max-width:$smallTablet-max) {
             grid-column: 1/-1;
             text-align: center;
+            white-space: normal;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
     }
 
