@@ -87,76 +87,17 @@
             order: 6;
         }
 
-    }
-
-    &__row {
-        &:not(:last-child) {
-            margin-bottom: 42px;
-
-            @media (max-width:$desktop) {
-                margin-bottom: 25px;
-            }
-        }
-
-        &.article__descr {
-            margin-bottom: 55px;
-
-            @media (max-width:$tablet-max) {
-                margin-bottom: 35px;
-            }
-        }
-    }
-
-    &__text {
-        a {
-            text-decoration: underline;
-            transition: color $transitionSpeed $transitionFunction;
-
-            &:hover {
-                color: var(--red);
-            }
-        }
-
-        p {
-            font-size: 14px;
-            line-height: math.div(21, 14);
-            color: var(--shark);
-
-            &:not(:last-child) {
-                margin-bottom: 25px;
-            }
-        }
-
-        @media (max-width:$tablet-max) {
-            p {
-                &:not(:last-child) {
-                    margin-bottom: 15px;
-                }
-            }
-        }
-    }
-
-    &__list {
         li {
             color: var(--shark);
             font-size: 14px;
             line-height: math.div(21, 14);
         }
 
-        &--numbers {
-            counter-reset: list;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0 0 0 20px;
 
-            li {
-                &::before {
-                    counter-increment: list;
-                    content: counter(list) ".";
-                    padding-right: 5px;
-                    font-weight: 500;
-                }
-            }
-        }
-
-        &--dots {
             li {
                 position: relative;
                 padding-left: 22px;
@@ -172,21 +113,108 @@
                     left: 8px;
                     border-radius: 50%;
                 }
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        ol {
+            list-style: none;
+            margin: 0;
+            padding: 0 0 0 20px;
+            counter-reset: list;
+
+            li {
+                &::before {
+                    counter-increment: list;
+                    content: counter(list) ".";
+                    padding-right: 5px;
+                    font-weight: 500;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            transition: color $transitionSpeed $transitionFunction;
+
+            &:hover {
+                color: var(--red);
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: math.div(21, 14);
+            color: var(--shark);
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+
+                @media (max-width:$tablet-max) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 18px;
+            line-height: math.div(26, 22);
+            font-weight: 700;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+
+                @media (max-width:$tablet-max) {
+                    margin-bottom: 12px;
+                }
+            }
+
+            @media (max-width:$tablet-max) {
+                font-size: 16px;
+            }
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: math.div(22, 16);
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+
+                @media (max-width:$tablet-max) {
+                    margin-bottom: 12px;
+                }
+            }
+
+            @media (max-width:$tablet-max) {
+                font-size: 14px;
             }
         }
     }
 
-    &__subtitle {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: math.div(22, 16);
-        margin-bottom: 25px;
 
-        @media (max-width:$tablet-max) {
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-    }
+
+
+
 
     &__info {}
 
