@@ -1,0 +1,37 @@
+.lineup {
+    &__line {
+        grid-column: 1/-1;
+    }
+
+    &__title {
+        grid-column: 1/-1;
+
+        color: #1C1C1C;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 26px;
+        line-height: math.div(29, 26);
+        font-weight: 700;
+        @include fontHalvar;
+    }
+
+    &__list {
+        grid-column: 1/-1;
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 70px;
+
+        @media (max-width:$tablet-max) {
+            grid-column-gap: 25px;
+            grid-row-gap: 50px;
+        }
+
+        @media (max-width:$smallTablet-max) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {}
+}

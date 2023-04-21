@@ -3084,17 +3084,17 @@ a {
   line-height: 1.15625;
   margin-right: 20px;
 }
-@media (min-width: 82.375em) {
+@media (min-width: 120em) {
   .boat-card-secondary__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
-@media (min-width: 20em) and (max-width: 82.375em) {
+@media (min-width: 35.5em) and (max-width: 120em) {
   .boat-card-secondary__title {
-    font-size: calc(1.125rem + 0.875 * (((100vw - 20rem)) / ((62.375))));
+    font-size: calc(1.125rem + 0.625 * (((100vw - 35.5rem)) / ((84.5))));
   }
 }
-@media (max-width: 20em) {
+@media (max-width: 35.5em) {
   .boat-card-secondary__title {
     font-size: 1.125rem;
   }
@@ -11634,6 +11634,41 @@ a {
   }
 }
 
+.lineup__line {
+  grid-column: 1/-1;
+}
+.lineup__title {
+  grid-column: 1/-1;
+  color: #1C1C1C;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 26px;
+  line-height: 1.1153846154;
+  font-weight: 700;
+  font-family: "Halvar Breitschrift", sans-serif;
+}
+.lineup__list {
+  grid-column: 1/-1;
+  margin-top: 55px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 70px;
+}
+@media (max-width: 1024px) {
+  .lineup__list {
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .lineup__list {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .footer {
   position: relative;
   background-image: url("../img/footer-bg.webp");

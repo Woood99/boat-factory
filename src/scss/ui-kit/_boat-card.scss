@@ -123,7 +123,7 @@
     &__title {
         @include fontHalvar;
         color: var(--black);
-        @include adaptiveValue("font-size", 32, 18);
+        @include adaptiveValue("font-size", 28, 18, 1920, 568, 1);
         line-height: math.div(37, 32);
         margin-right: 20px;
     }
