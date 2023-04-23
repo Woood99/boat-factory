@@ -1,6 +1,10 @@
 .lineup {
     &__line {
         grid-column: 1/-1;
+
+        @media (max-width:$max-1150) {
+            padding-top: 35px;
+        }
     }
 
     &__title {
