@@ -11674,6 +11674,23 @@ a {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.lineup__text {
+  margin-top: 75px;
+  grid-column: 5/-1;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.lineup__text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+@media (max-width: 1150px) {
+  .lineup__text {
+    margin-top: 50px;
+    grid-column: 1/-1;
+  }
+}
+
 .footer {
   position: relative;
   background-image: url("../img/footer-bg.webp");
